@@ -1,0 +1,1 @@
+app/Modules/Service/Resources/Views/commonModules/commonModules.blade.php:        @if(isset($message))<h4 style="color:red;">{{ $message }}</h4>@endif
