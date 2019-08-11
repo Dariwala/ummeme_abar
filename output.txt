@@ -1,1 +1,4 @@
-app/Modules/Service/Resources/Views/commonModules/commonModules.blade.php:        @if(isset($message))<h4 style="color:red;">{{ $message }}</h4>@endif
+resources/views/auth/login.blade.php:                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+resources/views/auth/passwords/email.blade.php:                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+resources/views/auth/passwords/reset.blade.php:                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+resources/views/auth/register.blade.php:                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
