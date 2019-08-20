@@ -259,8 +259,8 @@
                                                 @if(count($blood_donor_pricings)<1)
 
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('blood-donar/edit/pricing/add'.'/'.$blood_donor_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('blood-donar/edit/pricing/add'.'/'.$blood_donor_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                                 @endif

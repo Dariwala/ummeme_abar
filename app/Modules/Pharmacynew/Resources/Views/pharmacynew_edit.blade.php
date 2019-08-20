@@ -253,8 +253,8 @@
                                                 <!-- Add Publication plus sign -->
                                                 @if(count($pharmacynew_notices)<1)
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('pharmacynew/edit/notice/add'.'/'.$pharmacynew_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('pharmacynew/edit/notice/add'.'/'.$pharmacynew_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                                 @endif
@@ -317,8 +317,8 @@
                                                 <!-- Add Publication plus sign -->
 
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('pharmacynew/edit/doctor/add'.'/'.$pharmacynew_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('pharmacynew/edit/doctor/add'.'/'.$pharmacynew_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                             </div>
@@ -370,8 +370,8 @@
                                             @if(count($pharmacynew_products)< 1)
                                             
                                             <div class="md-fab-wrapper Publication-create">
-                                                <a id="add_Publication_name_button" href="{{ url('pharmacynew/edit/product/add'.'/'.$pharmacynew_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                    <i class="material-icons">&#xE145;</i>
+                                                <a id="add_Publication_name_button" href="{{ url('pharmacynew/edit/product/add'.'/'.$pharmacynew_id) }}"  class="md-fab Publication-create">
+                                                    <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                 </a>
                                             </div>
                                             @endif
@@ -426,8 +426,8 @@
 
                                             <!-- Add Publication plus sign -->
                                             <div class="md-fab-wrapper Publication-create">
-                                                <a id="add_Publication_name_button" href="{{ url('pharmacynew/edit/service/add'.'/'.$pharmacynew_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                    <i class="material-icons">&#xE145;</i>
+                                                <a id="add_Publication_name_button" href="{{ url('pharmacynew/edit/service/add'.'/'.$pharmacynew_id) }}"  class="md-fab Publication-create">
+                                                    <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                 </a>
                                             </div>
                                         </div>

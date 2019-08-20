@@ -56,8 +56,8 @@
                 <!-- Add Publication plus sign -->
 
                 <div class="md-fab-wrapper Publication-create">
-                    <a id="add_Publication_name_button" href="{{url('/service/add')}}"  class="md-fab md-fab-accent Publication-create">
-                        <i class="material-icons">&#xE145;</i>
+                    <a id="add_Publication_name_button" href="{{url('/service/add')}}"  class="md-fabPublication-create">
+                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                     </a>
                 </div>
             </div>

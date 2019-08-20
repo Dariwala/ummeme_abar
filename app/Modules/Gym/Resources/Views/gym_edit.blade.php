@@ -296,8 +296,8 @@
                                                 <!-- Add Publication plus sign -->
                                                 @if(count($gym_notices)<1)
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('gym/edit/notice/add'.'/'.$gym_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('gym/edit/notice/add'.'/'.$gym_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                                 @endif
@@ -356,8 +356,8 @@
                                                 <!-- Add Publication plus sign -->
 
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('gym/edit/service/add'.'/'.$gym_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('gym/edit/service/add'.'/'.$gym_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                             </div>

@@ -298,8 +298,8 @@
                                                 <!-- Add Publication plus sign -->
                                                 @if(count($herbal_center_notices)<1)
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('herbal-center/edit/notice/add'.'/'.$herbal_center_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('herbal-center/edit/notice/add'.'/'.$herbal_center_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                                 @endif
@@ -361,8 +361,8 @@
                                                 <!-- Add Publication plus sign -->
 
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('herbal-center/edit/doctor/add'.'/'.$herbal_center_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('herbal-center/edit/doctor/add'.'/'.$herbal_center_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                             </div>
@@ -413,8 +413,8 @@
                                             <!-- Add Publication plus sign -->
                                             @if(count($herbal_center_products)<1)
                                             <div class="md-fab-wrapper Publication-create">
-                                                <a id="add_Publication_name_button" href="{{ url('herbal-center/edit/product/add'.'/'.$herbal_center_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                    <i class="material-icons">&#xE145;</i>
+                                                <a id="add_Publication_name_button" href="{{ url('herbal-center/edit/product/add'.'/'.$herbal_center_id) }}"  class="md-fab Publication-create">
+                                                    <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                 </a>
                                             </div>
                                             @endif
@@ -472,8 +472,8 @@
                                                 <!-- Add Publication plus sign -->
 
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('herbal-center/edit/service/add'.'/'.$herbal_center_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('herbal-center/edit/service/add'.'/'.$herbal_center_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                             </div>

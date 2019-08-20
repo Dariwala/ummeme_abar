@@ -263,8 +263,8 @@
                                                 <!-- Add Publication plus sign -->
                                                 @if(count($blood_bank_notices)<1)
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('blood-bank/edit/notice/add'.'/'.$blood_bank_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('blood-bank/edit/notice/add'.'/'.$blood_bank_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                                 @endif
@@ -327,8 +327,8 @@
                                                 <!-- Add Publication plus sign -->
 
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('blood-bank/edit/doctor/add'.'/'.$blood_bank_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('blood-bank/edit/doctor/add'.'/'.$blood_bank_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                             </div>
@@ -386,8 +386,8 @@
                                                 <!-- Add Publication plus sign -->
 
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('blood-bank/edit/service/add'.'/'.$blood_bank_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('blood-bank/edit/service/add'.'/'.$blood_bank_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                             </div>

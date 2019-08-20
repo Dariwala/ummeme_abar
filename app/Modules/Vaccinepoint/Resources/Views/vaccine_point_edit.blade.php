@@ -268,8 +268,8 @@
                                                 <!-- Add Publication plus sign -->
                                                 @if(count($vaccine_point_notices)<1)
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('vaccine-point/edit/notice/add'.'/'.$vaccine_point_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('vaccine-point/edit/notice/add'.'/'.$vaccine_point_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                                 @endif
@@ -332,8 +332,8 @@
                                                 <!-- Add Publication plus sign -->
 
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('vaccine-point/edit/doctor/add'.'/'.$vaccine_point_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('vaccine-point/edit/doctor/add'.'/'.$vaccine_point_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                             </div>
@@ -391,8 +391,8 @@
                                                 <!-- Add Publication plus sign -->
 
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('vaccine-point/edit/service/add'.'/'.$vaccine_point_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('vaccine-point/edit/service/add'.'/'.$vaccine_point_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                             </div>

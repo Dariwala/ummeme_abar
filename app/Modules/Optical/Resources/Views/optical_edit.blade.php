@@ -270,8 +270,8 @@
                                                 <!-- Add Publication plus sign -->
                                                 @if(count($optical_notices)<1)
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('optical/edit/notice/add'.'/'.$optical_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('optical/edit/notice/add'.'/'.$optical_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                                 @endif
@@ -334,8 +334,8 @@
                                                 <!-- Add Publication plus sign -->
 
                                                 <div class="md-fab-wrapper Publication-create">
-                                                    <a id="add_Publication_name_button" href="{{ url('optical/edit/doctor/add'.'/'.$optical_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                        <i class="material-icons">&#xE145;</i>
+                                                    <a id="add_Publication_name_button" href="{{ url('optical/edit/doctor/add'.'/'.$optical_id) }}"  class="md-fab Publication-create">
+                                                        <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                     </a>
                                                 </div>
                                             </div>
@@ -387,8 +387,8 @@
                                             @if(count($optical_products)< 1)
                                             
                                             <div class="md-fab-wrapper Publication-create">
-                                                <a id="add_Publication_name_button" href="{{ url('optical/edit/product/add'.'/'.$optical_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                    <i class="material-icons">&#xE145;</i>
+                                                <a id="add_Publication_name_button" href="{{ url('optical/edit/product/add'.'/'.$optical_id) }}"  class="md-fab Publication-create">
+                                                    <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                 </a>
                                             </div>
                                             @endif
@@ -443,8 +443,8 @@
 
                                             <!-- Add Publication plus sign -->
                                             <div class="md-fab-wrapper Publication-create">
-                                                <a id="add_Publication_name_button" href="{{ url('optical/edit/service/add'.'/'.$optical_id) }}"  class="md-fab md-fab-accent Publication-create">
-                                                    <i class="material-icons">&#xE145;</i>
+                                                <a id="add_Publication_name_button" href="{{ url('optical/edit/service/add'.'/'.$optical_id) }}"  class="md-fab Publication-create">
+                                                    <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                                                 </a>
                                             </div>
                                         </div>
