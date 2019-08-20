@@ -58,8 +58,8 @@
                     <!-- Add District plus sign -->
 
                     <div class="md-fab-wrapper branch-create">
-                        <a id="add_branch_button" href="{{ url('/district/sub-district/add') }}" class="md-fab md-fab-accent branch-create">
-                            <i class="material-icons">&#xE145;</i>
+                        <a id="add_branch_button" href="{{ url('/district/sub-district/add') }}" class="md-fab branch-create">
+                            <i class="material-icons" style="color:#FD0100">&#xE145;</i>
                         </a>
                     </div>
                 </div>
