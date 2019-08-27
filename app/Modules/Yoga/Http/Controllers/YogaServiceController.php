@@ -12,6 +12,8 @@ use App\Models\Service;
 use App\Models\SubService;
 use App\Models\YogaService;
 use DB;
+use App\Http\Controllers\PhoneEmailIcon;
+use App\Http\Controllers\BanglaConverter;
 
 
 class YogaServiceController extends Controller
@@ -48,8 +50,8 @@ class YogaServiceController extends Controller
         $yoga_service = new YogaService;
 
         $yoga_service->service_id 					  	= $data['service_id'];
-        $yoga_service->yoga_service_description 	= $data['yoga_service_description'];
-        $yoga_service->b_yoga_service_description 	= $data['b_yoga_service_description'];
+        $yoga_service->yoga_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['yoga_service_description'], FALSE, $data['b_yoga_service_description']);
+        $yoga_service->b_yoga_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['yoga_service_description'], TRUE, $data['b_yoga_service_description']);
         $yoga_service->yoga_id 	                    = $id;
 
         if($yoga_service->save())
@@ -90,8 +92,8 @@ class YogaServiceController extends Controller
         
         $yoga_service = YogaService::find($yoga_service_id);
 
-        $yoga_service->yoga_service_description     = $data['yoga_service_description'];
-        $yoga_service->b_yoga_service_description   = $data['b_yoga_service_description'];
+        $yoga_service->yoga_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['yoga_service_description'], FALSE, $data['b_yoga_service_description']);
+        $yoga_service->b_yoga_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['yoga_service_description'], TRUE, $data['b_yoga_service_description']);
         $yoga_service->yoga_id                      = $yoga_id;
 
         if($yoga_service->update())

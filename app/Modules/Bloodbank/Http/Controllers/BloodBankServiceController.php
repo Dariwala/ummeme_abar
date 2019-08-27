@@ -12,6 +12,8 @@ use App\Models\Service;
 use App\Models\SubService;
 use App\Models\BloodBankService;
 use DB;
+use App\Http\Controllers\PhoneEmailIcon;
+use App\Http\Controllers\BanglaConverter;
 
 class BloodBankServiceController extends Controller
 {
@@ -48,8 +50,8 @@ class BloodBankServiceController extends Controller
         $blood_bank_service = new BloodBankService;
 
         $blood_bank_service->service_id                         = $data['service_id'];
-        $blood_bank_service->blood_bank_service_description     = $data['blood_bank_service_description'];
-        $blood_bank_service->b_blood_bank_service_description   = $data['b_blood_bank_service_description'];
+        $blood_bank_service->blood_bank_service_description     = PhoneEmailIcon::handlePhoneandEmail($data['blood_bank_service_description'], FALSE, $data['b_blood_bank_service_description']);
+        $blood_bank_service->b_blood_bank_service_description   = PhoneEmailIcon::handlePhoneandEmail($data['blood_bank_service_description'], TRUE, $data['b_blood_bank_service_description']);
         $blood_bank_service->blood_bank_id  = $id;
 
         if($blood_bank_service->save())
@@ -90,8 +92,8 @@ class BloodBankServiceController extends Controller
         $blood_bank_service = BloodBankService::find($blood_bank_service_id);
 
 
-        $blood_bank_service->blood_bank_service_description     = $data['blood_bank_service_description'];
-        $blood_bank_service->b_blood_bank_service_description   = $data['b_blood_bank_service_description'];
+        $blood_bank_service->blood_bank_service_description     = PhoneEmailIcon::handlePhoneandEmail($data['blood_bank_service_description'], FALSE, $data['b_blood_bank_service_description']);
+        $blood_bank_service->b_blood_bank_service_description   = PhoneEmailIcon::handlePhoneandEmail($data['blood_bank_service_description'], TRUE, $data['b_blood_bank_service_description']);
         $blood_bank_service->blood_bank_id                      = $blood_bank_id;
 
         if($blood_bank_service->update())

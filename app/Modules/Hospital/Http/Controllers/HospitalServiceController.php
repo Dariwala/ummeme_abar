@@ -12,6 +12,8 @@ use App\Models\Service;
 use App\Models\SubService;
 use App\Models\HospitalService;
 use DB;
+use App\Http\Controllers\PhoneEmailIcon;
+use App\Http\Controllers\BanglaConverter;
 
 
 class HospitalServiceController extends Controller
@@ -48,8 +50,8 @@ class HospitalServiceController extends Controller
         $hospital_service = new HospitalService;
 
         $hospital_service->service_id 					  	= $data['service_id'];
-        $hospital_service->hospital_service_description 	= $data['hospital_service_description'];
-        $hospital_service->b_hospital_service_description 	= $data['b_hospital_service_description'];
+        $hospital_service->hospital_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['hospital_service_description'], FALSE, $data['b_hospital_service_description']);
+        $hospital_service->b_hospital_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['hospital_service_description'], TRUE, $data['b_hospital_service_description']);
         $hospital_service->hospital_id 	                    = $id;
 
         if($hospital_service->save())
@@ -90,8 +92,8 @@ class HospitalServiceController extends Controller
         
         $hospital_service = HospitalService::find($hospital_service_id);
 
-        $hospital_service->hospital_service_description     = $data['hospital_service_description'];
-        $hospital_service->b_hospital_service_description   = $data['b_hospital_service_description'];
+        $hospital_service->hospital_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['hospital_service_description'], FALSE, $data['b_hospital_service_description']);
+        $hospital_service->b_hospital_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['hospital_service_description'], TRUE, $data['b_hospital_service_description']);
         $hospital_service->hospital_id                      = $hospital_id;
 
         if($hospital_service->update())

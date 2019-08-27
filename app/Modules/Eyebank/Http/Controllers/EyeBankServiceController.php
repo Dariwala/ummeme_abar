@@ -12,6 +12,8 @@ use App\Models\Service;
 use App\Models\SubService;
 use App\Models\EyeBankService;
 use DB;
+use App\Http\Controllers\PhoneEmailIcon;
+use App\Http\Controllers\BanglaConverter;
 
 class EyeBankServiceController extends Controller
 {
@@ -47,8 +49,8 @@ class EyeBankServiceController extends Controller
         $eye_bank_service = new EyeBankService;
 
         $eye_bank_service->service_id 					  	= $data['service_id'];
-        $eye_bank_service->eye_bank_service_description 	= $data['eye_bank_service_description'];
-        $eye_bank_service->b_eye_bank_service_description 	= $data['b_eye_bank_service_description'];
+        $eye_bank_service->eye_bank_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['eye_bank_service_description'], FALSE, $data['b_eye_bank_service_description']);
+        $eye_bank_service->b_eye_bank_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['eye_bank_service_description'], TRUE, $data['b_eye_bank_service_description']);
         $eye_bank_service->eye_bank_id 	= $id;
 
         if($eye_bank_service->save())
@@ -91,8 +93,8 @@ class EyeBankServiceController extends Controller
         $eye_bank_service = EyeBankService::find($eye_bank_service_id);
 
         
-        $eye_bank_service->eye_bank_service_description     = $data['eye_bank_service_description'];
-        $eye_bank_service->b_eye_bank_service_description   = $data['b_eye_bank_service_description'];
+        $eye_bank_service->eye_bank_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['eye_bank_service_description'], FALSE, $data['b_eye_bank_service_description']);
+        $eye_bank_service->b_eye_bank_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['eye_bank_service_description'], TRUE, $data['b_eye_bank_service_description']);
         $eye_bank_service->eye_bank_id                      = $eye_bank_id;
 
 

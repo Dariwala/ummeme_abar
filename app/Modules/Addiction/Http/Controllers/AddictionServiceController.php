@@ -12,6 +12,8 @@ use App\Models\Service;
 use App\Models\SubService;
 use App\Models\AddictionService;
 use DB;
+use App\Http\Controllers\PhoneEmailIcon;
+use App\Http\Controllers\BanglaConverter;
 
 
 class AddictionServiceController extends Controller
@@ -48,8 +50,8 @@ class AddictionServiceController extends Controller
         $addiction_service = new AddictionService;
 
         $addiction_service->service_id 					  	= $data['service_id'];
-        $addiction_service->addiction_service_description 	= $data['addiction_service_description'];
-        $addiction_service->b_addiction_service_description 	= $data['b_addiction_service_description'];
+        $addiction_service->addiction_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['addiction_service_description'], FALSE, '');
+        $addiction_service->b_addiction_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['addiction_service_description'], TRUE, $data['b_addiction_service_description']);
         $addiction_service->addiction_id 	                    = $id;
 
         if($addiction_service->save())
@@ -90,8 +92,8 @@ class AddictionServiceController extends Controller
         
         $addiction_service = AddictionService::find($addiction_service_id);
 
-        $addiction_service->addiction_service_description     = $data['addiction_service_description'];
-        $addiction_service->b_addiction_service_description   = $data['b_addiction_service_description'];
+        $addiction_service->addiction_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['addiction_service_description'], FALSE, '');
+        $addiction_service->b_addiction_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['addiction_service_description'], TRUE, $data['b_addiction_service_description']);
         $addiction_service->addiction_id                      = $addiction_id;
 
         if($addiction_service->update())

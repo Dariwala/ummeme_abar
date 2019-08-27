@@ -12,6 +12,8 @@ use App\Models\Service;
 use App\Models\SubService;
 use App\Models\HomeopathicService;
 use DB;
+use App\Http\Controllers\PhoneEmailIcon;
+use App\Http\Controllers\BanglaConverter;
 
 class HomeopathicServiceController extends Controller
 {
@@ -49,8 +51,8 @@ class HomeopathicServiceController extends Controller
         $homeopathic_service = new HomeopathicService;
 
         $homeopathic_service->service_id                       = $data['service_id'];
-        $homeopathic_service->homeopathic_service_description     = $data['homeopathic_service_description'];
-        $homeopathic_service->b_homeopathic_service_description   = $data['b_homeopathic_service_description'];
+        $homeopathic_service->homeopathic_service_description     = PhoneEmailIcon::handlePhoneandEmail($data['homeopathic_service_description'], FALSE, $data['b_homeopathic_service_description']);
+        $homeopathic_service->b_homeopathic_service_description   = PhoneEmailIcon::handlePhoneandEmail($data['homeopathic_service_description'], TRUE, $data['b_homeopathic_service_description']);
         $homeopathic_service->homeopathic_id  = $id;
 
         if($homeopathic_service->save())
@@ -92,8 +94,8 @@ class HomeopathicServiceController extends Controller
         $homeopathic_service = HomeopathicService::find($homeopathic_service_id);
 
 
-        $homeopathic_service->homeopathic_service_description     = $data['homeopathic_service_description'];
-        $homeopathic_service->b_homeopathic_service_description   = $data['b_homeopathic_service_description'];
+        $homeopathic_service->homeopathic_service_description     = PhoneEmailIcon::handlePhoneandEmail($data['homeopathic_service_description'], FALSE, $data['b_homeopathic_service_description']);
+        $homeopathic_service->b_homeopathic_service_description   = PhoneEmailIcon::handlePhoneandEmail($data['homeopathic_service_description'], TRUE, $data['b_homeopathic_service_description']);
         $homeopathic_service->homeopathic_id                      = $homeopathic_id;
 
         if($homeopathic_service->update())

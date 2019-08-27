@@ -65,7 +65,7 @@
                         <div class="uk-width-medium-1-1">
                         @php
                             
-                            echo str_replace("১৬২৬৩",'১৬২৬৩ <a href="tel:16263"><i class="fa fa-phone" style="margin-left:5px;"></i></a>',str_replace("৯৯৯",'৯৯৯ <a href="tel:999"><i class="fa fa-phone" style="margin-left:5px;"></i></a>',$data->b_emergency_helpline));
+                            echo $data->b_emergency_helpline;
                         @endphp
                         </div> 
                     </div>
@@ -79,7 +79,7 @@
                     <div class="uk-grid" data-uk-grid-margin>   
                         <div class="uk-width-medium-1-1">
                         @php
-                            echo str_replace("16263",'16263 <a href="tel:16263"><i class="fa fa-phone" style="margin-left:5px;"></i></a>',str_replace("999",'999 <a href="tel:999"><i class="fa fa-phone" style="margin-left:5px;"></i></a>',$data->emergency_helpline));
+                            echo $data->emergency_helpline;
                         @endphp
                         </div> 
                     </div>

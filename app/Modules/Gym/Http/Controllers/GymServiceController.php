@@ -12,7 +12,8 @@ use App\Models\Service;
 use App\Models\SubService;
 use App\Models\GymService;
 use DB;
-
+use App\Http\Controllers\PhoneEmailIcon;
+use App\Http\Controllers\BanglaConverter;
 
 class GymServiceController extends Controller
 {
@@ -48,8 +49,8 @@ class GymServiceController extends Controller
         $gym_service = new GymService;
 
         $gym_service->service_id 					  	= $data['service_id'];
-        $gym_service->gym_service_description 	= $data['gym_service_description'];
-        $gym_service->b_gym_service_description 	= $data['b_gym_service_description'];
+        $gym_service->gym_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['gym_service_description'], FALSE, $data['b_gym_service_description']);
+        $gym_service->b_gym_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['gym_service_description'], TRUE, $data['b_gym_service_description']);
         $gym_service->gym_id 	                    = $id;
 
         if($gym_service->save())
@@ -90,8 +91,8 @@ class GymServiceController extends Controller
         
         $gym_service = GymService::find($gym_service_id);
 
-        $gym_service->gym_service_description     = $data['gym_service_description'];
-        $gym_service->b_gym_service_description   = $data['b_gym_service_description'];
+        $gym_service->gym_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['gym_service_description'], FALSE, $data['b_gym_service_description']);
+        $gym_service->b_gym_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['gym_service_description'], TRUE, $data['b_gym_service_description']);
         $gym_service->gym_id                      = $gym_id;
 
         if($gym_service->update())

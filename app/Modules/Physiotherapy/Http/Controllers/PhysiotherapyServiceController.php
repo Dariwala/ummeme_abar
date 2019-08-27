@@ -12,6 +12,9 @@ use App\Models\Service;
 use App\Models\SubService;
 use App\Models\PhysiotherapyService;
 use DB;
+use App\Http\Controllers\PhoneEmailIcon;
+use App\Http\Controllers\BanglaConverter;
+
 
 class PhysiotherapyServiceController extends Controller
 {
@@ -49,8 +52,8 @@ class PhysiotherapyServiceController extends Controller
         $physiotherapy_service = new PhysiotherapyService;
 
         $physiotherapy_service->service_id                       = $data['service_id'];
-        $physiotherapy_service->physiotherapy_service_description     = $data['physiotherapy_service_description'];
-        $physiotherapy_service->b_physiotherapy_service_description   = $data['b_physiotherapy_service_description'];
+        $physiotherapy_service->physiotherapy_service_description     = PhoneEmailIcon::handlePhoneandEmail($data['physiotherapy_service_description'], FALSE, $data['b_physiotherapy_service_description']);
+        $physiotherapy_service->b_physiotherapy_service_description   = PhoneEmailIcon::handlePhoneandEmail($data['physiotherapy_service_description'], TRUE, $data['b_physiotherapy_service_description']);
         $physiotherapy_service->physiotherapy_id  = $id;
 
         if($physiotherapy_service->save())
@@ -92,8 +95,8 @@ class PhysiotherapyServiceController extends Controller
         $physiotherapy_service = PhysiotherapyService::find($physiotherapy_service_id);
 
 
-        $physiotherapy_service->physiotherapy_service_description     = $data['physiotherapy_service_description'];
-        $physiotherapy_service->b_physiotherapy_service_description   = $data['b_physiotherapy_service_description'];
+        $physiotherapy_service->physiotherapy_service_description     = PhoneEmailIcon::handlePhoneandEmail($data['physiotherapy_service_description'], FALSE, $data['b_physiotherapy_service_description']);
+        $physiotherapy_service->b_physiotherapy_service_description   = PhoneEmailIcon::handlePhoneandEmail($data['physiotherapy_service_description'], TRUE, $data['b_physiotherapy_service_description']);
         $physiotherapy_service->physiotherapy_id                      = $physiotherapy_id;
 
         if($physiotherapy_service->update())
