@@ -54,8 +54,8 @@ class commonModulesController extends Controller
             $data->b_notice         = PhoneEmailIcon::handlePhoneandEmail($request->notice_description,TRUE,$request->b_notice_description);
             $data->report_delivery  = PhoneEmailIcon::handlePhoneandEmail($request->report_delivery,FALSE,'');
             $data->b_report_delivery = PhoneEmailIcon::handlePhoneandEmail($request->report_delivery,TRUE,$request->b_report_delivery);
-            $data->emergency_helpline  = PhoneEmailIcon::handlePhoneandEmail($request->emergency_description,FALSE,'');
-            $data->b_emergency_helpline= PhoneEmailIcon::handlePhoneandEmail($request->emergency_description,TRUE,$request->b_emergency_description);
+            $data->emergency_helpline  = PhoneEmailIcon::handlePhoneandEmail($request->emergency_helpline,FALSE,'');
+            $data->b_emergency_helpline= PhoneEmailIcon::handlePhoneandEmail($request->emergency_helpline,TRUE,$request->b_emergency_helpline);
             
             $data->save();
             
