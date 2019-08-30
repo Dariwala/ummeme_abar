@@ -1,28 +1,29 @@
-assets/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_default();
-assets/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_scroll();
-assets/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_individual_search();
-assets/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_colVis();
-assets/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_tableExport();
-assets/assets/js/pages/plugins_datatables.js:altair_datatables = {
-assets/assets/js/pages/plugins_datatables.min.js:$(function(){altair_datatables.dt_default(),altair_datatables.dt_scroll(),altair_datatables.dt_individual_search(),altair_datatables.dt_colVis(),altair_datatables.dt_tableExport()}),altair_datatables={dt_default:function(){var t=$("#dt_default");t.length&&t.DataTable()},dt_scroll:function(){var t=$("#dt_scroll");t.length&&t.DataTable({scrollY:"200px",scrollCollapse:!1,paging:!1})},dt_individual_search:function(){var t=$("#dt_individual_search");if(t.length){t.find("tfoot th").each(function(){var a=t.find("tfoot th").eq($(this).index()).text();$(this).html('<input type="text" class="md-input" placeholder="'+a+'" />')}),altair_md.inputs();var a=t.DataTable();a.columns().every(function(){var t=this;$("input",this.footer()).on("keyup change",function(){t.search(this.value).draw()})})}},dt_colVis:function(){var t=$("#dt_colVis"),a=t.prev(".dt_colVis_buttons");if(t.length){var e=t.DataTable({buttons:[{extend:"colvis",fade:0}]});e.buttons().container().appendTo(a)}},dt_tableExport:function(){var t=$("#dt_tableExport"),a=t.prev(".dt_colVis_buttons");if(t.length){var e=t.DataTable({buttons:[{extend:"copyHtml5",text:'<i class="uk-icon-files-o"></i> Copy',titleAttr:"Copy"},{extend:"print",text:'<i class="uk-icon-print"></i> Print',titleAttr:"Print"},{extend:"excelHtml5",text:'<i class="uk-icon-file-excel-o"></i> XLSX',titleAttr:""},{extend:"csvHtml5",text:'<i class="uk-icon-file-text-o"></i> CSV',titleAttr:"CSV"},{extend:"pdfHtml5",text:'<i class="uk-icon-file-pdf-o"></i> PDF',titleAttr:"PDF"}]});e.buttons().container().appendTo(a)}}};
-assets/js/pages/plugins_datatables.js:    altair_datatables.dt_default();
-assets/js/pages/plugins_datatables.js:    altair_datatables.dt_scroll();
-assets/js/pages/plugins_datatables.js:    altair_datatables.dt_individual_search();
-assets/js/pages/plugins_datatables.js:    altair_datatables.dt_colVis();
-assets/js/pages/plugins_datatables.js:    altair_datatables.dt_tableExport();
-assets/js/pages/plugins_datatables.js:altair_datatables = {
-assets/js/pages/plugins_datatables.min.js:$(function(){altair_datatables.dt_default(),altair_datatables.dt_scroll(),altair_datatables.dt_individual_search(),altair_datatables.dt_colVis(),altair_datatables.dt_tableExport()}),altair_datatables={dt_default:function(){var t=$("#dt_default");t.length&&t.DataTable()},dt_scroll:function(){var t=$("#dt_scroll");t.length&&t.DataTable({scrollY:"200px",scrollCollapse:!1,paging:!1})},dt_individual_search:function(){var t=$("#dt_individual_search");if(t.length){t.find("tfoot th").each(function(){var a=t.find("tfoot th").eq($(this).index()).text();$(this).html('<input type="text" class="md-input" placeholder="'+a+'" />')}),altair_md.inputs();var a=t.DataTable();a.columns().every(function(){var t=this;$("input",this.footer()).on("keyup change",function(){t.search(this.value).draw()})})}},dt_colVis:function(){var t=$("#dt_colVis"),a=t.prev(".dt_colVis_buttons");if(t.length){var e=t.DataTable({buttons:[{extend:"colvis",fade:0}]});e.buttons().container().appendTo(a)}},dt_tableExport:function(){var t=$("#dt_tableExport"),a=t.prev(".dt_colVis_buttons");if(t.length){var e=t.DataTable({buttons:[{extend:"copyHtml5",text:'<i class="uk-icon-files-o"></i> Copy',titleAttr:"Copy"},{extend:"print",text:'<i class="uk-icon-print"></i> Print',titleAttr:"Print"},{extend:"excelHtml5",text:'<i class="uk-icon-file-excel-o"></i> XLSX',titleAttr:""},{extend:"csvHtml5",text:'<i class="uk-icon-file-text-o"></i> CSV',titleAttr:"CSV"},{extend:"pdfHtml5",text:'<i class="uk-icon-file-pdf-o"></i> PDF',titleAttr:"PDF"}]});e.buttons().container().appendTo(a)}}};
-public/assets/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_default();
-public/assets/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_scroll();
-public/assets/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_individual_search();
-public/assets/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_colVis();
-public/assets/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_tableExport();
-public/assets/assets/js/pages/plugins_datatables.js:altair_datatables = {
-public/assets/assets/js/pages/plugins_datatables.min.js:$(function(){altair_datatables.dt_default(),altair_datatables.dt_scroll(),altair_datatables.dt_individual_search(),altair_datatables.dt_colVis(),altair_datatables.dt_tableExport()}),altair_datatables={dt_default:function(){var t=$("#dt_default");t.length&&t.DataTable()},dt_scroll:function(){var t=$("#dt_scroll");t.length&&t.DataTable({scrollY:"200px",scrollCollapse:!1,paging:!1})},dt_individual_search:function(){var t=$("#dt_individual_search");if(t.length){t.find("tfoot th").each(function(){var a=t.find("tfoot th").eq($(this).index()).text();$(this).html('<input type="text" class="md-input" placeholder="'+a+'" />')}),altair_md.inputs();var a=t.DataTable();a.columns().every(function(){var t=this;$("input",this.footer()).on("keyup change",function(){t.search(this.value).draw()})})}},dt_colVis:function(){var t=$("#dt_colVis"),a=t.prev(".dt_colVis_buttons");if(t.length){var e=t.DataTable({buttons:[{extend:"colvis",fade:0}]});e.buttons().container().appendTo(a)}},dt_tableExport:function(){var t=$("#dt_tableExport"),a=t.prev(".dt_colVis_buttons");if(t.length){var e=t.DataTable({buttons:[{extend:"copyHtml5",text:'<i class="uk-icon-files-o"></i> Copy',titleAttr:"Copy"},{extend:"print",text:'<i class="uk-icon-print"></i> Print',titleAttr:"Print"},{extend:"excelHtml5",text:'<i class="uk-icon-file-excel-o"></i> XLSX',titleAttr:""},{extend:"csvHtml5",text:'<i class="uk-icon-file-text-o"></i> CSV',titleAttr:"CSV"},{extend:"pdfHtml5",text:'<i class="uk-icon-file-pdf-o"></i> PDF',titleAttr:"PDF"}]});e.buttons().container().appendTo(a)}}};
-public/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_default();
-public/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_scroll();
-public/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_individual_search();
-public/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_colVis();
-public/assets/js/pages/plugins_datatables.js:    altair_datatables.dt_tableExport();
-public/assets/js/pages/plugins_datatables.js:altair_datatables = {
-public/assets/js/pages/plugins_datatables.min.js:$(function(){altair_datatables.dt_default(),altair_datatables.dt_scroll(),altair_datatables.dt_individual_search(),altair_datatables.dt_colVis(),altair_datatables.dt_tableExport()}),altair_datatables={dt_default:function(){var t=$("#dt_default");t.length&&t.DataTable()},dt_scroll:function(){var t=$("#dt_scroll");t.length&&t.DataTable({scrollY:"200px",scrollCollapse:!1,paging:!1})},dt_individual_search:function(){var t=$("#dt_individual_search");if(t.length){t.find("tfoot th").each(function(){var a=t.find("tfoot th").eq($(this).index()).text();$(this).html('<input type="text" class="md-input" placeholder="'+a+'" />')}),altair_md.inputs();var a=t.DataTable();a.columns().every(function(){var t=this;$("input",this.footer()).on("keyup change",function(){t.search(this.value).draw()})})}},dt_colVis:function(){var t=$("#dt_colVis"),a=t.prev(".dt_colVis_buttons");if(t.length){var e=t.DataTable({buttons:[{extend:"colvis",fade:0}]});e.buttons().container().appendTo(a)}},dt_tableExport:function(){var t=$("#dt_tableExport"),a=t.prev(".dt_colVis_buttons");if(t.length){var e=t.DataTable({buttons:[{extend:"copyHtml5",text:'<i class="uk-icon-files-o"></i> Copy',titleAttr:"Copy"},{extend:"print",text:'<i class="uk-icon-print"></i> Print',titleAttr:"Print"},{extend:"excelHtml5",text:'<i class="uk-icon-file-excel-o"></i> XLSX',titleAttr:""},{extend:"csvHtml5",text:'<i class="uk-icon-file-text-o"></i> CSV',titleAttr:"CSV"},{extend:"pdfHtml5",text:'<i class="uk-icon-file-pdf-o"></i> PDF',titleAttr:"PDF"}]});e.buttons().container().appendTo(a)}}};
+.env:MAIL_USERNAME=info@medihelpbd.com
+app/Modules/Frontend/Http/Controllers/FrontendController.php:                               $message->to('info@medihelpbd.com');
+assets/file_manager/js/i18n/elfinder.de.js: * @author Timo-Linde <info@timo-linde.de>
+assets/file_manager/js/i18n/elfinder.el.js: * @author yawd <info@yawd.eu>, Romanos
+assets/file_manager/js/i18n/elfinder.hu.js: * @author Gáspár Lajos <info@glsys.eu>
+assets/file_manager/js/i18n/elfinder.hu.js:		translator : 'Gáspár Lajos &lt;info@glsys.eu&gt;',
+assets/file_manager/js/i18n/elfinder.jp.js: * @author Tomoaki Yoshida <info@yoshida-studio.jp>
+assets/file_manager/js/i18n/elfinder.jp.js:		translator : 'Tomoaki Yoshida &lt;info@yoshida-studio.jp&gt;, Naoki Sawada &lt;hypweb@gmail.com&gt;',
+assets/file_manager/js/i18n/elfinder.ug_CN.js:		translator : 'تەرجىمە قىلغۇچى:  ئۆتكۈر بىز شىركىتى info@otkur.biz',
+composer.lock:                    "email": "info@frenky.net"
+config/mail.php:        'address' => 'info@medihelpbd.com',
+Full Database/medihelpbd_15_april.sql:(1, 'Admin', 'info@medihelpbd.com', '$2y$10$rh6zZGf2DK1teh01I/t2zu0eH1Olaq53/kiHCNHrt4dDCYpcnHT1G', 'sQEaTXiObGKi5RpmenPLVk34e1rwb4hcEHfYABsIpqsIpJGFFQrCipSQjgcM', NULL, '2019-04-05 16:16:50');
+Full Database/medihelpbd_28_november_2018.sql:(1, 'Admin', 'info@medihelpbd.com', '$2y$10$rh6zZGf2DK1teh01I/t2zu0eH1Olaq53/kiHCNHrt4dDCYpcnHT1G', 'NgOytZ9ZWydTMnBqPfH6x1QaTaFCJrC5B1ZuBpRmXMn3IQ1VsMIow6TNAONN', NULL, '2018-11-18 18:10:32');
+Full Database/medihelpbd_test.sql:(1, 'Admin', 'info@medihelpbd.com', '$2y$10$rh6zZGf2DK1teh01I/t2zu0eH1Olaq53/kiHCNHrt4dDCYpcnHT1G', 'NgOytZ9ZWydTMnBqPfH6x1QaTaFCJrC5B1ZuBpRmXMn3IQ1VsMIow6TNAONN', NULL, '2018-11-18 18:10:32');
+public/assets/file_manager/js/i18n/elfinder.de.js: * @author Timo-Linde <info@timo-linde.de>
+public/assets/file_manager/js/i18n/elfinder.el.js: * @author yawd <info@yawd.eu>, Romanos
+public/assets/file_manager/js/i18n/elfinder.hu.js: * @author Gáspár Lajos <info@glsys.eu>
+public/assets/file_manager/js/i18n/elfinder.hu.js:		translator : 'Gáspár Lajos &lt;info@glsys.eu&gt;',
+public/assets/file_manager/js/i18n/elfinder.jp.js: * @author Tomoaki Yoshida <info@yoshida-studio.jp>
+public/assets/file_manager/js/i18n/elfinder.jp.js:		translator : 'Tomoaki Yoshida &lt;info@yoshida-studio.jp&gt;, Naoki Sawada &lt;hypweb@gmail.com&gt;',
+public/assets/file_manager/js/i18n/elfinder.ug_CN.js:		translator : 'تەرجىمە قىلغۇچى:  ئۆتكۈر بىز شىركىتى info@otkur.biz',
+Binary file public/uploads/vaccine_point/Vaccination Center294.jpg matches
+public/vendor/composer/installed.json:                "email": "info@frenky.net"
+public/vendor/league/flysystem/composer.json:            "email": "info@frenky.net"
+public/vendor/paragonie/random_compat/composer.json:    "email":      "info@paragonie.com",
+Binary file uploads/vaccine_point/Vaccination Center294.jpg matches
+vendor/composer/installed.json:                "email": "info@frenky.net"
+vendor/league/flysystem/composer.json:            "email": "info@frenky.net"
+vendor/paragonie/random_compat/composer.json:    "email":      "info@paragonie.com",

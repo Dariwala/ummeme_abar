@@ -44,7 +44,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.24-hours-pharmacy', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -83,7 +83,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.addiction-rehabilitation-center', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                           });
   
@@ -121,7 +121,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.air-ambulance', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                           });
   
@@ -161,7 +161,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.ambulance', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -199,7 +199,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.parlour-and-spa', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -237,7 +237,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.blood-bank', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -275,7 +275,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.blood-donor', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -313,7 +313,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.doctor-panel', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -351,7 +351,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.eye-bank', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -389,7 +389,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.foreign-medical-info', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -427,7 +427,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.gym', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -465,7 +465,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.health-care-center', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -503,7 +503,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.herbal-medicine-center', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -541,7 +541,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.homeopathic-medicine-center', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                           });
   
@@ -580,7 +580,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.optical-shop', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                           });
   
@@ -619,7 +619,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.pharmacy', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -657,7 +657,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.physiotherapy', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -695,7 +695,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.skincare', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -733,7 +733,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.vaccination-center', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                            });
   
@@ -771,7 +771,7 @@ class ServiceproviderController extends Controller
         
         try{
             $mail_send  = Mail::send('mail-service-provider.yoga', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                              $message->to('info@medihelpbd.com');
+                              $message->to('enlistyourservice@medihelpbd.com');
                               $message->subject($reqdata['subject']);
                           });
   

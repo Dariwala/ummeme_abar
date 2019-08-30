@@ -99,7 +99,7 @@ class FrontendController extends Controller
         try{
             
             $mail_send  = Mail::send('mail', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                               $message->to('info@medihelpbd.com');
+                               $message->to('contact@medihelpbd.com');
                                $message->subject($reqdata['subject']);
                            });
              
@@ -151,7 +151,7 @@ class FrontendController extends Controller
             $reqdata['photo_path'] = 'uploads/report_delivery/'.$new_file_name;
 
             $mail_send  = Mail::send('report_delivery', ["data1" => $reqdata], function ($message) use ($reqdata) {
-                $message->to('info@medihelpbd.com');
+                $message->to('reportdelivery@medihelpbd.com');
                 $message->subject('Report Delivery');
             });
 
