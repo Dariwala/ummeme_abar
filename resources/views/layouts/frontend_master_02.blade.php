@@ -137,6 +137,10 @@
             margin-right:calc(50% - 10px);
         }
         
+        
+    </style>
+    <style type="text/css" media="print">
+        div { visibility: hidden; display: none }
     </style>
 </head>
 

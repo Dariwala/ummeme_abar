@@ -58,7 +58,7 @@
 @section('content')
 
     @if(Session('language')=='bn')
-        <div class="uk-width-large-7-10">
+        <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
             <div class="md-card">
                 <div class="user_content">
                     <div class="uk-grid" data-uk-grid-margin>   
@@ -72,7 +72,7 @@
             </div>
         </div>
     @else
-        <div class="uk-width-large-7-10">
+        <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
             <div class="md-card">
                 <div class="user_content">
                     <div class="uk-grid" data-uk-grid-margin>   

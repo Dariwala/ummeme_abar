@@ -68,7 +68,7 @@
 
 @section('content')
 
-<div class="uk-width-large-7-10">
+<div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
     <div class="md-card">
         <div class="md-card-content large-padding">
 
