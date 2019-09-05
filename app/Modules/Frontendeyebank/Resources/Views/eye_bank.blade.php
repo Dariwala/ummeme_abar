@@ -198,7 +198,11 @@
                                                         @if(!is_numeric($e_phone_number[1]))
                                                             {{$phone_number}}
                                                         @else
-                                                        {{$phone_number}}<a href = "tel:{{$e_phone_number}}"><i class="fa fa-phone" style="margin-left:5px;"></i></a>
+                                                            @if($i != $len - 1)
+                                                            {{$phone_number}}<a href = "tel:{{$e_phone_number}}"><i class="fa fa-phone" style="margin-left:5px;"></i></a>
+                                                            @else
+                                                            {{$phone_number}}<a href = "tel:{{$e_phone_number}}">&nbsp;<i class="fa fa-phone" style="margin-left:5px;"></i></a>
+                                                            @endif
                                                         @endif
                                                         @if($i != $len - 1)
                                                             <br>
@@ -404,7 +408,11 @@
                                                         @if(!is_numeric($e_phone_number[1]))
                                                             {{$e_phone_number}}
                                                         @else
-                                                        {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}"><i class="fa fa-phone" style="margin-left:5px;"></i></a>
+                                                            @if($i != $len - 1)
+                                                            {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}"><i class="fa fa-phone" style="margin-left:5px;"></i></a>
+                                                            @else
+                                                            {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}">&nbsp;<i class="fa fa-phone" style="margin-left:5px;"></i></a>
+                                                            @endif
                                                         @endif
                                                         @if($i != $len - 1)
                                                             <br>
