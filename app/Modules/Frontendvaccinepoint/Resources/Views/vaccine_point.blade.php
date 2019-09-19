@@ -325,7 +325,7 @@
                         </div>
                         <ul class="md-list">
                             <li ng-repeat = "service in services">
-                                <div style="margin-top: -10px;" class="md-list-content">
+                                <div style="margin-top: 10px;" class="md-list-content">
                                     <div>
                                         <span class="uk-margin-right" ng-bind-html="trustAsHtml(service.b_vaccine_point_service_description)">
                                         </span>
@@ -542,7 +542,7 @@
                         <div   class="uk-form-row">
                             <input id="service_id" name="service_id" ng-model="service_id" ng-change="getVaccinePointService()"    style="width: 100%;" />
                         </div>
-                        <ul style="margin-top: -10px;" class="md-list">
+                        <ul style="margin-top: 10px;" class="md-list">
                             <li ng-repeat = "service in services">
                                 <div class="md-list-content">
                                     <div>

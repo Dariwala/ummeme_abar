@@ -319,7 +319,7 @@
                         </div>
                         <ul class="md-list">
                             <li ng-repeat = "service in services">
-                                <div style="margin-top: -10px;" class="md-list-content">
+                                <div style="margin-top: 10px;" class="md-list-content">
                                     <div>
                                         <span class="uk-margin-right" ng-bind-html="trustAsHtml(service.b_eye_bank_service_description)">
                                         </span>
@@ -529,7 +529,7 @@
                         </div>
                         <ul class="md-list">
                             <li ng-repeat = "service in services">
-                                <div style="margin-top: -10px;" class="md-list-content">
+                                <div style="margin-top: 10px;" class="md-list-content">
                                     <div>
                                         <span class="uk-margin-right" ng-bind-html="trustAsHtml(service.eye_bank_service_description)">
                                         </span>
