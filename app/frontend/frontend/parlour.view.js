@@ -14,8 +14,12 @@ function ViewParlourController($scope, $http, $sce) {
         })
         .then(function(response){
             data = response.data.parlourservice;
+            var header = {
+                text: "Select Category",
+                value: "0"
+            };
+            data.unshift(header);
             $('#service_id').kendoDropDownList({
-                optionLabel   : "Select Category",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,

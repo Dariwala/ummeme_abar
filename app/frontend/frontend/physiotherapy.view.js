@@ -17,9 +17,12 @@ function ViewPhysiotherapyController($scope, $http, $sce) {
         .then(function(response){
             
             data = response.data.physiotherapyservice;
-            
+            var header = {
+                text: "Select Category",
+                value: "0"
+            };
+            data.unshift(header);
             $('#service_id').kendoDropDownList({
-                optionLabel   : "Select Category",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -39,17 +42,12 @@ function ViewPhysiotherapyController($scope, $http, $sce) {
         })
         .then(function(response){
             data = response.data.physiotherapydepartment;
+            var header = {
+                text: "Select Department",
+                value: "0"
+            };
+            data.unshift(header);
             $('#department_id').kendoDropDownList({
-                optionLabel   : "Select Department",
-                dataTextField: "text",
-                dataValueField: "value",
-                dataSource: data,
-                dataType: "jsonp",
-                index: 0
-            });
-
-            $('#medical_specialist_id').kendoDropDownList({
-                optionLabel   : "Select Doctor",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -68,7 +66,7 @@ function ViewPhysiotherapyController($scope, $http, $sce) {
                 optionLabel   : "Select Doctor",
                 dataTextField: "text",
                 dataValueField: "value",
-                dataSource: data,
+                dataSource: [],
                 dataType: "jsonp",
                 index: 0
             });
@@ -85,8 +83,12 @@ function ViewPhysiotherapyController($scope, $http, $sce) {
             })
             .then(function(response){
                 data = response.data.physiotherapymedicalspecialist;
+                var header = {
+                    text: "Select Doctor",
+                    value: "0"
+                };
+                data.unshift(header);
                 $('#medical_specialist_id').kendoDropDownList({
-                    optionLabel   : "Select Doctor",
                     dataTextField: "text",
                     dataValueField: "value",
                     dataSource: data,

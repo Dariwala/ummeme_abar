@@ -14,8 +14,12 @@ function ViewBnParlourController($scope, $http, $sce) {
         })
         .then(function(response){
             data = response.data.parlourservice;
+            var header = {
+                text: "ধরণ নির্বাচন করুন",
+                value: "0"
+            };
+            data.unshift(header);
             $('#service_id').kendoDropDownList({
-                optionLabel   : "ধরণ নির্বাচন করুন",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,

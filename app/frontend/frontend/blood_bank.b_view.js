@@ -14,8 +14,12 @@ function ViewBnBloodBankController($scope, $http, $sce) {
         })
         .then(function(response){
             data = response.data.bloodbankservice;
+            var header = {
+                text: "ধরণ নির্বাচন করুন",
+                value: "0"
+            };
+            data.unshift(header);
             $('#service_id').kendoDropDownList({
-                optionLabel   : "ধরণ নির্বাচন করুন",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -89,9 +93,13 @@ function ViewBnBloodBankController($scope, $http, $sce) {
         })
         .then(function(response){
             data = response.data.bloodbankdepartment;
+            var header = {
+                text: "বিভাগ নির্বাচন করুন",
+                value: "0"
+            };
+            data.unshift(header);
             console.log('hellooooooo');
             $('#department_id').kendoDropDownList({
-                optionLabel   : "বিভাগ নির্বাচন করুন",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -99,7 +107,7 @@ function ViewBnBloodBankController($scope, $http, $sce) {
                 index: 0
             });
 
-            $('#medical_specialist_id').kendoDropDownList({
+            /*$('#medical_specialist_id').kendoDropDownList({
                 optionLabel   : "ডাক্তার নির্বাচন করুন",
                 dataTextField: "text",
                 dataValueField: "value",
@@ -107,7 +115,7 @@ function ViewBnBloodBankController($scope, $http, $sce) {
                 dataType: "jsonp",
                 filter: "contains",
                 index: 0
-            });
+            });*/
 
             var dropdownlist = $("#department_id").data("kendoDropDownList");
 
@@ -116,12 +124,12 @@ function ViewBnBloodBankController($scope, $http, $sce) {
         $scope.getMedicalSpecialistDropDown = function() 
         {  
             console.log('med');
-            
+
             $('#medical_specialist_id').kendoDropDownList({
                 optionLabel   : "ডাক্তার নির্বাচন করুন",
                 dataTextField: "text",
                 dataValueField: "value",
-                dataSource: data,
+                dataSource: [],
                 dataType: "jsonp",
                 filter: "contains",
                 index: 0
@@ -140,8 +148,12 @@ function ViewBnBloodBankController($scope, $http, $sce) {
             })
             .then(function(response){
                 data = response.data.bloodbankmedicalspecialist;
+                var header = {
+                    text: "ডাক্তার নির্বাচন করুন",
+                    value: "0"
+                };
+                data.unshift(header);
                 $('#medical_specialist_id').kendoDropDownList({
-                    optionLabel   : "ডাক্তার নির্বাচন করুন",
                     dataTextField: "text",
                     dataValueField: "value",
                     dataSource: data,

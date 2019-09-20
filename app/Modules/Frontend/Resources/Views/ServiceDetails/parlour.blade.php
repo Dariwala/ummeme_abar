@@ -289,9 +289,9 @@
                         <li ng-controller="ViewBnParlourController">
                             <input type="hidden" ng-init="parlour_id='asdfg'" value="{{$parlour_id}}" name="parlour_id" ng-model="parlour_id">
                             <div   class="uk-form-row">
-                                <input id="service_id" name="service_id" ng-model="service_id" ng-change="getParlourService()"   style="width: 100%;" />
+                            <select class="md-input selectable" id="service_id" name="service_id" ng-model="service_id" ng-change="getParlourService()"   style="width: 100%;"></select>
                             </div>
-                            <ul class="md-list">
+                            <ul class="md-list" ng-if="$('#service_id').data('kendoDropDownList').value() != 'ধরণ নির্বাচন করুন'">
                                 <li ng-repeat = "service in services">
                                     <div class="md-list-content">
                                         <h4 class="heading_c">@{{service.b_parlour_service_title}}</h4>
@@ -475,9 +475,9 @@
                         <li ng-controller="ViewParlourController">
                             <input type="hidden" ng-init="parlour_id='asdfg'" value="{{$parlour_id}}" name="parlour_id" ng-model="parlour_id">
                             <div   class="uk-form-row">
-                                <input id="service_id" name="service_id" ng-model="service_id" ng-change="getParlourService()"   style="width: 100%;" />
+                            <select class="md-input selectable" id="service_id" name="service_id" ng-model="service_id" ng-change="getParlourService()"   style="width: 100%;"></select>
                             </div>
-                            <ul class="md-list">
+                            <ul class="md-list" ng-if="$('#service_id').data('kendoDropDownList').value() != 'Select Category'">
                                 <li ng-repeat = "service in services">
                                     <div class="md-list-content">
                                         <h4 class="heading_c">@{{service.parlour_service_title}}</h4>

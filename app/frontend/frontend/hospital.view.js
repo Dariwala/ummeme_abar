@@ -15,8 +15,12 @@ function ViewHospitalController($scope, $http ,$sce) {
         })
         .then(function(response){
             data = response.data.hospitalservice;
+            var header = {
+                text: "Select Category",
+                value: "0"
+            };
+            data.unshift(header);
             $('#service_id').kendoDropDownList({
-                optionLabel   : "Select Category",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -101,7 +105,7 @@ function ViewHospitalController($scope, $http ,$sce) {
                 index: 0
             });
 
-            $('#medical_specialist_id').kendoDropDownList({
+            /*$('#medical_specialist_id').kendoDropDownList({
                 optionLabel   : "Select Doctor",
                 dataTextField: "text",
                 dataValueField: "value",
@@ -109,7 +113,7 @@ function ViewHospitalController($scope, $http ,$sce) {
                 dataType: "jsonp",
                 filter: "contains",
                 index: 0
-            });
+            });*/
 
             var dropdownlist = $("#department_id").data("kendoDropDownList");
 
@@ -122,7 +126,7 @@ function ViewHospitalController($scope, $http ,$sce) {
                 optionLabel   : "Select Doctor",
                 dataTextField: "text",
                 dataValueField: "value",
-                dataSource: data,
+                dataSource: [],
                 dataType: "jsonp",
                 filter: "contains",
                 index: 0
@@ -140,8 +144,12 @@ function ViewHospitalController($scope, $http ,$sce) {
             })
             .then(function(response){
                 data = response.data.hospitalmedicalspecialist;
+                var header = {
+                    text: "Select Doctor",
+                    value: "0"
+                };
+                data.unshift(header);
                 $('#medical_specialist_id').kendoDropDownList({
-                    optionLabel   : "Select Doctor",
                     dataTextField: "text",
                     dataValueField: "value",
                     dataSource: data,

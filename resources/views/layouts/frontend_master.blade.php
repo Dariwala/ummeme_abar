@@ -273,7 +273,7 @@
                                             <div class="uk-width-medium-1-1">
                                                 <div class="parsley-row">
                                                     <select id="main_district_id" name="district_name" required class="md-input selectable">
-                                                        <option>
+                                                        <option disabled="disabled" selected="selected">
                                                             @if(Session('language') == 'bn')
                                                             জেলা নির্বাচন করুন
                                                          @else
@@ -297,7 +297,7 @@
                                             <div class="uk-width-medium-1-1">
                                                 <div class="parsley-row">
                                                     <select id="sub_district_id" name="subdistrict_name" required class="md-input selectable">
-                                                        <option value="0">  @if(Session('language') == 'bn')  উপজেলা নির্বাচন করুন    @else Select Sub-District @endif</option>
+                                                        <option value="0" disabled="disabled" selected="selected">  @if(Session('language') == 'bn')  উপজেলা নির্বাচন করুন    @else Select Sub-District @endif</option>
                                                     </select>
                                                     <p style="color:red;">{{ $errors -> first('sub_district_id') }}</p>
                                                 </div>
@@ -306,7 +306,7 @@
                                             <div class="uk-width-medium-1-1">
                                                 <div class="parsley-row">
                                                     <select id="service_provider_id" name="directoryType" required class="md-input selectable">
-                                                        <option> 
+                                                        <option disabled="disabled" selected="selected"> 
                                                             @if(Session('language') == 'bn')
                                                                 সেবা প্রদানকারী নির্বাচন করুন  
                                                             @else
@@ -678,7 +678,7 @@
             $.get('/notice/ajax-sub-district/'+ main_district_id, function(data){
                 
                 $('#sub_district_id').empty();
-                $('#sub_district_id').append('<option value="0">  @if(Session('language') == 'bn')  উপজেলা নির্বাচন করুন    @else Select Sub-District @endif</option>');
+                $('#sub_district_id').append('<option value="0" disabled="disabled" selected="selected">  @if(Session('language') == 'bn')  উপজেলা নির্বাচন করুন    @else Select Sub-District @endif</option>');
                 
                 for(var i = 0; i< data.length; i++){
                     $('#sub_district_id').append( ' <option value="'+data[i].id+'">  ' + data[i].sub_district_name + '   </option> ' );
@@ -707,7 +707,7 @@
                 $("#show_sub_service_provider").show();
             
                 $('#sub_service_provider_id').empty();
-                $('#sub_service_provider_id').append('<option value="0">@if(Session('language') == 'bn') শ্রেনী নির্বাচন করুন @else Select Group @endif</option>');
+                $('#sub_service_provider_id').append('<option value="0" disabled="disabled" selected="selected">@if(Session('language') == 'bn') শ্রেনী নির্বাচন করুন @else Select Group @endif</option>');
                 
                 for(var i = 0; i< data.length; i++){                                     
                     $('#sub_service_provider_id').append( ' <option value="'+data[i].blood_group+'">  ' +  data[i].blood_group + '</option> ' );
@@ -726,7 +726,7 @@
                 $("#show_sub_service_provider").show();
             
                 $('#sub_service_provider_id').empty();
-                $('#sub_service_provider_id').append('<option value="0">@if(Session('language') == 'bn') ধরণ নির্বাচন করুন @else Select Category @endif</option>');
+                $('#sub_service_provider_id').append('<option value="0" disabled="disabled" selected="selected">@if(Session('language') == 'bn') ধরণ নির্বাচন করুন @else Select Category @endif</option>');
                 
                 for(var i = 0; i< data.length; i++){
                     $('#sub_service_provider_id').append( ' <option value="'+data[i].hospital_subname+'">  ' + data[i].hospital_subname + '   </option> ' );
@@ -745,8 +745,8 @@
                 $("#show_sub_service_provider").show();
             
                 $('#sub_service_provider_id').empty();
-                $('#sub_service_provider_id').append('<option value="0">@if(Session('language') == 'bn')  বিভাগ নির্বাচন করুন @else Select Department @endif</option>');
-                
+                $('#sub_service_provider_id').append('<option value="0" disabled="disabled" selected="selected">@if(Session('language') == 'bn')  বিভাগ নির্বাচন করুন @else Select Department @endif</option>');
+                    
                 for(var i = 0; i< data.length; i++){
                     $('#sub_service_provider_id').append( ' <option value="'+data[i].medical_specialist_name+'">  ' + data[i].medical_specialist_name + '   </option> ' );
                 }

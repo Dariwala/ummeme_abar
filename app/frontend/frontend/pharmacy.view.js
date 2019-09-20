@@ -16,9 +16,12 @@ function ViewPharmacyController($scope, $http , $sce) {
         .then(function(response){
             
             data = response.data.pharmacyservice;
-            
+            var header = {
+                text: "Select Category",
+                value: "0"
+            };
+            data.unshift(header);
             $('#service_id').kendoDropDownList({
-                optionLabel   : "Select Category",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -165,8 +168,12 @@ function ViewPharmacyController($scope, $http , $sce) {
         })
         .then(function(response){
             data = response.data.pharmacydepartment;
+            var header = {
+                text: "Select Department",
+                value: "0"
+            };
+            data.unshift(header);
             $('#department_id').kendoDropDownList({
-                optionLabel   : "Select Department",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -175,15 +182,7 @@ function ViewPharmacyController($scope, $http , $sce) {
                 index: 0
             });
 
-            $('#medical_specialist_id').kendoDropDownList({
-                optionLabel   : "Select Doctor",
-                dataTextField: "text",
-                dataValueField: "value",
-                dataSource: data,
-                dataType: "jsonp",
-                filter: "contains",
-                index: 0
-            });
+            
 
             var dropdownlist = $("#department_id").data("kendoDropDownList");
 
@@ -196,7 +195,7 @@ function ViewPharmacyController($scope, $http , $sce) {
                 optionLabel   : "Select Doctor",
                 dataTextField: "text",
                 dataValueField: "value",
-                dataSource: data,
+                dataSource: [],
                 dataType: "jsonp",
                 filter: "contains",
                 index: 0
@@ -214,8 +213,12 @@ function ViewPharmacyController($scope, $http , $sce) {
             })
             .then(function(response){
                 data = response.data.pharmacymedicalspecialist;
+                var header = {
+                    text: "Select Doctor",
+                    value: "0"
+                };
+                data.unshift(header);
                 $('#medical_specialist_id').kendoDropDownList({
-                    optionLabel   : "Select Doctor",
                     dataTextField: "text",
                     dataValueField: "value",
                     dataSource: data,

@@ -293,10 +293,10 @@
                              
                             <li ng-controller="ViewBnAddictionController">
                                 <div class="uk-form-row">
-                                    <input id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()" style="width: 100%;" />
+                                <select class="md-input selectable" id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()" style="width: 100%;"></select>
                                 </div>
                                 <div class="uk-form-row">
-                                    <input id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;" />
+                                <select class="md-input selectable" id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;"></select>
                                 </div>
                                 <ul class="md-list uk-margin-top">
                                     <li ng-repeat = "doctor in doctors" style = "padding-top: 0px;">
@@ -315,9 +315,9 @@
                             <li ng-controller="ViewBnAddictionController">
                                 <input type="hidden" ng-init="addiction_id='asdfg'" value="{{$addiction_id}}" name="addiction_id" ng-model="addiction_id">
                                 <div   class="uk-form-row">
-                                    <input id="service_id" name="service_id" ng-model="service_id" ng-change="getAddictionService()"   style="width: 100%;" />
+                                <select class="md-input selectable" id="service_id" name="service_id" ng-model="service_id" ng-change="getAddictionService()"   style="width: 100%;"></select>
                                 </div>
-                                <ul class="md-list">
+                                <ul class="md-list" ng-if="$('#service_id').data('kendoDropDownList').value() != 'ধরণ নির্বাচন করুন'">
                                     <li ng-repeat = "service in services">
                                         <div class="md-list-content">
                                             <h4 class="heading_c">@{{service.b_addiction_service_title}}</h4>
@@ -505,10 +505,10 @@
                              
                             <li ng-controller="ViewAddictionController">
                                 <div class="uk-form-row">
-                                    <input id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()"    style="width: 100%;" />
+                                <select class="md-input selectable" id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()"    style="width: 100%;"></select>
                                 </div>
                                 <div class="uk-form-row">
-                                    <input id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;" />
+                                <select class="md-input selectable" id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;"></select>
                                 </div>
                                 <ul class="md-list uk-margin-top">
                                     <li ng-repeat = "doctor in doctors" style = "padding-top: 0px;">
@@ -527,9 +527,9 @@
                             <li ng-controller="ViewAddictionController">
                                 <input type="hidden" ng-init="addiction_id='asdfg'" value="{{$addiction_id}}" name="addiction_id" ng-model="addiction_id">
                                 <div   class="uk-form-row">
-                                    <input id="service_id" name="service_id" ng-model="service_id" ng-change="getAddictionService()"   style="width: 100%;" />
+                                <select class="md-input selectable" id="service_id" name="service_id" ng-model="service_id" ng-change="getAddictionService()"   style="width: 100%;"></select>
                                 </div>
-                                <ul class="md-list">
+                                <ul class="md-list" ng-if="$('#service_id').data('kendoDropDownList').value() != 'Select Category'">
                                     <li ng-repeat = "service in services">
                                         <div class="md-list-content">
                                             <h4 class="heading_c">@{{service.addiction_service_title}}</h4>

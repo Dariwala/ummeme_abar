@@ -17,9 +17,12 @@ function ViewBnPhysiotherapyController($scope, $http, $sce) {
         .then(function(response){
             
             data = response.data.physiotherapyservice;
-            
+            var header = {
+                text: "ধরণ নির্বাচন করুন",
+                value: "0"
+            };
+            data.unshift(header);
             $('#service_id').kendoDropDownList({
-                optionLabel   : "ধরণ নির্বাচন করুন",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -39,17 +42,12 @@ function ViewBnPhysiotherapyController($scope, $http, $sce) {
         })
         .then(function(response){
             data = response.data.physiotherapydepartment;
+            var header = {
+                text: "বিভাগ নির্বাচন করুন",
+                value: "0"
+            };
+            data.unshift(header);
             $('#department_id').kendoDropDownList({
-                optionLabel   : "বিভাগ নির্বাচন করুন",
-                dataTextField: "text",
-                dataValueField: "value",
-                dataSource: data,
-                dataType: "jsonp",
-                index: 0
-            });
-
-            $('#medical_specialist_id').kendoDropDownList({
-                optionLabel   : "ডাক্তার নির্বাচন করুন",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -68,7 +66,7 @@ function ViewBnPhysiotherapyController($scope, $http, $sce) {
                 optionLabel   : "ডাক্তার নির্বাচন করুন",
                 dataTextField: "text",
                 dataValueField: "value",
-                dataSource: data,
+                dataSource: [],
                 dataType: "jsonp",
                 index: 0
             });
@@ -85,8 +83,12 @@ function ViewBnPhysiotherapyController($scope, $http, $sce) {
             })
             .then(function(response){
                 data = response.data.physiotherapymedicalspecialist;
+                var header = {
+                    text: "ডাক্তার নির্বাচন করুন",
+                    value: "0"
+                };
+                data.unshift(header);
                 $('#medical_specialist_id').kendoDropDownList({
-                    optionLabel   : "ডাক্তার নির্বাচন করুন",
                     dataTextField: "text",
                     dataValueField: "value",
                     dataSource: data,

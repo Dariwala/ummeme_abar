@@ -15,9 +15,12 @@ function ViewBnPharmacyController($scope, $http ,$sce) {
         
         .then(function(response){
             data = response.data.pharmacyservice;
-            
+            var header = {
+                text: "ধরণ নির্বাচন করুন",
+                value: "0"
+            };
+            data.unshift(header);
             $('#service_id').kendoDropDownList({
-                optionLabel   : "ধরণ নির্বাচন করুন",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -166,9 +169,12 @@ function ViewBnPharmacyController($scope, $http ,$sce) {
         })
         .then(function(response){
             data = response.data.pharmacydepartment;
-
+            var header = {
+                text: "বিভাগ নির্বাচন করুন",
+                value: "0"
+            };
+            data.unshift(header);
             $('#department_id').kendoDropDownList({
-                optionLabel   : "বিভাগ নির্বাচন করুন",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -177,15 +183,6 @@ function ViewBnPharmacyController($scope, $http ,$sce) {
                 index: 0
             });
 
-            $('#medical_specialist_id').kendoDropDownList({
-                optionLabel   : "ডাক্তার নির্বাচন করুন",
-                dataTextField: "text",
-                dataValueField: "value",
-                dataSource: data,
-                dataType: "jsonp",
-                filter: "contains",
-                index: 0
-            });
 
             var dropdownlist = $("#department_id").data("kendoDropDownList");
 
@@ -198,7 +195,7 @@ function ViewBnPharmacyController($scope, $http ,$sce) {
                 optionLabel   : "ডাক্তার নির্বাচন করুন",
                 dataTextField: "text",
                 dataValueField: "value",
-                dataSource: data,
+                dataSource: [],
                 dataType: "jsonp",
                 filter: "contains",
                 index: 0
@@ -216,8 +213,12 @@ function ViewBnPharmacyController($scope, $http ,$sce) {
             })
             .then(function(response){
                 data = response.data.pharmacymedicalspecialist;
+                var header = {
+                    text: "ডাক্তার নির্বাচন করুন",
+                    value: "0"
+                };
+                data.unshift(header);
                 $('#medical_specialist_id').kendoDropDownList({
-                    optionLabel   : "ডাক্তার নির্বাচন করুন",
                     dataTextField: "text",
                     dataValueField: "value",
                     dataSource: data,

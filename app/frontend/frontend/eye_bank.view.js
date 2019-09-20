@@ -14,8 +14,12 @@ function ViewEyeBankController($scope, $http, $sce) {
         })
         .then(function(response){
             data = response.data.eyebankservice;
+            var header = {
+                text: "Select Category",
+                value: "0"
+            };
+            data.unshift(header);
             $('#service_id').kendoDropDownList({
-                optionLabel   : "Select Category",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -88,8 +92,12 @@ function ViewEyeBankController($scope, $http, $sce) {
         })
         .then(function(response){
             data = response.data.eyebankdepartment;
+            var header = {
+                text: "Select Department",
+                value: "0"
+            };
+            data.unshift(header);
             $('#department_id').kendoDropDownList({
-                optionLabel   : "Select Department",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -97,7 +105,7 @@ function ViewEyeBankController($scope, $http, $sce) {
                 index: 0
             });
 
-            $('#medical_specialist_id').kendoDropDownList({
+            /*$('#medical_specialist_id').kendoDropDownList({
                 optionLabel   : "Select Doctor",
                 dataTextField: "text",
                 dataValueField: "value",
@@ -105,7 +113,7 @@ function ViewEyeBankController($scope, $http, $sce) {
                 dataType: "jsonp",
                 filter: "contains",
                 index: 0
-            });
+            });*/
 
             var dropdownlist = $("#department_id").data("kendoDropDownList");
 
@@ -118,7 +126,7 @@ function ViewEyeBankController($scope, $http, $sce) {
                 optionLabel   : "Select Doctor",
                 dataTextField: "text",
                 dataValueField: "value",
-                dataSource: data,
+                dataSource: [],
                 dataType: "jsonp",
                 filter: "contains",
                 index: 0
@@ -138,9 +146,12 @@ function ViewEyeBankController($scope, $http, $sce) {
             
                 data = response.data.eyebankmedicalspecialist;
                 console.log(data);
-                
+                var header = {
+                    text: "Select Doctpr",
+                    value: "0"
+                };
+                data.unshift(header);
                 $('#medical_specialist_id').kendoDropDownList({
-                    optionLabel   : "Select Doctor",
                     dataTextField: "text",
                     dataValueField: "value",
                     dataSource: data,

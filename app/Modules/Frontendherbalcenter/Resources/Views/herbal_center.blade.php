@@ -301,10 +301,10 @@
                     
                     <li ng-controller="ViewBnHerbalCenterController">
                         <div class="uk-form-row">
-                            <input id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()"    style="width: 100%;" />
+                        <select class="md-input selectable" id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()"    style="width: 100%;"></select>
                         </div>
                         <div class="uk-form-row">
-                            <input id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;" />
+                        <select class="md-input selectable" id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;"></select>
                         </div>
                         <ul class="md-list uk-margin-top">
                             <li ng-repeat = "doctor in doctors" style="padding-top: 0px;">
@@ -340,9 +340,9 @@
                     <li ng-controller="ViewBnHerbalCenterController">
                         <input type="hidden" ng-init="herbal_center_id='asdfg'" value="{{$herbal_center_id}}" name="herbal_center_id" ng-model="herbal_center_id">
                         <div   class="uk-form-row">
-                            <input id="service_id" name="service_id" ng-model="service_id" ng-change="getHerbalCenterService()"    style="width: 100%;" />
+                        <select class="md-input selectable" id="service_id" name="service_id" ng-model="service_id" ng-change="getHerbalCenterService()"    style="width: 100%;"></select>
                         </div>
-                        <ul class="md-list">
+                        <ul class="md-list" ng-if="$('#service_id').data('kendoDropDownList').value() != 'ধরন নির্বাচন করুন'">
                             <li ng-repeat = "service in services">
                                 <div style="margin-top: 10px;" class="md-list-content">
                                     <div>
@@ -539,10 +539,10 @@
                     
                     <li ng-controller="ViewHerbalCenterController">
                         <div class="uk-form-row">
-                            <input id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()"    style="width: 100%;" />
+                        <select class="md-input selectable" id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()"    style="width: 100%;"></select>
                         </div>
                         <div class="uk-form-row">
-                            <input id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;" />
+                        <select class="md-input selectable" id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;"></select>
                         </div>
                         <ul class="md-list uk-margin-top">
                             <li ng-repeat = "doctor in doctors" style = "padding-top: 0px;">
@@ -578,9 +578,9 @@
                     <li ng-controller="ViewHerbalCenterController">
                         <input type="hidden" ng-init="herbal_center_id='asdfg'" value="{{$herbal_center_id}}" name="herbal_center_id" ng-model="herbal_center_id">
                         <div   class="uk-form-row">
-                            <input id="service_id" name="service_id" ng-model="service_id" ng-change="getHerbalCenterService()"    style="width: 100%;" />
+                        <select class="md-input selectable" id="service_id" name="service_id" ng-model="service_id" ng-change="getHerbalCenterService()"    style="width: 100%;"></select>
                         </div>
-                        <ul class="md-list">
+                        <ul class="md-list" ng-if="$('#service_id').data('kendoDropDownList').value() != 'Select Category'">
                             <li ng-repeat = "service in services">
                                 <div style="margin-top: 10px;" class="md-list-content">
                                     <div>

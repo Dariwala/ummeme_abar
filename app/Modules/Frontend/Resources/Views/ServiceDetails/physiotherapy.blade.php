@@ -294,10 +294,10 @@
                         <li ng-controller="ViewBnPhysiotherapyController">
                             <input type="hidden" ng-init="physiotherapy_id='asdfg'" value="{{$physiotherapy_id}}" name="physiotherapy_id" ng-model="physiotherapy_id">
                             <div class="uk-form-row">
-                                <input id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()" style="width: 100%;" />
+                            <select class="md-input selectable" id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()" style="width: 100%;"></select>
                             </div>
                             <div class="uk-form-row">
-                                <input id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;" />
+                            <select class="md-input selectable" id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;"></select>
                             </div>
                             <ul class="md-list uk-margin-top">
                                 <li ng-repeat = "doctor in doctors" style = "padding-top: 0px;">
@@ -331,9 +331,9 @@
                         <li ng-controller="ViewBnPhysiotherapyController">
                             <input type="hidden" ng-init="physiotherapy_id='asdfg'" value="{{ $physiotherapy_id }}" name="physiotherapy_id" ng-model="physiotherapy_id">
                             <div class="uk-form-row">
-                                <input id="service_id" name="service_id" ng-model="service_id" ng-change="getPhysiotherapyService()" style="width: 100%;" />
+                            <select class="md-input selectable" id="service_id" name="service_id" ng-model="service_id" ng-change="getPhysiotherapyService()" style="width: 100%;"></select>
                             </div>
-                            <ul class="md-list">
+                            <ul class="md-list" ng-if="$('#service_id').data('kendoDropDownList').value() != 'ধরণ নির্বাচন করুন'">
                                 <li ng-repeat = "service in services">
                                     <div style="margin-top: 10px;" class="md-list-content">
                                         <div>
@@ -520,10 +520,10 @@
                         <li ng-controller="ViewPhysiotherapyController">
                             <input type="hidden" ng-init="physiotherapy_id='asdfg'" value="{{$physiotherapy_id}}" name="physiotherapy_id" ng-model="physiotherapy_id">
                             <div class="uk-form-row">
-                                <input id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()" style="width: 100%;" />
+                            <select class="md-input selectable" id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()" style="width: 100%;"></select>
                             </div>
                             <div class="uk-form-row">
-                                <input id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;" />
+                            <select class="md-input selectable" id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;"></select>
                             </div>
                             <ul class="md-list uk-margin-top">
                                 <li ng-repeat = "doctor in doctors" style = "padding-top: 0px;">
@@ -557,9 +557,9 @@
                         <li ng-controller="ViewPhysiotherapyController">
                             <input type="hidden" ng-init="physiotherapy_id='asdfg'" value="{{ $physiotherapy_id }}" name="physiotherapy_id" ng-model="physiotherapy_id">
                             <div class="uk-form-row">
-                                <input id="service_id" name="service_id" ng-model="service_id" ng-change="getPhysiotherapyService()" style="width: 100%;" />
+                            <select class="md-input selectable" id="service_id" name="service_id" ng-model="service_id" ng-change="getPhysiotherapyService()" style="width: 100%;"></select>
                             </div>
-                            <ul class="md-list">
+                            <ul class="md-list" ng-if="$('#service_id').data('kendoDropDownList').value() != 'Select Category'">
                                 <li ng-repeat = "service in services">
                                     <div style="margin-top: 10px;" class="md-list-content">
                                         <div>

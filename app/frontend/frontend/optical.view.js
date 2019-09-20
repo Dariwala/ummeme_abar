@@ -17,9 +17,12 @@ function ViewOpticalController($scope, $http, $sce) {
         .then(function(response){
             
             data = response.data.opticalservice;
-            
+            var header = {
+                text: "Select Category",
+                value: "0"
+            };
+            data.unshift(header);
             $('#service_id').kendoDropDownList({
-                optionLabel   : "Select Category",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -39,8 +42,12 @@ function ViewOpticalController($scope, $http, $sce) {
         })
         .then(function(response){
             data = response.data.opticaldepartment;
+            var header = {
+                text: "Select Department",
+                value: "0"
+            };
+            data.unshift(header);
             $('#department_id').kendoDropDownList({
-                optionLabel   : "Select Department",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -48,14 +55,7 @@ function ViewOpticalController($scope, $http, $sce) {
                 index: 0
             });
 
-            $('#medical_specialist_id').kendoDropDownList({
-                optionLabel   : "Select Doctor",
-                dataTextField: "text",
-                dataValueField: "value",
-                dataSource: data,
-                dataType: "jsonp",
-                index: 0
-            });
+            
 
             var dropdownlist = $("#department_id").data("kendoDropDownList");
 
@@ -68,7 +68,7 @@ function ViewOpticalController($scope, $http, $sce) {
                 optionLabel   : "Select Doctor",
                 dataTextField: "text",
                 dataValueField: "value",
-                dataSource: data,
+                dataSource: [],
                 dataType: "jsonp",
                 index: 0
             });
@@ -85,8 +85,12 @@ function ViewOpticalController($scope, $http, $sce) {
             })
             .then(function(response){
                 data = response.data.opticalmedicalspecialist;
+                var header = {
+                    text: "Select Doctor",
+                    value: "0"
+                };
+                data.unshift(header);
                 $('#medical_specialist_id').kendoDropDownList({
-                    optionLabel   : "Select Doctor",
                     dataTextField: "text",
                     dataValueField: "value",
                     dataSource: data,

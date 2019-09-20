@@ -14,8 +14,12 @@ function ViewBnYogaController($scope, $http, $sce) {
         })
         .then(function(response){
             data = response.data.yogaservice;
+            var header = {
+                text: "ধরণ নির্বাচন করুন",
+                value: "0"
+            };
+            data.unshift(header);
             $('#service_id').kendoDropDownList({
-                optionLabel   : "ধরণ নির্বাচন করুন",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -90,8 +94,12 @@ function ViewBnYogaController($scope, $http, $sce) {
         })
         .then(function(response){
             data = response.data.yogadepartment;
+            var header = {
+                text: "বিভাগ নির্বাচন করুন",
+                value: "0"
+            };
+            data.unshift(header);
             $('#department_id').kendoDropDownList({
-                optionLabel   : "বিভাগ নির্বাচন করুন",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -122,6 +130,11 @@ function ViewBnYogaController($scope, $http, $sce) {
             })
             .then(function(response){
                 data = response.data.yogamedicalspecialist;
+                var header = {
+                    text: "ডাক্তার নির্বাচন করুন",
+                    value: "0"
+                };
+                data.unshift(header);
                 $('#medical_specialist_id').kendoDropDownList({
                     optionLabel   : "ডাক্তার নির্বাচন করুন",
                     dataTextField: "text",

@@ -14,8 +14,12 @@ function ViewVaccinePointController($scope, $http, $sce) {
         })
         .then(function(response){
             data = response.data.vaccinepointservice;
+            var header = {
+                text: "Select Category",
+                value: "0"
+            };
+            data.unshift(header);
             $('#service_id').kendoDropDownList({
-                optionLabel   : "Select Category",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -90,22 +94,17 @@ function ViewVaccinePointController($scope, $http, $sce) {
         })
         .then(function(response){
             data = response.data.vaccinepointdepartment;
+            var header = {
+                text: "Select Department",
+                value: "0"
+            };
+            data.unshift(header);
             $('#department_id').kendoDropDownList({
-                optionLabel   : "Select Department",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
                 dataType: "jsonp",
                 filter: "contains",
-                index: 0
-            });
-
-            $('#medical_specialist_id').kendoDropDownList({
-                optionLabel   : "Select Doctor",
-                dataTextField: "text",
-                dataValueField: "value",
-                dataSource: data,
-                dataType: "jsonp",
                 index: 0
             });
 
@@ -119,7 +118,7 @@ function ViewVaccinePointController($scope, $http, $sce) {
                 optionLabel   : "Select Doctor",
                 dataTextField: "text",
                 dataValueField: "value",
-                dataSource: data,
+                dataSource: [],
                 dataType: "jsonp",
                 index: 0
             });
@@ -136,8 +135,12 @@ function ViewVaccinePointController($scope, $http, $sce) {
             })
             .then(function(response){
                 data = response.data.vaccinepointmedicalspecialist;
+                var header = {
+                    text: "Select Doctor",
+                    value: "0"
+                };
+                data.unshift(header);
                 $('#medical_specialist_id').kendoDropDownList({
-                    optionLabel   : "Select Doctor",
                     dataTextField: "text",
                     dataValueField: "value",
                     dataSource: data,

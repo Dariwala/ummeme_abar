@@ -294,10 +294,10 @@
                         <li ng-controller="ViewBnOpticalController">
                             <input type="hidden" ng-init="optical_id='asdfg'" value="{{$optical_id}}" name="optical_id" ng-model="optical_id">
                             <div class="uk-form-row">
-                                <input id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()" style="width: 100%;" />
+                            <select class="md-input selectable" id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()" style="width: 100%;"></select>
                             </div>
                             <div class="uk-form-row">
-                                <input id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;" />
+                            <select class="md-input selectable" id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;"></select>
                             </div>
                             <ul class="md-list uk-margin-top">
                                 <li ng-repeat = "doctor in doctors" style = "padding-top: 0px;">
@@ -314,7 +314,7 @@
                             </ul>
                         </li>
                         <li>
-                            <ul class="md-list">
+                            <ul class="md-list" ng-if="$('#service_id').data('kendoDropDownList').value() != 'ধরণ নির্বাচন করুন'">
                                 @foreach($products as $product)
                                 <?php echo $product->b_optical_product_description; ?>
                                 <!--
@@ -331,7 +331,7 @@
                         <li ng-controller="ViewBnOpticalController">
                             <input type="hidden" ng-init="optical_id='asdfg'" value="{{ $optical_id }}" name="optical_id" ng-model="optical_id">
                             <div class="uk-form-row">
-                                <input id="service_id" name="service_id" ng-model="service_id" ng-change="getOpticalService()" style="width: 100%;" />
+                            <select class="md-input selectable" id="service_id" name="service_id" ng-model="service_id" ng-change="getOpticalService()" style="width: 100%;"></select>
                             </div>
                             <ul class="md-list">
                                 <li ng-repeat = "service in services">
@@ -521,10 +521,10 @@
                         <li ng-controller="ViewOpticalController">
                             <input type="hidden" ng-init="optical_id='asdfg'" value="{{$optical_id}}" name="optical_id" ng-model="optical_id">
                             <div class="uk-form-row">
-                                <input id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()" style="width: 100%;" />
+                            <select class="md-input selectable" id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()" style="width: 100%;"></select>
                             </div>
                             <div class="uk-form-row">
-                                <input id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;" />
+                            <select class="md-input selectable" id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;"></select>
                             </div>
                             <ul class="md-list uk-margin-top">
                                 <li ng-repeat = "doctor in doctors" style = "padding-top: 0px;">
@@ -558,9 +558,9 @@
                         <li ng-controller="ViewOpticalController">
                             <input type="hidden" ng-init="optical_id='asdfg'" value="{{ $optical_id }}" name="optical_id" ng-model="optical_id">
                             <div class="uk-form-row">
-                                <input id="service_id" name="service_id" ng-model="service_id" ng-change="getOpticalService()" style="width: 100%;" />
+                            <select class="md-input selectable" id="service_id" name="service_id" ng-model="service_id" ng-change="getOpticalService()" style="width: 100%;"></select>
                             </div>
-                            <ul class="md-list">
+                            <ul class="md-list" ng-if="$('#service_id').data('kendoDropDownList').value() != 'Select Category'">
                                 <li ng-repeat = "service in services">
                                     <div style="margin-top: 10px;" class="md-list-content">
                                         <div>

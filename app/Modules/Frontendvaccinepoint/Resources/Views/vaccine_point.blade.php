@@ -298,10 +298,10 @@
                     
                     <li ng-controller="ViewBnVaccinePointController">
                         <div class="uk-form-row">
-                            <input id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()"    style="width: 100%;" />
+                        <select class="md-input selectable" id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()"    style="width: 100%;"></select>
                         </div>
                         <div class="uk-form-row">
-                            <input id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;" />
+                        <select class="md-input selectable" id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;"></select>
                         </div>
                         <ul class="md-list uk-margin-top">
                             <li ng-repeat = "doctor in doctors" style="padding-top: 0px;">
@@ -321,9 +321,9 @@
                     <li ng-controller="ViewBnVaccinePointController">
                         <input type="hidden" ng-init="vaccine_point_id='asdfg'" value="{{$vaccine_point_id}}" name="vaccine_point_id" ng-model="vaccine_point_id">
                         <div   class="uk-form-row">
-                            <input id="service_id" name="service_id" ng-model="service_id" ng-change="getVaccinePointService()"    style="width: 100%;" />
+                        <select class="md-input selectable" id="service_id" name="service_id" ng-model="service_id" ng-change="getVaccinePointService()"    style="width: 100%;"></select>
                         </div>
-                        <ul class="md-list">
+                        <ul class="md-list" ng-if="$('#service_id').data('kendoDropDownList').value() != 'ধরণ নির্বাচন করুন'">
                             <li ng-repeat = "service in services">
                                 <div style="margin-top: 10px;" class="md-list-content">
                                     <div>
@@ -516,10 +516,10 @@
                     
                     <li ng-controller="ViewVaccinePointController">
                         <div class="uk-form-row">
-                            <input id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()"    style="width: 100%;" />
+                        <select class="md-input selectable" id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()"    style="width: 100%;"></select>
                         </div>
                         <div class="uk-form-row">
-                            <input id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;" />
+                        <select class="md-input selectable" id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;"></select>
                         </div>
                         <ul class="md-list uk-margin-top">
                             <li ng-repeat = "doctor in doctors" style="padding-top: 0px;">
@@ -540,9 +540,9 @@
                     <li ng-controller="ViewVaccinePointController">
                         <input type="hidden" ng-init="vaccine_point_id='asdfg'" value="{{$vaccine_point_id}}" name="vaccine_point_id" ng-model="vaccine_point_id">
                         <div   class="uk-form-row">
-                            <input id="service_id" name="service_id" ng-model="service_id" ng-change="getVaccinePointService()"    style="width: 100%;" />
+                        <select class="md-input selectable" id="service_id" name="service_id" ng-model="service_id" ng-change="getVaccinePointService()"    style="width: 100%;"></select>
                         </div>
-                        <ul style="margin-top: 10px;" class="md-list">
+                        <ul style="margin-top: 10px;" class="md-list" ng-if="$('#service_id').data('kendoDropDownList').value() != 'Select Category'">
                             <li ng-repeat = "service in services">
                                 <div class="md-list-content">
                                     <div>

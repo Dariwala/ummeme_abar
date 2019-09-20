@@ -14,8 +14,12 @@ function ViewBloodBankController($scope, $http, $sce) {
         })
         .then(function(response){
             data = response.data.bloodbankservice;
+            var header = {
+                text: "Select Category",
+                value: "0"
+            };
+            data.unshift(header);
             $('#service_id').kendoDropDownList({
-                optionLabel   : "Select Category",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -90,8 +94,12 @@ function ViewBloodBankController($scope, $http, $sce) {
         .then(function(response){
             data = response.data.bloodbankdepartment;
             console.log('hellooooooo');
+            var header = {
+                text: "Select Department",
+                value: "0"
+            };
+            data.unshift(header);
             $('#department_id').kendoDropDownList({
-                optionLabel   : "Select Department",
                 dataTextField: "text",
                 dataValueField: "value",
                 dataSource: data,
@@ -99,7 +107,7 @@ function ViewBloodBankController($scope, $http, $sce) {
                 index: 0
             });
 
-            $('#medical_specialist_id').kendoDropDownList({
+            /*$('#medical_specialist_id').kendoDropDownList({
                 optionLabel   : "Select Doctor",
                 dataTextField: "text",
                 dataValueField: "value",
@@ -107,7 +115,7 @@ function ViewBloodBankController($scope, $http, $sce) {
                 dataType: "jsonp",
                 filter: "contains",
                 index: 0
-            });
+            });*/
 
             var dropdownlist = $("#department_id").data("kendoDropDownList");
 
@@ -121,7 +129,7 @@ function ViewBloodBankController($scope, $http, $sce) {
                 optionLabel   : "Select Doctor",
                 dataTextField: "text",
                 dataValueField: "value",
-                dataSource: data,
+                dataSource: [],
                 dataType: "jsonp",
                 filter: "contains",
                 index: 0
@@ -140,8 +148,12 @@ function ViewBloodBankController($scope, $http, $sce) {
             })
             .then(function(response){
                 data = response.data.bloodbankmedicalspecialist;
+                var header = {
+                    text: "Select Doctor",
+                    value: "0"
+                };
+                data.unshift(header);
                 $('#medical_specialist_id').kendoDropDownList({
-                    optionLabel   : "Select Doctor",
                     dataTextField: "text",
                     dataValueField: "value",
                     dataSource: data,
