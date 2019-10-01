@@ -177,5 +177,6 @@ Route::group(['prefix' => 'notice'], function () {
     Route::get('/frontend/{id}/{sub_district_id}', 'NoticeController@noticeFrontend')->name('notice_frontend');
     
     Route::get('/ajax-sub-district/{id}', 'NoticeController@ajaxSubdistrict')->name('notice_sub_district');
+    Route::get('/ajax-service/{sub_district_id}', 'NoticeController@ajaxService')->name('notice_service');
     
 });

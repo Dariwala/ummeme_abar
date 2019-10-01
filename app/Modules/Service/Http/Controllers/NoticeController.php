@@ -11,6 +11,26 @@ use Response;
 use App\Models\Notice;
 use App\Models\District;
 use App\Models\SubDistrict;
+use App\Models\AirAmbulance;
+use App\Models\Ambulance;
+use App\Models\BloodBank;
+use App\Models\BloodDonor;
+use App\Models\EyeBank;
+use App\Models\HerbalCenter;
+use App\Models\Hospital;
+use App\Models\Foreignmedical;
+use App\Models\Optical;
+use App\Models\Pharmacynew;
+use App\Models\Physiotherapy;
+use App\Models\Homeopathic;
+use App\Models\MedicalSpecialist;
+use App\Models\Pharmacy;
+use App\Models\Addiction;
+use App\Models\Gym;
+use App\Models\Yoga;
+use App\Models\Parlour;
+use App\Models\SkinLaserCenter;
+use App\Models\VaccinePoint;
 use DB;
 
 use Exception;
@@ -46,6 +66,102 @@ class NoticeController extends Controller
         return Response::json($subdisctricts);
     }
     
+    public function ajaxService($sub_district_id)
+    {
+        $service_names_bangla = array("২৪ আউয়ারস্ ফার্মেসী","অ্যাডিকশন রিহ্যাবিলিটেশন সেন্টার","এয়ার অ্যাাম্বুলেন্স","অ্যাাম্বুলেন্স","বিউটি পার্লার অ্যান্ড স্পা","ব্লাড ব্যাংক","ব্লাড ডোনার","ডক্টরস্‌ প্যানেল","আই ব্যাংক","ফরেন মেডিক্যাল ইনফরমেশন সেন্টার"
+                                     ,"জিম","হেল্‌থ কেয়ার সেন্টার","হারবাল মেডিসিন সেন্টার","হোমিওপ্যাথিক মেডিসিন সেন্টার","অপটিক্যাল সপ","ফার্মেসী",
+                                     "ফিজিওথেরাপি অ্যান্ড রিহ্যাবিলিটেশন সেন্টার","স্কিন কেয়ার অ্যান্ড লেজার সেন্টার","ভ্যাকসিনেশন সেন্টার","ইয়োগা সেন্টার");
+        $service_names_english = array("24 Hours Pharmacy","Addiction Rehabilitation Center","Air Ambulance","Ambulance","Beauty Parlour & Spa","Blood Bank","Blood Donor",
+                                        "Doctors Panel","Eye Bank","Foreign Medical Information Center"
+                                      ,"Gym","Health Care Center","Herbal Medicine Center","Homeopathic Medicine Center","Optical Shop"
+                                      ,"Pharmacy","Physiotherapy & Rehabilitation Center","Skin Care & Laser Center","Vaccination Center","Yoga Center");
+        
+                                      
+        $indices_of_services_in_drop_down = array(7,12,2,1,13,3,4,8,5,14,15,6,9,16,17,18,19,11,10,20);
+
+        $services = array();
+
+        $arr_length = count($indices_of_services_in_drop_down);
+
+        
+        for($i = 0; $i < $arr_length; $i = $i + 1)
+        {
+            if($i == 0){
+                $number_of_entries = Pharmacy::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 1){
+                $number_of_entries = Addiction::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 2){
+                $number_of_entries = AirAmbulance::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 3){
+                $number_of_entries = Ambulance::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 4){
+                $number_of_entries = Parlour::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 5){
+                $number_of_entries = BloodBank::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 6){
+                $number_of_entries = BloodDonor::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 7){
+                $number_of_entries = MedicalSpecialist::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 8){
+                $number_of_entries = EyeBank::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 9){
+                $number_of_entries = Foreignmedical::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 10){
+                $number_of_entries = Gym::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 11){
+                $number_of_entries = Hospital::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 12){
+                $number_of_entries = HerbalCenter::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 13){
+                $number_of_entries = Homeopathic::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 14){
+                $number_of_entries = Optical::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 15){
+                $number_of_entries = Pharmacynew::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 16){
+                $number_of_entries = Physiotherapy::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 17){
+                $number_of_entries = SkinLaserCenter::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 18){
+                $number_of_entries = VaccinePoint::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 19){
+                $number_of_entries = Yoga::where('subdistrict_id',$sub_district_id)->count();
+            }
+            if($number_of_entries != 0)
+            {
+                if(Session('language') == 'bn')
+                {
+                    array_push($services,array($service_names_bangla[$i],$indices_of_services_in_drop_down[$i]));
+                }
+                else
+                {
+                    array_push($services,array($service_names_english[$i],$indices_of_services_in_drop_down[$i]));
+                }
+            }
+        }
+
+        return Response::json($services);
+    }
+
     public function store(Request $request)
     {   
         $this->validate($request, [

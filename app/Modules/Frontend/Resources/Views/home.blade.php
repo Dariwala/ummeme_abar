@@ -237,26 +237,6 @@
                                            Select Service Provider
                                         @endif
                                     </option>
-                                    <option value="7"> @if(Session('language') == 'bn') ২৪ আউয়ারস্ ফার্মেসী @else 24 Hours Pharmacy @endif </option>
-                                    <option value="12">@if(Session('language') == 'bn') অ্যাডিকশন রিহ্যাবিলিটেশন সেন্টার@else Addiction Rehabilitation Center @endif </option>
-                                    <option value="2">@if(Session('language') == 'bn') এয়ার অ্যাাম্বুলেন্স  @else  Air Ambulance @endif </option>
-                                    <option value="1">@if(Session('language') == 'bn') অ্যাাম্বুলেন্স @else Ambulance @endif </option>
-                                    <option value="13">@if(Session('language') == 'bn') বিউটি পার্লার অ্যান্ড স্পা @else Beauty Parlour & Spa @endif </option>
-                                    <option value="3">@if(Session('language') == 'bn') ব্লাড ব্যাংক @else Blood Bank @endif </option>
-                                    <option value="4">@if(Session('language') == 'bn') ব্লাড ডোনার @else Blood Donor @endif </option>
-                                    <option value="8">@if(Session('language') == 'bn') ডক্টরস্‌ প্যানেল @else Doctors Panel @endif </option>
-                                    <option value="5">@if(Session('language') == 'bn') আই ব্যাংক  @else Eye Bank @endif </option>
-                                    <option value="14">@if(Session('language') == 'bn') ফরেন মেডিক্যাল ইনফরমেশন সেন্টার  @else Foreign Medical Information Center @endif </option>
-                                    <option value="15">@if(Session('language') == 'bn') জিম @else Gym @endif </option>
-                                    <option value="6">@if(Session('language') == 'bn') হেল্‌থ কেয়ার সেন্টার  @else Health Care Center @endif </option>
-                                    <option value="9">@if(Session('language') == 'bn') হারবাল মেডিসিন সেন্টার  @else Herbal Medicine Center @endif </option>
-                                    <option value="16">@if(Session('language') == 'bn') হোমিওপ্যাথিক মেডিসিন সেন্টার  @else Homeopathic Medicine Center @endif </option>
-                                    <option value="17">@if(Session('language') == 'bn') অপটিক্যাল সপ @else Optical Shop @endif </option>
-                                    <option value="18">@if(Session('language') == 'bn') ফার্মেসী @else Pharmacy @endif </option>
-                                    <option value="19">@if(Session('language') == 'bn') ফিজিওথেরাপি অ্যান্ড রিহ্যাবিলিটেশন সেন্টার @else Physiotherapy & Rehabilitation Center @endif </option>
-                                    <option value="11">@if(Session('language') == 'bn') স্কিন কেয়ার অ্যান্ড লেজার সেন্টার @else Skin Care & Laser Center @endif </option>
-                                    <option value="10">@if(Session('language') == 'bn') ভ্যাকসিনেশন সেন্টার @else Vaccination Center @endif </option>
-                                    <option value="20">@if(Session('language') == 'bn') ইয়োগা সেন্টার @else Yoga Center @endif </option>
                                 </select>
                                 <p style="color:red;">{{ $errors -> first('service_provider_id') }}</p>
                             </div>
@@ -531,6 +511,29 @@
                 });
             }
     
+        });
+
+        $('#sub_district_id').change(function() {
+            var sub_district_id = $("#sub_district_id option:selected").val();
+
+            $("#overlay-body").show();
+            $("#show_sub_service_provider").hide();
+            
+            if(sub_district_id){
+                $.get('/notice/ajax-service/'+ sub_district_id, function(data){
+                    
+                    $('#service_provider_id').empty();
+                    $('#service_provider_id').append('<option value="0" selected="selected">  @if(Session('language') == 'bn')  সেবা প্রদানকারী নির্বাচন করুন    @else Select Service Provider @endif</option>');
+                    
+                    for(var i = 0; i< data.length; i++){
+                        $('#service_provider_id').append( ' <option value="'+data[i][1]+'">  ' + data[i][0] + '   </option> ' );
+                    }
+                    
+                    $("#overlay-body").hide();
+                    
+                });
+            }
+            
         });
         
         
