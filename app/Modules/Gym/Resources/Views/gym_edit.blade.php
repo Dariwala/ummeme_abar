@@ -24,7 +24,7 @@
                         <div class="user_heading">
                             <div class="user_heading_avatar" style="width:100%;margin-left: calc(50% - 41px);margin-top:16px;">
                                 @if($gym->photo_path == '')
-                                <div class="thumbnail"><img alt="gym"  src="{{asset('/gym.PNG')}}">
+                                <div class="thumbnail"><img alt="gym"  src="{{asset('/gym.png')}}">
                                 </div>
                                 @else
                                 <div class="thumbnail"><img alt="gym" src="{{ url($gym->photo_path) }}">

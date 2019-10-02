@@ -268,7 +268,7 @@
                                     <div class="md-card-head">
                                         @if($contact->photo_path == '')
                                         <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('hospital.PNG')}}" alt=""/>
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('hospital.png')}}" alt=""/>
                                         </div> 
                                         @else
                                        <div class="uk-text-center">
@@ -495,7 +495,7 @@
                                     <div class="md-card-head">
                                         @if($contact->photo_path == '')
                                         <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('gym.PNG')}}" alt=""/>
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('gym.png')}}" alt=""/>
                                         </div> 
                                         @else
                                        <div class="uk-text-center">
@@ -791,7 +791,7 @@
                                     <div class="md-card-head">
                                         @if($contact->photo_path == '')
                                         <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('hospital.PNG')}}" alt=""/>
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('hospital.png')}}" alt=""/>
                                         </div> 
                                         @else
                                        <div class="uk-text-center">
@@ -1019,7 +1019,7 @@
                                     <div class="md-card-head">
                                         @if($contact->photo_path == '')
                                         <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('gym.PNG')}}" alt=""/>
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('gym.png')}}" alt=""/>
                                         </div> 
                                         @else
                                        <div class="uk-text-center">

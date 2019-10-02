@@ -127,7 +127,7 @@
                 <div class="user_heading">
                     <div class="user_heading_avatar" style="width:100%;margin-left: calc(50% - 41px);margin-top:16px;">
                         @if($hospital->photo_path == '')
-                        <div class="thumbnail"><img alt="hospital"  src="{{asset('/hospital.PNG')}}">
+                        <div class="thumbnail"><img alt="hospital"  src="{{asset('/hospital.png')}}">
                         </div>
                         @else
                         <div class="thumbnail"><img alt="hospital" src="{{ url($hospital->photo_path) }}">
@@ -345,7 +345,7 @@
             <div class="user_heading">
                 <div class="user_heading_avatar" style="width:100%;margin-left: calc(50% - 41px);margin-top:16px;">
                     @if($hospital->photo_path == '')
-                    <div class="thumbnail"><img alt="hospital"  src="{{asset('/hospital.PNG')}}">
+                    <div class="thumbnail"><img alt="hospital"  src="{{asset('/hospital.png')}}">
                     </div>
                     @else
                     <div class="thumbnail"><img alt="hospital" src="{{ url($hospital->photo_path) }}">
