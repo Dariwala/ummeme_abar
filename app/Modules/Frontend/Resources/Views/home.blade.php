@@ -254,13 +254,13 @@
                     
                     <div class="uk-margin-medium-top uk-text-center" style="margin-top: 15px !important;margin-bottom: 15px;">
                         
-                        <button type="submit" class="md-btn md-btn-large" style="background: #FFFFFF; width: 10%; color: #fff;">
+                        <button type="submit" style="background: none; color: inherit;border: none;padding: 0;font: inherit;cursor: pointer;outline: inherit;">
                             <!--@if(Session('language') == 'bn')
                                চলো যাই
                             @else
                                Let's Go
                             @endif-->
-                            <img style="height:40px;" src="{{url('vendor/img/letgo.png')}}" alt="">
+                            <img style="height:60px;" src="{{url('vendor/img/letgo.png')}}" alt="">
                         </button>
                     </div>
                     
