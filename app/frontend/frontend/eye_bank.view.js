@@ -147,7 +147,7 @@ function ViewEyeBankController($scope, $http, $sce) {
                 data = response.data.eyebankmedicalspecialist;
                 console.log(data);
                 var header = {
-                    text: "Select Doctpr",
+                    text: "Select Doctor",
                     value: "0"
                 };
                 data.unshift(header);

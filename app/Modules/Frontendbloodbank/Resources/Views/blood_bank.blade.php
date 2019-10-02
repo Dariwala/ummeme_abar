@@ -140,7 +140,7 @@
             </div>
     
     
-            <div class="user_content">
+            <div class="user_content" style="position:relative;z-index:1;">
                 <ul class="uk-tab" data-uk-sticky="{ top: 48, media: 960 }" data-uk-tab="{connect:'#user_profile_tabs_content', animation:'slide-horizontal'}" id="user_profile_tabs">
                     <li class="uk-active">
                         <a href="#">সম্বন্ধে</a>
@@ -297,7 +297,7 @@
                         </ul>
                     </li>
                     <li ng-controller="ViewBnBloodBankController">
-                        <div class="uk-form-row">
+                        <div class="uk-form-row" style="position:relative;z-index:2;">
                         <select class="md-input selectable" id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()"    style="width: 100%;"></select>
                         </div>
                         <div class="uk-form-row">
@@ -358,7 +358,7 @@
             </div>
     
     
-            <div class="user_content">
+            <div class="user_content" style="position:relative;z-index:1;">
                 <ul class="uk-tab" data-uk-sticky="{ top: 48, media: 960 }" data-uk-tab="{connect:'#user_profile_tabs_content', animation:'slide-horizontal'}" id="user_profile_tabs">
                     <li class="uk-active">
                         <a href="#">About</a>
@@ -514,7 +514,7 @@
                         
                     </li>
                     <li ng-controller="ViewBloodBankController">
-                        <div class="uk-form-row">
+                        <div class="uk-form-row" style="position:relative;z-index:2;">
                         <select class="md-input selectable" id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()"    style="width: 100%;"></select>
                         </div>
                         <div class="uk-form-row">
