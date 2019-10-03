@@ -253,7 +253,9 @@
                                 <div id="login_card">
                                     <div class="large-padding" id="login_form">
                                         <div class="login_heading">
-                                        <img style="width: 50%;height:200px;" src="{{url('vendor/img/ad.png')}}" alt="">
+                                        <div class="owl-carousel">
+                                        <img style="width: 100%;" src="{{url('vendor/img/ad.png')}}" alt="">
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
