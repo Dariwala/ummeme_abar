@@ -246,9 +246,22 @@
                                 </div>
                             </div>
                         </div>
+                    @else
+                    <div class="md-card">
+                            
+                            <div class="login_page_wrapper">
+                                <div id="login_card">
+                                    <div class="large-padding" id="login_form">
+                                        <div class="login_heading">
+                                        <img style="width: 50%;height:200px;" src="{{url('vendor/img/ad.png')}}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     @endif
                     
-                    <div class="md-card" @if(!isset($notices) || $notices->count() == 0) style="margin-top: 0px;" @endif>  
+                    <div class="md-card"> <!-- @if(!isset($notices) || $notices->count() == 0) style="margin-top: 0px;" @endif -->  
                         <div class="login_page_wrapper">
                             <div id="login_card" style="padding-bottom: 8px;">
                                 <div class="large-padding" id="login_form">
