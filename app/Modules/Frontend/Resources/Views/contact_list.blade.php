@@ -127,8 +127,8 @@
                 <div class="md-card-content serch_bar">
                 <div class="uk-grid" data-uk-grid-margin>
                     <div class="uk-width-medium-1-2">
-                        <label for="contact_list_search">খুঁজুন (ইংরেজিতে অক্ষর লিখুন)</label>
-                        <input style="color:#fff;" class="md-input" type="text" id="contact_list_search"/>
+                        <label for="contact_list_search">খুঁজুন</label>
+                        <input style="color:#fff;" class="md-input" type="text" id="contact_list_search" onkeyup="contactFilter()"/>
                     </div>
                 </div>
             </div>
@@ -137,7 +137,7 @@
             <div class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-4 uk-grid-width-xlarge-1-5 hierarchical_show" id="contact_list">
                 @if($directoryType == 1)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->ambulance_name}}, {{$contact->ambulance_name}}, {{$contact->ambulance_name}}">
+                        <div>
                             <a href="{{ url('frontendambulance/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -162,7 +162,7 @@
 
                 @if($directoryType == 2)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->air_ambulance_name}}, {{$contact->air_ambulance_name}}, {{$contact->air_ambulance_name}}">
+                        <div>
                             <a href="{{ url('frontendairambulance/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -187,7 +187,7 @@
 
                 @if($directoryType == 3)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->blood_bank_name}}, {{$contact->blood_bank_name}}, {{$contact->blood_bank_name}}">
+                        <div>
                             <a href="{{ url('frontendbloodbank/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -212,7 +212,7 @@
 
                 @if($directoryType == 4)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->blood_donor_name}}, {{$contact->blood_donor_name}}, {{$contact->blood_donor_name}}">
+                        <div>
                             <a href="{{ url('frontendblooddonor/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -237,7 +237,7 @@
  
                 @if($directoryType == 5)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->eye_bank_name}}, {{$contact->eye_bank_name}}, {{$contact->eye_bank_name}}">
+                        <div>
                             <a href="{{ url('frontendeyebank/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -262,7 +262,7 @@
 
                 @if($directoryType == 6)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->hospital_name}}, {{$contact->hospital_name}}, {{$contact->hospital_name}}">
+                        <div>
                             <a href="{{ url('frontendhospital/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -287,7 +287,7 @@
 
                 @if($directoryType == 7)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->pharmacy_name}}, {{$contact->pharmacy_name}}, {{$contact->pharmacy_name}}">
+                        <div>
                             <a href="{{ url('frontendpharmacy/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -312,7 +312,7 @@
 
                 @if($directoryType == 8)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->medical_specialist_name}}, {{$contact->medical_specialist_name}}, {{$contact->medical_specialist_name}}">
+                        <div>
                             <a href="{{ url('frontendmedicalspecialist/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -337,7 +337,7 @@
 
                 @if($directoryType == 9)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->herbal_center_name}}, {{$contact->herbal_center_name}}, {{$contact->herbal_center_name}}">
+                        <div>
                             <a href="{{ url('frontendherbalcenter/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -362,7 +362,7 @@
 
                 @if($directoryType == 10)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->vaccine_point_name}} ,{{$contact->vaccine_point_name}}, {{$contact->vaccine_point_name}}">
+                        <div>
                             <a href="{{ url('frontendvaccinepoint/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -387,7 +387,7 @@
 
                 @if($directoryType == 11)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->skin_laser_center_name}} ,{{$contact->skin_laser_center_name}}, {{$contact->skin_laser_center_name}}">
+                        <div>
                             <a href="{{ url('frontendskinlasercenter/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -414,7 +414,7 @@
 
                 @if($directoryType == 12)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->addiction_name}} ,{{$contact->addiction_name}}, {{$contact->addiction_name}}">
+                        <div>
                             <a href="{{ url('frontendaddiction/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -439,7 +439,7 @@
 
                 @if($directoryType == 13)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->parlour_name}} ,{{$contact->parlour_name}}, {{$contact->parlour_name}}">
+                        <div>
                             <a href="{{ url('frontendparlour/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -464,7 +464,7 @@
 
                 @if($directoryType == 14)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->foreignmedical_name}} ,{{$contact->foreignmedical_name}}, {{$contact->foreignmedical_name}}">
+                        <div>
                             <a href="{{ url('frontendforeignmedical/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -489,7 +489,7 @@
 
                 @if($directoryType == 15)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->gym_name}} ,{{$contact->gym_name}}, {{$contact->gym_name}}">
+                        <div>
                             <a href="{{ url('frontendgym/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -514,7 +514,7 @@
 
                 @if($directoryType == 16)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->homeopathic_name}} ,{{$contact->homeopathic_name}}, {{$contact->homeopathic_name}}">
+                        <div>
                             <a href="{{ url('frontendhomeopathic/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -539,7 +539,7 @@
 
                 @if($directoryType == 17)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->optical_name}} ,{{$contact->optical_name}}, {{$contact->optical_name}}">
+                        <div>
                             <a href="{{ url('frontendoptical/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -564,7 +564,7 @@
 
                 @if($directoryType == 18)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->pharmacynew_name}} ,{{$contact->pharmacynew_name}}, {{$contact->pharmacynew_name}}">
+                        <div>
                             <a href="{{ url('frontendpharmacynew/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -589,7 +589,7 @@
 
                 @if($directoryType == 19)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->physiotherapy_name}} ,{{$contact->physiotherapy_name}}, {{$contact->physiotherapy_name}}">
+                        <div>
                             <a href="{{ url('frontendphysiotherapy/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -614,7 +614,7 @@
 
                 @if($directoryType == 20)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->yoga_name}} ,{{$contact->yoga_name}}, {{$contact->yoga_name}}">
+                        <div>
                             <a href="{{ url('frontendyoga/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -651,7 +651,7 @@
                     <div class="uk-grid" data-uk-grid-margin>
                         <div class="uk-width-medium-1-2">
                             <label for="contact_list_search">Search</label>
-                            <input style="color:#fff;" class="md-input" type="text" id="contact_list_search"/>
+                            <input style="color:#fff;" class="md-input" type="text" id="contact_list_search" onkeyup="contactFilter()"/>
                         </div>
                     </div>
                 </div>
@@ -660,7 +660,7 @@
             <div class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-4 uk-grid-width-xlarge-1-5 hierarchical_show" id="contact_list">
                 @if($directoryType == 1)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->ambulance_name}}, {{$contact->ambulance_name}}, {{$contact->ambulance_name}}">
+                        <div>
                             <a href="{{ url('frontendambulance/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -685,7 +685,7 @@
 
                 @if($directoryType == 2)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->air_ambulance_name}}, {{$contact->air_ambulance_name}}, {{$contact->air_ambulance_name}}">
+                        <div>
                             <a href="{{ url('frontendairambulance/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -710,7 +710,7 @@
 
                 @if($directoryType == 3)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->blood_bank_name}}, {{$contact->blood_bank_name}}, {{$contact->blood_bank_name}}">
+                        <div>
                             <a href="{{ url('frontendbloodbank/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -735,7 +735,7 @@
 
                 @if($directoryType == 4)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->blood_donor_name}}, {{$contact->blood_donor_name}}, {{$contact->blood_donor_name}}">
+                        <div>
                             <a href="{{ url('frontendblooddonor/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -760,7 +760,7 @@
 
                 @if($directoryType == 5)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->eye_bank_name}}, {{$contact->eye_bank_name}}, {{$contact->eye_bank_name}}">
+                        <div>
                             <a href="{{ url('frontendeyebank/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -785,7 +785,7 @@
 
                 @if($directoryType == 6)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->hospital_name}}, {{$contact->hospital_name}}, {{$contact->hospital_name}}">
+                        <div>
                             <a href="{{ url('frontendhospital/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -810,7 +810,7 @@
 
                 @if($directoryType == 7)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->pharmacy_name}}, {{$contact->pharmacy_name}}, {{$contact->pharmacy_name}}">
+                        <div>
                             <a href="{{ url('frontendpharmacy/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -835,7 +835,7 @@
 
                 @if($directoryType == 8)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->medical_specialist_name}}, {{$contact->medical_specialist_name}}, {{$contact->medical_specialist_name}}">
+                        <div>
                             <a href="{{ url('frontendmedicalspecialist/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -860,7 +860,7 @@
 
                 @if($directoryType == 9)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->herbal_center_name}}, {{$contact->herbal_center_name}}, {{$contact->herbal_center_name}}">
+                        <div>
                             <a href="{{ url('frontendherbalcenter/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -885,7 +885,7 @@
 
                 @if($directoryType == 10)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->vaccine_point_name}} ,{{$contact->vaccine_point_name}}, {{$contact->vaccine_point_name}}">
+                        <div>
                             <a href="{{ url('frontendvaccinepoint/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -910,7 +910,7 @@
 
                 @if($directoryType == 11)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->skin_laser_center_name}} ,{{$contact->skin_laser_center_name}}, {{$contact->skin_laser_center_name}}">
+                        <div>
                             <a href="{{ url('frontendskinlasercenter/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -938,7 +938,7 @@
 
                 @if($directoryType == 12)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->addiction_name}} ,{{$contact->addiction_name}}, {{$contact->addiction_name}}">
+                        <div>
                             <a href="{{ url('frontendaddiction/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -963,7 +963,7 @@
 
                 @if($directoryType == 13)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->parlour_name}} ,{{$contact->parlour_name}}, {{$contact->parlour_name}}">
+                        <div>
                             <a href="{{ url('frontendparlour/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -988,7 +988,7 @@
 
                 @if($directoryType == 14)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->foreignmedical_name}} ,{{$contact->foreignmedical_name}}, {{$contact->foreignmedical_name}}">
+                        <div>
                             <a href="{{ url('frontendforeignmedical/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -1013,7 +1013,7 @@
 
                 @if($directoryType == 15)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->gym_name}} ,{{$contact->gym_name}}, {{$contact->gym_name}}">
+                        <div>
                             <a href="{{ url('frontendgym/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -1038,7 +1038,7 @@
 
                 @if($directoryType == 16)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->homeopathic_name}} ,{{$contact->homeopathic_name}}, {{$contact->homeopathic_name}}">
+                        <div>
                             <a href="{{ url('frontendhomeopathic/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -1063,7 +1063,7 @@
 
                 @if($directoryType == 17)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->optical_name}} ,{{$contact->optical_name}}, {{$contact->optical_name}}">
+                        <div>
                             <a href="{{ url('frontendoptical/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -1088,7 +1088,7 @@
 
                 @if($directoryType == 18)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->pharmacynew_name}} ,{{$contact->pharmacynew_name}}, {{$contact->pharmacynew_name}}">
+                        <div>
                             <a href="{{ url('frontendpharmacynew/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -1113,7 +1113,7 @@
 
                 @if($directoryType == 19)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->physiotherapy_name}} ,{{$contact->physiotherapy_name}}, {{$contact->physiotherapy_name}}">
+                        <div>
                             <a href="{{ url('frontendphysiotherapy/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -1138,7 +1138,7 @@
 
                 @if($directoryType == 20)
                     @foreach($contacts as $contact)
-                        <div data-uk-filter="{{$contact->yoga_name}} ,{{$contact->yoga_name}}, {{$contact->yoga_name}}">
+                        <div>
                             <a href="{{ url('frontendyoga/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
