@@ -190,9 +190,9 @@
                                                                 {{$phone_number}}
                                                             @else
                                                             @if($i != $len - 1)
-                                                            {{$phone_number}}<a href = "tel:{{$e_phone_number}}"><i class="fa fa-phone" style="margin-left:5px;"></i></a>
+                                                            {{$phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;"><i class="fa fa-phone" style="margin-left:5px;"></i></a>
                                                             @else
-                                                            {{$phone_number}}<a href = "tel:{{$e_phone_number}}">&nbsp;<i class="fa fa-phone" style="margin-left:5px;"></i></a>
+                                                            {{$phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;">&nbsp;<i class="fa fa-phone" style="margin-left:5px;"></i></a>
                                                             @endif
                                                             @endif
                                                             @if($i != $len - 1)
@@ -213,7 +213,7 @@
         
                                             <div class="md-list-content">
                                                 <span style="margin-top:5px" class="md-list-heading">
-                                                    {{$foreignmedical->foreignmedical_email_ad}}<a href = "mailto:{{$foreignmedical->foreignmedical_email_ad}}"><i class="fa fa-envelope-o" style="margin-left:5px;"></i></a>
+                                                    {{$foreignmedical->foreignmedical_email_ad}}<a href = "mailto:{{$foreignmedical->foreignmedical_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:5px;"></i></a>
                                                 </span>
                                                 <span class="uk-text-small uk-text-muted hidden">ই-মেইল</span>
                                             </div>
@@ -373,9 +373,9 @@
                                                                 {{$e_phone_number}}
                                                             @else
                                                             @if($i != $len - 1)
-                                                            {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}"><i class="fa fa-phone" style="margin-left:5px;"></i></a>
+                                                            {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;"><i class="fa fa-phone" style="margin-left:5px;"></i></a>
                                                             @else
-                                                            {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}">&nbsp;<i class="fa fa-phone" style="margin-left:5px;"></i></a>
+                                                            {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;">&nbsp;<i class="fa fa-phone" style="margin-left:5px;"></i></a>
                                                             @endif
                                                             @endif
                                                             @if($i != $len - 1)
@@ -395,7 +395,7 @@
         
         
                                             <div class="md-list-content">
-                                                <span style="margin-top:5px" class="md-list-heading">{{$foreignmedical->foreignmedical_email_ad}}<a href = "mailto:{{$foreignmedical->foreignmedical_email_ad}}"><i class="fa fa-envelope-o" style="margin-left:5px;"></i></a></span>
+                                                <span style="margin-top:5px" class="md-list-heading">{{$foreignmedical->foreignmedical_email_ad}}<a href = "mailto:{{$foreignmedical->foreignmedical_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:5px;"></i></a></span>
                                                 <span class="uk-text-small uk-text-muted hidden">Email</span>
                                             </div>
                                         </li>
