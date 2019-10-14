@@ -247,9 +247,9 @@
                                                             {{$phone_number}}
                                                         @else
                                                             @if($i != $len - 1)
-                                                            {{$phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;"><i class="fa fa-phone" style="margin-left:5px;"></i></a>
+                                                            {{$phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;"><i class="fa fa-phone" style="margin-left:1px;"></i></a>
                                                             @else
-                                                            {{$phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;">&nbsp;<i class="fa fa-phone" style="margin-left:5px;"></i></a>
+                                                            {{$phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;">&nbsp;<i class="fa fa-phone" style="margin-left:1px;"></i></a>
                                                             @endif
                                                         @endif
                                                         @if($i != $len - 1)
@@ -270,7 +270,7 @@
                                         </div>
                                         <div class="md-list-content">
                                             <span style="margin-top:5px" class="md-list-heading">
-                                                {{$medical_specialist->medical_specialist_email_ad}}<a href = "mailto:{{$medical_specialist->medical_specialist_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:5px;"></i></a>
+                                                {{$medical_specialist->medical_specialist_email_ad}}<a href = "mailto:{{$medical_specialist->medical_specialist_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:1px;"></i></a>
                                             </span>
                                         </div>
                                     </li>
@@ -935,9 +935,9 @@
                                                             {{$e_phone_number}}
                                                         @else
                                                             @if($i != $len - 1)
-                                                            {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;"><i class="fa fa-phone" style="margin-left:5px;"></i></a>
+                                                            {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;"><i class="fa fa-phone" style="margin-left:1px;"></i></a>
                                                             @else
-                                                            {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;">&nbsp;<i class="fa fa-phone" style="margin-left:5px;"></i></a>
+                                                            {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;">&nbsp;<i class="fa fa-phone" style="margin-left:1px;"></i></a>
                                                             @endif
                                                         @endif
                                                         @if($i != $len - 1)
@@ -956,7 +956,7 @@
                                         </div>
                                         <div class="md-list-content">
                                             <span style="margin-top:5px" class="md-list-heading">
-                                                {{$medical_specialist->medical_specialist_email_ad}}<a href = "mailto:{{$medical_specialist->medical_specialist_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:5px;"></i></a>
+                                                {{$medical_specialist->medical_specialist_email_ad}}<a href = "mailto:{{$medical_specialist->medical_specialist_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:1px;"></i></a>
                                             </span>
                                         </div>
                                     </li>
