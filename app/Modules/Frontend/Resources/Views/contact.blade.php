@@ -67,7 +67,7 @@
                             echo $data->b_contact;
                             @endphp
                         </div>
-                        <div class="uk-width-medium-1-2">
+                        <!--<div class="uk-width-medium-1-2">
                             {!! Form::open(['url' => 'contact/post', 'method' => 'POST', 'class' => 'ul-form-stacked']) !!}
                                 <div class="uk-grid" data-uk-grid-margin style="margin-top: 15px;">
                                     <div class="uk-width-medium-1-1">
@@ -96,7 +96,7 @@
                                     <button type="submit" class="md-btn md-btn-large" style="background: #FD0100;color: #fff;">পাঠিয়ে দিন</button>
                                 </div>
                             {!! Form::close() !!}
-                        </div>    
+                        </div>-->   
                          
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                             echo $data->contact;
                             @endphp
                         </div> 
-                        <div class="uk-width-medium-1-2">
+                        <!--<div class="uk-width-medium-1-2">
                             {!! Form::open(['url' => 'contact/post', 'method' => 'POST', 'class' => 'ul-form-stacked']) !!}
                                 <div class="uk-grid" data-uk-grid-margin style="margin-top: 15px;">
                                     <div class="uk-width-medium-1-1">
@@ -141,7 +141,7 @@
                                     <button type="submit" class="md-btn md-btn-large" style="background: #FD0100;color: #fff;">Send</button>
                                 </div>
                             {!! Form::close() !!}
-                        </div>    
+                        </div>-->  
                         
                     </div>
                 </div>
