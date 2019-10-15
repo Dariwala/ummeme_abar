@@ -1,6 +1,2 @@
-app/Modules/Addiction/Resources/Views/addiction_edit.blade.php:                                                    <label for="addiction_total_doctor">Total Doctor<span class="req"></span></label>
-app/Modules/Addiction/Resources/Views/addiction_edit.blade.php:                                                    <input type="text" id="addiction_total_doctor" name="addiction_total_doctor" value="{{ $addiction->addiction_total_doctor}}" class="md-input" /> 
-app/Modules/Addiction/Resources/Views/addiction_edit.blade.php:                                                <p style="color:red;">{{ $errors->has('addiction_total_doctor')?$errors->first('addiction_total_doctor'):'' }}</p>
-app/Modules/Addiction/Resources/Views/addiction_edit.blade.php:                                                    <label for="b_addiction_total_doctor">মোট ডাক্তার<span class="req"></span></label>
-app/Modules/Addiction/Resources/Views/addiction_edit.blade.php:                                                    <input type="text" id="b_addiction_total_doctor" name="b_addiction_total_doctor" value="{{ $addiction->b_addiction_total_doctor}}" class="md-input" /> 
-app/Modules/Addiction/Resources/Views/addiction_edit.blade.php:                                                <p style="color:red;">{{ $errors->has('b_addiction_total_doctor')?$errors->first('b_addiction_total_doctor'):'' }}</p>
+resources/views/layouts/admin_master.blade.php:                    <li title="Sertvices">
+resources/views/layouts/admin_master2.blade.php:                    <li title="Sertvices">

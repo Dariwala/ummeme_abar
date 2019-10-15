@@ -63,7 +63,7 @@
                 <div class="user_content">
                     <div class="uk-grid" data-uk-grid-margin>   
                         <div class="uk-width-medium-1-1">
-                            <p><?php echo $data->b_faq; ?></p>
+                            <?php echo $data->b_faq; ?>
                         </div> 
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                 <div class="user_content">
                     <div class="uk-grid" data-uk-grid-margin>   
                         <div class="uk-width-medium-1-1">
-                            <p><?php echo $data->faq; ?></p>
+                            <?php echo $data->faq; ?>
                         </div> 
                     </div>
                 </div>

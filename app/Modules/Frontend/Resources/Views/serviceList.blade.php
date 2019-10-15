@@ -63,7 +63,7 @@
                 <div class="user_content">
                     <div class="uk-grid" data-uk-grid-margin>   
                         <div class="uk-width-medium-1-1">
-                            <p><?php echo $data->b_serviceList; ?></p>
+                            <?php echo $data->b_serviceList; ?>
                         </div> 
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                 <div class="user_content">
                     <div class="uk-grid" data-uk-grid-margin>   
                         <div class="uk-width-medium-1-1">
-                            <p><?php echo $data->serviceList; ?></p>
+                            <?php echo $data->serviceList; ?>
                         </div> 
                     </div>
                 </div>
