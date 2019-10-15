@@ -270,7 +270,7 @@
                                         </div>
                                         <div class="md-list-content">
                                             <span style="margin-top:5px" class="md-list-heading">
-                                                {{$medical_specialist->medical_specialist_email_ad}}<a href = "mailto:{{$medical_specialist->medical_specialist_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:1px;"></i></a>
+                                                {{$medical_specialist->medical_specialist_email_ad}}<a href = "mailto:{{$medical_specialist->medical_specialist_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:6px;"></i></a>
                                             </span>
                                         </div>
                                     </li>
@@ -956,7 +956,7 @@
                                         </div>
                                         <div class="md-list-content">
                                             <span style="margin-top:5px" class="md-list-heading">
-                                                {{$medical_specialist->medical_specialist_email_ad}}<a href = "mailto:{{$medical_specialist->medical_specialist_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:1px;"></i></a>
+                                                {{$medical_specialist->medical_specialist_email_ad}}<a href = "mailto:{{$medical_specialist->medical_specialist_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:6px;"></i></a>
                                             </span>
                                         </div>
                                     </li>

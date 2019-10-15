@@ -225,7 +225,7 @@
                                             </div>
                                             <div class="md-list-content">
                                                 <span style="margin-top:5px" class="md-list-heading ">
-                                                    {{$hospital->hospital_email_ad}}<a href = "mailto:{{$hospital->hospital_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:1px;"></i></a>
+                                                    {{$hospital->hospital_email_ad}}<a href = "mailto:{{$hospital->hospital_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:6px;"></i></a>
                                                 </span>
                                                 <span class="uk-text-small uk-text-muted hidden">Email</span>
                                             </div>
@@ -441,7 +441,7 @@
                                         </div>
                                         <div class="md-list-content">
                                             <span style="margin-top:5px" class="md-list-heading ">
-                                                {{$hospital->hospital_email_ad}}<a href = "mailto:{{$hospital->hospital_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:1px;"></i></a>
+                                                {{$hospital->hospital_email_ad}}<a href = "mailto:{{$hospital->hospital_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:6px;"></i></a>
                                             </span>
                                             <span class="uk-text-small uk-text-muted hidden">Email</span>
                                         </div>

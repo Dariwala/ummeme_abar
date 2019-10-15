@@ -216,7 +216,7 @@
                                             </div>
                                             <div class="md-list-content">
                                                 <span style="margin-top:5px" class="md-list-heading ">
-                                                    {{$yoga->yoga_email_ad}}<a href = "mailto:{{$yoga->yoga_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:1px;"></i></a>
+                                                    {{$yoga->yoga_email_ad}}<a href = "mailto:{{$yoga->yoga_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:6px;"></i></a>
                                                 </span>
                                                 <span class="uk-text-small uk-text-muted hidden">ই-মেইল</span>
                                             </div>
@@ -403,7 +403,7 @@
                                                 <i style="margin: 0" class="md-list-addon-icon material-icons">&#xE158;</i>
                                             </div>
                                             <div class="md-list-content">
-                                                <span style="margin-top:5px" class="md-list-heading ">{{$yoga->yoga_email_ad}}<a href = "mailto:{{$yoga->yoga_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:1px;"></i></a></span>
+                                                <span style="margin-top:5px" class="md-list-heading ">{{$yoga->yoga_email_ad}}<a href = "mailto:{{$yoga->yoga_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:6px;"></i></a></span>
                                                 <span class="uk-text-small uk-text-muted hidden">Email</span>
                                             </div>
                                         </li>
