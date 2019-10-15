@@ -131,13 +131,13 @@
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="add_course_description">Address</label>
-                                                    <textarea class="md-input" id="air_ambulance_address" name="air_ambulance_address" cols="10" rows="3" data-parsley-trigger="keyup" >{{$air_ambulance->air_ambulance_address}}</textarea>
+                                                    <textarea class="md-input" id="air_ambulance_address" name="air_ambulance_address" cols="10" rows="3" data-parsley-trigger="keyup"  onkeydown="expandtext(this);">{{$air_ambulance->air_ambulance_address}}</textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="add_course_description">ঠিকানা</label>
-                                                    <textarea class="md-input" id="b_air_ambulance_address" name="b_air_ambulance_address" cols="10" rows="3" data-parsley-trigger="keyup" >{{$air_ambulance->b_air_ambulance_address}}</textarea>
+                                                    <textarea class="md-input" id="b_air_ambulance_address" name="b_air_ambulance_address" cols="10" rows="3" data-parsley-trigger="keyup"  onkeydown="expandtext(this);">{{$air_ambulance->b_air_ambulance_address}}</textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
@@ -145,7 +145,7 @@
                                                     <div class="uk-width-10-10">
                                                         <div class="parsley-row uk-margin-top">
                                                             <label for="air_ambulance_phone_no">Phone</label>
-                                                            <textarea class="md-input" id="air_ambulance_phone" name="air_ambulance_phone" cols="10" rows="3" data-parsley-trigger="keyup">{{$air_ambulance->air_ambulance_phone}}</textarea>
+                                                            <textarea class="md-input" id="air_ambulance_phone" name="air_ambulance_phone" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);">{{$air_ambulance->air_ambulance_phone}}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -155,7 +155,7 @@
                                                     <div class="uk-width-10-10">
                                                         <div class="parsley-row uk-margin-top">
                                                             <label for="air_ambulance_phone_no">ফোন</label>
-                                                            <textarea class="md-input" type="text" id="b_air_ambulance_phone" name="b_air_ambulance_phone" cols="10" rows="3" data-parsley-trigger="keyup" class="md-input">{{$air_ambulance->b_air_ambulance_phone}}</textarea>
+                                                            <textarea class="md-input" type="text" id="b_air_ambulance_phone" name="b_air_ambulance_phone" cols="10" rows="3" data-parsley-trigger="keyup" class="md-input" onkeydown="expandtext(this);">{{$air_ambulance->b_air_ambulance_phone}}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>

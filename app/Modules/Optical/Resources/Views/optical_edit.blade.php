@@ -139,13 +139,13 @@
                                         <div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="optical_address">Address</label>
-                                                <textarea class="md-input" id="optical_address" name="optical_address" value="{{ $optical->optical_address}}" cols="10" rows="2" data-parsley-trigger="keyup" >{{ $optical->optical_address}}</textarea>
+                                                <textarea class="md-input" id="optical_address" name="optical_address" value="{{ $optical->optical_address}}" cols="10" rows="2" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{ $optical->optical_address}}</textarea>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="b_optical_address">ঠিকানা</label>
-                                                <textarea class="md-input" name="b_optical_address"  cols="10" rows="2"  value="{{ $optical->b_optical_address}}" >{{ $optical->b_optical_address}}</textarea>
+                                                <textarea class="md-input" name="b_optical_address"  cols="10" rows="2"  value="{{ $optical->b_optical_address}}" onkeydown="expandtext(this);" >{{ $optical->b_optical_address}}</textarea>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-1-2">
@@ -153,7 +153,7 @@
                                                 <div class="uk-width-10-10">
                                                     <div class="parsley-row uk-margin-top">
                                                         <label for="optical_phone_no">Phone</label>
-                                                        <textarea class="md-input" id="optical_phone_no" name="optical_phone_no" cols="10" rows="3" data-parsley-trigger="keyup">{{$optical->optical_phone_no}}</textarea>
+                                                        <textarea class="md-input" id="optical_phone_no" name="optical_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);">{{$optical->optical_phone_no}}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -163,7 +163,7 @@
                                                 <div class="uk-width-10-10">
                                                     <div class="parsley-row uk-margin-top">
                                                         <label for="b_optical_phone_no">ফোন</label>
-                                                        <textarea class="md-input" type="text" id="b_optical_phone_no" name="b_optical_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" class="md-input">{{$optical->b_optical_phone_no}}</textarea>
+                                                        <textarea class="md-input" type="text" id="b_optical_phone_no" name="b_optical_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" class="md-input">{{$optical->b_optical_phone_no}}</textarea>
                                                     </div>
                                                 </div>
                                             </div>

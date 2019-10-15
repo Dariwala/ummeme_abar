@@ -133,13 +133,13 @@
                                         <div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="foreignmedical_address">Address</label>
-                                                <textarea class="md-input" id="foreignmedical_address" name="foreignmedical_address" value="{{ $foreignmedical->foreignmedical_address}}" cols="10" rows="2" data-parsley-trigger="keyup" >{{ $foreignmedical->foreignmedical_address}}</textarea>
+                                                <textarea class="md-input" id="foreignmedical_address" name="foreignmedical_address" value="{{ $foreignmedical->foreignmedical_address}}" cols="10" rows="2" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{ $foreignmedical->foreignmedical_address}}</textarea>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="b_foreignmedical_address">ঠিকানা</label>
-                                                <textarea class="md-input" name="b_foreignmedical_address"  cols="10" rows="2"  value="{{ $foreignmedical->b_foreignmedical_address}}" >{{ $foreignmedical->b_foreignmedical_address}}</textarea>
+                                                <textarea class="md-input" name="b_foreignmedical_address"  cols="10" rows="2"  value="{{ $foreignmedical->b_foreignmedical_address}}"  onkeydown="expandtext(this);">{{ $foreignmedical->b_foreignmedical_address}}</textarea>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-1-2">
@@ -147,7 +147,7 @@
                                                 <div class="uk-width-10-10">
                                                     <div class="parsley-row uk-margin-top">
                                                         <label for="foreignmedical_phone_no">Phone</label>
-                                                        <textarea class="md-input" id="foreignmedical_phone_no" name="foreignmedical_phone_no" cols="10" rows="3" data-parsley-trigger="keyup">{{$foreignmedical->foreignmedical_phone_no}}</textarea>
+                                                        <textarea class="md-input" id="foreignmedical_phone_no" name="foreignmedical_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);">{{$foreignmedical->foreignmedical_phone_no}}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -157,7 +157,7 @@
                                                 <div class="uk-width-10-10">
                                                     <div class="parsley-row uk-margin-top">
                                                         <label for="b_foreignmedical_phone_no">ফোন</label>
-                                                        <textarea class="md-input" type="text" id="b_foreignmedical_phone_no" name="b_foreignmedical_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" class="md-input">{{$foreignmedical->b_foreignmedical_phone_no}}</textarea>
+                                                        <textarea class="md-input" type="text" id="b_foreignmedical_phone_no" name="b_foreignmedical_phone_no" cols="10" rows="3" data-parsley-trigger="keyup"  onkeydown="expandtext(this);" class="md-input">{{$foreignmedical->b_foreignmedical_phone_no}}</textarea>
                                                     </div>
                                                 </div>
                                             </div>

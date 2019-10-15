@@ -134,13 +134,13 @@
                                             <div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                     <label for="gym_address">Address</label>
-                                                    <textarea class="md-input" id="gym_address" name="gym_address" cols="10" rows="3" data-parsley-trigger="keyup" >{{$gym->gym_address}}</textarea>
+                                                    <textarea class="md-input" id="gym_address" name="gym_address" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{$gym->gym_address}}</textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="b_gym_address">ঠিকানা</label>
-                                                    <textarea class="md-input" id="b_gym_address" name="b_gym_address" cols="10" rows="3" data-parsley-trigger="keyup" >{{$gym->b_gym_address}}</textarea>
+                                                    <textarea class="md-input" id="b_gym_address" name="b_gym_address" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{$gym->b_gym_address}}</textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
@@ -148,7 +148,7 @@
                                                     <div class="uk-width-10-10">
                                                         <div class="parsley-row uk-margin-top">
                                                             <label for="gym_phone_no">Phone</label>
-                                                            <textarea class="md-input" id="gym_phone_no" name="gym_phone_no" cols="10" rows="3" data-parsley-trigger="keyup">{{$gym->gym_phone_no}}</textarea>
+                                                            <textarea class="md-input" id="gym_phone_no" name="gym_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);">{{$gym->gym_phone_no}}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -158,7 +158,7 @@
                                                     <div class="uk-width-10-10">
                                                         <div class="parsley-row uk-margin-top">
                                                             <label for="b_gym_phone_no">ফোন</label>
-                                                            <textarea class="md-input" type="text" id="b_gym_phone_no" name="b_gym_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" class="md-input">{{$gym->b_gym_phone_no}}</textarea>
+                                                            <textarea class="md-input" type="text" id="b_gym_phone_no" name="b_gym_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" class="md-input">{{$gym->b_gym_phone_no}}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>

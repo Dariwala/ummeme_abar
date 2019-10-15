@@ -139,13 +139,13 @@
                                             <div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                     <label for="addiction_address">Address</label>
-                                                    <textarea class="md-input" id="addiction_address" name="addiction_address" cols="10" rows="3" data-parsley-trigger="keyup" >{{$addiction->addiction_address}}</textarea>
+                                                    <textarea class="md-input" id="addiction_address" name="addiction_address" cols="10" rows="3" data-parsley-trigger="keyup"  onkeydown="expandtext(this);">{{$addiction->addiction_address}}</textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="b_addiction_address">ঠিকানা</label>
-                                                    <textarea class="md-input" id="b_addiction_address" name="b_addiction_address" cols="10" rows="3" data-parsley-trigger="keyup" >{{$addiction->b_addiction_address}}</textarea>
+                                                    <textarea class="md-input" id="b_addiction_address" name="b_addiction_address" cols="10" rows="3" data-parsley-trigger="keyup"  onkeydown="expandtext(this);">{{$addiction->b_addiction_address}}</textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
@@ -153,7 +153,7 @@
                                                     <div class="uk-width-10-10">
                                                         <div class="parsley-row uk-margin-top">
                                                             <label for="addiction_phone_no">Phone</label>
-                                                            <textarea class="md-input" id="addiction_phone_no" name="addiction_phone_no" cols="10" rows="3" data-parsley-trigger="keyup">{{$addiction->addiction_phone_no}}</textarea>
+                                                            <textarea class="md-input" id="addiction_phone_no" name="addiction_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);">{{$addiction->addiction_phone_no}}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -163,7 +163,7 @@
                                                     <div class="uk-width-10-10">
                                                         <div class="parsley-row uk-margin-top">
                                                             <label for="b_addiction_phone_no">ফোন</label>
-                                                            <textarea class="md-input" type="text" id="b_addiction_phone_no" name="b_addiction_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" class="md-input">{{$addiction->b_addiction_phone_no}}</textarea>
+                                                            <textarea class="md-input" type="text" id="b_addiction_phone_no" name="b_addiction_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" class="md-input" onkeydown="expandtext(this);">{{$addiction->b_addiction_phone_no}}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>

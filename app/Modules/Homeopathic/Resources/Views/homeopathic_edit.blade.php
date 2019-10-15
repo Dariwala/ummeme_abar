@@ -139,13 +139,13 @@
                                         <div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="homeopathic_address">Address</label>
-                                                <textarea class="md-input" id="homeopathic_address" name="homeopathic_address" value="{{ $homeopathic->homeopathic_address}}" cols="10" rows="2" data-parsley-trigger="keyup" >{{ $homeopathic->homeopathic_address}}</textarea>
+                                                <textarea class="md-input" id="homeopathic_address" name="homeopathic_address" value="{{ $homeopathic->homeopathic_address}}" cols="10" rows="2" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{ $homeopathic->homeopathic_address}}</textarea>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="b_homeopathic_address">ঠিকানা</label>
-                                                <textarea class="md-input" name="b_homeopathic_address"  cols="10" rows="2"  value="{{ $homeopathic->b_homeopathic_address}}" >{{ $homeopathic->b_homeopathic_address}}</textarea>
+                                                <textarea class="md-input" name="b_homeopathic_address"  cols="10" rows="2"  value="{{ $homeopathic->b_homeopathic_address}}" onkeydown="expandtext(this);" >{{ $homeopathic->b_homeopathic_address}}</textarea>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-1-2">
@@ -153,7 +153,7 @@
                                                 <div class="uk-width-10-10">
                                                     <div class="parsley-row uk-margin-top">
                                                         <label for="homeopathic_phone_no">Phone</label>
-                                                        <textarea class="md-input" id="homeopathic_phone_no" name="homeopathic_phone_no" cols="10" rows="3" data-parsley-trigger="keyup">{{$homeopathic->homeopathic_phone_no}}</textarea>
+                                                        <textarea class="md-input" id="homeopathic_phone_no" name="homeopathic_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);">{{$homeopathic->homeopathic_phone_no}}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -163,7 +163,7 @@
                                                 <div class="uk-width-10-10">
                                                     <div class="parsley-row uk-margin-top">
                                                         <label for="b_homeopathic_phone_no">ফোন</label>
-                                                        <textarea class="md-input" type="text" id="b_homeopathic_phone_no" name="b_homeopathic_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" class="md-input">{{$homeopathic->b_homeopathic_phone_no}}</textarea>
+                                                        <textarea class="md-input" type="text" id="b_homeopathic_phone_no" name="b_homeopathic_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" class="md-input">{{$homeopathic->b_homeopathic_phone_no}}</textarea>
                                                     </div>
                                                 </div>
                                             </div>

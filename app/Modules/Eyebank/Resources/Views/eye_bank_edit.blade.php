@@ -138,13 +138,13 @@
                                         <div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="add_course_description">Address</label>
-                                                <textarea class="md-input" id="eye_bank_address" name="eye_bank_address" cols="10" rows="3" data-parsley-trigger="keyup" >{{$eye_bank->eye_bank_address}}</textarea>
+                                                <textarea class="md-input" id="eye_bank_address" name="eye_bank_address" cols="10" rows="3" data-parsley-trigger="keyup"  onkeydown="expandtext(this);">{{$eye_bank->eye_bank_address}}</textarea>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="add_course_description"> ঠিকানা</label>
-                                                <textarea class="md-input" id="b_eye_bank_address" name="b_eye_bank_address" cols="10" rows="3" data-parsley-trigger="keyup" >{{$eye_bank->b_eye_bank_address}}</textarea>
+                                                <textarea class="md-input" id="b_eye_bank_address" name="b_eye_bank_address" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{$eye_bank->b_eye_bank_address}}</textarea>
                                             </div>
                                         </div>
                                          <div class="uk-width-medium-1-2">
@@ -152,7 +152,7 @@
                                                 <div class="uk-width-10-10">
                                                     <div class="parsley-row uk-margin-top">
                                                         <label for="eye_bank_phone_no">Phone</label>
-                                                        <textarea class="md-input" id="eye_bank_phone_no" name="eye_bank_phone_no" cols="10" rows="3" data-parsley-trigger="keyup">{{$eye_bank->eye_bank_phone_no}}</textarea>
+                                                        <textarea class="md-input" id="eye_bank_phone_no" name="eye_bank_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);">{{$eye_bank->eye_bank_phone_no}}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -162,7 +162,7 @@
                                                 <div class="uk-width-10-10">
                                                     <div class="parsley-row uk-margin-top">
                                                         <label for="b_eye_bank_phone_no">ফোন</label>
-                                                        <textarea class="md-input" type="text" id="b_eye_bank_phone_no" name="b_eye_bank_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" class="md-input">{{$eye_bank->b_eye_bank_phone_no}}</textarea>
+                                                        <textarea class="md-input" type="text" id="b_eye_bank_phone_no" name="b_eye_bank_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" class="md-input">{{$eye_bank->b_eye_bank_phone_no}}</textarea>
                                                     </div>
                                                 </div>
                                             </div>

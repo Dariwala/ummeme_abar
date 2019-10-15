@@ -124,13 +124,13 @@
                                          <div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="blood_donor_address">Address</label>
-                                                <textarea class="md-input" id="blood_donor_address" name="blood_donor_address" cols="10" rows="3" data-parsley-trigger="keyup" >{{$blood_donor->blood_donor_address}}</textarea>
+                                                <textarea class="md-input" id="blood_donor_address" name="blood_donor_address" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{$blood_donor->blood_donor_address}}</textarea>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="b_blood_donor_address">ঠিকানা</label>
-                                                <textarea class="md-input" id="b_blood_donor_address" name="b_blood_donor_address" cols="10" rows="3" data-parsley-trigger="keyup" >{{$blood_donor->b_blood_donor_address}}</textarea>
+                                                <textarea class="md-input" id="b_blood_donor_address" name="b_blood_donor_address" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{$blood_donor->b_blood_donor_address}}</textarea>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-1-2">
@@ -138,7 +138,7 @@
                                                 <div class="uk-width-10-10">
                                                     <div class="parsley-row uk-margin-top">
                                                         <label for="blood_donor_phone_no">Phone</label>
-                                                        <textarea class="md-input" id="blood_donor_phone_no" name="blood_donor_phone_no" cols="10" rows="3" data-parsley-trigger="keyup">{{$blood_donor->blood_donor_phone_no}}</textarea>
+                                                        <textarea class="md-input" id="blood_donor_phone_no" name="blood_donor_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);">{{$blood_donor->blood_donor_phone_no}}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -148,7 +148,7 @@
                                                 <div class="uk-width-10-10">
                                                     <div class="parsley-row uk-margin-top">
                                                         <label for="b_blood_donor_phone_no">ফোন</label>
-                                                        <textarea class="md-input" type="text" id="b_blood_donor_phone_no" name="b_blood_donor_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" class="md-input">{{$blood_donor->b_blood_donor_phone_no}}</textarea>
+                                                        <textarea class="md-input" type="text" id="b_blood_donor_phone_no" name="b_blood_donor_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" class="md-input" onkeydown="expandtext(this);">{{$blood_donor->b_blood_donor_phone_no}}</textarea>
                                                     </div>
                                                 </div>
                                             </div>

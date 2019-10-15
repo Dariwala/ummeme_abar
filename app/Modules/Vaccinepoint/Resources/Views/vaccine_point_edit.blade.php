@@ -137,13 +137,13 @@
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="vaccine_point_address">Address</label>
-                                                    <textarea class="md-input" id="vaccine_point_address" name="vaccine_point_address" cols="10" rows="3" data-parsley-trigger="keyup" >{{$vaccine_point->vaccine_point_address}}</textarea>
+                                                    <textarea class="md-input" id="vaccine_point_address" name="vaccine_point_address" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{$vaccine_point->vaccine_point_address}}</textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="b_vaccine_point_address">ঠিকানা</label>
-                                                    <textarea class="md-input" id="b_vaccine_point_address" name="b_vaccine_point_address" cols="10" rows="3" data-parsley-trigger="keyup" >{{$vaccine_point->b_vaccine_point_address}}</textarea>
+                                                    <textarea class="md-input" id="b_vaccine_point_address" name="b_vaccine_point_address" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{$vaccine_point->b_vaccine_point_address}}</textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
@@ -151,7 +151,7 @@
                                                     <div class="uk-width-8-10">
                                                         <div class="parsley-row uk-margin-top">
                                                             <label for="vaccine_point_phone_no">Phone</label>
-                                                            <textarea class="md-input" id="vaccine_point_phone_no" name="vaccine_point_phone_no" cols="10" rows="3" data-parsley-trigger="keyup">{{$vaccine_point->vaccine_point_phone_no}}</textarea>
+                                                            <textarea class="md-input" id="vaccine_point_phone_no" name="vaccine_point_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);">{{$vaccine_point->vaccine_point_phone_no}}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -161,7 +161,7 @@
                                                     <div class="uk-width-10-10">
                                                         <div class="parsley-row uk-margin-top">
                                                             <label for="b_vaccine_point_phone_no">ফোন</label>
-                                                            <textarea class="md-input" type="text" id="b_vaccine_point_phone_no" name="b_vaccine_point_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" class="md-input">{{$vaccine_point->b_vaccine_point_phone_no}}</textarea>
+                                                            <textarea class="md-input" type="text" id="b_vaccine_point_phone_no" name="b_vaccine_point_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" class="md-input">{{$vaccine_point->b_vaccine_point_phone_no}}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>

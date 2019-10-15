@@ -141,13 +141,13 @@
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="add_course_description">Address</label>
-                                                    <textarea class="md-input" id="herbal_center_address" name="herbal_center_address" cols="10" rows="3" data-parsley-trigger="keyup" >{{$herbal_center->herbal_center_address}}</textarea>
+                                                    <textarea class="md-input" id="herbal_center_address" name="herbal_center_address" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{$herbal_center->herbal_center_address}}</textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="add_course_description">ঠিকানা</label>
-                                                    <textarea class="md-input" id="b_herbal_center_address" name="b_herbal_center_address" cols="10" rows="3" data-parsley-trigger="keyup" >{{$herbal_center->b_herbal_center_address}}</textarea>
+                                                    <textarea class="md-input" id="b_herbal_center_address" name="b_herbal_center_address" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{$herbal_center->b_herbal_center_address}}</textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
@@ -155,7 +155,7 @@
                                                     <div class="uk-width-10-10">
                                                         <div class="parsley-row uk-margin-top">
                                                             <label for="herbal_center_phone_no">Phone</label>
-                                                            <textarea class="md-input" id="herbal_center_phone_no" name="herbal_center_phone_no" cols="10" rows="3" data-parsley-trigger="keyup">{{$herbal_center->herbal_center_phone_no}}</textarea>
+                                                            <textarea class="md-input" id="herbal_center_phone_no" name="herbal_center_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);">{{$herbal_center->herbal_center_phone_no}}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -165,7 +165,7 @@
                                                     <div class="uk-width-10-10">
                                                         <div class="parsley-row uk-margin-top">
                                                             <label for="b_herbal_center_phone_no">ফোন</label>
-                                                            <textarea class="md-input" type="text" id="b_herbal_center_phone_no" name="b_herbal_center_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" class="md-input">{{$herbal_center->b_herbal_center_phone_no}}</textarea>
+                                                            <textarea class="md-input" type="text" id="b_herbal_center_phone_no" name="b_herbal_center_phone_no" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" class="md-input">{{$herbal_center->b_herbal_center_phone_no}}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>
