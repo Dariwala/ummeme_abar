@@ -173,17 +173,17 @@
                         </a>
                     </li>
                     
-                    <li title="Services">
+                    <li title="Service">
                         <a href="{{ url('/service') }}">
                             <span class="menu_icon"><i class="material-icons">add_location</i></span>
                             <span class="menu_title">Service</span>
                         </a>
                     </li>
                     
-                    <li title="Add Image">
+                    <li title="Ad Image">
                         <a href="{{ route('notice_index') }}">
                             <span class="menu_icon"><i class="material-icons">view_list</i></span>
-                            <span class="menu_title">Add Image</span>
+                            <span class="menu_title">Ad Image</span>
                         </a>
                     </li>
                     
