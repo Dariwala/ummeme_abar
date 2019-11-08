@@ -4,7 +4,7 @@
 @if(Session('language')=='bn')
 
     <!--<p style="font-size: 16px;font-weight: bold;">সম্বন্ধে</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">সম্বন্ধে</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">সম্বন্ধে</p>
     
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
@@ -25,7 +25,7 @@
     </div>
     
      <!--<p style="font-size: 16px;font-weight: bold;">যোগাযোগের তথ্য </p>-->
-     <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">যোগাযোগের তথ্য</p>
+     <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">যোগাযোগের তথ্য</p>
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
             <div class="parsley-row">
@@ -61,7 +61,7 @@
             </div>
         </div>
     </div>
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">আরও তথ্য<br><small>(যদি থাকে)</small></p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">আরও তথ্য<br><small>(যদি থাকে)</small></p>
     
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
@@ -79,7 +79,7 @@
 @else  
 
     <!--<p style="font-size: 16px;font-weight: bold;">About</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">About</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">About</p>
 
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
@@ -100,7 +100,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold;">Contact Info</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">Contact Info</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">Contact Info</p>
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
             <div class="parsley-row">
@@ -137,7 +137,7 @@
         </div>
     </div>
 
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">More Information<br><small>(If Any)</small></p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">More Information<br><small>(If Any)</small></p>
     
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">

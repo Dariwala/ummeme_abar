@@ -4,7 +4,7 @@
 @if(Session('language')=='bn')
 
     <!--<p style="font-size: 16px;font-weight: bold;">সম্বন্ধে</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">সম্বন্ধে</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">সম্বন্ধে</p>
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
             <div class="parsley-row">
@@ -38,7 +38,7 @@
         </div>
     </div>
      <!--<p style="font-size: 16px;font-weight: bold;">যোগাযোগের তথ্য </p>-->
-     <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">যোগাযোগের তথ্য</p>
+     <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">যোগাযোগের তথ্য</p>
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
             <div class="parsley-row">
@@ -93,7 +93,7 @@
         </div>
     </div>
   <!--<p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">সাধারণ তথ্য  </p>-->
-  <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">সাধারণ তথ্য</p>
+  <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">সাধারণ তথ্য</p>
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
             <div class="parsley-row">
@@ -105,16 +105,16 @@
 
     <br>
     
-    <p style="font-size: 18px;font-weight: bold;background:red;color:white; text-align:center">ডাক্তার <br><small>যদি থাকে, ডক্টরস্‌ প্যানেলে বিস্তারিত লিখুন</small> </p>
+    <p style="font-size: 18px;font-weight: bold;background:white;color:black; text-align:left">ডাক্তার (যদি থাকে)<br><small>ডক্টরস্‌ প্যানেলে বিস্তারিত লিখুন</small> </p>
       
     <br>
     
-    <p style="font-size: 18px;font-weight: bold;background:red;color:white; text-align:center">সেবা </p>
+    <!--<p style="font-size: 18px;font-weight: bold;background:white;color:black; text-align: left">সেবা </p>
     
-    <br>
+    <br>-->
     
     <!--<p style="font-size: 16px;font-weight: bold">অ্যাম্বুলেন্স</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">অ্যাম্বুলেন্স</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">অ্যাম্বুলেন্স</p>
 
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
@@ -284,7 +284,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold">আই সি ইউ অ্যাম্বুলেন্স</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">আই সি ইউ অ্যাম্বুলেন্স</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">আই সি ইউ অ্যাম্বুলেন্স</p>
 
      <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
@@ -408,7 +408,7 @@
     
 
     <!--<p style="font-size: 16px;font-weight: bold"> ব্লাড ব্যাংক  </p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">ব্লাড ব্যাংক</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">ব্লাড ব্যাংক</p>
     
     <div class="uk-grid" data-uk-grid-margin>
          <div class="uk-width-medium-1-1">
@@ -445,7 +445,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">রোগ নির্ণয় সংক্রান্ত পরীক্ষা-নিরীক্ষা  </p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">রোগ নির্ণয় সংক্রান্ত পরীক্ষা-নিরীক্ষা<br><small>পরীক্ষার নাম, মূল্য, পূর্ব-প্রস্তুতি এবং যোগাযোগের নম্বর লিখুন</small></p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">রোগ নির্ণয় সংক্রান্ত পরীক্ষা-নিরীক্ষা<br><small>পরীক্ষার নাম, মূল্য, পূর্ব-প্রস্তুতি এবং যোগাযোগের নম্বর লিখুন</small></p>
     
     <div class="uk-grid" data-uk-grid-margin>
          <div class="uk-width-medium-1-1">
@@ -457,7 +457,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">সুযোগ-সুবিধা </p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">সুযোগ-সুবিধা</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">সুযোগ-সুবিধা</p>
     
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
@@ -597,7 +597,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">হোম সার্ভিস </p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">হোম সার্ভিস<br><small>বাসায় গিয়ে রোগীকে চিকিৎসা বিষয়ক বিভিন্ন পরামর্শ প্রদান করা হয়</small></p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">হোম সার্ভিস<br><small>বাসায় গিয়ে রোগীকে চিকিৎসা বিষয়ক বিভিন্ন পরামর্শ প্রদান করা হয়</small></p>
     
     <div class="uk-grid" data-uk-grid-margin>
          <div class="uk-width-medium-1-1">
@@ -671,7 +671,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">চিকিৎসা বিভাগ</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">চিকিৎসা বিভাগ<br><small>বিভাগের নাম লিখুন</small></p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">চিকিৎসা বিভাগ<br><small>বিভাগের নাম লিখুন</small></p>
     
     <div class="uk-grid" data-uk-grid-margin>
          <div class="uk-width-medium-1-1">
@@ -683,7 +683,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">ফার্মেসী </p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">ফার্মেসী</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">ফার্মেসী</p>
     
     <div class="uk-grid" data-uk-grid-margin>
          <div class="uk-width-medium-1-1">
@@ -723,7 +723,7 @@
     
     
     <p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">হোম ডেলিভারি সার্ভিস </p>
-    <!--<p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">হোম ডেলিভারি সার্ভিস</p>-->
+    <!--<p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">হোম ডেলিভারি সার্ভিস</p>-->
     
     <div class="uk-grid" data-uk-grid-margin>
          <div class="uk-width-medium-1-1">
@@ -805,7 +805,7 @@
     </div>
    
    <!--<p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">কক্ষ সেবা (ওয়ার্ড, ক্যাবিন ইত্যাদি)   </p>-->
-   <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">কক্ষ সেবা (ওয়ার্ড, ক্যাবিন ইত্যাদি)<br><small>শয্যার নাম, মোট শয্যা সংখ্যা, ফ্রি শয্যা সংখ্যা, ভাড়া এবং যোগাযোগের নম্বর লিখুন</small></p>
+   <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">কক্ষ সেবা (ওয়ার্ড, ক্যাবিন ইত্যাদি)<br><small>শয্যার নাম, মোট শয্যা সংখ্যা, ফ্রি শয্যা সংখ্যা, ভাড়া এবং যোগাযোগের নম্বর লিখুন</small></p>
    
     <div class="uk-grid" data-uk-grid-margin>
          <div class="uk-width-medium-1-1">
@@ -815,7 +815,7 @@
             </div>
         </div>
     </div>
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center; margin-bottom: 2px;">আরও তথ্য <br><small>(যদি থাকে)</small></p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left; margin-bottom: 2px;">আরও তথ্য <br><small>(যদি থাকে)</small></p>
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
             <div class="parsley-row">
@@ -830,7 +830,7 @@
 @else  
 
     <!--<p style="font-size: 16px;font-weight: bold;">About</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">About</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">About</p>
     
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
@@ -866,7 +866,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold;">Contact Info</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">Contact Info</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">Contact Info</p>
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
             <div class="parsley-row">
@@ -922,7 +922,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold; margin-bottom: 5px;">General Info</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">General Info</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">General Info</p>
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
             <div class="parsley-row">
@@ -933,16 +933,16 @@
     </div>
     <br>
     
-    <p style="font-size: 18px;font-weight: bold; background:red; color:white; text-align: center; margin-bottom: 2px;">Doctor <br><small>If Any, Write details in the Doctors Panel</small></p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left; margin-bottom: 2px;">Doctor (If Any)<br><small>Write details in the Doctors Panel</small></p>
      
     <br>
     
-    <p style="font-size: 18px;font-weight: bold; background:red; color:white; text-align: center; margin-bottom: 2px;">Service</p>
+    <!--<p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left; margin-bottom: 2px;">Service</p>
     
-    <br>
+    <br>-->
     
     <!--p style="font-size: 16px;font-weight: bold">Ambulance</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">Ambulance</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">Ambulance</p>
     
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
@@ -1118,7 +1118,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold">ICU Ambulance</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">ICU Ambulance</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">ICU Ambulance</p>
     
      <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
@@ -1245,7 +1245,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold"> Blood Bank </p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">Blood Bank</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">Blood Bank</p>
     
     <div class="uk-grid" data-uk-grid-margin>
          <div class="uk-width-medium-1-1">
@@ -1282,7 +1282,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">Diagnostic Test</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">Diagnostic Test<br><small>Write Test Name, Rate, Preparation & Contact Number</small></p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">Diagnostic Test<br><small>Write Test Name, Rate, Preparation & Contact Number</small></p>
     
     <div class="uk-grid" data-uk-grid-margin>
          <div class="uk-width-medium-1-1">
@@ -1294,7 +1294,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">Facilities</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">Facilities</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">Facilities</p>
     
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
@@ -1434,7 +1434,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">Home Service</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">Home Service<br><small>Patient can receive various medical advices staying at home</small></p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">Home Service<br><small>Patient can receive various medical advices staying at home</small></p>
     
     <div class="uk-grid" data-uk-grid-margin>
          <div class="uk-width-medium-1-1">
@@ -1508,7 +1508,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">Medical Department</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">Medical Department<br><small>Write Department Name</small></p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">Medical Department<br><small>Write Department Name</small></p>
     
     <div class="uk-grid" data-uk-grid-margin>
          <div class="uk-width-medium-1-1">
@@ -1520,7 +1520,7 @@
     </div>
     
     <!--<p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">Pharmacy</p>-->
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">Pharmacy</p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">Pharmacy</p>
     
     <div class="uk-grid" data-uk-grid-margin>
          <div class="uk-width-medium-1-1">
@@ -1560,7 +1560,7 @@
     
     
     <p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">Home Delivery Service</p>
-    <!--<p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">Home Delivery Service</p>-->
+    <!--<p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">Home Delivery Service</p>-->
     
     <div class="uk-grid" data-uk-grid-margin>
          <div class="uk-width-medium-1-1">
@@ -1642,7 +1642,7 @@
     </div>
    
    <!--<p style="font-size: 16px;font-weight: bold; margin-bottom: 25px;">Room Service (Ward, Cabin etc)</p>-->
-   <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">Room Service (Ward, Cabin etc)<br><small>Write Bed Name, Total Bed Number, Free Bed Number, Rent & Contact Number</small></p>
+   <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">Room Service (Ward, Cabin etc)<br><small>Write Bed Name, Total Bed Number, Free Bed Number, Rent & Contact Number</small></p>
    
     <div class="uk-grid" data-uk-grid-margin>
          <div class="uk-width-medium-1-1">
@@ -1652,7 +1652,7 @@
             </div>
         </div>
     </div>
-    <p style="font-size: 18px;font-weight: bold; background:black; color:white; text-align: center;">More Information<br><small>(If Any)</small></p>
+    <p style="font-size: 18px;font-weight: bold; background:white; color:black; text-align: left;">More Information<br><small>(If Any)</small></p>
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-medium-1-1">
             <div class="parsley-row">
