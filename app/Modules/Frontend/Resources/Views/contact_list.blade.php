@@ -134,7 +134,7 @@
             </div>
             </div>
 
-            <div class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-4 uk-grid-width-xlarge-1-5 hierarchical_show" id="contact_list">
+            <div class="uk-grid uk-grid-width-large-1-4 uk-grid-width-medium-1-3 uk-grid-medium uk-sortable sortable-handler hierarchical_show" id="contact_list">
                 @if($directoryType == 1)
                     @foreach($contacts as $contact)
                         <div>
@@ -657,7 +657,7 @@
                 </div>
             </div>
 
-            <div class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-4 uk-grid-width-xlarge-1-5 hierarchical_show" id="contact_list">
+            <div class="uk-grid uk-grid-width-large-1-4 uk-grid-width-medium-1-3 uk-grid-medium uk-sortable sortable-handler hierarchical_show" id="contact_list">
                 @if($directoryType == 1)
                     @foreach($contacts as $contact)
                         <div>
