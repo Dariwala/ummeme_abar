@@ -137,7 +137,7 @@
             <div class="uk-grid uk-grid-width-large-1-4 uk-grid-width-medium-1-3 uk-grid-medium uk-sortable sortable-handler hierarchical_show" id="contact_list">
                 @if($directoryType == 1)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendambulance/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -162,7 +162,7 @@
 
                 @if($directoryType == 2)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendairambulance/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -187,7 +187,7 @@
 
                 @if($directoryType == 3)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendbloodbank/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -212,7 +212,7 @@
 
                 @if($directoryType == 4)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendblooddonor/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -237,7 +237,7 @@
  
                 @if($directoryType == 5)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendeyebank/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -262,7 +262,7 @@
 
                 @if($directoryType == 6)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendhospital/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -287,7 +287,7 @@
 
                 @if($directoryType == 7)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendpharmacy/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -312,7 +312,7 @@
 
                 @if($directoryType == 8)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendmedicalspecialist/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -337,7 +337,7 @@
 
                 @if($directoryType == 9)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendherbalcenter/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -362,7 +362,7 @@
 
                 @if($directoryType == 10)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendvaccinepoint/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -387,7 +387,7 @@
 
                 @if($directoryType == 11)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendskinlasercenter/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -414,7 +414,7 @@
 
                 @if($directoryType == 12)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendaddiction/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -439,7 +439,7 @@
 
                 @if($directoryType == 13)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendparlour/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -464,7 +464,7 @@
 
                 @if($directoryType == 14)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendforeignmedical/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -489,7 +489,7 @@
 
                 @if($directoryType == 15)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendgym/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -514,7 +514,7 @@
 
                 @if($directoryType == 16)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendhomeopathic/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -539,7 +539,7 @@
 
                 @if($directoryType == 17)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendoptical/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -564,7 +564,7 @@
 
                 @if($directoryType == 18)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendpharmacynew/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -589,7 +589,7 @@
 
                 @if($directoryType == 19)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendphysiotherapy/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -614,7 +614,7 @@
 
                 @if($directoryType == 20)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;" style="margin-top:12px;">
                             <a href="{{ url('frontendyoga/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -660,7 +660,7 @@
             <div class="uk-grid uk-grid-width-large-1-4 uk-grid-width-medium-1-3 uk-grid-medium uk-sortable sortable-handler hierarchical_show" id="contact_list">
                 @if($directoryType == 1)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendambulance/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -685,7 +685,7 @@
 
                 @if($directoryType == 2)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendairambulance/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -710,7 +710,7 @@
 
                 @if($directoryType == 3)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendbloodbank/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -735,7 +735,7 @@
 
                 @if($directoryType == 4)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendblooddonor/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -760,7 +760,7 @@
 
                 @if($directoryType == 5)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendeyebank/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -785,7 +785,7 @@
 
                 @if($directoryType == 6)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendhospital/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -810,7 +810,7 @@
 
                 @if($directoryType == 7)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendpharmacy/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -835,7 +835,7 @@
 
                 @if($directoryType == 8)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendmedicalspecialist/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -860,7 +860,7 @@
 
                 @if($directoryType == 9)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendherbalcenter/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -885,7 +885,7 @@
 
                 @if($directoryType == 10)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendvaccinepoint/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -910,7 +910,7 @@
 
                 @if($directoryType == 11)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendskinlasercenter/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -938,7 +938,7 @@
 
                 @if($directoryType == 12)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendaddiction/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -963,7 +963,7 @@
 
                 @if($directoryType == 13)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendparlour/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -988,7 +988,7 @@
 
                 @if($directoryType == 14)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendforeignmedical/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -1013,7 +1013,7 @@
 
                 @if($directoryType == 15)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendgym/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -1038,7 +1038,7 @@
 
                 @if($directoryType == 16)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendhomeopathic/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -1063,7 +1063,7 @@
 
                 @if($directoryType == 17)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendoptical/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -1088,7 +1088,7 @@
 
                 @if($directoryType == 18)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendpharmacynew/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -1113,7 +1113,7 @@
 
                 @if($directoryType == 19)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendphysiotherapy/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
@@ -1138,7 +1138,7 @@
 
                 @if($directoryType == 20)
                     @foreach($contacts as $contact)
-                        <div>
+                        <div style="margin-top:12px;">
                             <a href="{{ url('frontendyoga/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
                                 <div class="md-card md-card-hover">
                                     <div class="md-card-head">
