@@ -445,7 +445,7 @@
                                     <div class="md-card-head">
                                         @if($contact->photo_path == '')
                                         <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('parlour.jpg')}}" alt=""/>
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('parlour.png')}}" alt=""/>
                                         </div> 
                                         @else
                                        <div class="uk-text-center">
@@ -520,7 +520,7 @@
                                     <div class="md-card-head">
                                         @if($contact->photo_path == '')
                                         <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('homeopathic.jpg')}}" alt=""/>
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('homeopathic.png')}}" alt=""/>
                                         </div> 
                                         @else
                                        <div class="uk-text-center">
@@ -545,7 +545,7 @@
                                     <div class="md-card-head">
                                         @if($contact->photo_path == '')
                                         <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('optical.jpg')}}" alt=""/>
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('optical.png')}}" alt=""/>
                                         </div> 
                                         @else
                                        <div class="uk-text-center">
@@ -595,7 +595,7 @@
                                     <div class="md-card-head">
                                         @if($contact->photo_path == '')
                                         <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('physiotherapy.jpg')}}" alt=""/>
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('physiotherapy.png')}}" alt=""/>
                                         </div> 
                                         @else
                                        <div class="uk-text-center">
@@ -969,7 +969,7 @@
                                     <div class="md-card-head">
                                         @if($contact->photo_path == '')
                                         <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('parlour.jpg')}}" alt=""/>
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('parlour.png')}}" alt=""/>
                                         </div> 
                                         @else
                                        <div class="uk-text-center">
@@ -1044,7 +1044,7 @@
                                     <div class="md-card-head">
                                         @if($contact->photo_path == '')
                                         <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('homeopathic.jpg')}}" alt=""/>
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('homeopathic.png')}}" alt=""/>
                                         </div> 
                                         @else
                                        <div class="uk-text-center">
@@ -1069,7 +1069,7 @@
                                     <div class="md-card-head">
                                         @if($contact->photo_path == '')
                                         <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('optical.jpg')}}" alt=""/>
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('optical.png')}}" alt=""/>
                                         </div> 
                                         @else
                                        <div class="uk-text-center">
@@ -1119,7 +1119,7 @@
                                     <div class="md-card-head">
                                         @if($contact->photo_path == '')
                                         <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('physiotherapy.jpg')}}" alt=""/>
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('physiotherapy.png')}}" alt=""/>
                                         </div> 
                                         @else
                                        <div class="uk-text-center">
