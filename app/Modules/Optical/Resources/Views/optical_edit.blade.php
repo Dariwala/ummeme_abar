@@ -1,6 +1,6 @@
 @extends('layouts.admin_master')
 
-@section('title', 'Optical Shop')
+@section('title', 'Optics')
 
 @section('angular')
     <script src="{{url('app/admin/optical/optical.module.js')}}"></script>
@@ -108,7 +108,7 @@
                                             </div>
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row ">
-                                                     <label for="add_publication_title">Optical Shop Photo<span class="req"></span></label>
+                                                     <label for="add_publication_title">Optics Photo<span class="req"></span></label>
                                                 </div>
                                                 <div class="parsley-row uk-margin-top">
                                                     <input type="file" id="optical_photo" name="optical_photo" class="dropify"/>

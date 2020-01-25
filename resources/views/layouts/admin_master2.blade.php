@@ -278,10 +278,10 @@
                             <span class="menu_title">Homeopathic Medicine Center</span>
                         </a>
                     </li>
-                    <li title="Optical Shop">
+                    <li title="Optics">
                          <a href="{{ url('/optical') }}">
                             
-                            <span class="menu_title">Optical Shop</span>
+                            <span class="menu_title">Optics</span>
                         </a>
                     </li>
                     <li title="Pharmacy">

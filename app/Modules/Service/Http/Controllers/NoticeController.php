@@ -69,11 +69,11 @@ class NoticeController extends Controller
     public function ajaxService($sub_district_id)
     {
         $service_names_bangla = array("২৪ আউয়ারস্ ফার্মেসী","অ্যাডিকশন রিহ্যাবিলিটেশন সেন্টার","এয়ার অ্যাাম্বুলেন্স","অ্যাাম্বুলেন্স","বিউটি পার্লার অ্যান্ড স্পা","ব্লাড ব্যাংক","ব্লাড ডোনার","ডক্টরস্‌ প্যানেল","আই ব্যাংক","ফরেন মেডিক্যাল ইনফরমেশন সেন্টার"
-                                     ,"জিম","হেল্‌থ কেয়ার সেন্টার","হারবাল মেডিসিন সেন্টার","হোমিওপ্যাথিক মেডিসিন সেন্টার","অপটিক্যাল সপ","ফার্মেসী",
+                                     ,"জিম","হেল্‌থ কেয়ার সেন্টার","হারবাল মেডিসিন সেন্টার","হোমিওপ্যাথিক মেডিসিন সেন্টার","অপটিক্‌স","ফার্মেসী",
                                      "ফিজিওথেরাপি অ্যান্ড রিহ্যাবিলিটেশন সেন্টার","স্কিন কেয়ার অ্যান্ড লেজার সেন্টার","ভ্যাকসিনেশন সেন্টার","ইয়োগা সেন্টার");
         $service_names_english = array("24 Hours Pharmacy","Addiction Rehabilitation Center","Air Ambulance","Ambulance","Beauty Parlour & Spa","Blood Bank","Blood Donor",
                                         "Doctors Panel","Eye Bank","Foreign Medical Information Center"
-                                      ,"Gym","Health Care Center","Herbal Medicine Center","Homeopathic Medicine Center","Optical Shop"
+                                      ,"Gym","Health Care Center","Herbal Medicine Center","Homeopathic Medicine Center","Optics"
                                       ,"Pharmacy","Physiotherapy & Rehabilitation Center","Skin Care & Laser Center","Vaccination Center","Yoga Center");
         
                                       

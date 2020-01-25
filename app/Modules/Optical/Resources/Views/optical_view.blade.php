@@ -1,6 +1,6 @@
 @extends('layouts.admin_master')
 
-@section('title', 'Optical Shop')
+@section('title', 'Optics')
 
 @section('angular')
     <script src="{{url('app/admin/optical/optical.module.js')}}"></script>

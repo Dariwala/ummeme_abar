@@ -1,6 +1,6 @@
 @extends('layouts.frontend_master')
 
-@section('title', 'Optical Shop')
+@section('title', 'Optics')
 
 @section('angular')
     <script src="{{url('app/frontend/frontend/optical.view.js')}}"></script>

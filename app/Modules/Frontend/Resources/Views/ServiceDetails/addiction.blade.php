@@ -416,7 +416,7 @@
                                                                 @if($i != $len - 1)
                                                                 {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;"><i class="fa fa-phone" style="margin-left:1px;"></i></a>
                                                                 @else
-                                                                {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}">&nbsp;<i class="fa fa-phone" style="margin-left:1px;"></i></a>
+                                                                {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;">&nbsp;<i class="fa fa-phone" style="margin-left:1px;"></i></a>
                                                                 @endif
                                                                 @endif
                                                                 @if($i != $len - 1)
