@@ -259,15 +259,15 @@ class PharmacynewController extends Controller
 
             $pharmacynew->pharmacynew_description    = $data['pharmacynew_description'];
             $pharmacynew->b_pharmacynew_description  = $data['b_pharmacynew_description'];
-            $pharmacynew->pharmacynew_phone_no       = $data['pharmacynew_phone_no'];
-            $pharmacynew->b_pharmacynew_phone_no     = $data['b_pharmacynew_phone_no'];
-            $pharmacynew->pharmacynew_email_ad       = $data['pharmacynew_email_ad'];
+            #$pharmacynew->pharmacynew_phone_no       = $data['pharmacynew_phone_no'];
+            #$pharmacynew->b_pharmacynew_phone_no     = $data['b_pharmacynew_phone_no'];
+            #$pharmacynew->pharmacynew_email_ad       = $data['pharmacynew_email_ad'];
             //$pharmacynew->pharmacynew_fb_link        = $data['pharmacynew_fb_link'];
-            $pharmacynew->pharmacynew_web_link       = $data['pharmacynew_web_link'];
-            $pharmacynew->total_medicine          = $data['total_medicine'];
-            $pharmacynew->b_total_medicine        = $data['b_total_medicine'];
-            $pharmacynew->pharmacynew_address        = $data['pharmacynew_address'];
-            $pharmacynew->b_pharmacynew_address      = $data['b_pharmacynew_address'];
+            #$pharmacynew->pharmacynew_web_link       = $data['pharmacynew_web_link'];
+            #$pharmacynew->total_medicine          = $data['total_medicine'];
+            #$pharmacynew->b_total_medicine        = $data['b_total_medicine'];
+            #$pharmacynew->pharmacynew_address        = $data['pharmacynew_address'];
+            #$pharmacynew->b_pharmacynew_address      = $data['b_pharmacynew_address'];
 
             if($pharmacynew->update())
             {

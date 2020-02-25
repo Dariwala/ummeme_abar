@@ -211,7 +211,7 @@
                 <ul class="uk-switcher uk-margin" id="user_profile_tabs_content">
                     <li><?php echo $medical_specialist->b_medical_specialist_description; ?>
     
-                        <div class="uk-grid" data-uk-grid-margin="">
+                        <!--<div class="uk-grid" data-uk-grid-margin="">
                             <div class="uk-width-large-1-1">
                                 <h4 class="heading_c uk-margin-small-bottom">যোগাযোগের তথ্য</h4>
     
@@ -298,16 +298,16 @@
                         <div class="uk-width-large-1-1 uk-margin-medium-top">
                             <h4 class="heading_c">সাধারণ তথ্য</h4>
                             <ul class="md-list uk-margin-small-top">
-                            <?php echo $medical_specialist->b_fee_new; ?>
-                            <!--
+                            <?php #echo $medical_specialist->b_fee_new; ?>
+                            
                                 <li>
                                     <div class="md-list-content">
                                         <span class="hidden">সাধারণ</span><span><?php #echo $medical_specialist->b_fee_new; ?></span>
                                     </div>
                                 </li>
-                            -->
+                            
                             </ul>  
-                        </div>
+                        </div>-->
                         
                                                                                                     
                         <!-- START google maps -->
@@ -901,7 +901,7 @@
                 <ul class="uk-switcher uk-margin" id="user_profile_tabs_content">
                     <li><?php echo $medical_specialist->medical_specialist_description; ?>
     
-                        <div class="uk-grid" data-uk-grid-margin="">
+                        <!--<div class="uk-grid" data-uk-grid-margin="">
                             <div class="uk-width-large-1-1">
                                 <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">Contact Info</h4>
     
@@ -984,16 +984,16 @@
                         <div class="uk-width-large-1-1 uk-margin-medium-top">
                             <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">General Info</h4>
                             <ul class="md-list uk-margin-small-top">
-                            <?php echo $medical_specialist->fee_new; ?>
-                            <!--
+                            <?php #echo $medical_specialist->fee_new; ?>
+                            
                                 <li>
                                     <div class="md-list-content">
                                     <span><?php #echo $medical_specialist->fee_new; ?></span>
                                     </div>
                                 </li>
-                            -->
+                            
                             </ul>  
-                        </div>
+                        </div>-->
                         
                                                                             
                         <!-- START google maps -->

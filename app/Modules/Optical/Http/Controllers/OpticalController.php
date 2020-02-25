@@ -259,15 +259,15 @@ class OpticalController extends Controller
 
             $optical->optical_description    = $data['optical_description'];
             $optical->b_optical_description  = $data['b_optical_description'];
-            $optical->optical_phone_no       = $data['optical_phone_no'];
-            $optical->b_optical_phone_no     = $data['b_optical_phone_no'];
-            $optical->optical_email_ad       = $data['optical_email_ad'];
+            #$optical->optical_phone_no       = $data['optical_phone_no'];
+            #$optical->b_optical_phone_no     = $data['b_optical_phone_no'];
+            #$optical->optical_email_ad       = $data['optical_email_ad'];
             //$optical->optical_fb_link        = $data['optical_fb_link'];
-            $optical->optical_web_link       = $data['optical_web_link'];
-            $optical->total_medicine          = $data['total_medicine'];
-            $optical->b_total_medicine        = $data['b_total_medicine'];
-            $optical->optical_address        = $data['optical_address'];
-            $optical->b_optical_address      = $data['b_optical_address'];
+            #$optical->optical_web_link       = $data['optical_web_link'];
+            #$optical->total_medicine          = $data['total_medicine'];
+            #$optical->b_total_medicine        = $data['b_total_medicine'];
+            #$optical->optical_address        = $data['optical_address'];
+            #$optical->b_optical_address      = $data['b_optical_address'];
             $optical->optical_latitude        = $data['optical_latitude'];
             $optical->optical_longitude        = $data['optical_longitude'];
 

@@ -259,15 +259,15 @@ class PhysiotherapyController extends Controller
 
             $physiotherapy->physiotherapy_description    = $data['physiotherapy_description'];
             $physiotherapy->b_physiotherapy_description  = $data['b_physiotherapy_description'];
-            $physiotherapy->physiotherapy_phone_no       = $data['physiotherapy_phone_no'];
-            $physiotherapy->b_physiotherapy_phone_no     = $data['b_physiotherapy_phone_no'];
-            $physiotherapy->physiotherapy_email_ad       = $data['physiotherapy_email_ad'];
+            #$physiotherapy->physiotherapy_phone_no       = $data['physiotherapy_phone_no'];
+            #$physiotherapy->b_physiotherapy_phone_no     = $data['b_physiotherapy_phone_no'];
+            #$physiotherapy->physiotherapy_email_ad       = $data['physiotherapy_email_ad'];
             //$physiotherapy->physiotherapy_fb_link        = $data['physiotherapy_fb_link'];
-            $physiotherapy->physiotherapy_web_link       = $data['physiotherapy_web_link'];
-            $physiotherapy->total_medicine          = $data['total_medicine'];
-            $physiotherapy->b_total_medicine        = $data['b_total_medicine'];
-            $physiotherapy->physiotherapy_address        = $data['physiotherapy_address'];
-            $physiotherapy->b_physiotherapy_address      = $data['b_physiotherapy_address'];
+            #$physiotherapy->physiotherapy_web_link       = $data['physiotherapy_web_link'];
+            #$physiotherapy->total_medicine          = $data['total_medicine'];
+            #$physiotherapy->b_total_medicine        = $data['b_total_medicine'];
+            #$physiotherapy->physiotherapy_address        = $data['physiotherapy_address'];
+            #$physiotherapy->b_physiotherapy_address      = $data['b_physiotherapy_address'];
             $physiotherapy->physiotherapy_latitude        = $data['physiotherapy_latitude'];
             $physiotherapy->physiotherapy_longitude        = $data['physiotherapy_longitude'];
 

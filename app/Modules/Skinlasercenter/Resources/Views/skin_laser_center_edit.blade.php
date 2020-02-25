@@ -106,7 +106,7 @@
                                             </div>
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row ">
-                                                     <label for="add_publication_title">Skin Care & Laser Center Photo<span class="req"></span></label>
+                                                     <label for="add_publication_title">Skin Care & Laser Center Image<span class="req"></span></label>
                                                 </div>
                                                 <div class="parsley-row uk-margin-top">
                                                     <input type="file" id="skin_laser_center_photo" name="skin_laser_center_photo" class="dropify"/>
@@ -123,18 +123,18 @@
                                         <div class="uk-grid " data-uk-grid-margin>
                                             
                                             <div class="uk-width-medium-1-2">
-                                                <label for="skin_laser_center_description">Description</label>
+                                                <label for="skin_laser_center_description">About</label>
                                                 <div class="parsley-row uk-margin-top">
                                                     <textarea class="md-input" id="skin_laser_center_description" name="skin_laser_center_description" cols="10" rows="3" data-parsley-trigger="keyup" > {{ $skin_laser_center->skin_laser_center_description}} </textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
-                                                <label for="b_skin_laser_center_description"> বর্ণনা</label>
+                                                <label for="b_skin_laser_center_description">সম্বন্ধে</label>
                                                 <div class="parsley-row uk-margin-top">
                                                     <textarea class="md-input" id="b_skin_laser_center_description" name="b_skin_laser_center_description" cols="10" rows="3" data-parsley-trigger="keyup" > {{ $skin_laser_center->b_skin_laser_center_description}} </textarea>
                                                 </div>
                                             </div>
-                                            <div class="uk-width-medium-1-2">
+                                            <!--<div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="skin_laser_center_address">Address</label>
                                                     <textarea class="md-input" id="skin_laser_center_address" name="skin_laser_center_address" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{$skin_laser_center->skin_laser_center_address}}</textarea>
@@ -182,7 +182,7 @@
                                                     <label for="skin_laser_center_web_link">Website</label>
                                                     <input type="text" id="skin_laser_center_web_link" name="skin_laser_center_web_link" value="{{ $skin_laser_center->skin_laser_center_web_link}}" class="md-input" /> 
                                                 </div>
-                                            </div>
+                                            </div>-->
                                             
                                             <!-- START longitude latitude field -->
                                             <div class="uk-width-medium-1-2">
@@ -200,7 +200,7 @@
                                             </div>
                                             <!-- END   longitude latitude field -->
                                             
-                                            <div class="uk-width-medium-1-2">
+                                            <!--<div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="skin_laser_center_total_bed">General Info</label>
                                                     <div class="parsley-row uk-margin-top">
@@ -216,7 +216,7 @@
                                                         </textarea>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                         </div>
                                         <div class="uk-float-right uk-margin-top">
                                             <button type="submit" class="md-btn md-btn-primary" style="background: #FD0100;color: #fff;">Submit</button>

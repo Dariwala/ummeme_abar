@@ -108,7 +108,7 @@
                                             </div>
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row ">
-                                                     <label for="add_publication_title">Homeopathic Medicine Center Photo<span class="req"></span></label>
+                                                     <label for="add_publication_title">Homeopathic Medicine Center Image<span class="req"></span></label>
                                                 </div>
                                                 <div class="parsley-row uk-margin-top">
                                                     <input type="file" id="homeopathic_photo" name="homeopathic_photo" class="dropify"/>
@@ -125,18 +125,18 @@
                                     <div class="uk-grid " data-uk-grid-margin>
                                         
                                         <div class="uk-width-medium-1-2">
-                                            <label for="add_course_description">Description</label>
+                                            <label for="add_course_description">About</label>
                                             <div class="parsley-row uk-margin-top">
                                                 <textarea class="md-input" id="homeopathic_description" name="homeopathic_description" value="{{ $homeopathic->homeopathic_description}}" cols="10" rows="3" data-parsley-trigger="keyup" >{{ $homeopathic->homeopathic_description}}</textarea>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-1-2">
-                                            <label for="add_course_description">বর্ণনা</label>
+                                            <label for="add_course_description">সম্বন্ধে</label>
                                             <div class="parsley-row uk-margin-top">
                                                 <textarea class="md-input" id="b_homeopathic_description" name="b_homeopathic_description" value="{{ $homeopathic->b_homeopathic_description}}" cols="10" rows="3" data-parsley-trigger="keyup" >{{ $homeopathic->b_homeopathic_description}}</textarea>
                                             </div>
                                         </div>
-                                        <div class="uk-width-medium-1-2">
+                                        <!--<div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="homeopathic_address">Address</label>
                                                 <textarea class="md-input" id="homeopathic_address" name="homeopathic_address" value="{{ $homeopathic->homeopathic_address}}" cols="10" rows="2" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{ $homeopathic->homeopathic_address}}</textarea>
@@ -183,7 +183,7 @@
                                                 <label for="homeopathic_web_link">Website<span class="req"></span></label>
                                                 <input type="text" id="homeopathic_web_link" name="homeopathic_web_link" value="{{$homeopathic->homeopathic_web_link}}"  class="md-input" /> 
                                             </div>
-                                        </div>
+                                        </div>-->
                                         
                                         <!-- START longitude latitude field -->
                                         <div class="uk-width-medium-1-2">
@@ -201,7 +201,7 @@
                                         </div>
                                         <!-- END   longitude latitude field -->
                                         
-                                        <div class="uk-width-medium-1-2">
+                                        <!--<div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="add_publication_title">General Info</label>
                                                 <div class="parsley-row uk-margin-top">
@@ -216,7 +216,7 @@
                                                     <textarea type="text" id="add_publication_title2" name="b_total_medicine" value="{{ $homeopathic->b_total_medicine}}" required class="md-input">{{ $homeopathic->b_total_medicine}}</textarea>
                                                 </div> 
                                             </div>
-                                        </div>                                            
+                                        </div>-->                                           
                                     </div>
                                     <div class="uk-float-right uk-margin-top">
                                         <button type="submit" class="md-btn md-btn-primary" style="background: #FD0100;color: #fff;">Submit</button>

@@ -256,16 +256,16 @@ class BloodBankController extends Controller
 
         try {
 
-            $blood_bank->blood_bank_address                  = $data['blood_bank_address'];
-            $blood_bank->b_blood_bank_address                = $data['b_blood_bank_address'];
-            $blood_bank->blood_bank_phone_no                 = $data['blood_bank_phone_no'];
-            $blood_bank->b_blood_bank_phone_no               = $data['b_blood_bank_phone_no'];
-            $blood_bank->blood_bank_email_ad                 = $data['blood_bank_email_ad'];
-            $blood_bank->blood_group_details                 = $data['blood_group_details'];
-            $blood_bank->b_blood_group_details               = $data['b_blood_group_details'];
+            #$blood_bank->blood_bank_address                  = $data['blood_bank_address'];
+            #$blood_bank->b_blood_bank_address                = $data['b_blood_bank_address'];
+            #$blood_bank->blood_bank_phone_no                 = $data['blood_bank_phone_no'];
+            #$blood_bank->b_blood_bank_phone_no               = $data['b_blood_bank_phone_no'];
+            #$blood_bank->blood_bank_email_ad                 = $data['blood_bank_email_ad'];
+            #$blood_bank->blood_group_details                 = $data['blood_group_details'];
+            #$blood_bank->b_blood_group_details               = $data['b_blood_group_details'];
             $blood_bank->blood_bank_description              = $data['blood_bank_description'];
             $blood_bank->b_blood_bank_description            = $data['b_blood_bank_description'];
-            $blood_bank->blood_bank_fb_link                  = $data['blood_bank_fb_link'];
+            #$blood_bank->blood_bank_fb_link                  = $data['blood_bank_fb_link'];
             $blood_bank->blood_bank_latitude                 = $data['blood_bank_latitude'];
             $blood_bank->blood_bank_longitude                = $data['blood_bank_longitude'];
 

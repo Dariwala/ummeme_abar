@@ -284,18 +284,18 @@ class HerbalCenterController extends Controller
 
             $herbal_center->herbal_center_description    = $data['herbal_center_description'];
             $herbal_center->b_herbal_center_description  = $data['b_herbal_center_description'];
-            $herbal_center->herbal_center_phone_no       = $data['herbal_center_phone_no'];
-            $herbal_center->b_herbal_center_phone_no     = $data['b_herbal_center_phone_no'];
-            $herbal_center->herbal_center_email_ad       = $data['herbal_center_email_ad'];
-            $herbal_center->herbal_center_web_link       = $data['herbal_center_web_link'];
-            $herbal_center->herbal_center_total_bed      = $data['herbal_center_total_bed'];
-            $herbal_center->b_herbal_center_total_bed    = $data['b_herbal_center_total_bed'];
-            $herbal_center->herbal_center_total_doctor   = $data['herbal_center_total_doctor'];
-            $herbal_center->b_herbal_center_total_doctor = $data['b_herbal_center_total_doctor'];
-            $herbal_center->herbal_center_total_staff    = $data['herbal_center_total_staff'];
-            $herbal_center->b_herbal_center_total_staff  = $data['b_herbal_center_total_staff'];
-            $herbal_center->herbal_center_address        = $data['herbal_center_address'];
-            $herbal_center->b_herbal_center_address      = $data['b_herbal_center_address'];
+            #$herbal_center->herbal_center_phone_no       = $data['herbal_center_phone_no'];
+            #$herbal_center->b_herbal_center_phone_no     = $data['b_herbal_center_phone_no'];
+            #$herbal_center->herbal_center_email_ad       = $data['herbal_center_email_ad'];
+            #$herbal_center->herbal_center_web_link       = $data['herbal_center_web_link'];
+            #$herbal_center->herbal_center_total_bed      = $data['herbal_center_total_bed'];
+            #$herbal_center->b_herbal_center_total_bed    = $data['b_herbal_center_total_bed'];
+            #$herbal_center->herbal_center_total_doctor   = $data['herbal_center_total_doctor'];
+            #$herbal_center->b_herbal_center_total_doctor = $data['b_herbal_center_total_doctor'];
+            #$herbal_center->herbal_center_total_staff    = $data['herbal_center_total_staff'];
+            #$herbal_center->b_herbal_center_total_staff  = $data['b_herbal_center_total_staff'];
+            #$herbal_center->herbal_center_address        = $data['herbal_center_address'];
+            #$herbal_center->b_herbal_center_address      = $data['b_herbal_center_address'];
             $herbal_center->herbal_center_latitude       = $data['herbal_center_latitude'];
             $herbal_center->herbal_center_longitude      = $data['herbal_center_longitude'];
 

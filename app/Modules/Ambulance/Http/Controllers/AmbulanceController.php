@@ -304,17 +304,17 @@ class AmbulanceController extends Controller
         try {
 
 
-            $ambulance->ambulance_address       = $data['ambulance_address'];
-            $ambulance->b_ambulance_address     = $data['b_ambulance_address'];
-            $ambulance->total_ambulance         = $data['total_ambulance'];
-            $ambulance->b_total_ambulance       = $data['b_total_ambulance'];
-            $ambulance->ambulance_phone         = $data['ambulance_phone'];
-            $ambulance->b_ambulance_phone       = $data['b_ambulance_phone'];
-            $ambulance->ambulance_email       = $data['ambulance_email'];
+            #$ambulance->ambulance_address       = $data['ambulance_address'];
+            #$ambulance->b_ambulance_address     = $data['b_ambulance_address'];
+            #$ambulance->total_ambulance         = $data['total_ambulance'];
+            #$ambulance->b_total_ambulance       = $data['b_total_ambulance'];
+            #$ambulance->ambulance_phone         = $data['ambulance_phone'];
+            #$ambulance->b_ambulance_phone       = $data['b_ambulance_phone'];
+            #$ambulance->ambulance_email       = $data['ambulance_email'];
             $ambulance->ambulance_description   = $data['ambulance_description'];
             $ambulance->b_ambulance_description = $data['b_ambulance_description'];
            // $ambulance->ambulance_web_link      = $data['ambulance_web_link'];
-            $ambulance->ambulance_fb_link       = $data['ambulance_fb_link'];
+            #$ambulance->ambulance_fb_link       = $data['ambulance_fb_link'];
             $ambulance->ambulance_latitude       = $data['ambulance_latitude'];
             $ambulance->ambulance_longitude       = $data['ambulance_longitude'];
             

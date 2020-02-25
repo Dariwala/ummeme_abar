@@ -100,7 +100,7 @@
 
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row ">
-                                                     <label for="add_publication_title">Air Ambulance Photo<span class="req"></span></label>
+                                                     <label for="add_publication_title">Air Ambulance Image<span class="req"></span></label>
                                                 </div>
                                                 <div class="parsley-row uk-margin-top">
                                                     <input type="file" id="air_ambulance_photo" name="air_ambulance_photo" class="dropify"/>
@@ -117,18 +117,18 @@
                                         <div class="uk-grid " data-uk-grid-margin>
                                             
                                             <div class="uk-width-medium-1-2">
-                                                <label for="add_course_description">Description</label>
+                                                <label for="add_course_description">About</label>
                                                 <div class="parsley-row uk-margin-top">
                                                     <textarea class="md-input" id="air_ambulance_description" name="air_ambulance_description" cols="10" rows="3" data-parsley-trigger="keyup" >{{$air_ambulance->air_ambulance_description}}</textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
-                                                <label for="add_course_description">বর্ণনা</label>
+                                                <label for="add_course_description">সম্বন্ধে</label>
                                                 <div class="parsley-row uk-margin-top">
                                                     <textarea class="md-input" id="b_air_ambulance_description" name="b_air_ambulance_description" cols="10" rows="3" data-parsley-trigger="keyup" >{{$air_ambulance->b_air_ambulance_description}}</textarea>
                                                 </div>
                                             </div>
-                                            <div class="uk-width-medium-1-2">
+                                            <!--<div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="add_course_description">Address</label>
                                                     <textarea class="md-input" id="air_ambulance_address" name="air_ambulance_address" cols="10" rows="3" data-parsley-trigger="keyup"  onkeydown="expandtext(this);">{{$air_ambulance->air_ambulance_address}}</textarea>
@@ -175,7 +175,7 @@
                                                     <label for="air_ambulance_fb_link">Website</label>
                                                     <input type="text" id="air_ambulance_fb_link" name="air_ambulance_fb_link" value="{{$air_ambulance->air_ambulance_fb_link}}"  class="md-input" /> 
                                                 </div>
-                                            </div>
+                                            </div>-->
                                             
                                             <!-- START longitude latitude field -->
                                             <div class="uk-width-medium-1-2">
@@ -193,7 +193,7 @@
                                             </div>
                                             <!-- END   longitude latitude field -->
                                             
-                                            <div class="uk-width-medium-1-2">
+                                            <!--<div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="add_publication_title">General Info</label>
                                                     <div class="parsley-row uk-margin-top">
@@ -208,7 +208,7 @@
                                                         <textarea type="text" id="b_total_air_ambulance" name="b_total_air_ambulance" value="{{$air_ambulance->b_total_air_ambulance}}"  class="md-input ">{{$air_ambulance->b_total_air_ambulance}}</textarea>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                             <!--<div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top hidden">
                                                     <label for="air_ambulance_web_link">Website</label>

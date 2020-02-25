@@ -103,7 +103,7 @@
                                             
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row ">
-                                                     <label for="add_publication_title">Beauty Parlour & Spa Photo<span class="req"></span></label>
+                                                     <label for="add_publication_title">Beauty Parlour & Spa Image<span class="req"></span></label>
                                                 </div>
                                                 <div class="parsley-row uk-margin-top">
                                                     <input type="file" id="parlour_photo" name="parlour_photo" class="dropify"/>
@@ -120,18 +120,18 @@
                                         <div class="uk-grid " data-uk-grid-margin>
                                             
                                             <div class="uk-width-medium-1-2">
-                                                <label for="parlour_description">Description</label>
+                                                <label for="parlour_description">About</label>
                                                 <div class="parsley-row uk-margin-top">
                                                     <textarea class="md-input" id="parlour_description" name="parlour_description" cols="10" rows="3" data-parsley-trigger="keyup" > {{ $parlour->parlour_description}} </textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
-                                                <label for="b_parlour_description">বর্ণনা</label>
+                                                <label for="b_parlour_description">সম্বন্ধে</label>
                                                 <div class="parsley-row uk-margin-top">
                                                     <textarea class="md-input" id="b_parlour_description" name="b_parlour_description" cols="10" rows="3" data-parsley-trigger="keyup" > {{ $parlour->b_parlour_description}} </textarea>
                                                 </div>
                                             </div>
-                                            <div class="uk-width-medium-1-2">
+                                            <!--<div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                     <label for="parlour_address">Address</label>
                                                     <textarea class="md-input" id="parlour_address" name="parlour_address" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{$parlour->parlour_address}}</textarea>
@@ -179,7 +179,7 @@
                                                     <label for="parlour_web_link">Website<span class="req"></span></label>
                                                     <input type="text" id="parlour_web_link" name="parlour_web_link" value="{{ $parlour->parlour_web_link}}" class="md-input" /> 
                                                 </div>
-                                            </div>
+                                            </div>-->
                                             
                                             <!-- START longitude latitude field -->
                                             <div class="uk-width-medium-1-2">
@@ -197,7 +197,7 @@
                                             </div>
                                         <!-- END   longitude latitude field -->
                                             
-                                            <div class="uk-width-medium-1-2">
+                                            <!--<div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="parlour_total_bed">General Info<span class="req"></span></label>
                                                     <div class="parsley-row uk-margin-top">
@@ -214,7 +214,7 @@
                                                     </div>
                                                 </div>
                                                 <p style="color:red;">{{ $errors->has('b_parlour_total_bed')?$errors->first('b_parlour_total_bed'):'' }}</p>
-                                            </div>
+                                            </div>-->
                                             <div class="uk-width-medium-1-2 hidden">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="parlour_total_doctor">Total Doctor<span class="req"></span></label>

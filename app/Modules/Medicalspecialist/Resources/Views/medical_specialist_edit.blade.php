@@ -106,7 +106,7 @@
                                             
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row ">
-                                                     <label for="add_publication_title">Doctor Photo<span class="req"></span></label>
+                                                     <label for="add_publication_title">Doctor Image<span class="req"></span></label>
                                                 </div>
                                                 <div class="parsley-row uk-margin-top">
                                                     <input type="file" id="medical_specialist_photo" name="medical_specialist_photo" class="dropify"/>
@@ -138,18 +138,18 @@
                                             
                                         </div>
                                         <div class="uk-width-medium-1-2">
-                                            <label for="medical_specialist_description">Description</label>
+                                            <label for="medical_specialist_description">About</label>
                                             <div class="parsley-row uk-margin-top">
                                                 <textarea class="md-input" id="medical_specialist_description" name="medical_specialist_description" cols="10" rows="3" data-parsley-trigger="keyup" >{{$medical_specialist->medical_specialist_description}}</textarea>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-1-2">
-                                            <label for="b_medical_specialist_description">বর্ণনা</label>
+                                            <label for="b_medical_specialist_description">সম্বন্ধে</label>
                                             <div class="parsley-row uk-margin-top">
                                                 <textarea class="md-input" id="b_medical_specialist_description" name="b_medical_specialist_description" cols="10" rows="3" data-parsley-trigger="keyup" >{{$medical_specialist->b_medical_specialist_description}}</textarea>
                                             </div>
                                         </div>
-                                        <div class="uk-width-medium-1-2">
+                                        <!--<div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="medical_specialist_address">Address</label>
                                                 <textarea class="md-input" id="medical_specialist_address" name="medical_specialist_address" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{$medical_specialist->medical_specialist_address}}</textarea>
@@ -196,7 +196,7 @@
                                                 <label for="medical_specialist_web_link">Website<span class="req"></span></label>
                                                 <input type="text" id="medical_specialist_web_link" name="medical_specialist_web_link" value="{{$medical_specialist->medical_specialist_web_link}}"  class="md-input" /> 
                                             </div>
-                                        </div>
+                                        </div>-->
                                         
                                         <!-- START longitude latitude field -->
                                             <div class="uk-width-medium-1-2">
@@ -214,7 +214,7 @@
                                             </div>
                                             <!-- END   longitude latitude field -->
                                         
-                                        <div class="uk-width-medium-1-2">
+                                        <!--<div class="uk-width-medium-1-2">
                                             <label for="general_info">General Info</label>
                                             <div class="parsley-row uk-margin-top">
                                                 <textarea class="md-input" id="fee_new" name="fee_new" cols="10" rows="3" data-parsley-trigger="keyup" >{{$medical_specialist->fee_new}}</textarea>
@@ -225,7 +225,7 @@
                                             <div class="parsley-row uk-margin-top">
                                                 <textarea class="md-input" id="b_fee_new" name="b_fee_new" cols="10" rows="3" data-parsley-trigger="keyup" >{{$medical_specialist->b_fee_new}}</textarea>
                                             </div>
-                                        </div>
+                                        </div>-->
                                     </div>
                                     <div class="uk-float-right uk-margin-top">
                                         <button type="submit" class="md-btn md-btn-primary" style="background: #FD0100;color: #fff;">Submit</button>

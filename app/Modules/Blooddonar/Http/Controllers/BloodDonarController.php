@@ -252,16 +252,16 @@ class BloodDonarController extends Controller
 
         try {
 
-            $blood_donor->blood_donor_address             = $data['blood_donor_address'];
-            $blood_donor->b_blood_donor_address           = $data['b_blood_donor_address'];
-            $blood_donor->blood_donor_phone_no            = $data['blood_donor_phone_no'];
-            $blood_donor->b_blood_donor_phone_no          = $data['b_blood_donor_phone_no'];
-            $blood_donor->blood_donor_email_ad            = $data['blood_donor_email_ad'];
-            $blood_donor->blood_donor_general_info        = $data['blood_donor_general_info'];
-            $blood_donor->b_blood_donor_general_info      = $data['b_blood_donor_general_info'];
+            #$blood_donor->blood_donor_address             = $data['blood_donor_address'];
+            #$blood_donor->b_blood_donor_address           = $data['b_blood_donor_address'];
+            #$blood_donor->blood_donor_phone_no            = $data['blood_donor_phone_no'];
+            #$blood_donor->b_blood_donor_phone_no          = $data['b_blood_donor_phone_no'];
+            #$blood_donor->blood_donor_email_ad            = $data['blood_donor_email_ad'];
+            #$blood_donor->blood_donor_general_info        = $data['blood_donor_general_info'];
+            #$blood_donor->b_blood_donor_general_info      = $data['b_blood_donor_general_info'];
             $blood_donor->blood_donor_description         = $data['blood_donor_description'];
             $blood_donor->b_blood_donor_description       = $data['b_blood_donor_description'];
-            $blood_donor->blood_donor_fb_link             = $data['blood_donor_fb_link'];
+            #$blood_donor->blood_donor_fb_link             = $data['blood_donor_fb_link'];
             $blood_donor->blood_donor_latitude            = $data['blood_donor_latitude'];
             $blood_donor->blood_donor_longitude           = $data['blood_donor_longitude'];
 

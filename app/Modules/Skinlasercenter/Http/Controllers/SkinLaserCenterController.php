@@ -285,15 +285,15 @@ class SkinLaserCenterController extends Controller
 
             $skin_laser_center->skin_laser_center_description    = $data['skin_laser_center_description'];
             $skin_laser_center->b_skin_laser_center_description  = $data['b_skin_laser_center_description'];
-            $skin_laser_center->skin_laser_center_phone_no       = $data['skin_laser_center_phone_no'];
-            $skin_laser_center->b_skin_laser_center_phone_no     = $data['b_skin_laser_center_phone_no'];
-            $skin_laser_center->skin_laser_center_email_ad       = $data['skin_laser_center_email_ad'];
+            #$skin_laser_center->skin_laser_center_phone_no       = $data['skin_laser_center_phone_no'];
+            #$skin_laser_center->b_skin_laser_center_phone_no     = $data['b_skin_laser_center_phone_no'];
+            #$skin_laser_center->skin_laser_center_email_ad       = $data['skin_laser_center_email_ad'];
             //$skin_laser_center->skin_laser_center_fb_link        = $data['skin_laser_center_fb_link'];
-            $skin_laser_center->skin_laser_center_web_link       = $data['skin_laser_center_web_link'];
-            $skin_laser_center->skin_laser_center_total_bed      = $data['skin_laser_center_total_bed'];
-            $skin_laser_center->b_skin_laser_center_total_bed    = $data['b_skin_laser_center_total_bed'];
-            $skin_laser_center->skin_laser_center_address        = $data['skin_laser_center_address'];
-            $skin_laser_center->b_skin_laser_center_address      = $data['b_skin_laser_center_address'];
+            #$skin_laser_center->skin_laser_center_web_link       = $data['skin_laser_center_web_link'];
+            #$skin_laser_center->skin_laser_center_total_bed      = $data['skin_laser_center_total_bed'];
+            #$skin_laser_center->b_skin_laser_center_total_bed    = $data['b_skin_laser_center_total_bed'];
+            #$skin_laser_center->skin_laser_center_address        = $data['skin_laser_center_address'];
+            #$skin_laser_center->b_skin_laser_center_address      = $data['b_skin_laser_center_address'];
             $skin_laser_center->skin_laser_center_latitude       = $data['skin_laser_center_latitude'];
             $skin_laser_center->skin_laser_center_longitude      = $data['skin_laser_center_longitude'];
 

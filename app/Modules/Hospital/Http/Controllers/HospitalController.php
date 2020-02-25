@@ -281,18 +281,18 @@ class HospitalController extends Controller
 
             $hospital->hospital_description    = $data['hospital_description'];
             $hospital->b_hospital_description  = $data['b_hospital_description'];
-            $hospital->hospital_phone_no       = $data['hospital_phone_no'];
-            $hospital->b_hospital_phone_no     = $data['b_hospital_phone_no'];
-            $hospital->hospital_email_ad       = $data['hospital_email_ad'];
-            $hospital->hospital_web_link       = $data['hospital_web_link'];
-            $hospital->hospital_total_bed      = $data['hospital_total_bed'];
-            $hospital->b_hospital_total_bed    = $data['b_hospital_total_bed'];
-            $hospital->hospital_total_doctor   = $data['hospital_total_doctor'];
-            $hospital->b_hospital_total_doctor = $data['b_hospital_total_doctor'];
-            $hospital->hospital_total_staff    = $data['hospital_total_staff'];
-            $hospital->b_hospital_total_staff  = $data['b_hospital_total_staff'];
-            $hospital->hospital_address        = $data['hospital_address'];
-            $hospital->b_hospital_address      = $data['b_hospital_address'];
+            #$hospital->hospital_phone_no       = $data['hospital_phone_no'];
+            #$hospital->b_hospital_phone_no     = $data['b_hospital_phone_no'];
+            #$hospital->hospital_email_ad       = $data['hospital_email_ad'];
+            #$hospital->hospital_web_link       = $data['hospital_web_link'];
+            #$hospital->hospital_total_bed      = $data['hospital_total_bed'];
+            #$hospital->b_hospital_total_bed    = $data['b_hospital_total_bed'];
+            #$hospital->hospital_total_doctor   = $data['hospital_total_doctor'];
+            #$hospital->b_hospital_total_doctor = $data['b_hospital_total_doctor'];
+            #$hospital->hospital_total_staff    = $data['hospital_total_staff'];
+            #$hospital->b_hospital_total_staff  = $data['b_hospital_total_staff'];
+            #$hospital->hospital_address        = $data['hospital_address'];
+            #$hospital->b_hospital_address      = $data['b_hospital_address'];
             $hospital->hospital_latitude       = $data['hospital_latitude'];
             $hospital->hospital_longitude      = $data['hospital_longitude'];
 

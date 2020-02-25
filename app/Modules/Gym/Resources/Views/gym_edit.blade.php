@@ -103,7 +103,7 @@
                                             
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row ">
-                                                     <label for="add_publication_title">Gym  Photo<span class="req"></span></label>
+                                                     <label for="add_publication_title">Gym  Image<span class="req"></span></label>
                                                 </div>
                                                 <div class="parsley-row uk-margin-top">
                                                     <input type="file" id="gym_photo" name="gym_photo" class="dropify"/>
@@ -120,18 +120,18 @@
                                         <div class="uk-grid " data-uk-grid-margin>
                                             
                                             <div class="uk-width-medium-1-2">
-                                                <label for="gym_description">Description</label>
+                                                <label for="gym_description">About</label>
                                                 <div class="parsley-row uk-margin-top">
                                                     <textarea class="md-input" id="gym_description" name="gym_description" cols="10" rows="3" data-parsley-trigger="keyup" > {{ $gym->gym_description}} </textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
-                                                <label for="b_gym_description">বর্ণনা</label>
+                                                <label for="b_gym_description">সম্বন্ধে</label>
                                                 <div class="parsley-row uk-margin-top">
                                                     <textarea class="md-input" id="b_gym_description" name="b_gym_description" cols="10" rows="3" data-parsley-trigger="keyup" > {{ $gym->b_gym_description}} </textarea>
                                                 </div>
                                             </div>
-                                            <div class="uk-width-medium-1-2">
+                                            <!--<div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                     <label for="gym_address">Address</label>
                                                     <textarea class="md-input" id="gym_address" name="gym_address" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{$gym->gym_address}}</textarea>
@@ -179,7 +179,7 @@
                                                     <label for="gym_web_link">Website<span class="req"></span></label>
                                                     <input type="text" id="gym_web_link" name="gym_web_link" value="{{ $gym->gym_web_link}}" class="md-input" /> 
                                                 </div>
-                                            </div>
+                                            </div>-->
                                             
                                             <!-- START longitude latitude field -->
                                             <div class="uk-width-medium-1-2">
@@ -197,7 +197,7 @@
                                             </div>
                                             <!-- END   longitude latitude field -->
                                             
-                                            <div class="uk-width-medium-1-2">
+                                            <!--<div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="gym_total_bed">General Info<span class="req"></span></label>
                                                     <div class="parsley-row uk-margin-top">
@@ -214,7 +214,7 @@
                                                     </div>
                                                 </div>
                                                 <p style="color:red;">{{ $errors->has('b_gym_total_bed')?$errors->first('b_gym_total_bed'):'' }}</p>
-                                            </div>
+                                            </div>-->
                                             <div class="uk-width-medium-1-2 hidden">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="gym_total_doctor">Total Doctor<span class="req"></span></label>
@@ -244,7 +244,7 @@
                                                 <p style="color:red;">{{ $errors->has('b_gym_total_staff')?$errors->first('b_gym_total_staff'):'' }}</p>
                                             </div>
                                         </div>
-                                        <div class="uk-float-right">
+                                        <div class="uk-float-right uk-margin-top">
                                             <button type="submit" class="md-btn md-btn-primary" style="background: #FD0100;color: #fff;">Submit</button>
                                         </div>
                                     {!! Form::close() !!}

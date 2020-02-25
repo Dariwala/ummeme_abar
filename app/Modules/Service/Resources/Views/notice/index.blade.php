@@ -1,11 +1,11 @@
 @extends('layouts.admin_master2')
 
-@section('title', 'Ad Image')
+@section('title', 'Ad')
 
 @section('content')
 <div id="page_content">
     <div id="page_content_inner">
-        <h3 class="heading_b uk-margin-bottom">Ad Image</h3>
+        <h3 class="heading_b uk-margin-bottom">Ad</h3>
         @include('partials.flash_message')
         <div class="md-card">
             <div class="md-card-content">

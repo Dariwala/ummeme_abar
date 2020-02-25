@@ -259,15 +259,15 @@ class HomeopathicController extends Controller
 
             $homeopathic->homeopathic_description    = $data['homeopathic_description'];
             $homeopathic->b_homeopathic_description  = $data['b_homeopathic_description'];
-            $homeopathic->homeopathic_phone_no       = $data['homeopathic_phone_no'];
-            $homeopathic->b_homeopathic_phone_no     = $data['b_homeopathic_phone_no'];
-            $homeopathic->homeopathic_email_ad       = $data['homeopathic_email_ad'];
+            #$homeopathic->homeopathic_phone_no       = $data['homeopathic_phone_no'];
+            #$homeopathic->b_homeopathic_phone_no     = $data['b_homeopathic_phone_no'];
+            #$homeopathic->homeopathic_email_ad       = $data['homeopathic_email_ad'];
             //$homeopathic->homeopathic_fb_link        = $data['homeopathic_fb_link'];
-            $homeopathic->homeopathic_web_link       = $data['homeopathic_web_link'];
-            $homeopathic->total_medicine             = $data['total_medicine'];
-            $homeopathic->b_total_medicine          = $data['b_total_medicine'];
-            $homeopathic->homeopathic_address        = $data['homeopathic_address'];
-            $homeopathic->b_homeopathic_address      = $data['b_homeopathic_address'];
+            #$homeopathic->homeopathic_web_link       = $data['homeopathic_web_link'];
+            #$homeopathic->total_medicine             = $data['total_medicine'];
+            #$homeopathic->b_total_medicine          = $data['b_total_medicine'];
+            #$homeopathic->homeopathic_address        = $data['homeopathic_address'];
+            #$homeopathic->b_homeopathic_address      = $data['b_homeopathic_address'];
             $homeopathic->homeopathic_latitude       = $data['homeopathic_latitude'];
             $homeopathic->homeopathic_longitude      = $data['homeopathic_longitude'];
 

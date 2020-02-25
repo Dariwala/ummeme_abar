@@ -281,18 +281,18 @@ class AddictionController extends Controller
 
             $addiction->addiction_description    = $data['addiction_description'];
             $addiction->b_addiction_description  = $data['b_addiction_description'];
-            $addiction->addiction_phone_no       = $data['addiction_phone_no'];
-            $addiction->b_addiction_phone_no     = $data['b_addiction_phone_no'];
-            $addiction->addiction_email_ad       = $data['addiction_email_ad'];
-            $addiction->addiction_web_link       = $data['addiction_web_link'];
-            $addiction->addiction_total_bed      = $data['addiction_total_bed'];
-            $addiction->b_addiction_total_bed    = $data['b_addiction_total_bed'];
+            #$addiction->addiction_phone_no       = $data['addiction_phone_no'];
+            #$addiction->b_addiction_phone_no     = $data['b_addiction_phone_no'];
+            #$addiction->addiction_email_ad       = $data['addiction_email_ad'];
+            #$addiction->addiction_web_link       = $data['addiction_web_link'];
+            #$addiction->addiction_total_bed      = $data['addiction_total_bed'];
+            #$addiction->b_addiction_total_bed    = $data['b_addiction_total_bed'];
             //$addiction->addiction_total_doctor   = $data['addiction_total_doctor'];
             //$addiction->b_addiction_total_doctor = $data['b_addiction_total_doctor'];
             //$addiction->addiction_total_staff    = $data['addiction_total_staff'];
             //$addiction->b_addiction_total_staff  = $data['b_addiction_total_staff'];
-            $addiction->addiction_address        = $data['addiction_address'];
-            $addiction->b_addiction_address      = $data['b_addiction_address'];
+            #$addiction->addiction_address        = $data['addiction_address'];
+            #$addiction->b_addiction_address      = $data['b_addiction_address'];
             $addiction->addiction_latitude      = $data['addiction_latitude'];
             $addiction->addiction_longitude      = $data['addiction_longitude'];
 

@@ -303,17 +303,17 @@ class AirAmbulanceController extends Controller
         try {
 
 
-            $air_ambulance->air_ambulance_address       = $data['air_ambulance_address'];
-            $air_ambulance->b_air_ambulance_address     = $data['b_air_ambulance_address'];
-            $air_ambulance->air_ambulance_phone         = $data['air_ambulance_phone'];
-            $air_ambulance->b_air_ambulance_phone       = $data['b_air_ambulance_phone'];
-            $air_ambulance->air_ambulance_email       = $data['air_ambulance_email'];
-            $air_ambulance->total_air_ambulance         = $data['total_air_ambulance'];
-            $air_ambulance->b_total_air_ambulance       = $data['b_total_air_ambulance'];
+            #$air_ambulance->air_ambulance_address       = $data['air_ambulance_address'];
+            #$air_ambulance->b_air_ambulance_address     = $data['b_air_ambulance_address'];
+            #$air_ambulance->air_ambulance_phone         = $data['air_ambulance_phone'];
+            #$air_ambulance->b_air_ambulance_phone       = $data['b_air_ambulance_phone'];
+            #$air_ambulance->air_ambulance_email       = $data['air_ambulance_email'];
+            #$air_ambulance->total_air_ambulance         = $data['total_air_ambulance'];
+            #$air_ambulance->b_total_air_ambulance       = $data['b_total_air_ambulance'];
             $air_ambulance->air_ambulance_description   = $data['air_ambulance_description'];
             $air_ambulance->b_air_ambulance_description = $data['b_air_ambulance_description'];
             #$air_ambulance->air_ambulance_web_link      = $data['air_ambulance_web_link'];
-            $air_ambulance->air_ambulance_fb_link       = $data['air_ambulance_fb_link'];
+            #$air_ambulance->air_ambulance_fb_link       = $data['air_ambulance_fb_link'];
             $air_ambulance->air_ambulance_latitude      = $data['air_ambulance_latitude'];
             $air_ambulance->air_ambulance_longitude     = $data['air_ambulance_longitude'];
 

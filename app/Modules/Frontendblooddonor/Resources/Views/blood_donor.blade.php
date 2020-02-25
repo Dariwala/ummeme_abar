@@ -153,7 +153,7 @@
                 <ul class="uk-switcher uk-margin" id="user_profile_tabs_content">
                     <li><?php echo $blood_donor->b_blood_donor_description; ?>
     
-                        <div class="uk-grid" data-uk-grid-margin="">
+                        <!--<div class="uk-grid" data-uk-grid-margin="">
                             <div class="uk-width-large-1-1">
                                 <h4 class="heading_c uk-margin-small-bottom">যোগাযোগের তথ্য</h4>
     
@@ -243,16 +243,15 @@
                         <div class="uk-width-large-1-1 uk-margin-medium-top">
                             <h4 class="heading_c">সাধারণ তথ্য</h4>
                             <ul class="md-list uk-margin-small-top">
-                            <?php echo $blood_donor->b_blood_donor_general_info; ?>
-                            <!--
+                            <?php #echo $blood_donor->b_blood_donor_general_info; ?>
                                 <li>
                                     <div class="md-list-content ">
                                        <span class="hidden">General info:</span> <span><?php #echo $blood_donor->b_blood_donor_general_info; ?></span>
                                     </div>
                                 </li>
                             </ul>
-                            -->
-                        </div>
+                            
+                        </div>-->
                                                                             
                         <!-- START google maps -->
                         
@@ -326,7 +325,7 @@
                 <ul class="uk-switcher uk-margin" id="user_profile_tabs_content">
                     <li><?php echo $blood_donor->blood_donor_description; ?>
     
-                        <div class="uk-grid " data-uk-grid-margin="">
+                        <!--<div class="uk-grid " data-uk-grid-margin="">
                             <div class="uk-width-large-1-1">
                                 <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">Contact Info</h4>
     
@@ -414,16 +413,15 @@
                         <div class="uk-width-large-1-1 uk-margin-medium-top">
                             <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">General Info</h4>
                             <ul class="md-list uk-margin-small-top">
-                            <?php echo $blood_donor->blood_donor_general_info; ?>
-                            <!--
+                            <?php #echo $blood_donor->blood_donor_general_info; ?>
                                 <li>
                                     <div class="md-list-content">
                                         <span class="hidden">General:</span> <span><?php #echo $blood_donor->blood_donor_general_info; ?></span>
                                     </div>
                                 </li>
-                            -->
+                            
                             </ul> 
-                        </div>
+                        </div>-->
                             
                                                                                                         
                         <!-- START google maps -->

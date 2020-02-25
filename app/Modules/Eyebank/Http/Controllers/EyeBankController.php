@@ -257,16 +257,16 @@ class EyeBankController extends Controller
 
         try {
 
-            $eye_bank->eye_bank_address             = $data['eye_bank_address'];
-            $eye_bank->b_eye_bank_address           = $data['b_eye_bank_address'];
-            $eye_bank->eye_bank_phone_no            = $data['eye_bank_phone_no'];
-            $eye_bank->b_eye_bank_phone_no          = $data['b_eye_bank_phone_no'];
-            $eye_bank->eye_bank_email_ad            = $data['eye_bank_email_ad'];
-            $eye_bank->total_eye                    = $data['total_eye'];
-            $eye_bank->b_total_eye                  = $data['b_total_eye'];
+            #$eye_bank->eye_bank_address             = $data['eye_bank_address'];
+            #$eye_bank->b_eye_bank_address           = $data['b_eye_bank_address'];
+            #$eye_bank->eye_bank_phone_no            = $data['eye_bank_phone_no'];
+            #$eye_bank->b_eye_bank_phone_no          = $data['b_eye_bank_phone_no'];
+            #$eye_bank->eye_bank_email_ad            = $data['eye_bank_email_ad'];
+            #$eye_bank->total_eye                    = $data['total_eye'];
+            #$eye_bank->b_total_eye                  = $data['b_total_eye'];
             $eye_bank->eye_bank_description         = $data['eye_bank_description'];
             $eye_bank->b_eye_bank_description       = $data['b_eye_bank_description'];
-            $eye_bank->eye_bank_web_link            = $data['eye_bank_web_link'];
+            #$eye_bank->eye_bank_web_link            = $data['eye_bank_web_link'];
             $eye_bank->eye_bank_latitude            = $data['eye_bank_latitude'];
             $eye_bank->eye_bank_longitude           = $data['eye_bank_longitude'];
            // $eye_bank->eye_bank_fb_link             = $data['eye_bank_fb_link'];

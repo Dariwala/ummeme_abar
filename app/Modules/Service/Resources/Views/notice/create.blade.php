@@ -1,11 +1,11 @@
 @extends('layouts.admin_master')
 
-@section('title', 'Ad Image')
+@section('title', 'Ad')
 
 @section('content')
 <div id="page_content">
     <div id="page_content_inner">
-        <h3 class="heading_b uk-margin-bottom">Add Ad Image</h3>
+        <h3 class="heading_b uk-margin-bottom">Add Ad</h3>
         @include('partials.flash_message')
         <div class="md-card">
             <div class="md-card-content">
@@ -85,6 +85,9 @@
                             </div>
                             
                             <div class="uk-width-medium-1-2">
+                                <div class="parsley-row ">
+                                    <label for="add_publication_title">Ad Image<span class="req"></span></label>
+                                </div>
                                 <div class="uk-width-1-1 uk-margin-top">
                                     <div class="parsley-row">
                                         <input type="file" id="thumbnail" name="thumbnail" required class="md-input" /> 

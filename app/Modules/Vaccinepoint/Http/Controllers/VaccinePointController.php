@@ -283,14 +283,14 @@ class VaccinePointController extends Controller
 
             $vaccine_point->vaccine_point_description    = $data['vaccine_point_description'];
             $vaccine_point->b_vaccine_point_description  = $data['b_vaccine_point_description'];
-            $vaccine_point->vaccine_point_phone_no       = $data['vaccine_point_phone_no'];
-            $vaccine_point->b_vaccine_point_phone_no     = $data['b_vaccine_point_phone_no'];
-            $vaccine_point->vaccine_point_email_ad       = $data['vaccine_point_email_ad'];
-            $vaccine_point->vaccine_point_web_link       = $data['vaccine_point_web_link'];
-            $vaccine_point->vaccine_point_total_bed      = $data['vaccine_point_total_bed'];
-            $vaccine_point->b_vaccine_point_total_bed    = $data['b_vaccine_point_total_bed'];
-            $vaccine_point->vaccine_point_address        = $data['vaccine_point_address'];
-            $vaccine_point->b_vaccine_point_address      = $data['b_vaccine_point_address'];
+            //$vaccine_point->vaccine_point_phone_no       = $data['vaccine_point_phone_no'];
+            //$vaccine_point->b_vaccine_point_phone_no     = $data['b_vaccine_point_phone_no'];
+            //$vaccine_point->vaccine_point_email_ad       = $data['vaccine_point_email_ad'];
+            //$vaccine_point->vaccine_point_web_link       = $data['vaccine_point_web_link'];
+            //$vaccine_point->vaccine_point_total_bed      = $data['vaccine_point_total_bed'];
+            //$vaccine_point->b_vaccine_point_total_bed    = $data['b_vaccine_point_total_bed'];
+            //$vaccine_point->vaccine_point_address        = $data['vaccine_point_address'];
+            //$vaccine_point->b_vaccine_point_address      = $data['b_vaccine_point_address'];
             $vaccine_point->vaccine_point_latitude       = $data['vaccine_point_latitude'];
             $vaccine_point->vaccine_point_longitude      = $data['vaccine_point_longitude'];
 

@@ -108,7 +108,7 @@
                                             </div>
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row ">
-                                                     <label for="add_publication_title">Pharmacy Photo<span class="req"></span></label>
+                                                     <label for="add_publication_title">Pharmacy Image<span class="req"></span></label>
                                                 </div>
                                                 <div class="parsley-row uk-margin-top">
                                                     <input type="file" id="pharmacynew_photo" name="pharmacynew_photo" class="dropify"/>
@@ -125,18 +125,18 @@
                                     <div class="uk-grid " data-uk-grid-margin>
                                         
                                         <div class="uk-width-medium-1-2">
-                                            <label for="add_course_description">Description</label>
+                                            <label for="add_course_description">About</label>
                                             <div class="parsley-row uk-margin-top">
                                                 <textarea class="md-input" id="pharmacynew_description" name="pharmacynew_description" value="{{ $pharmacynew->pharmacynew_description}}" cols="10" rows="3" data-parsley-trigger="keyup" >{{ $pharmacynew->pharmacynew_description}}</textarea>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-1-2">
-                                            <label for="add_course_description">বর্ণনা</label>
+                                            <label for="add_course_description">সম্বন্ধে</label>
                                             <div class="parsley-row uk-margin-top">
                                                 <textarea class="md-input" id="b_pharmacynew_description" name="b_pharmacynew_description" value="{{ $pharmacynew->b_pharmacynew_description}}" cols="10" rows="3" data-parsley-trigger="keyup" >{{ $pharmacynew->b_pharmacynew_description}}</textarea>
                                             </div>
                                         </div>
-                                        <div class="uk-width-medium-1-2">
+                                        <!--<div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="pharmacynew_address">Address</label>
                                                 <textarea class="md-input" id="pharmacynew_address" name="pharmacynew_address" value="{{ $pharmacynew->pharmacynew_address}}" cols="10" rows="2" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{ $pharmacynew->pharmacynew_address}}</textarea>
@@ -199,7 +199,7 @@
                                                     <textarea type="text" id="add_publication_title2" name="b_total_medicine" value="{{ $pharmacynew->b_total_medicine}}" required class="md-input">{{ $pharmacynew->b_total_medicine}}</textarea>
                                                 </div> 
                                             </div>
-                                        </div>
+                                        </div>-->
                                     </div>
                                     <div class="uk-float-right uk-margin-top">
                                         <button type="submit" class="md-btn md-btn-primary" style="background: #FD0100;color: #fff;">Submit</button>

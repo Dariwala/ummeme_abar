@@ -281,18 +281,18 @@ class YogaController extends Controller
 
             $yoga->yoga_description    = $data['yoga_description'];
             $yoga->b_yoga_description  = $data['b_yoga_description'];
-            $yoga->yoga_phone_no       = $data['yoga_phone_no'];
-            $yoga->b_yoga_phone_no     = $data['b_yoga_phone_no'];
-            $yoga->yoga_email_ad       = $data['yoga_email_ad'];
-            $yoga->yoga_web_link       = $data['yoga_web_link'];
-            $yoga->yoga_total_bed      = $data['yoga_total_bed'];
-            $yoga->b_yoga_total_bed    = $data['b_yoga_total_bed'];
-            $yoga->yoga_total_doctor   = $data['yoga_total_doctor'];
-            $yoga->b_yoga_total_doctor = $data['b_yoga_total_doctor'];
-            $yoga->yoga_total_staff    = $data['yoga_total_staff'];
-            $yoga->b_yoga_total_staff  = $data['b_yoga_total_staff'];
-            $yoga->yoga_address        = $data['yoga_address'];
-            $yoga->b_yoga_address      = $data['b_yoga_address'];
+            #$yoga->yoga_phone_no       = $data['yoga_phone_no'];
+            #$yoga->b_yoga_phone_no     = $data['b_yoga_phone_no'];
+            #$yoga->yoga_email_ad       = $data['yoga_email_ad'];
+            #$yoga->yoga_web_link       = $data['yoga_web_link'];
+            #$yoga->yoga_total_bed      = $data['yoga_total_bed'];
+            #$yoga->b_yoga_total_bed    = $data['b_yoga_total_bed'];
+            #$yoga->yoga_total_doctor   = $data['yoga_total_doctor'];
+            #$yoga->b_yoga_total_doctor = $data['b_yoga_total_doctor'];
+            #$yoga->yoga_total_staff    = $data['yoga_total_staff'];
+            #$yoga->b_yoga_total_staff  = $data['b_yoga_total_staff'];
+            #$yoga->yoga_address        = $data['yoga_address'];
+            #$yoga->b_yoga_address      = $data['b_yoga_address'];
             $yoga->yoga_latitude       = $data['yoga_latitude'];
             $yoga->yoga_longitude      = $data['yoga_longitude'];
 

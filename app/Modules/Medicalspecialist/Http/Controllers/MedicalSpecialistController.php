@@ -282,17 +282,17 @@ class MedicalSpecialistController extends Controller
         try {
 
             $medical_specialist->department_id                    = $data['department_id'];
-            $medical_specialist->fee_new                          = $data['fee_new'];
-            $medical_specialist->b_fee_new                        = $data['b_fee_new'];
+            #$medical_specialist->fee_new                          = $data['fee_new'];
+            #$medical_specialist->b_fee_new                        = $data['b_fee_new'];
             $medical_specialist->medical_specialist_description   = $data['medical_specialist_description'];
             $medical_specialist->b_medical_specialist_description = $data['b_medical_specialist_description'];
-            $medical_specialist->medical_specialist_phone_no      = $data['medical_specialist_phone_no'];
-            $medical_specialist->b_medical_specialist_phone_no    = $data['b_medical_specialist_phone_no'];
-            $medical_specialist->medical_specialist_email_ad      = $data['medical_specialist_email_ad'];
-            $medical_specialist->medical_specialist_web_link      = $data['medical_specialist_web_link'];
+            #$medical_specialist->medical_specialist_phone_no      = $data['medical_specialist_phone_no'];
+            #$medical_specialist->b_medical_specialist_phone_no    = $data['b_medical_specialist_phone_no'];
+            #$medical_specialist->medical_specialist_email_ad      = $data['medical_specialist_email_ad'];
+            #$medical_specialist->medical_specialist_web_link      = $data['medical_specialist_web_link'];
 
-            $medical_specialist->medical_specialist_address       = $data['medical_specialist_address'];
-            $medical_specialist->b_medical_specialist_address     = $data['b_medical_specialist_address'];
+            #$medical_specialist->medical_specialist_address       = $data['medical_specialist_address'];
+            #$medical_specialist->b_medical_specialist_address     = $data['b_medical_specialist_address'];
             $medical_specialist->medical_specialist_latitude      = $data['medical_specialist_latitude'];
             $medical_specialist->medical_specialist_longitude     = $data['medical_specialist_longitude'];
 

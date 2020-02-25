@@ -156,7 +156,7 @@
                     <ul class="uk-switcher uk-margin" id="user_profile_tabs_content">
                         <li><?php echo $foreignmedical->b_foreignmedical_description; ?>
         
-                            <div class="uk-grid" data-uk-grid-margin="">
+                            <!--<div class="uk-grid" data-uk-grid-margin="">
                                 <div class="uk-width-large-1-1">
                                     <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">যোগাযোগের তথ্য</h4>
                                     <ul class="md-list md-list-addon">
@@ -241,16 +241,16 @@
                             <div class="uk-width-large-1-1 uk-margin-medium-top">
                                 <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">সাধারণ তথ্য</h4>
                                 <ul class="md-list uk-margin-small-top">
-                                <?php echo  $foreignmedical->b_total_medicine; ; ?>
-                                <!--
+                                <?php #echo  $foreignmedical->b_total_medicine; ; ?>
+                                
                                     <li>
                                         <div class="md-list-content">
                                             <span class="hidden">General:</span> <span><?php #echo  $foreignmedical->b_total_medicine; ; ?></span>
                                         </div>
                                     </li>
-                                -->
+                                
                                 </ul>  
-                            </div>  
+                            </div>-->  
                             
                             <!-- START google maps -->
                             
@@ -341,7 +341,7 @@
                     <ul class="uk-switcher uk-margin" id="user_profile_tabs_content">
                         <li><?php echo $foreignmedical->foreignmedical_description; ?>
         
-                            <div class="uk-grid" data-uk-grid-margin="">
+                            <!--<div class="uk-grid" data-uk-grid-margin="">
                                 <div class="uk-width-large-1-1">
                                     <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">Contact Info</h4>
                                     <ul class="md-list md-list-addon">
@@ -422,16 +422,16 @@
                             <div class="uk-width-large-1-1 uk-margin-medium-top">
                                 <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">General Info</h4>
                                 <ul class="md-list uk-margin-small-top">
-                                <?php echo  $foreignmedical->total_medicine; ; ?>
-                                <!--
+                                <?php #echo  $foreignmedical->total_medicine; ; ?>
+                                
                                     <li>
                                         <div class="md-list-content">
                                             <span class="hidden">General:</span> <span><?php #echo  $foreignmedical->total_medicine; ; ?></span>
                                         </div>
                                     </li>
-                                -->
+                                
                                 </ul>  
-                            </div>      
+                            </div> -->     
                             
                             <!-- START google maps -->
                             

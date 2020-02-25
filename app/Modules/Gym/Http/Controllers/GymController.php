@@ -281,18 +281,18 @@ class GymController extends Controller
 
             $gym->gym_description    = $data['gym_description'];
             $gym->b_gym_description  = $data['b_gym_description'];
-            $gym->gym_phone_no       = $data['gym_phone_no'];
-            $gym->b_gym_phone_no     = $data['b_gym_phone_no'];
-            $gym->gym_email_ad       = $data['gym_email_ad'];
-            $gym->gym_web_link       = $data['gym_web_link'];
-            $gym->gym_total_bed      = $data['gym_total_bed'];
-            $gym->b_gym_total_bed    = $data['b_gym_total_bed'];
-            $gym->gym_total_doctor   = $data['gym_total_doctor'];
-            $gym->b_gym_total_doctor = $data['b_gym_total_doctor'];
-            $gym->gym_total_staff    = $data['gym_total_staff'];
-            $gym->b_gym_total_staff  = $data['b_gym_total_staff'];
-            $gym->gym_address        = $data['gym_address'];
-            $gym->b_gym_address      = $data['b_gym_address'];
+            #$gym->gym_phone_no       = $data['gym_phone_no'];
+            #$gym->b_gym_phone_no     = $data['b_gym_phone_no'];
+            #$gym->gym_email_ad       = $data['gym_email_ad'];
+            #$gym->gym_web_link       = $data['gym_web_link'];
+            #$gym->gym_total_bed      = $data['gym_total_bed'];
+            #$gym->b_gym_total_bed    = $data['b_gym_total_bed'];
+            #$gym->gym_total_doctor   = $data['gym_total_doctor'];
+            #$gym->b_gym_total_doctor = $data['b_gym_total_doctor'];
+            #$gym->gym_total_staff    = $data['gym_total_staff'];
+            #$gym->b_gym_total_staff  = $data['b_gym_total_staff'];
+            #$gym->gym_address        = $data['gym_address'];
+            #$gym->b_gym_address      = $data['b_gym_address'];
             $gym->gym_latitude       = $data['gym_latitude'];
             $gym->gym_longitude      = $data['gym_longitude'];
 

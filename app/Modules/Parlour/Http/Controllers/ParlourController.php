@@ -281,18 +281,18 @@ class ParlourController extends Controller
 
             $parlour->parlour_description    = $data['parlour_description'];
             $parlour->b_parlour_description  = $data['b_parlour_description'];
-            $parlour->parlour_phone_no       = $data['parlour_phone_no'];
-            $parlour->b_parlour_phone_no     = $data['b_parlour_phone_no'];
-            $parlour->parlour_email_ad       = $data['parlour_email_ad'];
-            $parlour->parlour_web_link       = $data['parlour_web_link'];
-            $parlour->parlour_total_bed      = $data['parlour_total_bed'];
-            $parlour->b_parlour_total_bed    = $data['b_parlour_total_bed'];
-            $parlour->parlour_total_doctor   = $data['parlour_total_doctor'];
-            $parlour->b_parlour_total_doctor = $data['b_parlour_total_doctor'];
-            $parlour->parlour_total_staff    = $data['parlour_total_staff'];
-            $parlour->b_parlour_total_staff  = $data['b_parlour_total_staff'];
-            $parlour->parlour_address        = $data['parlour_address'];
-            $parlour->b_parlour_address      = $data['b_parlour_address'];
+            #$parlour->parlour_phone_no       = $data['parlour_phone_no'];
+            #$parlour->b_parlour_phone_no     = $data['b_parlour_phone_no'];
+            #$parlour->parlour_email_ad       = $data['parlour_email_ad'];
+            #$parlour->parlour_web_link       = $data['parlour_web_link'];
+            #$parlour->parlour_total_bed      = $data['parlour_total_bed'];
+            #$parlour->b_parlour_total_bed    = $data['b_parlour_total_bed'];
+            #$parlour->parlour_total_doctor   = $data['parlour_total_doctor'];
+            #$parlour->b_parlour_total_doctor = $data['b_parlour_total_doctor'];
+            #$parlour->parlour_total_staff    = $data['parlour_total_staff'];
+            #$parlour->b_parlour_total_staff  = $data['b_parlour_total_staff'];
+            #$parlour->parlour_address        = $data['parlour_address'];
+            #$parlour->b_parlour_address      = $data['b_parlour_address'];
             $parlour->parlour_latitude       = $data['parlour_latitude'];
             $parlour->parlour_longitude      = $data['parlour_longitude'];
             

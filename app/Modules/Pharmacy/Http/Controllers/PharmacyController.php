@@ -259,15 +259,15 @@ class PharmacyController extends Controller
 
             $pharmacy->pharmacy_description    = $data['pharmacy_description'];
             $pharmacy->b_pharmacy_description  = $data['b_pharmacy_description'];
-            $pharmacy->pharmacy_phone_no       = $data['pharmacy_phone_no'];
-            $pharmacy->b_pharmacy_phone_no     = $data['b_pharmacy_phone_no'];
-            $pharmacy->pharmacy_email_ad       = $data['pharmacy_email_ad'];
+            #$pharmacy->pharmacy_phone_no       = $data['pharmacy_phone_no'];
+            #$pharmacy->b_pharmacy_phone_no     = $data['b_pharmacy_phone_no'];
+            #$pharmacy->pharmacy_email_ad       = $data['pharmacy_email_ad'];
             //$pharmacy->pharmacy_fb_link        = $data['pharmacy_fb_link'];
-            $pharmacy->pharmacy_web_link       = $data['pharmacy_web_link'];
-            $pharmacy->total_medicine          = $data['total_medicine'];
-            $pharmacy->b_total_medicine        = $data['b_total_medicine'];
-            $pharmacy->pharmacy_address        = $data['pharmacy_address'];
-            $pharmacy->b_pharmacy_address      = $data['b_pharmacy_address'];
+            #$pharmacy->pharmacy_web_link       = $data['pharmacy_web_link'];
+            #$pharmacy->total_medicine          = $data['total_medicine'];
+            #$pharmacy->b_total_medicine        = $data['b_total_medicine'];
+            #$pharmacy->pharmacy_address        = $data['pharmacy_address'];
+            #$pharmacy->b_pharmacy_address      = $data['b_pharmacy_address'];
             $pharmacy->pharmacy_latitude       = $data['pharmacy_latitude'];
             $pharmacy->pharmacy_longitude      = $data['pharmacy_longitude'];
 

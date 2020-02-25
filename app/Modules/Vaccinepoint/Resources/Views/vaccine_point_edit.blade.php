@@ -106,7 +106,7 @@
                                             </div>
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row ">
-                                                     <label for="add_publication_title">Vaccination Center Photo<span class="req"></span></label>
+                                                     <label for="add_publication_title">Vaccination Center Image<span class="req"></span></label>
                                                 </div>
                                                 <div class="parsley-row uk-margin-top">
                                                     <input type="file" id="vaccine_point_photo" name="vaccine_point_photo" class="dropify"/>
@@ -123,18 +123,18 @@
                                         <div class="uk-grid " data-uk-grid-margin>
                                             
                                             <div class="uk-width-medium-1-2">
-                                                <label for="vaccine_point_description">Description</label>
+                                                <label for="vaccine_point_description">About</label>
                                                 <div class="parsley-row uk-margin-top">
                                                     <textarea class="md-input" id="vaccine_point_description" name="vaccine_point_description" cols="10" rows="3" data-parsley-trigger="keyup" > {{ $vaccine_point->vaccine_point_description}} </textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
-                                                <label for="b_vaccine_point_description">বর্ণনা</label>
+                                                <label for="b_vaccine_point_description">সম্বন্ধে</label>
                                                 <div class="parsley-row uk-margin-top">
                                                     <textarea class="md-input" id="b_vaccine_point_description" name="b_vaccine_point_description" cols="10" rows="3" data-parsley-trigger="keyup" > {{ $vaccine_point->b_vaccine_point_description}} </textarea>
                                                 </div>
                                             </div>
-                                            <div class="uk-width-medium-1-2">
+                                            <!--<div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="vaccine_point_address">Address</label>
                                                     <textarea class="md-input" id="vaccine_point_address" name="vaccine_point_address" cols="10" rows="3" data-parsley-trigger="keyup" onkeydown="expandtext(this);" >{{$vaccine_point->vaccine_point_address}}</textarea>
@@ -181,7 +181,7 @@
                                                     <label for="vaccine_point_web_link">Website</label>
                                                     <input type="text" id="vaccine_point_web_link" name="vaccine_point_web_link" value="{{ $vaccine_point->vaccine_point_web_link}}" class="md-input" /> 
                                                 </div>
-                                            </div>
+                                            </div>-->
                                             
                                             <!-- START longitude latitude field -->
                                             <div class="uk-width-medium-1-2">
@@ -199,7 +199,7 @@
                                             </div>
                                             <!-- END   longitude latitude field -->
                                             
-                                            <div class="uk-width-medium-1-2">
+                                            <!--<div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="vaccine_point_total_bed">General Info</label>
                                                     <div class="parsley-row uk-margin-top">
@@ -214,7 +214,7 @@
                                                         <textarea type="text" id="b_vaccine_point_total_bed" name="b_vaccine_point_total_bed" value="{{ $vaccine_point->b_vaccine_point_total_bed}}" class="md-input">{{ $vaccine_point->b_vaccine_point_total_bed}}</textarea>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                         </div>
                                         <div class="uk-float-right uk-margin-top">
                                             <button type="submit" class="md-btn md-btn-primary" style="background: #FD0100;color: #fff;">Submit</button>

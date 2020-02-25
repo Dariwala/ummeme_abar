@@ -107,7 +107,7 @@
                                             
                                             <div class="uk-width-medium-1-1">
                                                 <div class="parsley-row ">
-                                                     <label for="add_publication_title">Eye Bank Photo<span class="req"></span></label>
+                                                     <label for="add_publication_title">Eye Bank Image<span class="req"></span></label>
                                                 </div>
                                                 <div class="parsley-row uk-margin-top">
                                                     <input type="file" id="eye_bank_photo" name="eye_bank_photo" class="dropify"/>
@@ -124,18 +124,18 @@
                                     <div class="uk-grid " data-uk-grid-margin>
                                         
                                         <div class="uk-width-medium-1-2">
-                                            <label for="add_course_description">Description</label>
+                                            <label for="add_course_description">About</label>
                                             <div class="parsley-row uk-margin-top">
                                                 <textarea class="md-input" id="eye_bank_description" name="eye_bank_description" cols="10" rows="3" data-parsley-trigger="keyup" >{{$eye_bank->eye_bank_description}}</textarea>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-1-2">
-                                            <label for="add_course_description">বর্ণনা</label>
+                                            <label for="add_course_description">সম্বন্ধে</label>
                                             <div class="parsley-row uk-margin-top">
                                                 <textarea class="md-input" id="b_eye_bank_description" name="b_eye_bank_description" cols="10" rows="3" data-parsley-trigger="keyup" >{{$eye_bank->b_eye_bank_description}}</textarea>
                                             </div>
                                         </div>
-                                        <div class="uk-width-medium-1-2">
+                                        <!--<div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="add_course_description">Address</label>
                                                 <textarea class="md-input" id="eye_bank_address" name="eye_bank_address" cols="10" rows="3" data-parsley-trigger="keyup"  onkeydown="expandtext(this);">{{$eye_bank->eye_bank_address}}</textarea>
@@ -182,7 +182,7 @@
                                                 <label for="eye_bank_web_link">Website</label>
                                                 <input type="text" id="eye_bank_web_link" name="eye_bank_web_link" value="{{$eye_bank->eye_bank_web_link}}"  class="md-input" /> 
                                             </div>
-                                        </div>
+                                        </div>-->
                                         
                                         <!-- START longitude latitude field -->
                                         <div class="uk-width-medium-1-2">
@@ -200,7 +200,7 @@
                                         </div>
                                         <!-- END   longitude latitude field -->
                                         
-                                        <div class="uk-width-medium-1-2">
+                                        <!--<div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="add_publication_title">General Info</label>
                                                 <div class="parsley-row uk-margin-top">
@@ -215,7 +215,7 @@
                                                     <textarea type="text" id="b_total_eye" name="b_total_eye" value="{{$eye_bank->b_total_eye}}"  class="md-input ">{{$eye_bank->b_total_eye}}</textarea>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>-->
                                     </div>
                                     <div class="uk-float-right uk-margin-top">
                                         <button type="submit" class="md-btn md-btn-primary" style="background: #FD0100;color: #fff;">Submit</button>

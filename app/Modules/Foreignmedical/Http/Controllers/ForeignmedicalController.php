@@ -259,15 +259,15 @@ class ForeignmedicalController extends Controller
 
             $foreignmedical->foreignmedical_description    = $data['foreignmedical_description'];
             $foreignmedical->b_foreignmedical_description  = $data['b_foreignmedical_description'];
-            $foreignmedical->foreignmedical_phone_no       = $data['foreignmedical_phone_no'];
-            $foreignmedical->b_foreignmedical_phone_no     = $data['b_foreignmedical_phone_no'];
-            $foreignmedical->foreignmedical_email_ad       = $data['foreignmedical_email_ad'];
+            #$foreignmedical->foreignmedical_phone_no       = $data['foreignmedical_phone_no'];
+            #$foreignmedical->b_foreignmedical_phone_no     = $data['b_foreignmedical_phone_no'];
+            #$foreignmedical->foreignmedical_email_ad       = $data['foreignmedical_email_ad'];
             //$foreignmedical->foreignmedical_fb_link        = $data['foreignmedical_fb_link'];
-            $foreignmedical->foreignmedical_web_link       = $data['foreignmedical_web_link'];
-            $foreignmedical->total_medicine          = $data['total_medicine'];
-            $foreignmedical->b_total_medicine        = $data['b_total_medicine'];
-            $foreignmedical->foreignmedical_address        = $data['foreignmedical_address'];
-            $foreignmedical->b_foreignmedical_address      = $data['b_foreignmedical_address'];
+            #$foreignmedical->foreignmedical_web_link       = $data['foreignmedical_web_link'];
+            #$foreignmedical->total_medicine          = $data['total_medicine'];
+            #$foreignmedical->b_total_medicine        = $data['b_total_medicine'];
+            #$foreignmedical->foreignmedical_address        = $data['foreignmedical_address'];
+            #$foreignmedical->b_foreignmedical_address      = $data['b_foreignmedical_address'];
             $foreignmedical->foreignmedical_latitude      = $data['foreignmedical_latitude'];
             $foreignmedical->foreignmedical_longitude      = $data['foreignmedical_longitude'];
 

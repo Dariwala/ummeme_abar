@@ -164,7 +164,7 @@
                     <ul class="uk-switcher uk-margin" id="user_profile_tabs_content">
                         <li><?php echo $homeopathic->b_homeopathic_description; ?>
         
-                            <div class="uk-grid" data-uk-grid-margin="">
+                            <!--<div class="uk-grid" data-uk-grid-margin="">
                                 <div class="uk-width-large-1-1">
                                     <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">যোগাযোগের তথ্য</h4>
                                     <ul class="md-list md-list-addon">
@@ -249,16 +249,16 @@
                             <div class="uk-width-large-1-1 uk-margin-medium-top">
                                 <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">সাধারণ তথ্য</h4>
                                 <ul class="md-list uk-margin-small-top">
-                                <?php echo  $homeopathic->b_total_medicine; ; ?>
-                                <!--
+                                <?php #echo  $homeopathic->b_total_medicine; ; ?>
+                                
                                     <li>
                                         <div class="md-list-content">
                                             <span class="hidden">General:</span> <span><?php echo  $homeopathic->b_total_medicine; ; ?></span>
                                         </div>
                                     </li>
-                                -->
+                                
                                 </ul>  
-                            </div>  
+                            </div>-->  
                             
                             <!-- START google maps -->
                             
@@ -394,7 +394,7 @@
                     <ul class="uk-switcher uk-margin" id="user_profile_tabs_content">
                         <li><?php echo $homeopathic->homeopathic_description; ?>
         
-                            <div class="uk-grid" data-uk-grid-margin="">
+                            <!--<div class="uk-grid" data-uk-grid-margin="">
                                 <div class="uk-width-large-1-1">
                                     <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">Contact Info</h4>
                                     <ul class="md-list md-list-addon">
@@ -475,16 +475,16 @@
                             <div class="uk-width-large-1-1 uk-margin-medium-top">
                                 <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">General Info</h4>
                                 <ul class="md-list uk-margin-small-top">
-                                <?php echo  $homeopathic->total_medicine; ; ?>
-                                <!--
+                                <?php #echo  $homeopathic->total_medicine; ; ?>
+                                
                                     <li>
                                         <div class="md-list-content">
                                             <span class="hidden">General:</span> <span><?php #echo  $homeopathic->total_medicine; ; ?></span>
                                         </div>
                                     </li>
-                                -->
+                                
                                 </ul>  
-                            </div>           
+                            </div>-->           
                             
                             <!-- START google maps -->
                             

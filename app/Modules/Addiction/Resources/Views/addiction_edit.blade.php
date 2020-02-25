@@ -106,7 +106,7 @@
                                             
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row ">
-                                                     <label for="add_publication_title">Addiction Rehabilitation Center Photo<span class="req"></span></label>
+                                                     <label for="add_publication_title">Addiction Rehabilitation Center Image<span class="req"></span></label>
                                                 </div>
                                                 <div class="parsley-row uk-margin-top">
                                                     <input type="file" id="addiction_photo" name="addiction_photo" class="dropify"/>
@@ -125,18 +125,18 @@
                                         <div class="uk-grid " data-uk-grid-margin>
                                             
                                             <div class="uk-width-medium-1-2">
-                                                <label for="addiction_description">Description</label>
+                                                <label for="addiction_description">About</label>
                                                 <div class="parsley-row uk-margin-top">
                                                     <textarea class="md-input" id="addiction_description" name="addiction_description" cols="10" rows="3" data-parsley-trigger="keyup" > {{ $addiction->addiction_description}} </textarea>
                                                 </div>
                                             </div>
                                             <div class="uk-width-medium-1-2">
-                                                <label for="b_addiction_description">বর্ণনা</label>
+                                                <label for="b_addiction_description">সম্বন্ধে</label>
                                                 <div class="parsley-row uk-margin-top">
                                                     <textarea class="md-input" id="b_addiction_description" name="b_addiction_description" cols="10" rows="3" data-parsley-trigger="keyup" > {{ $addiction->b_addiction_description}} </textarea>
                                                 </div>
                                             </div>
-                                            <div class="uk-width-medium-1-2">
+                                            <!--<div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                     <label for="addiction_address">Address</label>
                                                     <textarea class="md-input" id="addiction_address" name="addiction_address" cols="10" rows="3" data-parsley-trigger="keyup"  onkeydown="expandtext(this);">{{$addiction->addiction_address}}</textarea>
@@ -184,7 +184,7 @@
                                                     <label for="addiction_web_link">Website<span class="req"></span></label>
                                                     <input type="text" id="addiction_web_link" name="addiction_web_link" value="{{ $addiction->addiction_web_link}}" class="md-input" /> 
                                                 </div>
-                                            </div>
+                                            </div>-->
                                             
                                             <!-- START longitude latitude field -->
                                             <div class="uk-width-medium-1-2">
@@ -202,7 +202,7 @@
                                             </div>
                                             <!-- END   longitude latitude field -->
                                             
-                                            <div class="uk-width-medium-1-2">
+                                            <!--<div class="uk-width-medium-1-2">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="addiction_total_bed">General Info<span class="req"></span></label>
                                                     <div class="parsley-row uk-margin-top">
@@ -219,7 +219,7 @@
                                                     </div>
                                                 </div>
                                                 <p style="color:red;">{{ $errors->has('b_addiction_total_bed')?$errors->first('b_addiction_total_bed'):'' }}</p>
-                                            </div>
+                                            </div>-->
                                             <!--<div class="uk-width-medium-1-2 hidden">
                                                 <div class="parsley-row uk-margin-top">
                                                     <label for="addiction_total_doctor">Total Doctor<span class="req"></span></label>
@@ -252,7 +252,7 @@
                                             
                                         </div>
                                         
-                                        <div class="uk-float-right">
+                                        <div class="uk-float-right uk-margin-top">
                                             <button type="submit" class="md-btn md-btn-primary" style="background: #FD0100;color: #fff;">Submit</button>
                                         </div>
                                         

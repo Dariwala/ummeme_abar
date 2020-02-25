@@ -105,7 +105,7 @@
                                             
                                             <div class="uk-width-medium-1-2">
                                                 <div class="parsley-row ">
-                                                     <label for="add_publication_title">Blood Bank Photo<span class="req"></span></label>
+                                                     <label for="add_publication_title">Blood Bank Image<span class="req"></span></label>
                                                 </div>
                                                 <div class="parsley-row uk-margin-top">
                                                     <input type="file" id="blood_bank_photo" name="blood_bank_photo" class="dropify"/>
@@ -122,18 +122,18 @@
                                     <div class="uk-grid " data-uk-grid-margin>
                                         
                                         <div class="uk-width-medium-1-2">
-                                            <label for="add_course_description">Description</label>
+                                            <label for="add_course_description">About</label>
                                             <div class="parsley-row uk-margin-top">
                                                 <textarea class="md-input" id="blood_bank_description" name="blood_bank_description" cols="10" rows="3" data-parsley-trigger="keyup" >{{$blood_bank->blood_bank_description}}</textarea>
                                             </div>
                                         </div>
                                         <div class="uk-width-medium-1-2">
-                                            <label for="add_course_description">বর্ণনা</label>
+                                            <label for="add_course_description">সম্বন্ধে</label>
                                             <div class="parsley-row uk-margin-top">
                                                 <textarea class="md-input" id="b_blood_bank_description" name="b_blood_bank_description" cols="10" rows="3" data-parsley-trigger="keyup" >{{$blood_bank->b_blood_bank_description}}</textarea>
                                             </div>
                                         </div>
-                                        <div class="uk-width-medium-1-2">
+                                        <!--<div class="uk-width-medium-1-2">
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="blood_bank_address">Address</label>
                                                 <textarea class="md-input" id="blood_bank_address" name="blood_bank_address" cols="10" rows="3" data-parsley-trigger="keyup"  onkeydown="expandtext(this);">{{$blood_bank->blood_bank_address}}</textarea>
@@ -180,7 +180,7 @@
                                                 <label for="blood_bank_fb_link">Website</label>
                                                 <input type="text" id="blood_bank_fb_link" name="blood_bank_fb_link" value="{{$blood_bank->blood_bank_fb_link}}"  class="md-input" /> 
                                             </div>
-                                        </div>
+                                        </div>-->
                                         
                                         <!-- START longitude latitude field -->
                                         <div class="uk-width-medium-1-2">
@@ -198,7 +198,7 @@
                                         </div>
                                         <!-- END   longitude latitude field -->
                                         
-                                        <div class="uk-width-medium-1-2">
+                                        <!--<div class="uk-width-medium-1-2">
                                             <label for="add_course_description">General Info</label>
                                             <div class="parsley-row uk-margin-top">
                                                 <textarea class="md-input" id="blood_group_details" name="blood_group_details" cols="10" rows="3" data-parsley-trigger="keyup" >{{$blood_bank->blood_group_details}}</textarea>
@@ -209,7 +209,7 @@
                                             <div class="parsley-row uk-margin-top">
                                                 <textarea class="md-input" id="b_blood_group_details" name="b_blood_group_details" cols="10" rows="3" data-parsley-trigger="keyup" >{{$blood_bank->b_blood_group_details}}</textarea>
                                             </div>
-                                        </div>
+                                        </div>-->
                                     </div>
                                     <div class="uk-float-right uk-margin-top">
                                         <button type="submit" class="md-btn md-btn-primary" style="background: #FD0100;color: #fff;">Submit</button>

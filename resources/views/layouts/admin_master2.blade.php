@@ -180,10 +180,10 @@
                         </a>
                     </li>
                     
-                    <li title="Ad Image">
+                    <li title="Ad">
                         <a href="{{ route('notice_index') }}">
                             <span class="menu_icon"><i class="material-icons">view_list</i></span>
-                            <span class="menu_title">Ad Image</span>
+                            <span class="menu_title">Ad</span>
                         </a>
                     </li>
                     
