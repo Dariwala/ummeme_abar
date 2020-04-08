@@ -12,6 +12,8 @@ use App\Models\AmbulancePricing;
 use App\Models\AmbulanceNotice;
 use DB;
 
+use App\Http\Controllers\PhoneEmailIcon;
+
 class FrontendAmbulanceController extends Controller
 {
     public function viewAmbulance($ambulance_id,$subdistrict_id)

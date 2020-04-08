@@ -18,6 +18,8 @@ use App\Models\PharmacynewService;
 use App\Models\PharmacynewNotice;
 use DB;
 
+use App\Http\Controllers\PhoneEmailIcon;
+
 class FrontendPharmacynewController extends Controller
 {
     public function viewPharmacynew($pharmacynew_id,$subdistrict_id)

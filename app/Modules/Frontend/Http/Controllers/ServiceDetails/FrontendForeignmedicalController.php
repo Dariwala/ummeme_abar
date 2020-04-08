@@ -18,6 +18,8 @@ use App\Models\ForeignmedicalService;
 use App\Models\ForeignmedicalNotice;
 use DB;
 
+use App\Http\Controllers\PhoneEmailIcon;
+
 class FrontendForeignmedicalController extends Controller
 {
     public function viewForeignmedical($foreignmedical_id,$subdistrict_id)

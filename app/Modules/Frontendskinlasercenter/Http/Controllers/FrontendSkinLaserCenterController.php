@@ -11,6 +11,8 @@ use App\Models\SkinLaserCenter;
 use App\Models\SkinLaserCenterNotice;
 use DB;
 
+use App\Http\Controllers\PhoneEmailIcon;
+
 class FrontendSkinLaserCenterController extends Controller 
 {
     public function viewSkinLaserCenter($skin_laser_center_id,$subdistrict_id)

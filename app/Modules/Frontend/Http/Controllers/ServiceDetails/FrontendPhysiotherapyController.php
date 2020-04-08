@@ -18,6 +18,8 @@ use App\Models\PhysiotherapyService;
 use App\Models\PhysiotherapyNotice;
 use DB;
 
+use App\Http\Controllers\PhoneEmailIcon;
+
 class FrontendPhysiotherapyController extends Controller
 {
     public function viewPhysiotherapy($physiotherapy_id,$subdistrict_id)

@@ -18,6 +18,8 @@ use App\Models\OpticalService;
 use App\Models\OpticalNotice;
 use DB;
 
+use App\Http\Controllers\PhoneEmailIcon;
+
 class FrontendOpticalController extends Controller
 {
     public function viewOptical($optical_id,$subdistrict_id)

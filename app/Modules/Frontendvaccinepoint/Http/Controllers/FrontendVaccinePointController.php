@@ -11,6 +11,8 @@ use App\Models\VaccinePoint;
 use App\Models\VaccinePointNotice;
 use DB;
 
+use App\Http\Controllers\PhoneEmailIcon;
+
 class FrontendVaccinePointController extends Controller
 {
     public function viewVaccinePoint($vaccine_point_id,$subdistrict_id)

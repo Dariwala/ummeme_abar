@@ -14,6 +14,8 @@ use App\Models\AddictionNotice;
 use App\Models\MedicalSpecialist;
 use DB;
 
+use App\Http\Controllers\PhoneEmailIcon;
+
 class FrontendAddictionController extends Controller
 {
     public function viewAddiction($addiction_id,$subdistrict_id)

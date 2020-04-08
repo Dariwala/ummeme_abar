@@ -11,6 +11,8 @@ use App\Models\EyeBank;
 use App\Models\EyeBankNotice;
 use DB;
 
+use App\Http\Controllers\PhoneEmailIcon;
+
 class FrontendEyeBankController extends Controller
 {
     public function viewEyeBank($eye_bank_id,$subdistrict_id)

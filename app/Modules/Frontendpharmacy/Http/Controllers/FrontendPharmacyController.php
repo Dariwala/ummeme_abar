@@ -12,6 +12,7 @@ use App\Models\Pharmacy;
 use App\Models\PharmacyNotice;
 use App\Models\PharmacyProduct;
 use DB;
+use App\Http\Controllers\PhoneEmailIcon;
 
 class FrontendPharmacyController extends Controller
 {

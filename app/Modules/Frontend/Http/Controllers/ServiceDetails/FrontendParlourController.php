@@ -18,6 +18,8 @@ use App\Models\ParlourService;
 use App\Models\ParlourNotice;
 use DB;
 
+use App\Http\Controllers\PhoneEmailIcon;
+
 class FrontendParlourController extends Controller
 {
     public function viewParlour($parlour_id,$subdistrict_id)

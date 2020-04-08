@@ -18,6 +18,8 @@ use App\Models\GymService;
 use App\Models\GymNotice;
 use DB;
 
+use App\Http\Controllers\PhoneEmailIcon;
+
 class FrontendGymController extends Controller
 {
     public function viewGym($gym_id,$subdistrict_id)

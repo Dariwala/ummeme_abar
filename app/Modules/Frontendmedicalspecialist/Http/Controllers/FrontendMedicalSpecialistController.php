@@ -18,6 +18,7 @@ use DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
+use App\Http\Controllers\PhoneEmailIcon;
 
 class FrontendMedicalSpecialistController extends Controller
 {
