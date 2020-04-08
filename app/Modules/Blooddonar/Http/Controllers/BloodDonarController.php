@@ -186,7 +186,9 @@ class BloodDonarController extends Controller
         $blood_donor = BloodDonor::find($id);
 
         try {
-
+            if($blood_donor->photo_path[0]=='u'){
+                unlink($blood_donor->photo_path);
+            }
 
             if($request->hasFile('blood_donor_photo'))
             {

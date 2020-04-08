@@ -186,7 +186,9 @@ class AmbulanceController extends Controller
         $ambulance = Ambulance::find($id);
 
         try {
-
+            if($ambulance->photo_path[0]=='u'){
+                unlink($ambulance->photo_path);
+            }
 
             if($request->hasFile('ambulance_photo'))
             {

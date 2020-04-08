@@ -214,7 +214,9 @@ class MedicalSpecialistController extends Controller
                 $medical_specialist->b_specialty = $data['b_specialty'];
                 
             }else{
-                
+                if($medical_specialist->photo_path[0]=='u'){
+                    unlink($medical_specialist->photo_path);
+                }
                 if($request->hasFile('medical_specialist_photo'))
                 {
                     $file = $request->file('medical_specialist_photo');
@@ -232,6 +234,9 @@ class MedicalSpecialistController extends Controller
                         $medical_specialist->medical_specialist_photo = $new_file_name;
                         $medical_specialist->photo_path = 'uploads/medical_specialist/'.$new_file_name;
                     }
+                }
+                else{
+                    $medical_specialist->photo_path = 'medicalspecialist.jpg';
                 }
     
                 $medical_specialist->medical_specialist_name = $data['medical_specialist_name'];

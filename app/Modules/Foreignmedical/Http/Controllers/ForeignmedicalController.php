@@ -191,7 +191,9 @@ class ForeignmedicalController extends Controller
         $foreignmedical = Foreignmedical::find($id);
 
         try {
-
+            if($foreignmedical->photo_path[0]=='u'){
+                unlink($foreignmedical->photo_path);
+            }
 
             if($request->hasFile('foreignmedical_photo'))
             {

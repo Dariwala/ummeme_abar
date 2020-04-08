@@ -136,7 +136,9 @@
             margin-left:calc(50% - 10px);
             margin-right:calc(50% - 10px);
         }
-        
+        a{
+            color : black;
+        }
         
     </style>
     <style type="text/css" media="print">

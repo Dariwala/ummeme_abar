@@ -191,7 +191,9 @@ class OpticalController extends Controller
         $optical = Optical::find($id);
 
         try {
-
+            if($optical->photo_path[0]=='u'){
+                unlink($optical->photo_path);
+            }
 
             if($request->hasFile('optical_photo'))
             {

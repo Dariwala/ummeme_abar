@@ -217,7 +217,9 @@ class SkinLaserCenterController extends Controller
 
         try {
 
-
+            if($skin_laser_center->photo_path[0]=='u'){
+                unlink($skin_laser_center->photo_path);
+            }
             if($request->hasFile('skin_laser_center_photo'))
             {
                 $file = $request->file('skin_laser_center_photo');

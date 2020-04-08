@@ -34,25 +34,34 @@ use App\Models\Addiction;
 use App\Models\Gym;
 use App\Models\Yoga;
 use App\Models\Parlour;
+use App\Http\Controllers\PhoneEmailIcon;
 
 class FrontendController extends Controller
 {
     public function vision(){
         
         $data = commonModules::first();
-        
+        $temp = $data->vision;
+        $data->vision = PhoneEmailIcon::handlePhoneandEmail($data->vision,FALSE,'');
+        $data->b_vision = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$data->b_vision);
         return view('frontend::vision', compact('data'));
     }
     
     public function contact(){
         
         $data = commonModules::first();
+        $temp = $data->contact;
+        $data->contact = PhoneEmailIcon::handlePhoneandEmail($data->contact,FALSE,'');
+        $data->b_contact = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$data->b_contact);
         
         return view('frontend::contact', compact('data'));
     }
     public function reportDelivery(){
         
         $data = commonModules::first();
+        $temp = $data->report_delivery;
+        $data->report_delivery = PhoneEmailIcon::handlePhoneandEmail($data->report_delivery,FALSE,'');
+        $data->b_report_delivery = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$data->b_report_delivery);
         
         return view('frontend::report_delivery', compact('data'));
     }
@@ -206,13 +215,18 @@ class FrontendController extends Controller
 
     public function emergency_helpline(){
         $data = commonModules::first();
-
+        $temp = $data->emergency_helpline;
+        $data->emergency_helpline = PhoneEmailIcon::handlePhoneandEmail($data->emergency_helpline,FALSE,'');
+        $data->b_emergency_helpline = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$data->b_emergency_helpline);
         return view('frontend::emergency_helpline',compact('data'));
     }
     
     public function serviceEntry(){
         
         $data = commonModules::first();
+        $temp = $data->serviceEntry;
+        $data->serviceEntry = PhoneEmailIcon::handlePhoneandEmail($data->serviceEntry,FALSE,'');
+        $data->b_serviceEntry = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$data->b_serviceEntry);
         $message = '';
         
         return view('frontend::serviceEntry', compact('data','message'));
@@ -221,6 +235,9 @@ class FrontendController extends Controller
     public function faq(){
         
         $data = commonModules::first();
+        $temp = $data->faq;
+        $data->faq = PhoneEmailIcon::handlePhoneandEmail($data->faq,FALSE,'');
+        $data->b_faq = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$data->b_faq);
         
         return view('frontend::faq', compact('data'));
     }
@@ -228,6 +245,9 @@ class FrontendController extends Controller
     public function serviceList(){
         
         $data = commonModules::first();
+        $temp = $data->serviceList;
+        $data->serviceList = PhoneEmailIcon::handlePhoneandEmail($data->serviceList,FALSE,'');
+        $data->b_serviceList = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$data->b_serviceList);
         
         return view('frontend::serviceList', compact('data'));
     }
@@ -235,6 +255,9 @@ class FrontendController extends Controller
     public function latestNews(){
         
         $data = commonModules::first();
+        $temp = $data->latest_news;
+        $data->latest_news = PhoneEmailIcon::handlePhoneandEmail($data->latest_news,FALSE,'');
+        $data->b_latest_news = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$data->b_latest_news);
         
         return view('frontend::latest-news', compact('data'));
     }
@@ -242,6 +265,9 @@ class FrontendController extends Controller
     public function specialNotice(){
         
         $data = commonModules::first();
+        $temp = $data->notice;
+        $data->notice = PhoneEmailIcon::handlePhoneandEmail($data->notice,FALSE,'');
+        $data->b_notice = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$data->b_notice);
         
         return view('frontend::special-notice', compact('data'));
     }

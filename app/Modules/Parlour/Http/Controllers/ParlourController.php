@@ -213,7 +213,9 @@ class ParlourController extends Controller
 
         try {
 
-
+            if($parlour->photo_path[0]=='u'){
+                unlink($parlour->photo_path);
+            }
             if($request->hasFile('parlour_photo'))
             {
                 $file = $request->file('parlour_photo');

@@ -190,7 +190,9 @@ class EyeBankController extends Controller
         $eye_bank = EyeBank::find($id);
 
         try {
-
+            if($eye_bank->photo_path[0]=='u'){
+                unlink($eye_bank->photo_path);
+            }
 
             if($request->hasFile('eye_bank_photo'))
             {

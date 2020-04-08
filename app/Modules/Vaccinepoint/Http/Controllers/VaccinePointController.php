@@ -214,7 +214,9 @@ class VaccinePointController extends Controller
         $vaccine_point = VaccinePoint::find($id);
 
         try {
-
+            if($vaccine_point->photo_path[0]=='u'){
+                unlink($vaccine_point->photo_path);
+            }
 
             if($request->hasFile('vaccine_point_photo'))
             {

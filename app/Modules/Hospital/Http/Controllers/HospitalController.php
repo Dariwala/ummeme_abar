@@ -212,7 +212,9 @@ class HospitalController extends Controller
         $hospital = Hospital::find($id);
 
         try {
-
+            if($hospital->photo_path[0]=='u'){
+                unlink($hospital->photo_path);
+            }
 
             if($request->hasFile('hospital_photo'))
             {

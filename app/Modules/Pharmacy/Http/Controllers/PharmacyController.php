@@ -191,7 +191,9 @@ class PharmacyController extends Controller
         $pharmacy = Pharmacy::find($id);
 
         try {
-
+            if($pharmacy->photo_path[0]=='u'){
+                unlink($pharmacy->photo_path);
+            }
 
             if($request->hasFile('pharmacy_photo'))
             {

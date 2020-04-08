@@ -20,11 +20,17 @@ use App\Models\HospitalPricing;
 use App\Models\HospitalNotice;
 use DB;
 
+use App\Http\Controllers\PhoneEmailIcon;
+
 class FrontendHospitalController extends Controller
 {
 	public function viewHospital($hospital_id, $subdistrict_id)
     {
-        $hospital                   = Hospital::find($hospital_id); 
+        $hospital                   = Hospital::find($hospital_id);
+
+        $temp = $hospital->hospital_description;
+        $hospital->hospital_description = PhoneEmailIcon::handlePhoneandEmail($hospital->hospital_description,FALSE,'');
+        $hospital->b_hospital_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$hospital->b_hospital_description);
         
         if(isset($hospital->hospital_subname) && Session('language') != 'bn'){
             

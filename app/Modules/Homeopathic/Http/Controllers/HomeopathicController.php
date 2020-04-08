@@ -192,7 +192,9 @@ class HomeopathicController extends Controller
 
         try {
 
-
+            if($homeopathic->photo_path[0]=='u'){
+                unlink($homeopathic->photo_path);
+            }
             if($request->hasFile('homeopathic_photo'))
             {
                 $file = $request->file('homeopathic_photo');

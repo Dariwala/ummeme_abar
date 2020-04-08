@@ -212,7 +212,9 @@ class YogaController extends Controller
         $yoga = Yoga::find($id);
 
         try {
-
+            if($yoga->photo_path[0]=='u'){
+                unlink($yoga->photo_path);
+            }
 
             if($request->hasFile('yoga_photo'))
             {

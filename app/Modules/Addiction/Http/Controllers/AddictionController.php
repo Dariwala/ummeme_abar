@@ -213,7 +213,9 @@ class AddictionController extends Controller
 
         try {
 
-
+            if($addiction->photo_path[0]=='u'){
+                unlink($addiction->photo_path);
+            }
             if($request->hasFile('addiction_photo'))
             {
                 $file = $request->file('addiction_photo');

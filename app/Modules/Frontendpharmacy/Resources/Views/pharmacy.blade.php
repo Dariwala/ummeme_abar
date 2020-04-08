@@ -390,7 +390,7 @@
                     </li>
                 </ul>
     
-                <ul class="uk-switcher uk-margin" id="user_profile_tabs_content">
+                <ul class="uk-switcher uk-margin-top" id="user_profile_tabs_content" style="margin-bottom:-25px;">
                     <li><?php echo $pharmacy->pharmacy_description; ?>
     
                         <!--<div class="uk-grid" data-uk-grid-margin="">

@@ -191,7 +191,9 @@ class PhysiotherapyController extends Controller
         $physiotherapy = Physiotherapy::find($id);
 
         try {
-
+            if($physiotherapy->photo_path[0]=='u'){
+                unlink($physiotherapy->photo_path);
+            }
 
             if($request->hasFile('physiotherapy_photo'))
             {

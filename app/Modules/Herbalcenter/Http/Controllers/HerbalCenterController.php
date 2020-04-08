@@ -218,7 +218,9 @@ class HerbalCenterController extends Controller
 
         try {
 
-
+            if($herbal_center->photo_path[0]=='u'){
+                unlink($herbal_center->photo_path);
+            }
             if($request->hasFile('herbal_center_photo'))
             {
                 $file = $request->file('herbal_center_photo');

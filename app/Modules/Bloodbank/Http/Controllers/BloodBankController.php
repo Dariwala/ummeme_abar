@@ -190,7 +190,9 @@ class BloodBankController extends Controller
 
         try {
 
-
+            if($blood_bank->photo_path[0]=='u'){
+                unlink($blood_bank->photo_path);
+            }
             if($request->hasFile('blood_bank_photo'))
             {
                 $file = $request->file('blood_bank_photo');

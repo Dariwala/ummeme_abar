@@ -212,7 +212,9 @@ class GymController extends Controller
         $gym = Gym::find($id);
 
         try {
-
+            if($gym->photo_path[0]=='u'){
+                unlink($gym->photo_path);
+            }
 
             if($request->hasFile('gym_photo'))
             {
