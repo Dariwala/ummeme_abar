@@ -421,6 +421,11 @@ class GymController extends Controller
             ->where('gym_id', $gym_id)
             ->where('service_id', $service_id)
             ->get();
+        for($i=0;$i<count($services);$i = $i + 1){
+            $temp = $services[$i]->gym_service_description;
+            $services[$i]->gym_service_description = PhoneEmailIcon::handlePhoneandEmail($services[$i]->gym_service_description,FALSE,'');
+            $services[$i]->b_gym_service_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$services[$i]->b_gym_service_description);
+        }
 
         return $services;
     }

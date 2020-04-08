@@ -139,6 +139,11 @@ class PhysiotherapyServiceController extends Controller
                         ->where('physiotherapy_id', $physiotherapy_id)
                         ->where('service_id', $service_id)
                         ->get();
+        for($i=0;$i<count($services);$i = $i + 1){
+            $temp = $services[$i]->physiotherapy_service_description;
+            $services[$i]->physiotherapy_service_description = PhoneEmailIcon::handlePhoneandEmail($services[$i]->physiotherapy_service_description,FALSE,'');
+            $services[$i]->b_physiotherapy_service_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$services[$i]->b_physiotherapy_service_description);
+        }
 
         return $services;
     }

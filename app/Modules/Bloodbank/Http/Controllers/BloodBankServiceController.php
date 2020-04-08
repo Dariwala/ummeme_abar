@@ -138,6 +138,11 @@ class BloodBankServiceController extends Controller
             ->where('blood_bank_id', $blood_bank_id)
             ->where('service_id', $service_id)
             ->get();
+        for($i=0;$i<count($services);$i = $i + 1){
+            $temp = $services[$i]->blood_bank_service_description;
+            $services[$i]->blood_bank_service_description = PhoneEmailIcon::handlePhoneandEmail($services[$i]->blood_bank_service_description,FALSE,'');
+            $services[$i]->b_blood_bank_service_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$services[$i]->b_blood_bank_service_description);
+        }
 
         return $services;
     }

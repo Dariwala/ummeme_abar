@@ -419,6 +419,12 @@ class VaccinePointController extends Controller
             ->where('vaccine_point_id', $vaccine_point_id)
             ->where('service_id', $service_id)
             ->get();
+        
+        for($i=0;$i<count($services);$i = $i + 1){
+            $temp = $services[$i]->vaccine_point_service_description;
+            $services[$i]->vaccine_point_service_description = PhoneEmailIcon::handlePhoneandEmail($services[$i]->vaccine_point_service_description,FALSE,'');
+            $services[$i]->b_vaccine_point_service_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$services[$i]->b_vaccine_point_service_description);
+        }
 
         return $services;
     }

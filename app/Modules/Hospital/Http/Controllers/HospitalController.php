@@ -421,6 +421,11 @@ class HospitalController extends Controller
             ->where('hospital_id', $hospital_id)
             ->where('service_id', $service_id)
             ->get();
+        for($i=0;$i<count($services);$i = $i + 1){
+            $temp = $services[$i]->hospital_service_description;
+            $services[$i]->hospital_service_description = PhoneEmailIcon::handlePhoneandEmail($services[$i]->hospital_service_description,FALSE,'');
+            $services[$i]->b_hospital_service_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$services[$i]->b_hospital_service_description);
+        }
 
         return $services;
     }

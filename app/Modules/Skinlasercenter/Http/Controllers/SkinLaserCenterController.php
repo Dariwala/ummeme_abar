@@ -422,6 +422,12 @@ class SkinLaserCenterController extends Controller
             ->where('skin_laser_center_id', $skin_laser_center_id)
             ->where('service_id', $service_id)
             ->get();
+        
+        for($i=0;$i<count($services);$i = $i + 1){
+            $temp = $services[$i]->skin_laser_center_service_description;
+            $services[$i]->skin_laser_center_service_description = PhoneEmailIcon::handlePhoneandEmail($services[$i]->skin_laser_center_service_description,FALSE,'');
+            $services[$i]->b_skin_laser_center_service_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$services[$i]->b_skin_laser_center_service_description);
+        }
 
         return $services;
     }

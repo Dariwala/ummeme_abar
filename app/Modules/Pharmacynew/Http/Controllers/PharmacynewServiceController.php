@@ -138,6 +138,11 @@ class PharmacynewServiceController extends Controller
                         ->where('pharmacynew_id', $pharmacynew_id)
                         ->where('service_id', $service_id)
                         ->get();
+        for($i=0;$i<count($services);$i = $i + 1){
+            $temp = $services[$i]->pharmacynew_service_description;
+            $services[$i]->pharmacynew_service_description = PhoneEmailIcon::handlePhoneandEmail($services[$i]->pharmacynew_service_description,FALSE,'');
+            $services[$i]->b_pharmacynew_service_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$services[$i]->b_pharmacynew_service_description);
+        }
 
         return $services;
     }

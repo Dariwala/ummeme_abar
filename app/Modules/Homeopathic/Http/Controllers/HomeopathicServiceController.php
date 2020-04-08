@@ -138,6 +138,11 @@ class HomeopathicServiceController extends Controller
                         ->where('homeopathic_id', $homeopathic_id)
                         ->where('service_id', $service_id)
                         ->get();
+        for($i=0;$i<count($services);$i = $i + 1){
+            $temp = $services[$i]->homeopathic_service_description;
+            $services[$i]->homeopathic_service_description = PhoneEmailIcon::handlePhoneandEmail($services[$i]->homeopathic_service_description,FALSE,'');
+            $services[$i]->b_homeopathic_service_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$services[$i]->b_homeopathic_service_description);
+        }
 
         return $services;
     }

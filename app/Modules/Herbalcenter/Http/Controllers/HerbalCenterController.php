@@ -424,6 +424,11 @@ class HerbalCenterController extends Controller
             ->where('herbal_center_id', $herbal_center_id)
             ->where('service_id', $service_id)
             ->get();
+        for($i=0;$i<count($services);$i = $i + 1){
+            $temp = $services[$i]->herbal_center_service_description;
+            $services[$i]->herbal_center_service_description = PhoneEmailIcon::handlePhoneandEmail($services[$i]->herbal_center_service_description,FALSE,'');
+            $services[$i]->b_herbal_center_service_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$services[$i]->b_herbal_center_service_description);
+        }
 
         return $services;
     }

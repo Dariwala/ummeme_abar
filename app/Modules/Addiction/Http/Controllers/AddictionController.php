@@ -22,6 +22,8 @@ use App\Models\AddictionNotice;
 use App\Models\MedicalSpecialist;
 use DB;
 
+use App\Http\Controllers\PhoneEmailIcon;
+
 class AddictionController extends Controller
 {
     public function index()
@@ -421,6 +423,12 @@ class AddictionController extends Controller
             ->where('addiction_id', $addiction_id)
             ->where('service_id', $service_id)
             ->get();
+        
+        for($i=0;$i<count($services);$i = $i + 1){
+            $temp = $services[$i]->addiction_service_description;
+            $services[$i]->addiction_service_description = PhoneEmailIcon::handlePhoneandEmail($services[$i]->addiction_service_description,FALSE,'');
+            $services[$i]->b_addiction_service_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$services[$i]->b_addiction_service_description);
+        }
 
         return $services;
     }

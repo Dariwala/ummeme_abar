@@ -138,6 +138,11 @@ class ForeignmedicalServiceController extends Controller
                         ->where('foreignmedical_id', $foreignmedical_id)
                         ->where('service_id', $service_id)
                         ->get();
+        for($i=0;$i<count($services);$i = $i + 1){
+            $temp = $services[$i]->foreignmedical_service_description;
+            $services[$i]->foreignmedical_service_description = PhoneEmailIcon::handlePhoneandEmail($services[$i]->foreignmedical_service_description,FALSE,'');
+            $services[$i]->b_foreignmedical_service_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$services[$i]->b_foreignmedical_service_description);
+        }
 
         return $services;
     }
