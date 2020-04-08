@@ -26,6 +26,11 @@ class FrontendYogaController extends Controller
         $aside_results      = Yoga::with('subDistrict')->where('subdistrict_id', $subdistrict_id)->get();
 
         $yoga        = Yoga::find($yoga_id);
+
+        $temp = $yoga->yoga_description;
+        $yoga->yoga_description = PhoneEmailIcon::handlePhoneandEmail($yoga->yoga_description,FALSE,'');
+        $yoga->b_yoga_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$yoga->b_yoga_description);
+
         $phones             = DB::table('yoga_phone')->where('yoga_id', $yoga_id)->get();
         $emails             = DB::table('yoga_email')->where('yoga_id', $yoga_id)->get();
         $notices            = YogaNotice::where('yoga_id', $yoga_id)->get();

@@ -27,6 +27,11 @@ class FrontendPhysiotherapyController extends Controller
         $aside_results      = Physiotherapy::with('subDistrict')->where('subdistrict_id', $subdistrict_id)->get();
 
         $physiotherapy        = Physiotherapy::find($physiotherapy_id);
+
+        $temp = $physiotherapy->physiotherapy_description;
+        $physiotherapy->physiotherapy_description = PhoneEmailIcon::handlePhoneandEmail($physiotherapy->physiotherapy_description,FALSE,'');
+        $physiotherapy->b_physiotherapy_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$physiotherapy->b_physiotherapy_description);
+
         $phones             = DB::table('physiotherapy_phone')->where('physiotherapy_id', $physiotherapy_id)->get();
         $emails             = DB::table('physiotherapy_email')->where('physiotherapy_id', $physiotherapy_id)->get();
         $notices            = PhysiotherapyNotice::where('physiotherapy_id', $physiotherapy_id)->get();

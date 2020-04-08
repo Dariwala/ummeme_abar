@@ -19,6 +19,11 @@ class FrontendEyeBankController extends Controller
     	$aside_results = EyeBank::with('subDistrict')->where('subdistrict_id', $subdistrict_id)->get();
 
         $eye_bank = EyeBank::find($eye_bank_id);
+
+        $temp = $eye_bank->eye_bank_description;
+        $eye_bank->eye_bank_description = PhoneEmailIcon::handlePhoneandEmail($eye_bank->eye_bank_description,FALSE,'');
+        $eye_bank->b_eye_bank_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$eye_bank->b_eye_bank_description);
+
         $phones     = DB::table('eye_bank_phone')->where('eye_bank_id', $eye_bank_id)->get();
         $emails     = DB::table('eye_bank_email')->where('eye_bank_id', $eye_bank_id)->get();
 

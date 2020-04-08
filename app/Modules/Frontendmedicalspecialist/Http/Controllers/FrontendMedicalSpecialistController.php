@@ -24,7 +24,11 @@ class FrontendMedicalSpecialistController extends Controller
     public function viewMedicalSpecialist($medical_specialist_id,$subdistrict_id)
     {
     	
-    	$medical_specialist = MedicalSpecialist::find($medical_specialist_id);
+        $medical_specialist = MedicalSpecialist::find($medical_specialist_id);
+        
+        $temp = $medical_specialist->medical_specialist_description;
+        $medical_specialist->medical_specialist_description = PhoneEmailIcon::handlePhoneandEmail($medical_specialist->medical_specialist_description,FALSE,'');
+        $medical_specialist->b_medical_specialist_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$medical_specialist->b_medical_specialist_description);
     	
     	if(isset($medical_specialist->medical_specialist_subname) && Session('language') != 'bn'){
             

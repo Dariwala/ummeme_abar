@@ -16,7 +16,11 @@ class FrontendBloodDonorController extends Controller
     public function viewBloodDonor($blood_donor_id,$subdistrict_id)
     {
     	
-    	$blood_donor        = BloodDonor::find($blood_donor_id); 
+        $blood_donor        = BloodDonor::find($blood_donor_id); 
+        
+        $temp = $blood_donor->blood_donor_description;
+        $blood_donor->blood_donor_description = PhoneEmailIcon::handlePhoneandEmail($blood_donor->blood_donor_description,FALSE,'');
+        $blood_donor->b_blood_donor_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$blood_donor->b_blood_donor_description);
     	
     	if(isset($blood_donor->blood_donor_subname) && Session('language') != 'bn'){
             

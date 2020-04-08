@@ -27,6 +27,11 @@ class FrontendHomeopathicController extends Controller
         $aside_results      = Homeopathic::with('subDistrict')->where('subdistrict_id', $subdistrict_id)->get();
 
         $homeopathic        = Homeopathic::find($homeopathic_id);
+
+        $temp = $homeopathic->homeopathic_description;
+        $homeopathic->homeopathic_description = PhoneEmailIcon::handlePhoneandEmail($homeopathic->homeopathic_description,FALSE,'');
+        $homeopathic->b_homeopathic_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$homeopathic->b_homeopathic_description);
+
         $phones             = DB::table('homeopathic_phone')->where('homeopathic_id', $homeopathic_id)->get();
         $emails             = DB::table('homeopathic_email')->where('homeopathic_id', $homeopathic_id)->get();
         $notices            = HomeopathicNotice::where('homeopathic_id', $homeopathic_id)->get();

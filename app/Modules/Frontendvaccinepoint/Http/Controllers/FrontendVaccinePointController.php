@@ -19,6 +19,11 @@ class FrontendVaccinePointController extends Controller
     	$aside_results = VaccinePoint::with('subDistrict')->where('subdistrict_id', $subdistrict_id)->get();
 
         $vaccine_point = VaccinePoint::find($vaccine_point_id);
+
+        $temp = $vaccine_point->vaccine_point_description;
+        $vaccine_point->vaccine_point_description = PhoneEmailIcon::handlePhoneandEmail($vaccine_point->vaccine_point_description,FALSE,'');
+        $vaccine_point->b_vaccine_point_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$vaccine_point->b_vaccine_point_description);
+
         $phones     = DB::table('vaccine_point_phone')->where('vaccine_point_id', $vaccine_point_id)->get();
         $emails     = DB::table('vaccine_point_email')->where('vaccine_point_id', $vaccine_point_id)->get();
 

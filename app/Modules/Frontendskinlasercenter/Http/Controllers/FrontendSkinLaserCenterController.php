@@ -19,6 +19,11 @@ class FrontendSkinLaserCenterController extends Controller
     	$aside_results = SkinLaserCenter::with('subDistrict')->where('subdistrict_id', $subdistrict_id)->get();
 
         $skin_laser_center = SkinLaserCenter::find($skin_laser_center_id);
+
+        $temp = $skin_laser_center->skin_laser_center_description;
+        $skin_laser_center->skin_laser_center_description = PhoneEmailIcon::handlePhoneandEmail($skin_laser_center->skin_laser_center_description,FALSE,'');
+        $skin_laser_center->b_skin_laser_center_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$skin_laser_center->b_skin_laser_center_description);
+
         $phones     = DB::table('skin_laser_center_phone')->where('skin_laser_center_id', $skin_laser_center_id)->get();
         $emails     = DB::table('skin_laser_center_email')->where('skin_laser_center_id', $skin_laser_center_id)->get();
 

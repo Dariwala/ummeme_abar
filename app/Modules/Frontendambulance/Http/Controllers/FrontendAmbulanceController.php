@@ -19,6 +19,11 @@ class FrontendAmbulanceController extends Controller
     	$total_result = DB::table('ambulance')->where('subdistrict_id', $subdistrict_id)->count();
     	$aside_results = Ambulance::with('subDistrict')->where('subdistrict_id', $subdistrict_id)->get();
         $ambulance = Ambulance::find($ambulance_id);
+
+        $temp = $ambulance->ambulance_description;
+        $ambulance->ambulance_description = PhoneEmailIcon::handlePhoneandEmail($ambulance->ambulance_description,FALSE,'');
+        $ambulance->b_ambulance_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$ambulance->b_ambulance_description);
+
         $phones     = DB::table('ambulance_phone')->where('ambulance_id', $ambulance_id)->get();
         $emails     = DB::table('ambulance_email')->where('ambulance_id', $ambulance_id)->get();
 

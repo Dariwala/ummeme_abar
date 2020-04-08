@@ -27,6 +27,11 @@ class FrontendParlourController extends Controller
         $aside_results      = Parlour::with('subDistrict')->where('subdistrict_id', $subdistrict_id)->get();
 
         $parlour        = Parlour::find($parlour_id);
+
+        $temp = $parlour->parlour_description;
+        $parlour->parlour_description = PhoneEmailIcon::handlePhoneandEmail($parlour->parlour_description,FALSE,'');
+        $parlour->b_parlour_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$parlour->b_parlour_description);
+
         $phones             = DB::table('parlour_phone')->where('parlour_id', $parlour_id)->get();
         $emails             = DB::table('parlour_email')->where('parlour_id', $parlour_id)->get();
         $notices            = ParlourNotice::where('parlour_id', $parlour_id)->get();

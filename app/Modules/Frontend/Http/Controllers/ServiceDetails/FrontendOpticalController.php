@@ -27,6 +27,11 @@ class FrontendOpticalController extends Controller
         $aside_results      = Optical::with('subDistrict')->where('subdistrict_id', $subdistrict_id)->get();
 
         $optical        = Optical::find($optical_id);
+
+        $temp = $optical->optical_description;
+        $optical->optical_description = PhoneEmailIcon::handlePhoneandEmail($optical->optical_description,FALSE,'');
+        $optical->b_optical_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$optical->b_optical_description);
+
         $phones             = DB::table('optical_phone')->where('optical_id', $optical_id)->get();
         $emails             = DB::table('optical_email')->where('optical_id', $optical_id)->get();
         $notices            = OpticalNotice::where('optical_id', $optical_id)->get();

@@ -20,6 +20,11 @@ class FrontendHerbalCenterController extends Controller
     	$aside_results = HerbalCenter::with('subDistrict')->where('subdistrict_id', $subdistrict_id)->get();
 
         $herbal_center = HerbalCenter::find($herbal_center_id);
+
+        $temp = $herbal_center->herbal_center_description;
+        $herbal_center->herbal_center_description = PhoneEmailIcon::handlePhoneandEmail($herbal_center->herbal_center_description,FALSE,'');
+        $herbal_center->b_herbal_center_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$herbal_center->b_herbal_center_description);
+
         $phones     = DB::table('herbal_center_phone')->where('herbal_center_id', $herbal_center_id)->get();
         $emails     = DB::table('herbal_center_email')->where('herbal_center_id', $herbal_center_id)->get();
 

@@ -27,6 +27,11 @@ class FrontendForeignmedicalController extends Controller
         $aside_results      = Foreignmedical::with('subDistrict')->where('subdistrict_id', $subdistrict_id)->get();
 
         $foreignmedical     = Foreignmedical::find($foreignmedical_id);
+
+        $temp = $foreignmedical->foreignmedical_description;
+        $foreignmedical->foreignmedical_description = PhoneEmailIcon::handlePhoneandEmail($foreignmedical->foreignmedical_description,FALSE,'');
+        $foreignmedical->b_foreignmedical_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$foreignmedical->b_foreignmedical_description);
+
         $phones             = DB::table('foreignmedical_phone')->where('foreignmedical_id', $foreignmedical_id)->get();
         $emails             = DB::table('foreignmedical_email')->where('foreignmedical_id', $foreignmedical_id)->get();
         $notices            = ForeignmedicalNotice::where('foreignmedical_id', $foreignmedical_id)->get();

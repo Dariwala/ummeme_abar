@@ -27,6 +27,11 @@ class FrontendPharmacynewController extends Controller
         $aside_results      = Pharmacynew::with('subDistrict')->where('subdistrict_id', $subdistrict_id)->get();
 
         $pharmacynew        = Pharmacynew::find($pharmacynew_id);
+
+        $temp = $pharmacynew->pharmacynew_description;
+        $pharmacynew->pharmacynew_description = PhoneEmailIcon::handlePhoneandEmail($pharmacynew->pharmacynew_description,FALSE,'');
+        $pharmacynew->b_pharmacynew_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$pharmacynew->b_pharmacynew_description);
+
         $phones             = DB::table('pharmacynew_phone')->where('pharmacynew_id', $pharmacynew_id)->get();
         $emails             = DB::table('pharmacynew_email')->where('pharmacynew_id', $pharmacynew_id)->get();
         $notices            = PharmacynewNotice::where('pharmacynew_id', $pharmacynew_id)->get();

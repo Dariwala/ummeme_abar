@@ -27,6 +27,11 @@ class FrontendGymController extends Controller
         $aside_results      = Gym::with('subDistrict')->where('subdistrict_id', $subdistrict_id)->get();
 
         $gym                = Gym::find($gym_id);
+
+        $temp = $gym->gym_description;
+        $gym->gym_description = PhoneEmailIcon::handlePhoneandEmail($gym->gym_description,FALSE,'');
+        $gym->b_gym_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$gym->b_gym_description);
+
         $phones             = DB::table('gym_phone')->where('gym_id', $gym_id)->get();
         $emails             = DB::table('gym_email')->where('gym_id', $gym_id)->get();
         $notices            = GymNotice::where('gym_id', $gym_id)->get();

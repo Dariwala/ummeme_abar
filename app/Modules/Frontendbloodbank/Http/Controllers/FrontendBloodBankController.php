@@ -19,6 +19,11 @@ class FrontendBloodBankController extends Controller
     	$aside_results = BloodBank::with('subDistrict')->where('subdistrict_id', $subdistrict_id)->get();
 
         $blood_bank = BloodBank::find($blood_bank_id);
+
+        $temp = $blood_bank->blood_bank_description;
+        $blood_bank->blood_bank_description = PhoneEmailIcon::handlePhoneandEmail($blood_bank->blood_bank_description,FALSE,'');
+        $blood_bank->b_blood_bank_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$blood_bank->b_blood_bank_description);
+
         $phones     = DB::table('blood_bank_phone')->where('blood_bank_id', $blood_bank_id)->get();
         $emails     = DB::table('blood_bank_email')->where('blood_bank_id', $blood_bank_id)->get();
 
