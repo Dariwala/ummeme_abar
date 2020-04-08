@@ -49,8 +49,8 @@ class ParlourServiceController extends Controller
         $parlour_service = new ParlourService;
 
         $parlour_service->service_id 					  	= $data['service_id'];
-        $parlour_service->parlour_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['parlour_service_description'], FALSE, $data['b_parlour_service_description']);
-        $parlour_service->b_parlour_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['parlour_service_description'], TRUE, $data['b_parlour_service_description']);
+        $parlour_service->parlour_service_description 	= $data['parlour_service_description'];
+        $parlour_service->b_parlour_service_description 	= $data['b_parlour_service_description'];
         $parlour_service->parlour_id 	                    = $id;
 
         if($parlour_service->save())
@@ -91,8 +91,8 @@ class ParlourServiceController extends Controller
         
         $parlour_service = ParlourService::find($parlour_service_id);
 
-        $parlour_service->parlour_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['parlour_service_description'], FALSE, $data['b_parlour_service_description']);
-        $parlour_service->b_parlour_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['parlour_service_description'], TRUE, $data['b_parlour_service_description']);
+        $parlour_service->parlour_service_description 	= $data['parlour_service_description'];
+        $parlour_service->b_parlour_service_description 	= $data['b_parlour_service_description'];
         $parlour_service->parlour_id                      = $parlour_id;
 
         if($parlour_service->update())

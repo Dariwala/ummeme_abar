@@ -51,8 +51,8 @@ class AirAmbulanceServiceController extends Controller
         $air_ambulance_service = new AirAmbulanceService;
 
         $air_ambulance_service->service_id                            = $data['service_id'];
-        $air_ambulance_service->air_ambulance_service_description     = PhoneEmailIcon::handlePhoneandEmail($data['air_ambulance_service_description'], FALSE, $data['b_air_ambulance_service_description']);
-        $air_ambulance_service->b_air_ambulance_service_description   = PhoneEmailIcon::handlePhoneandEmail($data['air_ambulance_service_description'], TRUE, $data['b_air_ambulance_service_description']);
+        $air_ambulance_service->air_ambulance_service_description     = $data['air_ambulance_service_description'];
+        $air_ambulance_service->b_air_ambulance_service_description   = $data['b_air_ambulance_service_description'];
         $air_ambulance_service->air_ambulance_id  = $id;
 
         if($air_ambulance_service->save())
@@ -92,8 +92,8 @@ class AirAmbulanceServiceController extends Controller
         $air_ambulance_service  = AirAmbulanceService::find($air_ambulance_service_id);
 
 
-        $air_ambulance_service->air_ambulance_service_description     = PhoneEmailIcon::handlePhoneandEmail($data['air_ambulance_service_description'], FALSE, $data['b_air_ambulance_service_description']);
-        $air_ambulance_service->b_air_ambulance_service_description   = PhoneEmailIcon::handlePhoneandEmail($data['air_ambulance_service_description'], TRUE, $data['b_air_ambulance_service_description']);
+        $air_ambulance_service->air_ambulance_service_description     = $data['air_ambulance_service_description'];
+        $air_ambulance_service->b_air_ambulance_service_description   = $data['b_air_ambulance_service_description'];
         $air_ambulance_service->air_ambulance_id                      = $air_ambulance_id;
 
         if($air_ambulance_service->update())

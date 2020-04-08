@@ -28,8 +28,8 @@ class MedicalSpecialistChamberController extends Controller
 
     	$medical_specialist_chamber = new MedicalSpecialistChamber;
 
-    	$medical_specialist_chamber->medical_specialist_chamber_description   = PhoneEmailIcon::handlePhoneandEmail($data['medical_specialist_chamber_description'], FALSE, '');
-    	$medical_specialist_chamber->b_medical_specialist_chamber_description = PhoneEmailIcon::handlePhoneandEmail($data['medical_specialist_chamber_description'], TRUE, $data['b_medical_specialist_chamber_description']);
+    	$medical_specialist_chamber->medical_specialist_chamber_description   = $data['medical_specialist_chamber_description'];
+    	$medical_specialist_chamber->b_medical_specialist_chamber_description = $data['b_medical_specialist_chamber_description'];
     	$medical_specialist_chamber->medical_specialist_id 				      = $medical_specialist_id;
 
     	if($medical_specialist_chamber->save())
@@ -63,8 +63,8 @@ class MedicalSpecialistChamberController extends Controller
         $medical_specialist_chamber = MedicalSpecialistChamber::find($medical_specialist_chamber_id);
 
         
-        $medical_specialist_chamber->medical_specialist_chamber_description   = PhoneEmailIcon::handlePhoneandEmail($data['medical_specialist_chamber_description'], FALSE, '');
-    	$medical_specialist_chamber->b_medical_specialist_chamber_description = PhoneEmailIcon::handlePhoneandEmail($data['medical_specialist_chamber_description'], TRUE, $data['b_medical_specialist_chamber_description']);
+        $medical_specialist_chamber->medical_specialist_chamber_description   = $data['medical_specialist_chamber_description'];
+    	$medical_specialist_chamber->b_medical_specialist_chamber_description = $data['b_medical_specialist_chamber_description'];
         $medical_specialist_chamber->medical_specialist_id                    = $medical_specialist_id;
 
         if($medical_specialist_chamber->update())

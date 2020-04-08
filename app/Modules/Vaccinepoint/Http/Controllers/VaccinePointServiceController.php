@@ -50,8 +50,8 @@ class VaccinePointServiceController extends Controller
         $vaccine_point_service = new VaccinePointService;
 
         $vaccine_point_service->service_id 					  	    = $data['service_id'];
-        $vaccine_point_service->vaccine_point_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['vaccine_point_service_description'], FALSE, $data['b_vaccine_point_service_description']);
-        $vaccine_point_service->b_vaccine_point_service_description = PhoneEmailIcon::handlePhoneandEmail($data['vaccine_point_service_description'], TRUE, $data['b_vaccine_point_service_description']);
+        $vaccine_point_service->vaccine_point_service_description 	= $data['vaccine_point_service_description'];
+        $vaccine_point_service->b_vaccine_point_service_description = $data['b_vaccine_point_service_description'];
         $vaccine_point_service->vaccine_point_id 	                = $id;
 
         if($vaccine_point_service->save())
@@ -93,8 +93,8 @@ class VaccinePointServiceController extends Controller
         $vaccine_point_service = VaccinePointService::find($vaccine_point_service_id);
 
         
-        $vaccine_point_service->vaccine_point_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['vaccine_point_service_description'], FALSE, $data['b_vaccine_point_service_description']);
-        $vaccine_point_service->b_vaccine_point_service_description = PhoneEmailIcon::handlePhoneandEmail($data['vaccine_point_service_description'], TRUE, $data['b_vaccine_point_service_description']);
+        $vaccine_point_service->vaccine_point_service_description 	= $data['vaccine_point_service_description'];
+        $vaccine_point_service->b_vaccine_point_service_description = $data['b_vaccine_point_service_description'];
         $vaccine_point_service->vaccine_point_id                      = $vaccine_point_id;
 
         if($vaccine_point_service->update())

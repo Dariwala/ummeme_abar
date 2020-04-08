@@ -50,8 +50,8 @@ class SkinLaserCenterServiceController extends Controller
         $skin_laser_center_service = new SkinLaserCenterService;
 
         $skin_laser_center_service->service_id 					  	        = $data['service_id'];
-        $skin_laser_center_service->skin_laser_center_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['skin_laser_center_service_description'], FALSE, $data['b_skin_laser_center_service_description']);
-        $skin_laser_center_service->b_skin_laser_center_service_description = PhoneEmailIcon::handlePhoneandEmail($data['skin_laser_center_service_description'], TRUE, $data['b_skin_laser_center_service_description']);
+        $skin_laser_center_service->skin_laser_center_service_description 	= $data['skin_laser_center_service_description'];
+        $skin_laser_center_service->b_skin_laser_center_service_description = $data['b_skin_laser_center_service_description'];
         $skin_laser_center_service->skin_laser_center_id 	                = $id;
 
         if($skin_laser_center_service->save())
@@ -93,8 +93,8 @@ class SkinLaserCenterServiceController extends Controller
         $skin_laser_center_service = SkinLaserCenterService::find($skin_laser_center_service_id);
 
 
-        $skin_laser_center_service->skin_laser_center_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['skin_laser_center_service_description'], FALSE, $data['b_skin_laser_center_service_description']);
-        $skin_laser_center_service->b_skin_laser_center_service_description = PhoneEmailIcon::handlePhoneandEmail($data['skin_laser_center_service_description'], TRUE, $data['b_skin_laser_center_service_description']);
+        $skin_laser_center_service->skin_laser_center_service_description 	= $data['skin_laser_center_service_description'];
+        $skin_laser_center_service->b_skin_laser_center_service_description = $data['b_skin_laser_center_service_description'];
         $skin_laser_center_service->skin_laser_center_id                      = $skin_laser_center_id;
         
         if($skin_laser_center_service->update())

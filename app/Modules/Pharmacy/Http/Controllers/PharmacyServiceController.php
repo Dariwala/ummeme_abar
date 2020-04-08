@@ -52,8 +52,8 @@ class PharmacyServiceController extends Controller
         $pharmacy_service = new PharmacyService;
 
         $pharmacy_service->service_id                       = $data['service_id'];
-        $pharmacy_service->pharmacy_service_description     = PhoneEmailIcon::handlePhoneandEmail($data['pharmacy_service_description'], FALSE, $data['b_pharmacy_service_description']);
-        $pharmacy_service->b_pharmacy_service_description   = PhoneEmailIcon::handlePhoneandEmail($data['pharmacy_service_description'], TRUE, $data['b_pharmacy_service_description']);
+        $pharmacy_service->pharmacy_service_description     = $data['pharmacy_service_description'];
+        $pharmacy_service->b_pharmacy_service_description   = $data['b_pharmacy_service_description'];
         $pharmacy_service->pharmacy_id  = $id;
 
         if($pharmacy_service->save())
@@ -95,8 +95,8 @@ class PharmacyServiceController extends Controller
         $pharmacy_service = PharmacyService::find($pharmacy_service_id);
 
 
-        $pharmacy_service->pharmacy_service_description     = PhoneEmailIcon::handlePhoneandEmail($data['pharmacy_service_description'], FALSE, $data['b_pharmacy_service_description']);
-        $pharmacy_service->b_pharmacy_service_description   = PhoneEmailIcon::handlePhoneandEmail($data['pharmacy_service_description'], TRUE, $data['b_pharmacy_service_description']);
+        $pharmacy_service->pharmacy_service_description     = $data['pharmacy_service_description'];
+        $pharmacy_service->b_pharmacy_service_description   = $data['b_pharmacy_service_description'];
         $pharmacy_service->pharmacy_id                      = $pharmacy_id;
 
         if($pharmacy_service->update())

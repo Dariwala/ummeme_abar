@@ -52,8 +52,8 @@ class OpticalServiceController extends Controller
         $optical_service = new OpticalService;
 
         $optical_service->service_id                       = $data['service_id'];
-        $optical_service->optical_service_description     = PhoneEmailIcon::handlePhoneandEmail($data['optical_service_description'], FALSE, $data['b_optical_service_description']);
-        $optical_service->b_optical_service_description   = PhoneEmailIcon::handlePhoneandEmail($data['optical_service_description'], TRUE, $data['b_optical_service_description']);
+        $optical_service->optical_service_description     = $data['optical_service_description'];
+        $optical_service->b_optical_service_description   = $data['b_optical_service_description'];
         $optical_service->optical_id  = $id;
 
         if($optical_service->save())
@@ -95,8 +95,8 @@ class OpticalServiceController extends Controller
         $optical_service = OpticalService::find($optical_service_id);
 
 
-        $optical_service->optical_service_description     = PhoneEmailIcon::handlePhoneandEmail($data['optical_service_description'], FALSE, $data['b_optical_service_description']);
-        $optical_service->b_optical_service_description   = PhoneEmailIcon::handlePhoneandEmail($data['optical_service_description'], TRUE, $data['b_optical_service_description']);
+        $optical_service->optical_service_description     = $data['optical_service_description'];
+        $optical_service->b_optical_service_description   = $data['b_optical_service_description'];
         $optical_service->optical_id                      = $optical_id;
 
         if($optical_service->update())

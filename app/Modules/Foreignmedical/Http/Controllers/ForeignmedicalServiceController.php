@@ -51,8 +51,8 @@ class ForeignmedicalServiceController extends Controller
         $foreignmedical_service = new ForeignmedicalService;
 
         $foreignmedical_service->service_id                       = $data['service_id'];
-        $foreignmedical_service->foreignmedical_service_description     = PhoneEmailIcon::handlePhoneandEmail($data['foreignmedical_service_description'], FALSE, $data['b_foreignmedical_service_description']);
-        $foreignmedical_service->b_foreignmedical_service_description   = PhoneEmailIcon::handlePhoneandEmail($data['foreignmedical_service_description'], TRUE, $data['b_foreignmedical_service_description']);
+        $foreignmedical_service->foreignmedical_service_description     = $data['foreignmedical_service_description'];
+        $foreignmedical_service->b_foreignmedical_service_description   = $data['b_foreignmedical_service_description'];
         $foreignmedical_service->foreignmedical_id  = $id;
 
         if($foreignmedical_service->save())

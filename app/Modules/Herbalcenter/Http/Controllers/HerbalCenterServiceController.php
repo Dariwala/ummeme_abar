@@ -50,8 +50,8 @@ class HerbalCenterServiceController extends Controller
         $herbal_center_service = new HerbalCenterService;
 
         $herbal_center_service->service_id 					  	    = $data['service_id'];
-        $herbal_center_service->herbal_center_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['herbal_center_service_description'], FALSE, $data['b_herbal_center_service_description']);
-        $herbal_center_service->b_herbal_center_service_description = PhoneEmailIcon::handlePhoneandEmail($data['herbal_center_service_description'], TRUE, $data['b_herbal_center_service_description']);
+        $herbal_center_service->herbal_center_service_description 	= $data['herbal_center_service_description'];
+        $herbal_center_service->b_herbal_center_service_description = $data['b_herbal_center_service_description'];
         $herbal_center_service->herbal_center_id 	                = $id;
 
         if($herbal_center_service->save())
@@ -93,8 +93,8 @@ class HerbalCenterServiceController extends Controller
         $herbal_center_service = HerbalCenterService::find($herbal_center_service_id);
 
         
-        $herbal_center_service->herbal_center_service_description 	= PhoneEmailIcon::handlePhoneandEmail($data['herbal_center_service_description'], FALSE, $data['b_herbal_center_service_description']);
-        $herbal_center_service->b_herbal_center_service_description = PhoneEmailIcon::handlePhoneandEmail($data['herbal_center_service_description'], TRUE, $data['b_herbal_center_service_description']);
+        $herbal_center_service->herbal_center_service_description 	= $data['herbal_center_service_description'];
+        $herbal_center_service->b_herbal_center_service_description = $data['b_herbal_center_service_description'];
         $herbal_center_service->herbal_center_id                      = $herbal_center_id;
 
         if($herbal_center_service->update())
