@@ -78,6 +78,13 @@ class FrontendMedicalSpecialistController extends Controller
         $phones = DB::table('medical_specialist_phone')->where('medical_specialist_id', $medical_specialist_id)->get();
         $emails = DB::table('medical_specialist_email')->where('medical_specialist_id', $medical_specialist_id)->get();
         $chembers = DB::table('medical_specialist_chamber')->where('medical_specialist_id', $medical_specialist_id)->get();
+
+        for($i=0;$i<count($chembers);$i=$i+1){
+            $temp = $chembers[$i]->medical_specialist_chamber_description;
+            $chembers[$i]->medical_specialist_chamber_description = PhoneEmailIcon::handlePhoneandEmail($chembers[$i]->medical_specialist_chamber_description,FALSE,'');
+            $chembers[$i]->b_medical_specialist_chamber_description = PhoneEmailIcon::handlePhoneandEmail($temp,TRUE,$chembers[$i]->b_medical_specialist_chamber_description);
+        }
+
         $notices = MedicalSpecialistNotice::where('medical_specialist_id', $medical_specialist_id)->get();
         $appointments = MedicalSpecialistAppointment::where('medical_specialist_id', $medical_specialist_id)->get();
         $appointment_notice = MedicalSpecialistAppointmentNotice::where('medical_specialist_id', $medical_specialist_id)->get();

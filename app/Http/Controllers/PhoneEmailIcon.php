@@ -27,7 +27,7 @@ class PhoneEmailIcon
                 }
                 else if(count($matches_email[0]) > 0){
                     foreach($matches_email[0] as $match){
-                        $b_str = str_replace(BanglaConverter::en2bn($match),'<a href="mailto:'.$match.'">'.$match.'</a>',$b_str);
+                        $b_str = str_replace($match,'<a href="mailto:'.$match.'">'.$match.'</a>',$b_str);
                     }
                 }
                 else if(count($matches_emergency[0]) > 0){
