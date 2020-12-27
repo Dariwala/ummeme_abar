@@ -154,14 +154,14 @@
                  <a class="sSwitch sSwitch_left" href="#" id="sidebar_main_toggle"><span class="sSwitchIcon"></span></a> <!-- secondary sidebar switch -->
                  <a class="sSwitch sSwitch_right sidebar_secondary_check" href="#" id="sidebar_secondary_toggle"><span class="sSwitchIcon"></span></a>
                  <div class="main_logo_top">
-                    @if(Session('language')=='bn')
-                        <a class = "home-link" href="{{'/'}}"><b>হোম</b></a>
-                    @else
+                    @if(Session('language')=='en')
                         <a class = "home-link" href="{{'/'}}"><b>Home</b></a>
+                    @else
+                        <a class = "home-link" href="{{'/'}}"><b><img style="height:40px;" src="{{url('vendor/img/home_icon.png')}}" alt=""></b></a>
                     @endif
                 </div>
 
-                <div class="uk-navbar-flip">
+                <!--<div class="uk-navbar-flip">
                     @if(Session('language')=='bn')
                     <ul class="uk-navbar-nav user_actions">
                         <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}">
@@ -202,7 +202,7 @@
                     </ul>
                     @endif
                     
-                </div>
+                </div>-->
             </nav>
         </div>
     </header>
@@ -292,18 +292,18 @@
                                                 <div class="parsley-row">
                                                     <select id="main_district_id" name="district_name" required class="md-input selectable">
                                                         <option selected="selected">
-                                                            @if(Session('language') == 'bn')
-                                                            জেলা নির্বাচন করুন
-                                                         @else
+                                                            @if(Session('language') == 'en')
                                                             Select District 
+                                                         @else
+                                                         জেলা নির্বাচন করুন
                                                          @endif
                                                         </option>
                                                         @foreach($districts as $district)
                                                             <option value="{{ $district->id }}">
-                                                                 @if(Session('language') == 'bn')
-                                                                    {{ $district->b_district_name }}
-                                                                 @else
+                                                                 @if(Session('language') == 'en')
                                                                     {{ $district->district_name }}
+                                                                 @else
+                                                                    {{ $district->b_district_name }}
                                                                  @endif
                                                             </option>
                                                         @endforeach
@@ -315,7 +315,7 @@
                                             <div class="uk-width-medium-1-1">
                                                 <div class="parsley-row">
                                                     <select id="sub_district_id" name="subdistrict_name" required class="md-input selectable">
-                                                        <option value="0" selected="selected">  @if(Session('language') == 'bn')  উপজেলা নির্বাচন করুন    @else Select Sub-District @endif</option>
+                                                        <option value="0" selected="selected">  @if(Session('language') == 'en')   Select Sub-District   @else উপজেলা নির্বাচন করুন @endif</option>
                                                     </select>
                                                     <p style="color:red;">{{ $errors -> first('sub_district_id') }}</p>
                                                 </div>
@@ -325,10 +325,10 @@
                                                 <div class="parsley-row">
                                                     <select id="service_provider_id" name="directoryType" required class="md-input selectable">
                                                         <option selected="selected"> 
-                                                            @if(Session('language') == 'bn')
-                                                                সেবা প্রদানকারী নির্বাচন করুন  
+                                                            @if(Session('language') == 'en')
+                                                            Select Service Provider
                                                             @else
-                                                               Select Service Provider
+                                                            সেবা প্রদানকারী নির্বাচন করুন  
                                                             @endif
                                                         </option>
                                                     </select>
@@ -361,9 +361,52 @@
                                     {!! Form::close() !!}
                                     
                                     <div class="uk-margin-medium-top uk-text-center" style = "margin-top: 6px!important;">
-                                        @if(Session('language') == 'bn')
-                                        
-                                            @php
+                                        @if(Session('language') == 'en')
+                                        <!--<a  href="mailto:?body=This is a painless way to connect service recipients with health care provider or organization. You can easily find detail information about them through this search engine sitting at home.
+                                                    %0D%0AExperience the freedom of choice on medihelpbd.com today.%0D%0A%0D%0ATo know more visit:%0D%0Ahttps://www.medihelpbd.com&subject=medihelpbd.com">
+                                                <span><button type="submit" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff; padding:2px 14px;">Share With Friends</button></span>
+                                            </a>
+                                            <a href="https://www.google.com/maps">
+                                                <span><button type="submit" class="md-btn md-btn-large uk-margin-top" style="background: #FD0100; width: 70%; color: #fff;">Find On Map</button></span>
+                                            </a>-->
+                                            
+                                            <div class="uk-margin-top uk-text-center" style = "margin-top: 6px!important;margin-bottom:15px!important;">
+                                                <a href="{{url('/latest-news')}}">                    
+                                                    <button type="submit" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">
+                                                        Advertisement
+                                                    </button>
+                                                </a>
+                                            </div>
+                                            <div class="uk-margin-top uk-text-center" style = "margin-top: 6px!important;margin-bottom:15px!important;">
+                                                <a href="{{url('/helpline')}}">                    
+                                                    <button type="submit" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">
+                                                        Helpline
+                                                    </button>
+                                                </a>
+                                            </div>
+
+                                            <div style="margin-bottom:15px;">
+                                                <a href="{{url('/special-notice')}}">
+                                                    <span><button type="submit" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">Notice</button></span>
+                                                </a>
+                                            </div>
+                                            <div style="margin-bottom:15px;">
+                                                <a href="{{url('/report_delivery')}}">
+                                                    <span><button type="submit" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">Report Delivery</button></span>
+                                                </a>
+                                            </div>
+                                            
+                                            <button type="submit" onclick = "showLinks()" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">
+                                            <div class="menu-icon">
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                                <span class="line"></span>
+                                            </div>
+                                            </button>
+                                            
+                                            
+                                        @else
+                                        @php
                                                 
                                                 $body_text = "সেবা গ্রহীতা এবং স্বাস্থ্যসেবা প্রদানকারী ব্যাক্তি বা প্রতিষ্ঠানের সাথে সংযোগ স্থাপন করার জন্য এটি একটি যন্ত্রণাহীন উপায়। আপনি খুব সহজে ঘরে বসেই এই সার্চ ইঞ্জিনের মাধ্যমে তাদের সম্পর্কে বিস্তারিত তথ্য খুঁজে পেতে পারেন। %0D%0Ahttps://www.medihelpbd.com";
                                             
@@ -411,89 +454,14 @@
                                                 <span class="line"></span>
                                             </div>
                                             </button>
-                                            
-                                        @else
                                         
-                                            <!--<a  href="mailto:?body=This is a painless way to connect service recipients with health care provider or organization. You can easily find detail information about them through this search engine sitting at home.
-                                                    %0D%0AExperience the freedom of choice on medihelpbd.com today.%0D%0A%0D%0ATo know more visit:%0D%0Ahttps://www.medihelpbd.com&subject=medihelpbd.com">
-                                                <span><button type="submit" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff; padding:2px 14px;">Share With Friends</button></span>
-                                            </a>
-                                            <a href="https://www.google.com/maps">
-                                                <span><button type="submit" class="md-btn md-btn-large uk-margin-top" style="background: #FD0100; width: 70%; color: #fff;">Find On Map</button></span>
-                                            </a>-->
                                             
-                                            <div class="uk-margin-top uk-text-center" style = "margin-top: 6px!important;margin-bottom:15px!important;">
-                                                <a href="{{url('/latest-news')}}">                    
-                                                    <button type="submit" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">
-                                                        Advertisement
-                                                    </button>
-                                                </a>
-                                            </div>
-                                            <div class="uk-margin-top uk-text-center" style = "margin-top: 6px!important;margin-bottom:15px!important;">
-                                                <a href="{{url('/helpline')}}">                    
-                                                    <button type="submit" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">
-                                                        Helpline
-                                                    </button>
-                                                </a>
-                                            </div>
-
-                                            <div style="margin-bottom:15px;">
-                                                <a href="{{url('/special-notice')}}">
-                                                    <span><button type="submit" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">Notice</button></span>
-                                                </a>
-                                            </div>
-                                            <div style="margin-bottom:15px;">
-                                                <a href="{{url('/report_delivery')}}">
-                                                    <span><button type="submit" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">Report Delivery</button></span>
-                                                </a>
-                                            </div>
-                                            
-                                            <button type="submit" onclick = "showLinks()" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">
-                                            <div class="menu-icon">
-                                                <span class="line"></span>
-                                                <span class="line"></span>
-                                                <span class="line"></span>
-                                            </div>
-                                            </button>
                                             
                                         @endif 
                                     </div>
                 
-                                    @if(Session('language')=='bn')
-                                        <div class="uk-margin-top uk-text-center">
-                                            <ul class="more-links-bn footer-ul" style = "display: none;">
-                                                <li>
-                                                    <a href="{{url('/service-entry')}}"><span><strong>আপনার সেবা যুক্ত করুন</strong></span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{url('/contact')}}"><span><strong>যোগাযোগ</strong></span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{url('/vision')}}"><span><strong> সম্বন্ধে</strong></span></a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{url('/faq')}}"><span><strong>সাধারণ জিজ্ঞাসা</strong></span></a>
-                                                </li>
-                                                <!--<li>
-                                                    <a href="{{url('/make-appointment')}}"><span><strong>সাক্ষাৎ</strong></span></a>
-                                                </li>-->
-                                                <li>
-                                                    <a href="{{url('/services-list')}}"><span><strong>সেবাসমূহের তালিকা</strong></span></a>
-                                                </li>
-                                                
-                                            </ul>
-
-                                            
-                                            
-                                            <!--<a href="https://play.google.com/store/apps/details?id=com.shehab.user.medihelpbd" target="_blank">
-                                            	<img style="width: 70%;" src="/uploads/google_app_icon.png" alt="Get on Google Play">
-                                            </a>-->
-                                            
-                                            <p style="margin-bottom: 22px;">&copy; মেডিহেল্পবিডি ডট কম</p>
-                                            <!--<p style="font-size: 0.9em; margin-top: 0px; margin-bottom: 10px;">প্রস্তুত এবং রক্ষণাবেক্ষণের দায়িত্বে <a style="color: #444; text-decoration: none;" href="http://www.ontiktechnology.com">অন্তিক টেকনোলজি</a></p>-->
-                                        </div>
-                                    @else
-                                        <div class="uk-margin-top uk-text-center">
+                                    @if(Session('language')=='en')
+                                    <div class="uk-margin-top uk-text-center">
                                             
                                             <ul class="more-links footer-ul" style = "display: none;">
                                                 <li>
@@ -525,6 +493,39 @@
                                             
                                             <p style="margin-bottom: 22px;">&copy; medihelpbd.com</p>
                                             <!--<p style="font-size: 0.9em; margin-top: 0px;">Developed &amp; Maintained By <a style="color: #444; text-decoration: none;" href="http://www.ontiktechnology.com">Ontik Technology</a></p>-->
+                                        </div>
+                                    @else
+                                    <div class="uk-margin-top uk-text-center">
+                                            <ul class="more-links-bn footer-ul" style = "display: none;">
+                                                <li>
+                                                    <a href="{{url('/service-entry')}}"><span><strong>আপনার সেবা যুক্ত করুন</strong></span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{url('/contact')}}"><span><strong>যোগাযোগ</strong></span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{url('/vision')}}"><span><strong> সম্বন্ধে</strong></span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{url('/faq')}}"><span><strong>সাধারণ জিজ্ঞাসা</strong></span></a>
+                                                </li>
+                                                <!--<li>
+                                                    <a href="{{url('/make-appointment')}}"><span><strong>সাক্ষাৎ</strong></span></a>
+                                                </li>-->
+                                                <li>
+                                                    <a href="{{url('/services-list')}}"><span><strong>সেবাসমূহের তালিকা</strong></span></a>
+                                                </li>
+                                                
+                                            </ul>
+
+                                            
+                                            
+                                            <!--<a href="https://play.google.com/store/apps/details?id=com.shehab.user.medihelpbd" target="_blank">
+                                            	<img style="width: 70%;" src="/uploads/google_app_icon.png" alt="Get on Google Play">
+                                            </a>-->
+                                            
+                                            <p style="margin-bottom: 22px;">&copy; মেডিহেল্পবিডি ডট কম</p>
+                                            <!--<p style="font-size: 0.9em; margin-top: 0px; margin-bottom: 10px;">প্রস্তুত এবং রক্ষণাবেক্ষণের দায়িত্বে <a style="color: #444; text-decoration: none;" href="http://www.ontiktechnology.com">অন্তিক টেকনোলজি</a></p>-->
                                         </div>
                                     @endif
                                 </div>
@@ -677,7 +678,7 @@
             $.get('/notice/ajax-sub-district/'+ main_district_id, function(data){
                 
                 $('#sub_district_id').empty();
-                $('#sub_district_id').append('<option value="0" selected="selected">  @if(Session('language') == 'bn')  উপজেলা নির্বাচন করুন    @else Select Sub-District @endif</option>');
+                $('#sub_district_id').append('<option value="0" selected="selected">  @if(Session('language') == 'en')   Select Sub-District   @else উপজেলা নির্বাচন করুন @endif</option>');
                 
                 for(var i = 0; i< data.length; i++){
                     $('#sub_district_id').append( ' <option value="'+data[i].id+'">  ' + data[i].sub_district_name + '   </option> ' );
@@ -700,7 +701,7 @@
             $.get('/notice/ajax-service/'+ sub_district_id, function(data){
                 
                 $('#service_provider_id').empty();
-                $('#service_provider_id').append('<option value="0" selected="selected">  @if(Session('language') == 'bn')  সেবা প্রদানকারী নির্বাচন করুন    @else Select Service Provider @endif</option>');
+                $('#service_provider_id').append('<option value="0" selected="selected">  @if(Session('language') == 'en')   Select Service Provider   @else সেবা প্রদানকারী নির্বাচন করুন @endif</option>');
                 
                 for(var i = 0; i< data.length; i++){
                     $('#service_provider_id').append( ' <option value="'+data[i][1]+'">  ' + data[i][0] + '   </option> ' );
@@ -727,7 +728,7 @@
                 $("#show_sub_service_provider").show();
             
                 $('#sub_service_provider_id').empty();
-                $('#sub_service_provider_id').append('<option value="0" selected="selected">@if(Session('language') == 'bn') শ্রেনী নির্বাচন করুন @else Select Group @endif</option>');
+                $('#sub_service_provider_id').append('<option value="0" selected="selected">@if(Session('language') == 'en') Select Group @else শ্রেনী নির্বাচন করুন @endif</option>');
                 
                 for(var i = 0; i< data.length; i++){                                     
                     $('#sub_service_provider_id').append( ' <option value="'+data[i].blood_group+'">  ' +  data[i].blood_group + '</option> ' );
@@ -746,7 +747,7 @@
                 $("#show_sub_service_provider").show();
             
                 $('#sub_service_provider_id').empty();
-                $('#sub_service_provider_id').append('<option value="0" selected="selected">@if(Session('language') == 'bn') ধরণ নির্বাচন করুন @else Select Category @endif</option>');
+                $('#sub_service_provider_id').append('<option value="0" selected="selected">@if(Session('language') == 'en') Select Category @else ধরণ নির্বাচন করুন @endif</option>');
                 
                 for(var i = 0; i< data.length; i++){
                     $('#sub_service_provider_id').append( ' <option value="'+data[i].hospital_subname+'">  ' + data[i].hospital_subname + '   </option> ' );
@@ -765,7 +766,7 @@
                 $("#show_sub_service_provider").show();
             
                 $('#sub_service_provider_id').empty();
-                $('#sub_service_provider_id').append('<option value="0" selected="selected">@if(Session('language') == 'bn')  বিভাগ নির্বাচন করুন @else Select Department @endif</option>');
+                $('#sub_service_provider_id').append('<option value="0" selected="selected">@if(Session('language') == 'en') Select Department  @else বিভাগ নির্বাচন করুন @endif</option>');
                     
                 for(var i = 0; i< data.length; i++){
                     $('#sub_service_provider_id').append( ' <option value="'+data[i].medical_specialist_name+'">  ' + data[i].medical_specialist_name + '   </option> ' );

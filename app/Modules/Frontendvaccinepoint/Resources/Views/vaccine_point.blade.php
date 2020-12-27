@@ -57,35 +57,8 @@
         div { visibility: hidden; display: none }
     </style>
 
-    @if(Session('language')=='bn')
-        <aside id="sidebar_main">
-            <div class="sidebar_main_header">
-                <h4 class="resultText">মোট ফলাফল <br/> {{BanglaConverter::en2bn($total_result)}}</</h4>
-            </div>
-    
-    
-            <div class="menu_section">
-                <ul>
-                    @foreach($aside_results as $aside_result)
-                        @if($vaccine_point->id == $aside_result->id)
-                            <li class="selectedSidebar">
-                                <a href="{{ url('frontendvaccinepoint/view'.'/'.$aside_result->id.'/'.$aside_result->subdistrict_id)}}">
-                                    <span class="md-list-heading">{{$aside_result->b_vaccine_point_name}}</span>
-                                </a>
-                            </li>
-                        @else
-                            <li title="">
-                                <a href="{{ url('frontendvaccinepoint/view'.'/'.$aside_result->id.'/'.$aside_result->subdistrict_id)}}">
-                                    <span class="md-list-heading">{{$aside_result->b_vaccine_point_name}}</span>
-                                </a>
-                            </li>
-                        @endif
-                    @endforeach
-                </ul>
-            </div>
-        </aside>
-    @else
-        <aside id="sidebar_main">
+    @if(Session('language')=='en')
+    <aside id="sidebar_main">
             <div class="sidebar_main_header">
                 <h4 class="resultText">Total Result <br/>{{$total_result}}</h4>
             </div>
@@ -111,6 +84,33 @@
                 </ul>
             </div>
         </aside>
+    @else
+    <aside id="sidebar_main">
+            <div class="sidebar_main_header">
+                <h4 class="resultText">মোট ফলাফল <br/> {{BanglaConverter::en2bn($total_result)}}</</h4>
+            </div>
+    
+    
+            <div class="menu_section">
+                <ul>
+                    @foreach($aside_results as $aside_result)
+                        @if($vaccine_point->id == $aside_result->id)
+                            <li class="selectedSidebar">
+                                <a href="{{ url('frontendvaccinepoint/view'.'/'.$aside_result->id.'/'.$aside_result->subdistrict_id)}}">
+                                    <span class="md-list-heading">{{$aside_result->b_vaccine_point_name}}</span>
+                                </a>
+                            </li>
+                        @else
+                            <li title="">
+                                <a href="{{ url('frontendvaccinepoint/view'.'/'.$aside_result->id.'/'.$aside_result->subdistrict_id)}}">
+                                    <span class="md-list-heading">{{$aside_result->b_vaccine_point_name}}</span>
+                                </a>
+                            </li>
+                        @endif
+                    @endforeach
+                </ul>
+            </div>
+        </aside>
     @endif
 
 @endsection
@@ -118,8 +118,225 @@
 
 @section('content')
 
-    @if(Session('language')=='bn')
-        <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
+    @if(Session('language')=='en')
+    <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
+        <div class="md-card">
+            <div class="user_heading">
+                <div class="user_heading_avatar" style="width:100%;margin-left: calc(50% - 41px);margin-top:16px;">
+                    @if($vaccine_point->photo_path == '')
+                    <div class="thumbnail"><img alt="vaccine point"  src="{{asset('/vaccination.jpg')}}">
+                    </div>
+                    @else
+                    <div class="thumbnail"><img alt="vaccine point" src="{{ url($vaccine_point->photo_path) }}">
+                    </div>
+                    @endif
+                </div>
+    
+                <div class="user_heading_content" style="display:table;margin:0 auto;">
+                    <h2 class="heading_b"><span class="uk-text-break">{{$vaccine_point->vaccine_point_name}}</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="user_content" style="position:relative;z-index:1;">
+                <ul class="uk-tab" data-uk-sticky="{ top: 48, media: 960 }" data-uk-tab="{connect:'#user_profile_tabs_content', animation:'slide-horizontal'}" id="user_profile_tabs">
+                    <li class="uk-active">
+                        <a href="#">About</a>
+                    </li>
+    
+                    <li>
+                        <a href="#">Article</a>
+                    </li>
+                    
+                    <li ng-controller="ViewVaccinePointController">
+                        <a ng-click="getMedicalSpecialistDropDown()" href="#">Doctor</a>
+                    </li>
+    
+    
+                    <li ng-controller="ViewVaccinePointController">
+                        <a ng-click="getSubServiceDropDown()" href="#">Service</a>
+                    </li>
+                </ul>
+    
+    
+                <ul class="uk-switcher uk-margin" id="user_profile_tabs_content">
+                    <li><?php echo $vaccine_point->vaccine_point_description; ?>
+    
+                        <!--<div class="uk-grid" data-uk-grid-margin="">
+                            <div class="uk-width-large-1-1">
+                                <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">Contact Info</h4>
+    
+    
+                                <ul class="md-list md-list-addon">
+                                    <li>
+                                        <div class="md-list-addon-element">
+                                            <i class="md-list-addon-icon material-icons">&#xE88A;</i>
+                                        </div>
+    
+    
+                                        <div class="md-list-content">
+                                            <span style="margin-top:5px" class="md-list-heading">{!! nl2br ($vaccine_point->vaccine_point_address) !!}</span> <span class="uk-text-small uk-text-muted hidden">Address</span>
+                                        </div>
+                                    </li>
+    
+                                    <li>
+                                        <div class="md-list-addon-element">
+                                            <i class="md-list-addon-icon material-icons">&#xE0CD;</i>
+                                        </div>
+    
+    
+                                        <div class="md-list-content">
+                                            <span style="margin-top:5px" class="md-list-heading">
+                                                @if($vaccine_point->vaccine_point_phone_no != '')
+                                                @php
+                                                    $e_phone_number_splitted = explode("\n",$vaccine_point->vaccine_point_phone_no);
+                                                    $len = sizeof($e_phone_number_splitted);
+                                                @endphp
+                                                    @for($i = 0; $i < $len ; $i = $i + 1)
+                                                        @php
+                                                            $e_phone_number = $e_phone_number_splitted[$i];
+                                                            $length = strlen($e_phone_number);
+                                                        @endphp
+                                                        @if(!is_numeric($e_phone_number[1]))
+                                                            {{$e_phone_number}}
+                                                        @else
+                                                            @if($i != $len - 1)
+                                                            {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;"><i class="fa fa-phone" style="margin-left:1px;"></i></a>
+                                                            @else
+                                                            {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;">&nbsp;<i class="fa fa-phone" style="margin-left:1px;"></i></a>
+                                                            @endif
+                                                        @endif
+                                                        @if($i != $len - 1)
+                                                            <br>
+                                                        @endif
+                                                    @endfor
+                                                @endif
+                                            </span>
+                                             <span class="uk-text-small uk-text-muted hidden">Phone</span>
+                                        </div>
+                                    </li>
+                                    @if($vaccine_point->vaccine_point_email_ad != '')
+                                    <li>
+                                        <div class="md-list-addon-element">
+                                            <i style=" margin: 0;" class="md-list-addon-icon material-icons">&#xE158;</i>
+                                        </div>
+    
+    
+                                        <div class="md-list-content">
+                                            <span style="margin-top:5px" class="md-list-heading">{{$vaccine_point->vaccine_point_email_ad}}<a href = "mailto:{{$vaccine_point->vaccine_point_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:6px;"></i></a></span>
+                                            <span class="uk-text-small uk-text-muted hidden">Email</span>
+                                        </div>
+                                    </li>
+                                    @endif
+                                    <li>
+                                        <div class="md-list-addon-element">
+                                            <i style=" margin: 0;" class="md-list-addon-icon material-icons">&#xE894;</i>
+                                        </div>
+    
+    
+                                        <div class="md-list-content">
+                                            <span style="margin-top:5px" class="md-list-heading">{{$vaccine_point->vaccine_point_web_link}}</span> <span class="uk-text-small uk-text-muted hidden">Website</span>
+                                        </div>
+                                    </li>
+                                    <li class="hidden">
+                                        <div class="md-list-addon-element">
+                                            <i style="font-size:30px; margin: 0;" class="md-list-addon-icon material-icons">&#xE894;</i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="uk-width-large-1-1 uk-margin-medium-top">
+                            <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">General Info</h4>
+                            <ul class="md-list uk-margin-small-top">
+                            <?php #echo $vaccine_point->vaccine_point_total_bed; ?>
+                            
+                                <li>
+                                    <div class="md-list-content">
+                                        <span class="hidden">General:</span> <span><?php #echo $vaccine_point->vaccine_point_total_bed; ?></span>
+                                    </div>
+                                </li>
+                            
+                            </ul>  
+                        </div>-->
+                        
+                        <!-- START google maps -->
+                        
+                        @if( $vaccine_point->vaccine_point_latitude != '' && $vaccine_point->vaccine_point_longitude != '' )
+                        
+                        <div class="uk-width-large-1-1 google_maps_show">
+                             <iframe 
+                                src="https://www.google.com/maps/embed/v1/search?key=AIzaSyD3_tCn50Ef5Z2zUJxkXi26T486gIzIHp8&q={{ $vaccine_point->vaccine_point_latitude }}, {{ $vaccine_point->vaccine_point_longitude }}&zoom=15" frameborder="0" height="600" style="border:0; width:100%;" allowfullscreen>
+                            </iframe>
+                        </div>
+                        
+                        @endif
+                        
+                        <!-- END google maps -->
+                        
+                    </li>
+                    <li>
+                        <ul class="md-list">
+                        @foreach($notices as $notice)
+                            <?php echo $notice->vaccine_point_notice_description; ?></span>
+                        @endforeach
+                        <!--
+                            <li style="padding-top: 0px;">
+                                <div class="md-list-content">
+                                    @foreach($notices as $notice)
+                                        <span class="uk-margin-right"><?php #echo $notice->vaccine_point_notice_description; ?></span>
+                                    @endforeach
+                                </div>
+                            </li>
+                        -->
+                        </ul>
+                    </li>
+                    
+                    <li ng-controller="ViewVaccinePointController">
+                        <div class="uk-form-row" style="position:relative;z-index:2;">
+                        <select class="md-input selectable" id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()"    style="width: 100%;"></select>
+                        </div>
+                        <div class="uk-form-row">
+                        <select class="md-input selectable" id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;"></select>
+                        </div>
+                        <ul class="md-list uk-margin-top">
+                            <li ng-repeat = "doctor in doctors" style="padding-top: 0px;">
+                                <div class="md-list-content">
+                                    <div>
+                                        <span class="uk-margin-right">
+                                            <img class="black-border" style="height:100px;width:100px;" ng-src="{{'/'}}@{{doctor.photo_path}}">
+                                        </span>
+                                    </div>
+                                    <h4 class="heading_c" style = "margin-top: 10px;">@{{doctor.medical_specialist_name}}</h4>
+                                    <a href="{{'/'}}frontendmedicalspecialist/view/@{{doctor.id}}/{{$subdistrict_id}}"><h4 style="color:red;" class=" uk-margin-small-bottom">View Details</h4></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+    
+    
+                    <li ng-controller="ViewVaccinePointController">
+                        <input type="hidden" ng-init="vaccine_point_id='asdfg'" value="{{$vaccine_point_id}}" name="vaccine_point_id" ng-model="vaccine_point_id">
+                        <div   class="uk-form-row">
+                        <select class="md-input selectable" id="service_id" name="service_id" ng-model="service_id" ng-change="getVaccinePointService()"    style="width: 100%;"></select>
+                        </div>
+                        <ul style="margin-top: 10px;" class="md-list" ng-if="$('#service_id').data('kendoDropDownList').value() != 'Select Category'">
+                            <li ng-repeat = "service in services">
+                                <div class="md-list-content">
+                                    <div>
+                                        <span class="uk-margin-right" ng-bind-html="trustAsHtml(service.vaccine_point_service_description)">
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    @else
+    <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
         <div class="md-card">
             <div class="user_heading">
                  <div class="user_heading_avatar" style="width:100%;margin-left: calc(50% - 41px);margin-top:16px;">
@@ -336,223 +553,6 @@
                     </li>
                     
                     
-                </ul>
-            </div>
-        </div>
-    </div>
-    @else
-        <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
-        <div class="md-card">
-            <div class="user_heading">
-                <div class="user_heading_avatar" style="width:100%;margin-left: calc(50% - 41px);margin-top:16px;">
-                    @if($vaccine_point->photo_path == '')
-                    <div class="thumbnail"><img alt="vaccine point"  src="{{asset('/vaccination.jpg')}}">
-                    </div>
-                    @else
-                    <div class="thumbnail"><img alt="vaccine point" src="{{ url($vaccine_point->photo_path) }}">
-                    </div>
-                    @endif
-                </div>
-    
-                <div class="user_heading_content" style="display:table;margin:0 auto;">
-                    <h2 class="heading_b"><span class="uk-text-break">{{$vaccine_point->vaccine_point_name}}</span>
-                    </h2>
-                </div>
-            </div>
-            <div class="user_content" style="position:relative;z-index:1;">
-                <ul class="uk-tab" data-uk-sticky="{ top: 48, media: 960 }" data-uk-tab="{connect:'#user_profile_tabs_content', animation:'slide-horizontal'}" id="user_profile_tabs">
-                    <li class="uk-active">
-                        <a href="#">About</a>
-                    </li>
-    
-                    <li>
-                        <a href="#">Article</a>
-                    </li>
-                    
-                    <li ng-controller="ViewVaccinePointController">
-                        <a ng-click="getMedicalSpecialistDropDown()" href="#">Doctor</a>
-                    </li>
-    
-    
-                    <li ng-controller="ViewVaccinePointController">
-                        <a ng-click="getSubServiceDropDown()" href="#">Service</a>
-                    </li>
-                </ul>
-    
-    
-                <ul class="uk-switcher uk-margin" id="user_profile_tabs_content">
-                    <li><?php echo $vaccine_point->vaccine_point_description; ?>
-    
-                        <!--<div class="uk-grid" data-uk-grid-margin="">
-                            <div class="uk-width-large-1-1">
-                                <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">Contact Info</h4>
-    
-    
-                                <ul class="md-list md-list-addon">
-                                    <li>
-                                        <div class="md-list-addon-element">
-                                            <i class="md-list-addon-icon material-icons">&#xE88A;</i>
-                                        </div>
-    
-    
-                                        <div class="md-list-content">
-                                            <span style="margin-top:5px" class="md-list-heading">{!! nl2br ($vaccine_point->vaccine_point_address) !!}</span> <span class="uk-text-small uk-text-muted hidden">Address</span>
-                                        </div>
-                                    </li>
-    
-                                    <li>
-                                        <div class="md-list-addon-element">
-                                            <i class="md-list-addon-icon material-icons">&#xE0CD;</i>
-                                        </div>
-    
-    
-                                        <div class="md-list-content">
-                                            <span style="margin-top:5px" class="md-list-heading">
-                                                @if($vaccine_point->vaccine_point_phone_no != '')
-                                                @php
-                                                    $e_phone_number_splitted = explode("\n",$vaccine_point->vaccine_point_phone_no);
-                                                    $len = sizeof($e_phone_number_splitted);
-                                                @endphp
-                                                    @for($i = 0; $i < $len ; $i = $i + 1)
-                                                        @php
-                                                            $e_phone_number = $e_phone_number_splitted[$i];
-                                                            $length = strlen($e_phone_number);
-                                                        @endphp
-                                                        @if(!is_numeric($e_phone_number[1]))
-                                                            {{$e_phone_number}}
-                                                        @else
-                                                            @if($i != $len - 1)
-                                                            {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;"><i class="fa fa-phone" style="margin-left:1px;"></i></a>
-                                                            @else
-                                                            {{$e_phone_number}}<a href = "tel:{{$e_phone_number}}" style="color:black;">&nbsp;<i class="fa fa-phone" style="margin-left:1px;"></i></a>
-                                                            @endif
-                                                        @endif
-                                                        @if($i != $len - 1)
-                                                            <br>
-                                                        @endif
-                                                    @endfor
-                                                @endif
-                                            </span>
-                                             <span class="uk-text-small uk-text-muted hidden">Phone</span>
-                                        </div>
-                                    </li>
-                                    @if($vaccine_point->vaccine_point_email_ad != '')
-                                    <li>
-                                        <div class="md-list-addon-element">
-                                            <i style=" margin: 0;" class="md-list-addon-icon material-icons">&#xE158;</i>
-                                        </div>
-    
-    
-                                        <div class="md-list-content">
-                                            <span style="margin-top:5px" class="md-list-heading">{{$vaccine_point->vaccine_point_email_ad}}<a href = "mailto:{{$vaccine_point->vaccine_point_email_ad}}" style="color:black;"><i class="fa fa-envelope" style="margin-left:6px;"></i></a></span>
-                                            <span class="uk-text-small uk-text-muted hidden">Email</span>
-                                        </div>
-                                    </li>
-                                    @endif
-                                    <li>
-                                        <div class="md-list-addon-element">
-                                            <i style=" margin: 0;" class="md-list-addon-icon material-icons">&#xE894;</i>
-                                        </div>
-    
-    
-                                        <div class="md-list-content">
-                                            <span style="margin-top:5px" class="md-list-heading">{{$vaccine_point->vaccine_point_web_link}}</span> <span class="uk-text-small uk-text-muted hidden">Website</span>
-                                        </div>
-                                    </li>
-                                    <li class="hidden">
-                                        <div class="md-list-addon-element">
-                                            <i style="font-size:30px; margin: 0;" class="md-list-addon-icon material-icons">&#xE894;</i>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="uk-width-large-1-1 uk-margin-medium-top">
-                            <h4 class="heading_c uk-margin-small-bottom uk-margin-small-top">General Info</h4>
-                            <ul class="md-list uk-margin-small-top">
-                            <?php #echo $vaccine_point->vaccine_point_total_bed; ?>
-                            
-                                <li>
-                                    <div class="md-list-content">
-                                        <span class="hidden">General:</span> <span><?php #echo $vaccine_point->vaccine_point_total_bed; ?></span>
-                                    </div>
-                                </li>
-                            
-                            </ul>  
-                        </div>-->
-                        
-                        <!-- START google maps -->
-                        
-                        @if( $vaccine_point->vaccine_point_latitude != '' && $vaccine_point->vaccine_point_longitude != '' )
-                        
-                        <div class="uk-width-large-1-1 google_maps_show">
-                             <iframe 
-                                src="https://www.google.com/maps/embed/v1/search?key=AIzaSyD3_tCn50Ef5Z2zUJxkXi26T486gIzIHp8&q={{ $vaccine_point->vaccine_point_latitude }}, {{ $vaccine_point->vaccine_point_longitude }}&zoom=15" frameborder="0" height="600" style="border:0; width:100%;" allowfullscreen>
-                            </iframe>
-                        </div>
-                        
-                        @endif
-                        
-                        <!-- END google maps -->
-                        
-                    </li>
-                    <li>
-                        <ul class="md-list">
-                        @foreach($notices as $notice)
-                            <?php echo $notice->vaccine_point_notice_description; ?></span>
-                        @endforeach
-                        <!--
-                            <li style="padding-top: 0px;">
-                                <div class="md-list-content">
-                                    @foreach($notices as $notice)
-                                        <span class="uk-margin-right"><?php #echo $notice->vaccine_point_notice_description; ?></span>
-                                    @endforeach
-                                </div>
-                            </li>
-                        -->
-                        </ul>
-                    </li>
-                    
-                    <li ng-controller="ViewVaccinePointController">
-                        <div class="uk-form-row" style="position:relative;z-index:2;">
-                        <select class="md-input selectable" id="department_id" name="department_id" ng-model="department_id" ng-change="getMedicalSpecialist()"    style="width: 100%;"></select>
-                        </div>
-                        <div class="uk-form-row">
-                        <select class="md-input selectable" id="medical_specialist_id" name="medical_specialist_id" ng-model="medical_specialist_id" ng-change="getDoctor()"  style="width: 100%;"></select>
-                        </div>
-                        <ul class="md-list uk-margin-top">
-                            <li ng-repeat = "doctor in doctors" style="padding-top: 0px;">
-                                <div class="md-list-content">
-                                    <div>
-                                        <span class="uk-margin-right">
-                                            <img class="black-border" style="height:100px;width:100px;" ng-src="{{'/'}}@{{doctor.photo_path}}">
-                                        </span>
-                                    </div>
-                                    <h4 class="heading_c" style = "margin-top: 10px;">@{{doctor.medical_specialist_name}}</h4>
-                                    <a href="{{'/'}}frontendmedicalspecialist/view/@{{doctor.id}}/{{$subdistrict_id}}"><h4 style="color:red;" class=" uk-margin-small-bottom">View Details</h4></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-    
-    
-                    <li ng-controller="ViewVaccinePointController">
-                        <input type="hidden" ng-init="vaccine_point_id='asdfg'" value="{{$vaccine_point_id}}" name="vaccine_point_id" ng-model="vaccine_point_id">
-                        <div   class="uk-form-row">
-                        <select class="md-input selectable" id="service_id" name="service_id" ng-model="service_id" ng-change="getVaccinePointService()"    style="width: 100%;"></select>
-                        </div>
-                        <ul style="margin-top: 10px;" class="md-list" ng-if="$('#service_id').data('kendoDropDownList').value() != 'Select Category'">
-                            <li ng-repeat = "service in services">
-                                <div class="md-list-content">
-                                    <div>
-                                        <span class="uk-margin-right" ng-bind-html="trustAsHtml(service.vaccine_point_service_description)">
-                                        </span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
         </div>

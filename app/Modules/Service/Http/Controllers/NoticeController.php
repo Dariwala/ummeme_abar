@@ -54,13 +54,13 @@ class NoticeController extends Controller
     public function ajaxSubdistrict($id){
         
             
-        if(Session('language')=='bn') 
+        if(Session('language')=='en') 
         {
-          $subdisctricts = SubDistrict::select('b_sub_district_name as sub_district_name','id')->orderBy('sub_district_name','ASC')->where('district_id', $id)->get();
+            $subdisctricts = SubDistrict::select('sub_district_name as sub_district_name','id')->orderBy('sub_district_name','ASC')->where('district_id', $id)->get();
         }
         else
         {
-           $subdisctricts = SubDistrict::select('sub_district_name as sub_district_name','id')->orderBy('sub_district_name','ASC')->where('district_id', $id)->get();
+            $subdisctricts = SubDistrict::select('b_sub_district_name as sub_district_name','id')->orderBy('sub_district_name','ASC')->where('district_id', $id)->get();
         }
         
         return Response::json($subdisctricts);
@@ -148,13 +148,13 @@ class NoticeController extends Controller
             }
             if($number_of_entries != 0)
             {
-                if(Session('language') == 'bn')
+                if(Session('language') == 'en')
                 {
-                    array_push($services,array($service_names_bangla[$i],$indices_of_services_in_drop_down[$i]));
+                    array_push($services,array($service_names_english[$i],$indices_of_services_in_drop_down[$i]));
                 }
                 else
                 {
-                    array_push($services,array($service_names_english[$i],$indices_of_services_in_drop_down[$i]));
+                    array_push($services,array($service_names_bangla[$i],$indices_of_services_in_drop_down[$i]));
                 }
             }
         }

@@ -57,13 +57,13 @@
 
 @section('content')
 
-    @if(Session('language')=='bn')
+    @if(Session('language')=='en')
         <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
             <div class="md-card">
                 <div class="user_content">
                     <div class="uk-grid" data-uk-grid-margin>   
                         <div class="uk-width-medium-1-1">
-                            <?php echo $data->b_serviceList; ?>
+                            <?php echo $data->serviceList; ?>
                         </div> 
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                 <div class="user_content">
                     <div class="uk-grid" data-uk-grid-margin>   
                         <div class="uk-width-medium-1-1">
-                            <?php echo $data->serviceList; ?>
+                            <?php echo $data->b_serviceList; ?>
                         </div> 
                     </div>
                 </div>

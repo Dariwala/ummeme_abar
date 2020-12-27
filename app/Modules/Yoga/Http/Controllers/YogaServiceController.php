@@ -136,22 +136,22 @@ class YogaServiceController extends Controller
         $subDistrict = $request->subDistrict;
         
         if(isset($subDistrict)){
-            if(Session('language')=='bn') 
+            if(Session('language')=='en') 
             {
-               $yoga_service = Yoga::select('b_yoga_subname as yoga_subname')->distinct()->orderBy('b_yoga_subname', 'ASC')->where('b_yoga_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
+                $yoga_service = Yoga::select('yoga_subname as yoga_subname')->distinct()->orderBy('yoga_subname', 'ASC')->where('yoga_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
             }
             else
             {
-               $yoga_service = Yoga::select('yoga_subname as yoga_subname')->distinct()->orderBy('yoga_subname', 'ASC')->where('yoga_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
+                $yoga_service = Yoga::select('b_yoga_subname as yoga_subname')->distinct()->orderBy('b_yoga_subname', 'ASC')->where('b_yoga_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
             }
         }else{
-            if(Session('language')=='bn') 
+            if(Session('language')=='en') 
             {
-               $yoga_service = Yoga::select('b_yoga_subname as yoga_subname')->distinct()->orderBy('b_yoga_subname', 'ASC')->where('b_yoga_subname', '!=', NULL)->get();
+                $yoga_service = Yoga::select('yoga_subname as yoga_subname')->distinct()->orderBy('yoga_subname', 'ASC')->where('yoga_subname', '!=', NULL)->get();
             }
             else
             {
-               $yoga_service = Yoga::select('yoga_subname as yoga_subname')->distinct()->orderBy('yoga_subname', 'ASC')->where('yoga_subname', '!=', NULL)->get();
+                $yoga_service = Yoga::select('b_yoga_subname as yoga_subname')->distinct()->orderBy('b_yoga_subname', 'ASC')->where('b_yoga_subname', '!=', NULL)->get();
             }
         }
 

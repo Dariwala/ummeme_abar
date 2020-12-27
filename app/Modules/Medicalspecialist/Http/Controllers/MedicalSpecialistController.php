@@ -835,24 +835,24 @@ class MedicalSpecialistController extends Controller
         
         if(isset($subDistrict)){
             
-            if(Session('language')=='bn') 
+            if(Session('language')=='en') 
             {
-              $medical_specialists = MedicalSpecialist::orderBy('b_medical_specialist_subname', 'ASC')->distinct()->select('b_medical_specialist_subname as medical_specialist_name')->where('b_medical_specialist_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
+                $medical_specialists = MedicalSpecialist::orderBy('medical_specialist_subname', 'ASC')->distinct()->select('medical_specialist_subname as medical_specialist_name')->where('medical_specialist_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
             }
             else
             {
-               $medical_specialists = MedicalSpecialist::orderBy('medical_specialist_subname', 'ASC')->distinct()->select('medical_specialist_subname as medical_specialist_name')->where('medical_specialist_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
+                $medical_specialists = MedicalSpecialist::orderBy('b_medical_specialist_subname', 'ASC')->distinct()->select('b_medical_specialist_subname as medical_specialist_name')->where('b_medical_specialist_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
             }
                 
         }else{
             
-            if(Session('language')=='bn') 
+            if(Session('language')=='en') 
             {
-              $medical_specialists = MedicalSpecialist::orderBy('b_medical_specialist_subname', 'ASC')->distinct()->select('b_medical_specialist_subname as medical_specialist_name')->where('b_medical_specialist_subname', '!=', NULL)->get();
+                $medical_specialists = MedicalSpecialist::orderBy('medical_specialist_subname', 'ASC')->distinct()->select('medical_specialist_subname as medical_specialist_name')->where('medical_specialist_subname', '!=', NULL)->get();
             }
             else
             {
-               $medical_specialists = MedicalSpecialist::orderBy('medical_specialist_subname', 'ASC')->distinct()->select('medical_specialist_subname as medical_specialist_name')->where('medical_specialist_subname', '!=', NULL)->get();
+                $medical_specialists = MedicalSpecialist::orderBy('b_medical_specialist_subname', 'ASC')->distinct()->select('b_medical_specialist_subname as medical_specialist_name')->where('b_medical_specialist_subname', '!=', NULL)->get();
             }
             
         }

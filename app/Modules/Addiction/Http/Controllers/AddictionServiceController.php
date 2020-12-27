@@ -136,22 +136,22 @@ class AddictionServiceController extends Controller
         $subDistrict = $request->subDistrict;
         
         if(isset($subDistrict)){
-            if(Session('language')=='bn') 
+            if(Session('language')=='en') 
             {
-               $addiction_service = Addiction::select('b_addiction_subname as addiction_subname')->distinct()->orderBy('b_addiction_subname', 'ASC')->where('b_addiction_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
+                $addiction_service = Addiction::select('addiction_subname as addiction_subname')->distinct()->orderBy('addiction_subname', 'ASC')->where('addiction_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
             }
             else
             {
-               $addiction_service = Addiction::select('addiction_subname as addiction_subname')->distinct()->orderBy('addiction_subname', 'ASC')->where('addiction_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
+                $addiction_service = Addiction::select('b_addiction_subname as addiction_subname')->distinct()->orderBy('b_addiction_subname', 'ASC')->where('b_addiction_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
             }
         }else{
-            if(Session('language')=='bn') 
+            if(Session('language')=='en') 
             {
-               $addiction_service = Addiction::select('b_addiction_subname as addiction_subname')->distinct()->orderBy('b_addiction_subname', 'ASC')->where('b_addiction_subname', '!=', NULL)->get();
+                $addiction_service = Addiction::select('addiction_subname as addiction_subname')->distinct()->orderBy('addiction_subname', 'ASC')->where('addiction_subname', '!=', NULL)->get();
             }
             else
             {
-               $addiction_service = Addiction::select('addiction_subname as addiction_subname')->distinct()->orderBy('addiction_subname', 'ASC')->where('addiction_subname', '!=', NULL)->get();
+                $addiction_service = Addiction::select('b_addiction_subname as addiction_subname')->distinct()->orderBy('b_addiction_subname', 'ASC')->where('b_addiction_subname', '!=', NULL)->get();
             }
         }
 

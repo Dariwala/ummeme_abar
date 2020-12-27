@@ -66,13 +66,13 @@
         <div class="header_main_content">
             <nav class="uk-navbar">
                 <div class="main_logo_top">
-                    @if(Session('language')=='bn')
-                        <a class = "home-link" href="{{'/'}}"><b>হোম</b></a>
-                    @else
+                    @if(Session('language')=='en')
                         <a class = "home-link" href="{{'/'}}"><b>Home</b></a>
+                    @else
+                        <a class = "home-link" href="{{'/'}}"><b><img style="height:40px;" src="{{url('vendor/img/home_icon.png')}}" alt=""></b></a>
                     @endif
                 </div>
-                <div class="uk-navbar-flip">
+                <!--<div class="uk-navbar-flip">
                     @if(Session('language')=='bn')
                         <ul class="uk-navbar-nav user_actions">
                             <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}">
@@ -115,535 +115,12 @@
                         
                     @endif
                     
-                </div>
+                </div>-->
             </nav>
         </div>
     </header>
 
-    @if(Session('language')=='bn')
-    <div id="page_content " class="uk-width-9-10 uk-container-center" >
-        <div id="page_content_inner">
-            <div class="md-card uk-margin-medium-bottom">
-                <div class="md-card-content serch_bar">
-                <div class="uk-grid" data-uk-grid-margin>
-                    <div class="uk-width-medium-1-2">
-                        <label for="contact_list_search">খুঁজুন</label>
-                        <input style="color:#fff;" class="md-input" type="text" id="contact_list_search" onkeyup="contactFilter()"/>
-                    </div>
-                </div>
-            </div>
-            </div>
-
-            <div class="uk-grid uk-grid-width-large-1-4 uk-grid-width-medium-1-3 uk-grid-medium uk-sortable sortable-handler hierarchical_show" id="contact_list">
-                @if($directoryType == 1)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendambulance/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('ambulance.png')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_ambulance_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 2)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendairambulance/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('logo1.png')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_air_ambulance_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 3)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendbloodbank/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('BloodBank.jpg')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_blood_bank_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 4)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendblooddonor/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('BloodDonor.jpg')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_blood_donor_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
- 
-                @if($directoryType == 5)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendeyebank/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('EyeBank.jpg')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_eye_bank_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 6)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendhospital/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('hospital.png')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_hospital_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 7)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendpharmacy/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('pharmacy.png')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_pharmacy_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 8)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendmedicalspecialist/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('medicalspecialist.jpg')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_medical_specialist_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 9)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendherbalcenter/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('herbalcenter.jpg')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_herbal_center_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 10)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendvaccinepoint/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('vaccination.jpg')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_vaccine_point_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 11)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendskinlasercenter/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('skincare.jpg')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_skin_laser_center_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                <!-- New Modules -->
-
-                @if($directoryType == 12)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendaddiction/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('addiction.png')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_addiction_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 13)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendparlour/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('parlour.png')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_parlour_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 14)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendforeignmedical/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('foreignmedical.png')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_foreignmedical_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 15)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendgym/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('gym.png')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_gym_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 16)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendhomeopathic/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('homeopathic.png')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_homeopathic_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 17)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendoptical/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('optical.png')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_optical_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 18)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendpharmacynew/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('pharmacynew.png')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_pharmacynew_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 19)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;">
-                            <a href="{{ url('frontendphysiotherapy/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('physiotherapy.png')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_physiotherapy_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                @if($directoryType == 20)
-                    @foreach($contacts as $contact)
-                        <div style="margin-top:12px;" style="margin-top:12px;">
-                            <a href="{{ url('frontendyoga/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
-                                <div class="md-card md-card-hover">
-                                    <div class="md-card-head">
-                                        @if($contact->photo_path == '')
-                                        <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('yoga.png')}}" alt=""/>
-                                        </div> 
-                                        @else
-                                       <div class="uk-text-center">
-                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
-                                        </div> 
-                                        @endif
-                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
-                                            {{$contact->b_yoga_name}}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-                <!-- New Modules Ends-->
-
-            </div>
-
-        </div>
-    </div>
-    @else
+    @if(Session('language')=='en')
     <div id="page_content " class="uk-width-9-10 uk-container-center" >
         <div id="page_content_inner">
             <div class="md-card uk-margin-medium-bottom">
@@ -1164,6 +641,529 @@
                 <!-- New Modules Ends-->
 
 
+
+            </div>
+
+        </div>
+    </div>
+    @else
+    <div id="page_content " class="uk-width-9-10 uk-container-center" >
+        <div id="page_content_inner">
+            <div class="md-card uk-margin-medium-bottom">
+                <div class="md-card-content serch_bar">
+                <div class="uk-grid" data-uk-grid-margin>
+                    <div class="uk-width-medium-1-2">
+                        <label for="contact_list_search">খুঁজুন</label>
+                        <input style="color:#fff;" class="md-input" type="text" id="contact_list_search" onkeyup="contactFilter()"/>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="uk-grid uk-grid-width-large-1-4 uk-grid-width-medium-1-3 uk-grid-medium uk-sortable sortable-handler hierarchical_show" id="contact_list">
+                @if($directoryType == 1)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendambulance/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('ambulance.png')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_ambulance_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 2)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendairambulance/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('logo1.png')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_air_ambulance_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 3)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendbloodbank/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('BloodBank.jpg')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_blood_bank_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 4)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendblooddonor/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('BloodDonor.jpg')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_blood_donor_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+ 
+                @if($directoryType == 5)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendeyebank/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('EyeBank.jpg')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_eye_bank_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 6)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendhospital/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('hospital.png')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_hospital_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 7)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendpharmacy/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('pharmacy.png')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_pharmacy_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 8)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendmedicalspecialist/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('medicalspecialist.jpg')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_medical_specialist_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 9)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendherbalcenter/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('herbalcenter.jpg')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_herbal_center_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 10)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendvaccinepoint/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('vaccination.jpg')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_vaccine_point_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 11)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendskinlasercenter/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('skincare.jpg')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_skin_laser_center_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                <!-- New Modules -->
+
+                @if($directoryType == 12)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendaddiction/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('addiction.png')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_addiction_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 13)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendparlour/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('parlour.png')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_parlour_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 14)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendforeignmedical/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('foreignmedical.png')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_foreignmedical_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 15)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendgym/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('gym.png')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_gym_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 16)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendhomeopathic/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('homeopathic.png')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_homeopathic_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 17)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendoptical/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('optical.png')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_optical_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 18)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendpharmacynew/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('pharmacynew.png')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_pharmacynew_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 19)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;">
+                            <a href="{{ url('frontendphysiotherapy/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('physiotherapy.png')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_physiotherapy_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                @if($directoryType == 20)
+                    @foreach($contacts as $contact)
+                        <div style="margin-top:12px;" style="margin-top:12px;">
+                            <a href="{{ url('frontendyoga/view'.'/'.$contact->id.'/'.$contact->subdistrict_id)}}">
+                                <div class="md-card md-card-hover">
+                                    <div class="md-card-head">
+                                        @if($contact->photo_path == '')
+                                        <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{url('yoga.png')}}" alt=""/>
+                                        </div> 
+                                        @else
+                                       <div class="uk-text-center">
+                                            <img class="md-card-head-avatar" style = "border: 1px solid red;" src="{{ url($contact->photo_path) }}" alt=""/>
+                                        </div> 
+                                        @endif
+                                        <h3 class="md-card-head-text uk-text-center" style = "color: black;">
+                                            {{$contact->b_yoga_name}}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
+
+                <!-- New Modules Ends-->
 
             </div>
 

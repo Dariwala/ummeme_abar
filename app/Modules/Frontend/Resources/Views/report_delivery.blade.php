@@ -70,8 +70,58 @@
 
 @section('content')
 
-    @if(Session('language')=='bn')
-        <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
+    @if(Session('language')=='en')
+    <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
+            <div class="md-card">
+                <div class="user_content">
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-medium-1-1">
+                        @php
+                        echo $data->report_delivery;
+                        @endphp
+                        </div> 
+                        <div class="uk-width-medium-1-2">
+                            {!! Form::open(['url' => 'report_delivery/post', 'method' => 'POST', 'class' => 'ul-form-stacked', 'files' => true]) !!}
+                                <div class="uk-grid" data-uk-grid-margin style="margin-top: 15px;">
+                                    <div class="uk-width-medium-1-1">
+                                        <h4></h4>
+                                        <div class="uk-width-1-1 uk-margin-top">
+                                            <div class="parsley-row">
+                                                <label for="name">Name <span class="req">*</span></label><br>
+                                                <input type="text" id="name" name="name" value="" required style="width:calc(100% - 8px);height:25px;padding-left:6px;"></input><br><br>
+                                            </div>
+                                            <div class="parsley-row uk-margin-top">
+                                                <label for="email">Address<span class="req">*</span></label><br>
+                                                <textarea type="text" id="address" name="address" class="txta" value="" required style="width:calc(100% - 8px);font-family:'Helvetica', Arial, Lucida Grande, sans-serif;resize:none;overflow:hidden;vertical-align:top;line-height:1.4;height:20px;min-height:20px;padding-top:6px;padding-left:6px;"></textarea><br><br>
+                                            </div>
+                                            <div class="parsley-row uk-margin-top">
+                                                <label for="subject">Contact Number <span class="req">*</span></label><br>
+                                                <input type="text" id="phone_number" name="phone_number" value="" required style="width:calc(100% - 8px);height:25px;padding-left:6px;"></input>
+                                            </div>
+                                            <br>
+                                            <div class="uk-width-medium-1-2">
+                                                <div class="parsley-row ">
+                                                     <label for="add_publication_title">Paid Money Receipt<span class="req"></span></label>
+                                                </div>
+                                                <div class="parsley-row uk-margin-top">
+                                                    <input type="file" id="user_photo" name="user_photo" class="dropify" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-float-right uk-margin-top">
+                                    <button type="submit" class="md-btn md-btn-large" style="background: #FD0100;color: #fff;">Send</button>
+                                </div>
+                            {!! Form::close() !!}
+                        </div>    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    @else
+    <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
             <div class="md-card">
                 <div class="user_content">
                     <div class="uk-grid" data-uk-grid-margin>
@@ -117,56 +167,6 @@
                             {!! Form::close() !!}
                         </div>    
                          
-                    </div>
-                </div>
-            </div>
-        </div>
-    @else
-        <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
-            <div class="md-card">
-                <div class="user_content">
-                    <div class="uk-grid" data-uk-grid-margin>
-                        <div class="uk-width-medium-1-1">
-                        @php
-                        echo $data->report_delivery;
-                        @endphp
-                        </div> 
-                        <div class="uk-width-medium-1-2">
-                            {!! Form::open(['url' => 'report_delivery/post', 'method' => 'POST', 'class' => 'ul-form-stacked', 'files' => true]) !!}
-                                <div class="uk-grid" data-uk-grid-margin style="margin-top: 15px;">
-                                    <div class="uk-width-medium-1-1">
-                                        <h4></h4>
-                                        <div class="uk-width-1-1 uk-margin-top">
-                                            <div class="parsley-row">
-                                                <label for="name">Name <span class="req">*</span></label><br>
-                                                <input type="text" id="name" name="name" value="" required style="width:calc(100% - 8px);height:25px;padding-left:6px;"></input><br><br>
-                                            </div>
-                                            <div class="parsley-row uk-margin-top">
-                                                <label for="email">Address<span class="req">*</span></label><br>
-                                                <textarea type="text" id="address" name="address" class="txta" value="" required style="width:calc(100% - 8px);font-family:'Helvetica', Arial, Lucida Grande, sans-serif;resize:none;overflow:hidden;vertical-align:top;line-height:1.4;height:20px;min-height:20px;padding-top:6px;padding-left:6px;"></textarea><br><br>
-                                            </div>
-                                            <div class="parsley-row uk-margin-top">
-                                                <label for="subject">Contact Number <span class="req">*</span></label><br>
-                                                <input type="text" id="phone_number" name="phone_number" value="" required style="width:calc(100% - 8px);height:25px;padding-left:6px;"></input>
-                                            </div>
-                                            <br>
-                                            <div class="uk-width-medium-1-2">
-                                                <div class="parsley-row ">
-                                                     <label for="add_publication_title">Paid Money Receipt<span class="req"></span></label>
-                                                </div>
-                                                <div class="parsley-row uk-margin-top">
-                                                    <input type="file" id="user_photo" name="user_photo" class="dropify" required/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="uk-float-right uk-margin-top">
-                                    <button type="submit" class="md-btn md-btn-large" style="background: #FD0100;color: #fff;">Send</button>
-                                </div>
-                            {!! Form::close() !!}
-                        </div>    
-                        
                     </div>
                 </div>
             </div>

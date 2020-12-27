@@ -135,13 +135,13 @@ class GymServiceController extends Controller
         $subDistrict = $request->subDistrict;
         
         if(isset($subDistrict)){
-            if(Session('language')=='bn') 
+            if(Session('language')=='en') 
             {
-               $gym_service = Gym::select('b_gym_subname as gym_subname')->distinct()->orderBy('b_gym_subname', 'ASC')->where('b_gym_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
+                $gym_service = Gym::select('gym_subname as gym_subname')->distinct()->orderBy('gym_subname', 'ASC')->where('gym_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
             }
             else
             {
-               $gym_service = Gym::select('gym_subname as gym_subname')->distinct()->orderBy('gym_subname', 'ASC')->where('gym_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
+                $gym_service = Gym::select('b_gym_subname as gym_subname')->distinct()->orderBy('b_gym_subname', 'ASC')->where('b_gym_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
             }
         }else{
             if(Session('language')=='bn') 

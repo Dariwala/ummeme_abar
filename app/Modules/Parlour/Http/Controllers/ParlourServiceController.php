@@ -135,22 +135,22 @@ class ParlourServiceController extends Controller
         $subDistrict = $request->subDistrict;
         
         if(isset($subDistrict)){
-            if(Session('language')=='bn') 
+            if(Session('language')=='en') 
             {
-               $parlour_service = Parlour::select('b_parlour_subname as parlour_subname')->distinct()->orderBy('b_parlour_subname', 'ASC')->where('b_parlour_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
+                $parlour_service = Parlour::select('parlour_subname as parlour_subname')->distinct()->orderBy('parlour_subname', 'ASC')->where('parlour_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
             }
             else
             {
-               $parlour_service = Parlour::select('parlour_subname as parlour_subname')->distinct()->orderBy('parlour_subname', 'ASC')->where('parlour_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
+                $parlour_service = Parlour::select('b_parlour_subname as parlour_subname')->distinct()->orderBy('b_parlour_subname', 'ASC')->where('b_parlour_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
             }
         }else{
-            if(Session('language')=='bn') 
+            if(Session('language')=='en') 
             {
-               $parlour_service = Parlour::select('b_parlour_subname as parlour_subname')->distinct()->orderBy('b_parlour_subname', 'ASC')->where('b_parlour_subname', '!=', NULL)->get();
+                $parlour_service = Parlour::select('parlour_subname as parlour_subname')->distinct()->orderBy('parlour_subname', 'ASC')->where('parlour_subname', '!=', NULL)->get();
             }
             else
             {
-               $parlour_service = Parlour::select('parlour_subname as parlour_subname')->distinct()->orderBy('parlour_subname', 'ASC')->where('parlour_subname', '!=', NULL)->get();
+                $parlour_service = Parlour::select('b_parlour_subname as parlour_subname')->distinct()->orderBy('b_parlour_subname', 'ASC')->where('b_parlour_subname', '!=', NULL)->get();
             }
         }
 

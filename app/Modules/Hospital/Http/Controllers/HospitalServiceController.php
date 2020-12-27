@@ -136,22 +136,22 @@ class HospitalServiceController extends Controller
         $subDistrict = $request->subDistrict;
         
         if(isset($subDistrict)){
-            if(Session('language')=='bn') 
+            if(Session('language')=='en') 
             {
-               $hospital_service = Hospital::select('b_hospital_subname as hospital_subname')->distinct()->orderBy('b_hospital_subname', 'ASC')->where('b_hospital_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
+                $hospital_service = Hospital::select('hospital_subname as hospital_subname')->distinct()->orderBy('hospital_subname', 'ASC')->where('hospital_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
             }
             else
             {
-               $hospital_service = Hospital::select('hospital_subname as hospital_subname')->distinct()->orderBy('hospital_subname', 'ASC')->where('hospital_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
+                $hospital_service = Hospital::select('b_hospital_subname as hospital_subname')->distinct()->orderBy('b_hospital_subname', 'ASC')->where('b_hospital_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
             }
         }else{
-            if(Session('language')=='bn') 
+            if(Session('language')=='en') 
             {
-               $hospital_service = Hospital::select('b_hospital_subname as hospital_subname')->distinct()->orderBy('b_hospital_subname', 'ASC')->where('b_hospital_subname', '!=', NULL)->get();
+                $hospital_service = Hospital::select('hospital_subname as hospital_subname')->distinct()->orderBy('hospital_subname', 'ASC')->where('hospital_subname', '!=', NULL)->get();
             }
             else
             {
-               $hospital_service = Hospital::select('hospital_subname as hospital_subname')->distinct()->orderBy('hospital_subname', 'ASC')->where('hospital_subname', '!=', NULL)->get();
+                $hospital_service = Hospital::select('b_hospital_subname as hospital_subname')->distinct()->orderBy('b_hospital_subname', 'ASC')->where('b_hospital_subname', '!=', NULL)->get();
             }
         }
 

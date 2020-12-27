@@ -356,24 +356,24 @@ class BloodDonarController extends Controller
 
         if(isset($subDistrict)){
             
-            if(Session('language')=='bn') 
+            if(Session('language')=='en') 
             {
-               $blood_donors = BloodDonor::select('b_blood_donor_subname as blood_group')->distinct()->orderBy('b_blood_donor_subname', 'ASC')->where('b_blood_donor_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
+                $blood_donors = BloodDonor::select('blood_donor_subname as blood_group')->distinct()->orderBy('blood_donor_subname', 'ASC')->where('blood_donor_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
             }
             else
             {
-               $blood_donors = BloodDonor::select('blood_donor_subname as blood_group')->distinct()->orderBy('blood_donor_subname', 'ASC')->where('blood_donor_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
+                $blood_donors = BloodDonor::select('b_blood_donor_subname as blood_group')->distinct()->orderBy('b_blood_donor_subname', 'ASC')->where('b_blood_donor_subname', '!=', NULL)->where('subdistrict_id', $subDistrict)->get();
             }   
             
         }else{
             
-            if(Session('language')=='bn') 
+            if(Session('language')=='en') 
             {
-               $blood_donors = BloodDonor::select('b_blood_donor_subname as blood_group')->distinct()->orderBy('b_blood_donor_subname', 'ASC')->where('b_blood_donor_subname', '!=', NULL)->get();
+                $blood_donors = BloodDonor::select('blood_donor_subname as blood_group')->distinct()->orderBy('blood_donor_subname', 'ASC')->where('blood_donor_subname', '!=', NULL)->get();
             }
             else
             {
-               $blood_donors = BloodDonor::select('blood_donor_subname as blood_group')->distinct()->orderBy('blood_donor_subname', 'ASC')->where('blood_donor_subname', '!=', NULL)->get();
+                $blood_donors = BloodDonor::select('b_blood_donor_subname as blood_group')->distinct()->orderBy('b_blood_donor_subname', 'ASC')->where('b_blood_donor_subname', '!=', NULL)->get();
             }
             
         }

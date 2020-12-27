@@ -57,53 +57,8 @@
 
 @section('content')
 
-    @if(Session('language')=='bn')
-        <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
-            <div class="md-card">
-                <div class="user_content">
-                    <div class="uk-grid" data-uk-grid-margin>
-                        <div class="uk-width-medium-1-1">
-                            @php
-                            echo $data->b_contact;
-                            @endphp
-                        </div>
-                        <!--<div class="uk-width-medium-1-2">
-                            {!! Form::open(['url' => 'contact/post', 'method' => 'POST', 'class' => 'ul-form-stacked']) !!}
-                                <div class="uk-grid" data-uk-grid-margin style="margin-top: 15px;">
-                                    <div class="uk-width-medium-1-1">
-                                        <h4></h4>
-                                        <div class="uk-width-1-1 uk-margin-top">
-                                            <div class="parsley-row">
-                                                <label for="name">নাম <span class="req">*</span></label>
-                                                <textarea type="text" id="name" name="name" value="" required class="md-input" ></textarea>
-                                            </div>
-                                            <div class="parsley-row uk-margin-top">
-                                                <label for="email">ই-মেইল অথবা ফোন <span class="req">*</span></label>
-                                                <textarea type="text" id="email" name="email" value="" required class="md-input"></textarea>
-                                            </div>
-                                            <div class="parsley-row uk-margin-top">
-                                                <label for="subject">বিষয় <span class="req">*</span></label>
-                                                <textarea type="text" id="subject" name="subject" value="" required class="md-input"></textarea>
-                                            </div>
-                                            <div class="parsley-row uk-margin-top">
-                                                <label for="details">বিস্তারিত <span class="req">*</span></label>
-                                                <textarea id="details" name="details" value="" required class="md-input"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="uk-float-right uk-margin-top">
-                                    <button type="submit" class="md-btn md-btn-large" style="background: #FD0100;color: #fff;">পাঠিয়ে দিন</button>
-                                </div>
-                            {!! Form::close() !!}
-                        </div>-->   
-                         
-                    </div>
-                </div>
-            </div>
-        </div>
-    @else
-        <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
+    @if(Session('language')=='en')
+    <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
             <div class="md-card">
                 <div class="user_content">
                     <div class="uk-grid" data-uk-grid-margin>
@@ -143,6 +98,51 @@
                             {!! Form::close() !!}
                         </div>-->  
                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    @else
+    <div class="uk-width-large-7-10" oncopy="return false" oncut="return false" onpaste="return false">
+            <div class="md-card">
+                <div class="user_content">
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-medium-1-1">
+                            @php
+                            echo $data->b_contact;
+                            @endphp
+                        </div>
+                        <!--<div class="uk-width-medium-1-2">
+                            {!! Form::open(['url' => 'contact/post', 'method' => 'POST', 'class' => 'ul-form-stacked']) !!}
+                                <div class="uk-grid" data-uk-grid-margin style="margin-top: 15px;">
+                                    <div class="uk-width-medium-1-1">
+                                        <h4></h4>
+                                        <div class="uk-width-1-1 uk-margin-top">
+                                            <div class="parsley-row">
+                                                <label for="name">নাম <span class="req">*</span></label>
+                                                <textarea type="text" id="name" name="name" value="" required class="md-input" ></textarea>
+                                            </div>
+                                            <div class="parsley-row uk-margin-top">
+                                                <label for="email">ই-মেইল অথবা ফোন <span class="req">*</span></label>
+                                                <textarea type="text" id="email" name="email" value="" required class="md-input"></textarea>
+                                            </div>
+                                            <div class="parsley-row uk-margin-top">
+                                                <label for="subject">বিষয় <span class="req">*</span></label>
+                                                <textarea type="text" id="subject" name="subject" value="" required class="md-input"></textarea>
+                                            </div>
+                                            <div class="parsley-row uk-margin-top">
+                                                <label for="details">বিস্তারিত <span class="req">*</span></label>
+                                                <textarea id="details" name="details" value="" required class="md-input"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-float-right uk-margin-top">
+                                    <button type="submit" class="md-btn md-btn-large" style="background: #FD0100;color: #fff;">পাঠিয়ে দিন</button>
+                                </div>
+                            {!! Form::close() !!}
+                        </div>-->   
+                         
                     </div>
                 </div>
             </div>
