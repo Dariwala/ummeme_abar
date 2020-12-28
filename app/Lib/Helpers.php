@@ -61,7 +61,7 @@ class Helpers
     
     public function getDistricts(){
         
-        $districts = District::orderBy('district_name','ASC')->get();
+        $districts = District::orderBy('b_district_name','ASC')->get();
         
         return $districts;
     }

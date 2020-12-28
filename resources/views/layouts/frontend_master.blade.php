@@ -151,7 +151,7 @@
         <div class="header_main_content">
             <nav class="uk-navbar">
                 <!-- main sidebar switch -->
-                 <a class="sSwitch sSwitch_left" href="#" id="sidebar_main_toggle"><span class="sSwitchIcon"></span></a> <!-- secondary sidebar switch -->
+                 <!-- <a class="sSwitch sSwitch_left" href="#" id="sidebar_main_toggle"><span class="sSwitchIcon"></span></a> secondary sidebar switch -->
                  <a class="sSwitch sSwitch_right sidebar_secondary_check" href="#" id="sidebar_secondary_toggle"><span class="sSwitchIcon"></span></a>
                  <div class="main_logo_top">
                     @if(Session('language')=='en')
