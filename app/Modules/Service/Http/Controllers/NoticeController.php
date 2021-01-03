@@ -68,16 +68,33 @@ class NoticeController extends Controller
     
     public function ajaxService($sub_district_id)
     {
-        $service_names_bangla = array("২৪ ঘণ্টা ফার্মেসী","অ্যাডিকশন রিহ্যাবিলিটেশন সেন্টার","এয়ার অ্যাাম্বুলেন্স","অ্যাাম্বুলেন্স","বিউটি পার্লার অ্যান্ড স্পা","ব্লাড ব্যাংক","ব্লাড ডোনার","ডক্টরস্‌ প্যানেল","আই ব্যাংক","ফরেন মেডিক্যাল ইনফরমেশন সেন্টার"
-                                     ,"জিম","হেল্‌থ কেয়ার সেন্টার","হারবাল মেডিসিন সেন্টার","হোমিওপ্যাথিক মেডিসিন সেন্টার","অপটিক্‌স","ফার্মেসী",
-                                     "ফিজিওথেরাপি অ্যান্ড রিহ্যাবিলিটেশন সেন্টার","স্কিন কেয়ার অ্যান্ড লেজার সেন্টার","ভ্যাকসিনেশন সেন্টার","ইয়োগা সেন্টার");
+        $service_names_bangla = array("২৪ ঘণ্টা ফার্মেসী",
+                                      "অপটিক্‌স",
+                                      "অ্যাডিকশন রিহ্যাবিলিটেশন সেন্টার",
+                                      "অ্যাাম্বুলেন্স",
+                                      "আই ব্যাংক",
+                                      "ইয়োগা সেন্টার",
+                                      "এয়ার অ্যাাম্বুলেন্স",
+                                      "জিম",
+                                      "ডক্টরস্‌ প্যানেল",
+                                      "ফরেন মেডিক্যাল ইনফরমেশন সেন্টার",
+                                      "ফার্মেসী",
+                                      "ফিজিওথেরাপি অ্যান্ড রিহ্যাবিলিটেশন সেন্টার",
+                                      "বিউটি পার্লার অ্যান্ড স্পা",
+                                      "ব্লাড ডোনার",
+                                      "ব্লাড ব্যাংক",
+                                      "ভ্যাকসিনেশন সেন্টার",
+                                      "স্কিন কেয়ার অ্যান্ড লেজার সেন্টার",
+                                      "হারবাল মেডিসিন সেন্টার",
+                                      "হেল্‌থ কেয়ার সেন্টার",
+                                      "হোমিওপ্যাথিক মেডিসিন সেন্টার");
         $service_names_english = array("24 Hours Pharmacy","Addiction Rehabilitation Center","Air Ambulance","Ambulance","Beauty Parlour & Spa","Blood Bank","Blood Donor",
                                         "Doctors Panel","Eye Bank","Foreign Medical Information Center"
                                       ,"Gym","Health Care Center","Herbal Medicine Center","Homeopathic Medicine Center","Optics"
                                       ,"Pharmacy","Physiotherapy & Rehabilitation Center","Skin Care & Laser Center","Vaccination Center","Yoga Center");
         
                                       
-        $indices_of_services_in_drop_down = array(7,12,2,1,13,3,4,8,5,14,15,6,9,16,17,18,19,11,10,20);
+        $indices_of_services_in_drop_down = array(7,17,12,1,5,20,2,15,8,14,18,19,13,4,3,10,11,9,6,16);
 
         $services = array();
 
@@ -90,61 +107,61 @@ class NoticeController extends Controller
                 $number_of_entries = Pharmacy::where('subdistrict_id',$sub_district_id)->count();
             }
             else if($i == 1){
-                $number_of_entries = Addiction::where('subdistrict_id',$sub_district_id)->count();
+                $number_of_entries = Optical::where('subdistrict_id',$sub_district_id)->count();
             }
             else if($i == 2){
-                $number_of_entries = AirAmbulance::where('subdistrict_id',$sub_district_id)->count();
+                $number_of_entries = Addiction::where('subdistrict_id',$sub_district_id)->count();
             }
             else if($i == 3){
                 $number_of_entries = Ambulance::where('subdistrict_id',$sub_district_id)->count();
             }
             else if($i == 4){
-                $number_of_entries = Parlour::where('subdistrict_id',$sub_district_id)->count();
+                $number_of_entries = EyeBank::where('subdistrict_id',$sub_district_id)->count();
             }
             else if($i == 5){
-                $number_of_entries = BloodBank::where('subdistrict_id',$sub_district_id)->count();
+                $number_of_entries = Yoga::where('subdistrict_id',$sub_district_id)->count();
             }
             else if($i == 6){
-                $number_of_entries = BloodDonor::where('subdistrict_id',$sub_district_id)->count();
+                $number_of_entries = AirAmbulance::where('subdistrict_id',$sub_district_id)->count();
             }
             else if($i == 7){
-                $number_of_entries = MedicalSpecialist::where('subdistrict_id',$sub_district_id)->count();
+                $number_of_entries = Gym::where('subdistrict_id',$sub_district_id)->count();
             }
             else if($i == 8){
-                $number_of_entries = EyeBank::where('subdistrict_id',$sub_district_id)->count();
+                $number_of_entries = MedicalSpecialist::where('subdistrict_id',$sub_district_id)->count();
             }
             else if($i == 9){
                 $number_of_entries = Foreignmedical::where('subdistrict_id',$sub_district_id)->count();
             }
             else if($i == 10){
-                $number_of_entries = Gym::where('subdistrict_id',$sub_district_id)->count();
-            }
-            else if($i == 11){
-                $number_of_entries = Hospital::where('subdistrict_id',$sub_district_id)->count();
-            }
-            else if($i == 12){
-                $number_of_entries = HerbalCenter::where('subdistrict_id',$sub_district_id)->count();
-            }
-            else if($i == 13){
-                $number_of_entries = Homeopathic::where('subdistrict_id',$sub_district_id)->count();
-            }
-            else if($i == 14){
-                $number_of_entries = Optical::where('subdistrict_id',$sub_district_id)->count();
-            }
-            else if($i == 15){
                 $number_of_entries = Pharmacynew::where('subdistrict_id',$sub_district_id)->count();
             }
-            else if($i == 16){
+            else if($i == 11){
                 $number_of_entries = Physiotherapy::where('subdistrict_id',$sub_district_id)->count();
             }
-            else if($i == 17){
-                $number_of_entries = SkinLaserCenter::where('subdistrict_id',$sub_district_id)->count();
+            else if($i == 12){
+                $number_of_entries = Parlour::where('subdistrict_id',$sub_district_id)->count();
             }
-            else if($i == 18){
+            else if($i == 13){
+                $number_of_entries = BloodDonor::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 14){
+                $number_of_entries = BloodBank::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 15){
                 $number_of_entries = VaccinePoint::where('subdistrict_id',$sub_district_id)->count();
             }
+            else if($i == 16){
+                $number_of_entries = SkinLaserCenter::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 17){
+                $number_of_entries = HerbalCenter::where('subdistrict_id',$sub_district_id)->count();
+            }
+            else if($i == 18){
+                $number_of_entries = Hospital::where('subdistrict_id',$sub_district_id)->count();
+            }
             else if($i == 19){
-                $number_of_entries = Yoga::where('subdistrict_id',$sub_district_id)->count();
+                $number_of_entries = Homeopathic::where('subdistrict_id',$sub_district_id)->count();
             }
             if($number_of_entries != 0)
             {
