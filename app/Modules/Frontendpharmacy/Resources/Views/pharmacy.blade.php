@@ -369,7 +369,7 @@
                 </div>
         
         
-                <div class="user_content" style="position:relative;z-index:1;">
+                <div class="user_content">
                     <ul class="uk-tab uk-tab-bn" data-uk-sticky="{ top: 48, media: 960 }" data-uk-tab="{connect:'#user_profile_tabs_content', animation:'slide-horizontal'}" id="user_profile_tabs">
                         <li class="uk-active">
                             <a href="#">সম্বন্ধে</a>
