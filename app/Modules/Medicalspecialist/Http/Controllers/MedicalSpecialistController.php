@@ -579,13 +579,13 @@ class MedicalSpecialistController extends Controller
     {
         $medical_specialist_ids = HospitalDoctor::where('hospital_id', $hospital_id)->where('department_id', $department_id)->select('medical_specialist_id')->get();
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $hospitalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
+            $hospitalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
         }
         else
         {
-            $hospitalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
+            $hospitalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
         }
         return response()->json([
             'hospitalmedicalspecialist' =>  $hospitalmedicalspecialist,
@@ -596,13 +596,13 @@ class MedicalSpecialistController extends Controller
     {
         $medical_specialist_ids = AddictionDoctor::where('addiction_id', $addiction_id)->where('department_id', $department_id)->select('medical_specialist_id')->get();
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $addictionmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
+            $addictionmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
         }
         else
         {
-            $addictionmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
+            $addictionmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
         }
         return response()->json([
             'addictionmedicalspecialist' =>  $addictionmedicalspecialist,
@@ -615,13 +615,13 @@ class MedicalSpecialistController extends Controller
 
         $medical_specialists = HospitalDoctor::where('hospital_id', $medical_specialist_ids->hospital_id)->where('department_id', $medical_specialist_ids->department_id)->select('medical_specialist_id')->get();
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $hospitalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialists)->select('b_medical_specialist_name as text', 'id as value')->get();
+            $hospitalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialists)->select('medical_specialist_name as text', 'id as value')->get();
         }
         else
         {
-            $hospitalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialists)->select('medical_specialist_name as text', 'id as value')->get();
+            $hospitalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialists)->select('b_medical_specialist_name as text', 'id as value')->get();
         }
         return response()->json([
             'selected_Medical_specialist' =>  $medical_specialist_ids,
@@ -634,13 +634,13 @@ class MedicalSpecialistController extends Controller
     {
         $medical_specialist_ids = HerbalCenterDoctor::where('herbal_center_id', $herbal_center_id)->where('department_id', $department_id)->select('medical_specialist_id')->get();
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $herbalcentermedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
+            $herbalcentermedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
         }
         else
         {
-           $herbalcentermedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get(); 
+            $herbalcentermedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
         }
         return response()->json([
             'herbalcentermedicalspecialist' =>  $herbalcentermedicalspecialist,
@@ -651,13 +651,13 @@ class MedicalSpecialistController extends Controller
     {
         $medical_specialist_ids = BloodBankDoctor::where('blood_bank_id', $blood_bank_id)->where('department_id', $department_id)->select('medical_specialist_id')->get();
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $bloodbankmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
+            $bloodbankmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get(); 
         }
         else
         {
-           $bloodbankmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get(); 
+            $bloodbankmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
         }
         return response()->json([
             'bloodbankmedicalspecialist' =>  $bloodbankmedicalspecialist,
@@ -668,13 +668,13 @@ class MedicalSpecialistController extends Controller
     {
         $medical_specialist_ids = EyeBankDoctor::where('eye_bank_id', $eye_bank_id)->where('department_id', $department_id)->select('medical_specialist_id')->get();
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $eyebankmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
+            $eyebankmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get(); 
         }
         else
         {
-           $eyebankmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get(); 
+            $eyebankmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
         }
         return response()->json([
             'eyebankmedicalspecialist' =>  $eyebankmedicalspecialist,
@@ -686,13 +686,13 @@ class MedicalSpecialistController extends Controller
         $medical_specialist_ids = SkinLaserCenterDoctor::where('skin_laser_center_id', $skin_laser_center_id)->where('department_id', $department_id)->select('medical_specialist_id')->get();
         
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $skinlasercentermedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
+            $skinlasercentermedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
         }
         else
         {
-            $skinlasercentermedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
+            $skinlasercentermedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
         }
         return response()->json([
             'skinlasercentermedicalspecialist' =>  $skinlasercentermedicalspecialist,
@@ -705,13 +705,13 @@ class MedicalSpecialistController extends Controller
         $medical_specialist_ids = VaccinePointDoctor::where('vaccine_point_id', $vaccine_point_id)->where('department_id', $department_id)->select('medical_specialist_id')->get();
        
        
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $vaccinepointmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
+            $vaccinepointmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
         }
         else
         {
-            $vaccinepointmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
+            $vaccinepointmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
         }
         
         return response()->json([
@@ -722,13 +722,13 @@ class MedicalSpecialistController extends Controller
     public function viewPharmacyMedicalSpecialist($department_id,$pharmacy_id)
     {
         $medical_specialist_ids = PharmacyDoctor::where('pharmacy_id', $pharmacy_id)->where('department_id', $department_id)->select('medical_specialist_id')->get();
-        if(Session('language')=='bn') 
+        if(Session('language')=='en') 
         {
-           $pharmacymedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
+            $pharmacymedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
         }
         else
         {
-            $pharmacymedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
+            $pharmacymedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
         }
         
         
@@ -742,13 +742,13 @@ class MedicalSpecialistController extends Controller
     public function viewForeignmedicalMedicalSpecialist($department_id,$foreignmedical_id)
     {
         $medical_specialist_ids = ForeignmedicalDoctor::where('foreignmedical_id', $foreignmedical_id)->where('department_id', $department_id)->select('medical_specialist_id')->get();
-        if(Session('language')=='bn') 
+        if(Session('language')=='en') 
         {
-           $foreignmedicalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
+            $foreignmedicalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
         }
         else
         {
-            $foreignmedicalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
+            $foreignmedicalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
         }
         
         
@@ -760,13 +760,13 @@ class MedicalSpecialistController extends Controller
     public function viewHomeopathicMedicalSpecialist($department_id,$homeopathic_id)
     {
         $medical_specialist_ids = HomeopathicDoctor::where('homeopathic_id', $homeopathic_id)->where('department_id', $department_id)->select('medical_specialist_id')->get();
-        if(Session('language')=='bn') 
+        if(Session('language')=='en') 
         {
-           $homeopathicmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
+            $homeopathicmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
         }
         else
         {
-            $homeopathicmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
+            $homeopathicmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
         }
         
         
@@ -778,13 +778,13 @@ class MedicalSpecialistController extends Controller
     public function viewOpticalMedicalSpecialist($department_id,$optical_id)
     {
         $medical_specialist_ids = OpticalDoctor::where('optical_id', $optical_id)->where('department_id', $department_id)->select('medical_specialist_id')->get();
-        if(Session('language')=='bn') 
+        if(Session('language')=='en') 
         {
-           $opticalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
+            $opticalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
         }
         else
         {
-            $opticalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
+            $opticalmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
         }
         
         
@@ -796,13 +796,13 @@ class MedicalSpecialistController extends Controller
     public function viewPharmacynewMedicalSpecialist($department_id,$pharmacynew_id)
     {
         $medical_specialist_ids = PharmacynewDoctor::where('pharmacynew_id', $pharmacynew_id)->where('department_id', $department_id)->select('medical_specialist_id')->get();
-        if(Session('language')=='bn') 
+        if(Session('language')=='en') 
         {
-           $pharmacynewmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
+            $pharmacynewmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
         }
         else
         {
-            $pharmacynewmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
+            $pharmacynewmedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
         }
         
         
@@ -814,13 +814,13 @@ class MedicalSpecialistController extends Controller
     public function viewPhysiotherapyMedicalSpecialist($department_id,$physiotherapy_id)
     {
         $medical_specialist_ids = PhysiotherapyDoctor::where('physiotherapy_id', $physiotherapy_id)->where('department_id', $department_id)->select('medical_specialist_id')->get();
-        if(Session('language')=='bn') 
+        if(Session('language')=='en') 
         {
-           $physiotherapymedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
+            $physiotherapymedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
         }
         else
         {
-            $physiotherapymedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('medical_specialist_name as text', 'id as value')->get();
+            $physiotherapymedicalspecialist = Medicalspecialist::whereIn('id', $medical_specialist_ids)->select('b_medical_specialist_name as text', 'id as value')->get();
         }
         
         

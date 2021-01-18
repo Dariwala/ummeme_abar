@@ -443,13 +443,13 @@ class DepartmentController extends Controller
         $departmet_ids = HospitalDoctor::where('hospital_id', $hospital_id)->select('department_id')->get();
         
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $hospitaldepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $hospitaldepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $hospitaldepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $hospitaldepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         return response()->json([
             'hospitaldepartment' =>  $hospitaldepartment,
@@ -461,13 +461,13 @@ class DepartmentController extends Controller
         $departmet_ids = AddictionDoctor::where('addiction_id', $addiction_id)->select('department_id')->get();
         
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $addictiondepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $addictiondepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $addictiondepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $addictiondepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         return response()->json([
             'addictiondepartment' =>  $addictiondepartment,
@@ -479,13 +479,13 @@ class DepartmentController extends Controller
         $departmet_ids = GymDoctor::where('gym_id', $gym_id)->select('department_id')->get();
         
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $gymdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $gymdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $gymdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $gymdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         return response()->json([
             'gymdepartment' =>  $gymdepartment,
@@ -497,13 +497,13 @@ class DepartmentController extends Controller
         $departmet_ids = YogaDoctor::where('yoga_id', $yoga_id)->select('department_id')->get();
         
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $yogadepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $yogadepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $yogadepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $yogadepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         return response()->json([
             'yogadepartment' =>  $yogadepartment,
@@ -515,13 +515,13 @@ class DepartmentController extends Controller
         $departmet_ids = ParlourDoctor::where('parlour_id', $parlour_id)->select('department_id')->get();
         
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $parlourdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $parlourdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $parlourdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $parlourdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         return response()->json([
             'parlourdepartment' =>  $parlourdepartment,
@@ -533,13 +533,13 @@ class DepartmentController extends Controller
         $departmet_ids = HerbalCenterDoctor::where('herbal_center_id', $herbal_center_id)->select('department_id')->get();
         
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $herbalcenterdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $herbalcenterdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $herbalcenterdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $herbalcenterdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         return response()->json([
             'herbalcenterdepartment' =>  $herbalcenterdepartment,
@@ -551,13 +551,13 @@ class DepartmentController extends Controller
         $departmet_ids = BloodBankDoctor::where('blood_bank_id', $blood_bank_id)->select('department_id')->get();
         
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $bloodbankdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $bloodbankdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $bloodbankdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $bloodbankdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         return response()->json([
             'bloodbankdepartment' =>  $bloodbankdepartment,
@@ -570,13 +570,13 @@ class DepartmentController extends Controller
         $departmet_ids = EyeBankDoctor::where('eye_bank_id', $eye_bank_id)->select('department_id')->get();
         
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $eyebankdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $eyebankdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $eyebankdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $eyebankdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         return response()->json([
             'eyebankdepartment' =>  $eyebankdepartment,
@@ -588,13 +588,13 @@ class DepartmentController extends Controller
         
         
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $skinlasercenterdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $skinlasercenterdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $skinlasercenterdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $skinlasercenterdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
 
         return response()->json([
@@ -607,13 +607,13 @@ class DepartmentController extends Controller
         
         
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $vaccinepointdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $vaccinepointdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $vaccinepointdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $vaccinepointdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         
         return response()->json([
@@ -625,13 +625,13 @@ class DepartmentController extends Controller
     {
         $departmet_ids = PharmacyDoctor::where('pharmacy_id', $pharmacy_id)->select('department_id')->get();
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $pharmacydepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $pharmacydepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $pharmacydepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $pharmacydepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         
         
@@ -647,13 +647,13 @@ class DepartmentController extends Controller
     {
         $departmet_ids = ForeignmedicalDoctor::where('foreignmedical_id', $foreignmedical_id)->select('department_id')->get();
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $foreignmedicaldepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $foreignmedicaldepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $foreignmedicaldepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $foreignmedicaldepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         
         
@@ -667,13 +667,13 @@ class DepartmentController extends Controller
     {
         $departmet_ids = HomeopathicDoctor::where('homeopathic_id', $homeopathic_id)->select('department_id')->get();
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $homeopathicdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $homeopathicdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $homeopathicdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $homeopathicdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         
         
@@ -687,13 +687,13 @@ class DepartmentController extends Controller
     {
         $departmet_ids = OpticalDoctor::where('optical_id', $optical_id)->select('department_id')->get();
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $opticaldepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $opticaldepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $opticaldepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $opticaldepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         
         
@@ -707,13 +707,13 @@ class DepartmentController extends Controller
     {
         $departmet_ids = PharmacynewDoctor::where('pharmacynew_id', $pharmacynew_id)->select('department_id')->get();
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $pharmacynewdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $pharmacynewdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $pharmacynewdepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $pharmacynewdepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         
         
@@ -727,13 +727,13 @@ class DepartmentController extends Controller
     {
         $departmet_ids = PhysiotherapyDoctor::where('physiotherapy_id', $physiotherapy_id)->select('department_id')->get();
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $physiotherapydepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
+            $physiotherapydepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
         }
         else
         {
-            $physiotherapydepartment = Department::whereIn('id', $departmet_ids)->select('department_name as text', 'id as value')->get();
+            $physiotherapydepartment = Department::whereIn('id', $departmet_ids)->select('b_department_name as text', 'id as value')->get();
         }
         
         

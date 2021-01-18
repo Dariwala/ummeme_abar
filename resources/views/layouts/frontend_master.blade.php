@@ -250,7 +250,7 @@
                             </div>
                         </div>
                     @else
-                    <div class="md-card">
+                    <div class="md-card" style="position:relative;z-index:0;">
                             
                             <div class="login_page_wrapper">
                                 <div id="login_card">

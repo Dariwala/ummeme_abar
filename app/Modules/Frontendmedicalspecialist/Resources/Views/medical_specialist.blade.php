@@ -167,7 +167,7 @@
             @include('layouts.flash_message')
     
     
-            <div class="user_content ">
+            <div class="user_content" style="position:relative;z-index:1;">
                 <ul class="uk-tab hidden-print" data-uk-sticky="{ top: 48, media: 960 }" data-uk-tab="{connect:'#user_profile_tabs_content', animation:'slide-horizontal'}" id="user_profile_tabs">
 
                     @if(session()->has('flag') || $flag = 1 && $flag != 0)
@@ -862,7 +862,7 @@
     
             @include('layouts.flash_message')
             
-            <div class="user_content">
+            <div class="user_content" style="position:relative;z-index:1;">
                 <ul class="uk-tab" data-uk-sticky="{ top: 48, media: 960 }" data-uk-tab="{connect:'#user_profile_tabs_content', animation:'slide-horizontal'}" id="user_profile_tabs">
 
                     @if(session()->has('flag') || $flag = 1 && $flag != 0)
