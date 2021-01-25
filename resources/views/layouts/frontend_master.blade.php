@@ -102,25 +102,92 @@
     	}
     	
     	#overlay-body {
-          position: fixed;
+          /* position: fixed; */
           display: none;
-          width: 100%;
+          /* width: 100%;
           height: 100%;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
           background-color: rgba(0,0,0,0.2);
-          z-index: 1000;
-          cursor: pointer;
+          z-index: 2;
+          cursor: pointer; */
         }
         
-        #overlay-content{
+        /* #overlay-content{
           position: absolute;
           top: 35%;
           left: 50%;
           transform: translate(-50%,-50%);
           -ms-transform: translate(-50%,-50%);
+        } */
+
+        .loading span{
+            width: 15px;
+            height: 15px;
+            margin: 0 5px;
+            background-color: #FD0100;
+            border-radius: 50%;
+            display: inline-block;
+            -webkit-animation-name: dots;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease-in-out;
+            -moz-animation-name: dots;
+            -moz-animation-duration: 1s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-timing-function: ease-in-out;
+            -o-animation-name: dots;
+            -o-animation-duration: 1s;
+            -o-animation-iteration-count: infinite;
+            -o-animation-timing-function: ease-in-out;
+            animation-name: dots;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .loading span:nth-child(2){
+            -webkit-animation-delay: 0.1s;
+            -moz-animation-delay: 0.1s;
+            -o-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+        }
+
+        .loading span:nth-child(3){
+            -webkit-animation-delay: 0.2s;
+            -o-animation-delay: 0.2s;
+            -moz-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+        }
+
+        @-webkit-keyframes dots{
+            50%{
+                opacity: 0;
+                transform: scale(0.7) translateY(10px);
+            }
+        }
+
+        @-moz-keyframes dots{
+            50%{
+                opacity: 0;
+                transform: scale(0.7) translateY(10px);
+            }
+        }
+
+        @-o-keyframes dots{
+            50%{
+                opacity: 0;
+                transform: scale(0.7) translateY(10px);
+            }
+        }
+
+        @keyframes dots{
+            50%{
+                opacity: 0;
+                transform: scale(0.7) translateY(10px);
+            }
         }
 
         .menu-icon > .line {
@@ -282,12 +349,7 @@
                                             $districts = $helper->getDistricts();
                                         @endphp
                 
-                                        <div class="uk-grid">
-                                            
-                                            <div id="overlay-body" class="uk-width-medium-1-1" style="text-align: center;">
-                                                <div id="overlay-content" class="md-preloader md-preloader-danger"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="48" width="48" viewbox="0 0 75 75"><circle cx="37.5" cy="37.5" r="33.5" stroke-width="8"/></svg></div>
-                                            </div>
-                                            
+                                        <div class="uk-grid">                                            
                                             <div class="uk-width-medium-1-1">
                                                 <div class="parsley-row">
                                                     <select id="main_district_id" name="district_name" required class="md-input selectable">
@@ -361,6 +423,13 @@
                                     {!! Form::close() !!}
                                     
                                     <div class="uk-margin-medium-top uk-text-center" style = "margin-top: 6px!important;">
+                                    <div id="overlay-body" class="uk-margin-top uk-text-center" style = "margin-top: 6px!important;margin-bottom:15px!important;"> <!--class="uk-width-medium-1-1" style="text-align: center;">-->
+                                        <div class="loading">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
                                         @if(Session('language') == 'en')
                                         <!--<a  href="mailto:?body=This is a painless way to connect service recipients with health care provider or organization. You can easily find detail information about them through this search engine sitting at home.
                                                     %0D%0AExperience the freedom of choice on medihelpbd.com today.%0D%0A%0D%0ATo know more visit:%0D%0Ahttps://www.medihelpbd.com&subject=medihelpbd.com">
