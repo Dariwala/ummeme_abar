@@ -515,7 +515,7 @@
                                         </span>
                                     </div>
                                     <!-- <h4 class="heading_c" style = "margin-top: 10px;">@{{doctor.b_medical_specialist_name}}</h4> -->
-                                    <a href="{{'/'}}frontendmedicalspecialist/view/@{{doctor.id}}/{{$subdistrict_id}}"><h4 style="color:red;" class=" uk-margin-small-bottom">বিস্তারিত দেখুন</h4></a>
+                                    <a href="{{'/'}}frontendmedicalspecialist/view/@{{doctor.id}}/{{$subdistrict_id}}"><h4 style="color:red;padding-top:10px;" class=" uk-margin-small-bottom">বিস্তারিত দেখুন</h4></a>
                                 </div>
                             </li>
                         </ul>
