@@ -344,14 +344,14 @@ class ServiceController extends Controller
 
         $service_ids = HospitalService::where('hospital_id', $hospital_id)->select('service_id')->get();
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $hospitalservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $hospitalservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();  
         }
 
         else
         {
-           $hospitalservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();  
+            $hospitalservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
         }
         
         
@@ -365,14 +365,14 @@ class ServiceController extends Controller
 
         $service_ids = AddictionService::where('addiction_id', $addiction_id)->select('service_id')->get();
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $addictionservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $addictionservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();  
         }
 
         else
         {
-           $addictionservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();  
+            $addictionservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
         }
         
         
@@ -386,14 +386,14 @@ class ServiceController extends Controller
 
         $service_ids = GymService::where('gym_id', $gym_id)->select('service_id')->get();
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $gymservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $gymservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();  
         }
 
         else
         {
-           $gymservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();  
+            $gymservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
         }
         
         
@@ -407,14 +407,14 @@ class ServiceController extends Controller
 
         $service_ids = YogaService::where('yoga_id', $yoga_id)->select('service_id')->get();
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $yogaservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $yogaservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();  
         }
 
         else
         {
-           $yogaservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();  
+            $yogaservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
         }
         
         
@@ -428,14 +428,14 @@ class ServiceController extends Controller
 
         $service_ids = ParlourService::where('parlour_id', $parlour_id)->select('service_id')->get();
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $parlourservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $parlourservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();  
         }
 
         else
         {
-           $parlourservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();  
+            $parlourservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
         }
         
         
@@ -449,14 +449,14 @@ class ServiceController extends Controller
 
         $service_ids = HerbalCenterService::where('herbal_center_id', $herbal_center_id)->select('service_id')->get();
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $herbalcenterservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $herbalcenterservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
         }
 
         else
         {
-           $herbalcenterservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
+            $herbalcenterservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
         }
         
         
@@ -469,14 +469,14 @@ class ServiceController extends Controller
 
         $service_ids = SkinLaserCenterService::where('skin_laser_center_id', $skin_laser_center_id)->select('service_id')->get();
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $skinlasercenterservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $skinlasercenterservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get(); 
         }
 
         else
         {
-           $skinlasercenterservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get(); 
+            $skinlasercenterservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
         }
         
         
@@ -490,13 +490,13 @@ class ServiceController extends Controller
 
         $service_ids = VaccinePointService::where('vaccine_point_id', $vaccine_point_id)->select('service_id')->get();
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $vaccinepointservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $vaccinepointservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
         }
         else
         {
-            $vaccinepointservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
+            $vaccinepointservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
         }
         
         return response()->json([
@@ -509,14 +509,14 @@ class ServiceController extends Controller
 
         $service_ids = EyeBankService::where('eye_bank_id', $eye_bank_id)->select('service_id')->get();
 
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $eyebankservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $eyebankservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get(); 
         }
 
         else
         {
-           $eyebankservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get(); 
+            $eyebankservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
         }
         
         
@@ -530,13 +530,13 @@ class ServiceController extends Controller
 
         $service_ids = BloodBankService::where('blood_bank_id', $blood_bank_id)->select('service_id')->get();
        
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $bloodbankservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $bloodbankservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
         }
         else
         {
-            $bloodbankservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
+            $bloodbankservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
 
         }
         
@@ -550,14 +550,13 @@ class ServiceController extends Controller
         
         $service_ids = PharmacyService::where('pharmacy_id', $pharmacy_id)->select('service_id')->get();
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $pharmacyservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $pharmacyservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
         }
         else
         {
-            $pharmacyservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
-
+            $pharmacyservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
         }
         
         return response()->json([
@@ -572,13 +571,13 @@ class ServiceController extends Controller
         
         $service_ids = ForeignmedicalService::where('foreignmedical_id', $foreignmedical_id)->select('service_id')->get();
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $foreignmedicalservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $foreignmedicalservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
         }
         else
         {
-            $foreignmedicalservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
+            $foreignmedicalservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
 
         }
         
@@ -592,13 +591,13 @@ class ServiceController extends Controller
         
         $service_ids = HomeopathicService::where('homeopathic_id', $homeopathic_id)->select('service_id')->get();
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $homeopathicservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $homeopathicservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
         }
         else
         {
-            $homeopathicservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
+            $homeopathicservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
 
         }
         
@@ -612,14 +611,13 @@ class ServiceController extends Controller
         
         $service_ids = OpticalService::where('optical_id', $optical_id)->select('service_id')->get();
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $opticalservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $opticalservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
         }
         else
         {
-            $opticalservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
-
+            $opticalservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
         }
         
         return response()->json([
@@ -632,14 +630,13 @@ class ServiceController extends Controller
         
         $service_ids = PharmacynewService::where('pharmacynew_id', $pharmacynew_id)->select('service_id')->get();
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $pharmacynewservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $pharmacynewservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
         }
         else
         {
-            $pharmacynewservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
-
+            $pharmacynewservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
         }
         
         return response()->json([
@@ -652,13 +649,13 @@ class ServiceController extends Controller
         
         $service_ids = PhysiotherapyService::where('physiotherapy_id', $physiotherapy_id)->select('service_id')->get();
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $physiotherapyservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $physiotherapyservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
         }
         else
         {
-            $physiotherapyservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
+            $physiotherapyservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
 
         }
         
@@ -672,14 +669,13 @@ class ServiceController extends Controller
         
         $service_ids = AirAmbulanceService::where('air_ambulance_id', $air_ambulance_id)->select('service_id')->get();
         
-        if(Session('language')=='bn')
+        if(Session('language')=='en')
         {
-            $airambulanceservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
+            $airambulanceservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
         }
         else
         {
-            $airambulanceservice = Service::whereIn('id', $service_ids)->select('service_name as text', 'id as value')->get();
-
+            $airambulanceservice = Service::whereIn('id', $service_ids)->select('b_service_name as text', 'id as value')->get();
         }
         
         return response()->json([
