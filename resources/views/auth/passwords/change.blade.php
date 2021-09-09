@@ -11,6 +11,7 @@
                 <div class="md-card-content">
                     <div class="uk-overflow-container">
                         {{ Form::open(array('route' => array('change_password' , $user) , 'method' => 'POST')) }}
+                            <br></br>
                             <div class="row uk-width-medium-1-2">
                                 <div class="col-sm-12 col-md-12">
                                     <div class="form-group parsley-row">

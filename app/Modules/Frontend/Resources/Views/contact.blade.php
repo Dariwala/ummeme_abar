@@ -51,6 +51,19 @@
         .uk-tab-bn>li>a{
             font-size: 15px !important;
         }
+        .txta{
+            width:99.7%;
+            min-height:100px;
+            font-family: 'Helvetica', Arial, Lucida Grande, sans-serif;
+            resize:none;
+            overflow:hidden;
+            vertical-align:top;
+            line-height:1.4;
+            height:20px;
+            min-height:20px;
+            padding-top:6px;
+            padding-left:6px;
+        }
     </style>
 
 @endsection
@@ -112,27 +125,31 @@
                             echo $data->b_contact;
                             @endphp
                         </div>
-                        <!--<div class="uk-width-medium-1-2">
+                        <div class="uk-width-medium-1-2">
                             {!! Form::open(['url' => 'contact/post', 'method' => 'POST', 'class' => 'ul-form-stacked']) !!}
                                 <div class="uk-grid" data-uk-grid-margin style="margin-top: 15px;">
                                     <div class="uk-width-medium-1-1">
                                         <h4></h4>
                                         <div class="uk-width-1-1 uk-margin-top">
                                             <div class="parsley-row">
-                                                <label for="name">নাম <span class="req">*</span></label>
-                                                <textarea type="text" id="name" name="name" value="" required class="md-input" ></textarea>
+                                                <label for="name">নাম 
+                                                <!-- <span class="req">*</span> -->
+                                                </label>
+                                                <textarea type="text" id="name" name="name" value="" required class="txta" style="width:calc(100% - 8px);font-family:'Helvetica', Arial, Lucida Grande, sans-serif;resize:none;overflow:hidden;vertical-align:top;line-height:1.4;height:20px;min-height:20px;padding-top:6px;padding-left:6px;"></textarea>
                                             </div>
                                             <div class="parsley-row uk-margin-top">
-                                                <label for="email">ই-মেইল অথবা ফোন <span class="req">*</span></label>
-                                                <textarea type="text" id="email" name="email" value="" required class="md-input"></textarea>
+                                                <label for="email">ই-মেইল অথবা ফোন 
+                                                <!-- <span class="req">*</span> -->
+                                                </label>
+                                                <textarea type="text" id="email" name="email" value="" class="txta" style="width:calc(100% - 8px);font-family:'Helvetica', Arial, Lucida Grande, sans-serif;resize:none;overflow:hidden;vertical-align:top;line-height:1.4;height:20px;min-height:20px;padding-top:6px;padding-left:6px;"></textarea>
                                             </div>
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="subject">বিষয় <span class="req">*</span></label>
-                                                <textarea type="text" id="subject" name="subject" value="" required class="md-input"></textarea>
+                                                <textarea type="text" id="subject" name="subject" value="" required class="txta" style="width:calc(100% - 8px);font-family:'Helvetica', Arial, Lucida Grande, sans-serif;resize:none;overflow:hidden;vertical-align:top;line-height:1.4;height:20px;min-height:20px;padding-top:6px;padding-left:6px;"></textarea>
                                             </div>
                                             <div class="parsley-row uk-margin-top">
                                                 <label for="details">বিস্তারিত <span class="req">*</span></label>
-                                                <textarea id="details" name="details" value="" required class="md-input"></textarea>
+                                                <textarea id="details" name="details" value="" required class="txta" style="width:calc(100% - 8px);font-family:'Helvetica', Arial, Lucida Grande, sans-serif;resize:none;overflow:hidden;vertical-align:top;line-height:1.4;height:20px;min-height:20px;padding-top:6px;padding-left:6px;"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -141,7 +158,7 @@
                                     <button type="submit" class="md-btn md-btn-large" style="background: #FD0100;color: #fff;">পাঠিয়ে দিন</button>
                                 </div>
                             {!! Form::close() !!}
-                        </div>-->   
+                        </div>
                          
                     </div>
                 </div>

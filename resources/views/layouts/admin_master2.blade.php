@@ -92,7 +92,7 @@
                     </a>
                     
                     <div class="main_logo_top">
-                        <a class = "home-link" href="{{'/'}}">Home</a>
+                        <a class = "home-link" href="{{'/'}}"><img style="height:40px;margin-top:5px;" src="{{url('vendor/img/home_icon.png')}}" alt=""></a>
                     </div>
         
                     <div class="uk-navbar-flip">

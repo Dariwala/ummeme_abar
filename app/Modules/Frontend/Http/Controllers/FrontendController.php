@@ -107,7 +107,7 @@ class FrontendController extends Controller
         
         try{
             
-            $mail_send  = Mail::send('mail', ["data1" => $reqdata], function ($message) use ($reqdata) {
+            $mail_send  = Mail::send('contact', ["data1" => $reqdata], function ($message) use ($reqdata) {
                                $message->to('contact@medihelpbd.com');
                                $message->subject($reqdata['subject']);
                            });

@@ -52,8 +52,9 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a style="color:#fff; font-weight: bold !important; font-size: 1.2em;" class="navbar-brand" href="{{ url('/') }}">
-                        Home
+                    <!-- <a style="color:#fff; font-weight: bold !important; font-size: 1.2em;" class="navbar-brand" href="{{ url('/') }}"> -->
+                    <a href="{{ url('/') }}">
+                    <img style="height:40px;margin-top:5px;" src="{{url('vendor/img/home_icon.png')}}" alt="">
                     </a>
                     
                 </div>

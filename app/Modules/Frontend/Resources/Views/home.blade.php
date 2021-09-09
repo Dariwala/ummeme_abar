@@ -377,7 +377,7 @@
                             <span><button type="submit" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">বিজ্ঞপ্তি</button></span>
                         </a>
                     </div>
-                    <div class="uk-margin-medium-top uk-text-center" style = "margin-top: 6px!important;margin-bottom:15px!important;">
+                    <!-- <div class="uk-margin-medium-top uk-text-center" style = "margin-top: 6px!important;margin-bottom:15px!important;">
                         <a href="{{url('/latest-news')}}">                    
                             <button type="submit" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">
                                 বিজ্ঞাপন
@@ -388,11 +388,11 @@
                         <a href="{{url('/report_delivery')}}">
                             <span><button type="submit" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">রিপোর্ট ডেলিভারি</button></span>
                         </a>
-                    </div>
+                    </div> -->
                     <div class="uk-margin-top uk-text-center" style = "margin-top: 6px!important;margin-bottom:15px!important;">
                         <a href="{{url('/helpline')}}">                    
                             <button type="submit" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">
-                            হেল্পলাইন
+                            হেল্প লাইন
                             </button>
                         </a>
                     </div>
@@ -468,7 +468,7 @@
                                     <a href="{{url('/make-appointment')}}"><span><strong>সাক্ষাৎ</strong></span></a>
                                 </li>-->
                                 <li>
-                                    <a href="{{url('/services-list')}}"><span><strong>সেবাসমূহের তালিকা</strong></span></a>
+                                    <a href="{{url('/services-list')}}"><span><strong>সেবা সমূহ</strong></span></a>
                                 </li>
                             </ul>
 
