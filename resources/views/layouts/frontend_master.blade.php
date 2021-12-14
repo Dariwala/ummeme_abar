@@ -515,7 +515,7 @@
                                                 <span><button type="submit" class="md-btn md-btn-large uk-margin-top" style="background: #FD0100; width: 70%; color: #fff;">ম্যাপে খুঁজুন</button></span>
                                             </a>-->
                                             
-                                            
+                                            <a href="{{url('/more')}}">
                                             <button type="submit" onclick = "showLinksBN()" class="md-btn md-btn-large" style="background: #FD0100; width: 70%; color: #fff;">
                                             <div class="menu-icon">
                                                 <span class="line"></span>
@@ -523,6 +523,7 @@
                                                 <span class="line"></span>
                                             </div>
                                             </button>
+                                            </a>
                                         
                                             
                                             
@@ -673,15 +674,15 @@
     
     function showLinksBN(){
         
-        if($(".more-links-bn").is(":visible")){
+        // if($(".more-links-bn").is(":visible")){
             
-            $(".more-links-bn").hide();    
+        //     $(".more-links-bn").hide();    
             
-        }else{
+        // }else{
            
-           $(".more-links-bn").show();
+        //    $(".more-links-bn").show();
             
-        }
+        // }
         
     }
     

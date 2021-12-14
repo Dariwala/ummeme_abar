@@ -22,6 +22,7 @@ Route::get('/faq', 'FrontendController@faq');
 Route::get('/services-list', 'FrontendController@serviceList');
 Route::get('/latest-news', 'FrontendController@latestNews');
 Route::get('/special-notice', 'FrontendController@specialNotice');
+Route::get('/more', 'FrontendController@showMoreOptions');
 
 
 Route::group(['prefix' => 'frontendaddiction'], function () {

@@ -231,6 +231,10 @@ class FrontendController extends Controller
         
         return view('frontend::serviceEntry', compact('data','message'));
     }
+
+    public function showMoreOptions(){
+        return view('frontend::showMoreOptions');
+    }
     
     public function faq(){
         
