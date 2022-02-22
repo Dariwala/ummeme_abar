@@ -108,25 +108,25 @@
                                                 @endif
                                             </option>
                                             <option value="7"> @if(Session('language') == 'en') 24 Hours Pharmacy @else ২৪ আউয়ারস্ ফার্মেসী @endif </option>
-                                            <option value="12">@if(Session('language') == 'en') Addiction Rehabilitation Center@else অ্যাডিকশন রিহ্যাবিলিটেশন সেন্টার @endif </option>
+                                            <option value="12">@if(Session('language') == 'en') Addiction Rehabilitation Center @else অ্যাডিকশন রিহ্যাবিলিটেশন সেন্টার @endif </option>
                                             <option value="2">@if(Session('language') == 'en')  Air Ambulance @else  এয়ার অ্যাাম্বুলেন্স @endif </option>
-                                            <option value="1">@if(Session('language') == 'en')  Ambulance@else অ্যাাম্বুলেন্স @endif </option>
-                                            <option value="13">@if(Session('language') == 'en')  Beauty Parlour & Spa@else বিউটি পার্লার অ্যান্ড স্পা @endif </option>
-                                            <option value="3">@if(Session('language') == 'en')  Blood Bank@else ব্লাড ব্যাংক @endif </option>
-                                            <option value="4">@if(Session('language') == 'en')  Blood Donor@else ব্লাড ডোনার @endif </option>
-                                            <option value="8">@if(Session('language') == 'en')  Doctors Panel@else ডক্টরস্‌ প্যানেল @endif </option>
-                                            <option value="5">@if(Session('language') == 'en')   Eye Bank@else আই ব্যাংক @endif </option>
-                                            <option value="14">@if(Session('language') == 'en')  Foreign Medical Information Center@else ফরেন মেডিক্যাল ইনফরমেশন সেন্টার @endif </option>
-                                            <option value="15">@if(Session('language') == 'en')  Gym@else জিম @endif </option>
-                                            <option value="6">@if(Session('language') == 'en')   Health Care Center@else হেল্‌থ কেয়ার সেন্টার @endif </option>
-                                            <option value="9">@if(Session('language') == 'en')   Herbal Medicine Center@else হারবাল মেডিসিন সেন্টার @endif </option>
-                                            <option value="16">@if(Session('language') == 'en')   Homeopathic Medicine Center@else হোমিওপ্যাথিক মেডিসিন সেন্টার @endif </option>
-                                            <option value="17">@if(Session('language') == 'en')  Optical Shop@else অপটিক্যাল সপ @endif </option>
-                                            <option value="18">@if(Session('language') == 'en')  Pharmacy@else ফার্মেসী @endif </option>
-                                            <option value="19">@if(Session('language') == 'en')  Physiotherapy & Rehabilitation Center@else ফিজিওথেরাপি অ্যান্ড রিহ্যাবিলিটেশন সেন্টার @endif </option>
-                                            <option value="11">@if(Session('language') == 'en')  Skin Care & Laser Center@else স্কিন কেয়ার অ্যান্ড লেজার সেন্টার @endif </option>
-                                            <option value="10">@if(Session('language') == 'en')  Vaccination Center@else ভ্যাকসিনেশন সেন্টার @endif </option>
-                                            <option value="20">@if(Session('language') == 'en')  Yoga Center@else ইয়োগা সেন্টার @endif </option>
+                                            <option value="1">@if(Session('language') == 'en')  Ambulance @else অ্যাাম্বুলেন্স @endif </option>
+                                            <option value="13">@if(Session('language') == 'en')  Beauty Parlour & Spa @else বিউটি পার্লার অ্যান্ড স্পা @endif </option>
+                                            <option value="3">@if(Session('language') == 'en')  Blood Bank @else ব্লাড ব্যাংক @endif </option>
+                                            <option value="4">@if(Session('language') == 'en')  Blood Donor @else ব্লাড ডোনার @endif </option>
+                                            <option value="8">@if(Session('language') == 'en')  Doctors Panel @else ডক্টরস্‌ প্যানেল @endif </option>
+                                            <option value="5">@if(Session('language') == 'en')   Eye Bank @else আই ব্যাংক @endif </option>
+                                            <option value="14">@if(Session('language') == 'en')  Foreign Medical Information Center @else ফরেন মেডিক্যাল ইনফরমেশন সেন্টার @endif </option>
+                                            <option value="15">@if(Session('language') == 'en')  Gym @else জিম @endif </option>
+                                            <option value="6">@if(Session('language') == 'en')   Health Care Center @else হেল্‌থ কেয়ার সেন্টার @endif </option>
+                                            <option value="9">@if(Session('language') == 'en')   Herbal Medicine Center @else হারবাল মেডিসিন সেন্টার @endif </option>
+                                            <option value="16">@if(Session('language') == 'en')   Homeopathic Medicine Center @else হোমিওপ্যাথিক মেডিসিন সেন্টার @endif </option>
+                                            <option value="17">@if(Session('language') == 'en')  Optical Shop @else অপটিক্যাল সপ @endif </option>
+                                            <option value="18">@if(Session('language') == 'en')  Pharmacy @else ফার্মেসী @endif </option>
+                                            <option value="19">@if(Session('language') == 'en')  Physiotherapy & Rehabilitation Center @else ফিজিওথেরাপি অ্যান্ড রিহ্যাবিলিটেশন সেন্টার @endif </option>
+                                            <option value="11">@if(Session('language') == 'en')  Skin Care & Laser Center @else স্কিন কেয়ার অ্যান্ড লেজার সেন্টার @endif </option>
+                                            <option value="10">@if(Session('language') == 'en')  Vaccination Center @else ভ্যাকসিনেশন সেন্টার @endif </option>
+                                            <option value="20">@if(Session('language') == 'en')  Yoga Center @else ইয়োগা সেন্টার @endif </option>
                                         </select>
                                     </div>
                             </div>
